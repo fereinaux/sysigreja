@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05E9C958-8580-4F2D-B43C-28DA1F6B2003}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Account\AccountBusiness.cs" />
+    <Compile Include="Business\Account\IAccountBusiness.cs" />
+    <Compile Include="Business\CentroCusto\CentroCustoBusiness.cs" />
+    <Compile Include="Business\CentroCusto\ICentroCustoBusiness.cs" />
+    <Compile Include="Business\Quartos\QuartosBusiness.cs" />
+    <Compile Include="Business\Quartos\IQuartosBusiness.cs" />
+    <Compile Include="Business\Equipes\EquipeBusiness.cs" />
+    <Compile Include="Business\Equipes\IEquipeBusiness.cs" />
+    <Compile Include="Business\ContaBancaria\ContaBancariaBusiness.cs" />
+    <Compile Include="Business\ContaBancaria\IContaBancariaBusiness.cs" />
+    <Compile Include="Business\Arquivo\ArquivosBusiness.cs" />
+    <Compile Include="Business\Arquivo\IArquivosBusiness.cs" />
+    <Compile Include="Business\Circulos\CirculosBusiness.cs" />
+    <Compile Include="Business\Circulos\ICirculosBusiness.cs" />
+    <Compile Include="Business\Eventos\EventosBusiness.cs" />
+    <Compile Include="Business\Eventos\IEventosBusiness.cs" />
+    <Compile Include="Business\Lancamento\ILancamentoBusiness.cs" />
+    <Compile Include="Business\Lancamento\LancamentoBusiness.cs" />
+    <Compile Include="Business\Reunioes\ReunioesBusiness.cs" />
+    <Compile Include="Business\Reunioes\IReunioesBusiness.cs" />
+    <Compile Include="Business\MeioPagamento\IMeioPagamentoBusiness.cs" />
+    <Compile Include="Business\Equipantes\EquipantesBusiness.cs" />
+    <Compile Include="Business\Equipantes\IEquipantesBusiness.cs" />
+    <Compile Include="Business\MeioPagamento\MeioPagamentoBusiness.cs" />
+    <Compile Include="Business\Newsletter\INewsletterBusiness.cs" />
+    <Compile Include="Business\Newsletter\NewsletterBusiness.cs" />
+    <Compile Include="Business\Participantes\ParticipantesBusiness.cs" />
+    <Compile Include="Business\Participantes\IParticipantesBusiness.cs" />
+    <Compile Include="Models\CentroCusto\PostCentroCustoModel.cs" />
+    <Compile Include="Models\DataTable\DataTableModel.cs" />
+    <Compile Include="Models\Equipantes\EquipanteListModel.cs" />
+    <Compile Include="Models\Participantes\PostInfoModel.cs" />
+    <Compile Include="Models\Participantes\ParticipanteListModel.cs" />
+    <Compile Include="Models\Quartos\PostQuartoModel.cs" />
+    <Compile Include="Models\Equipe\PostEquipeMembroModel.cs" />
+    <Compile Include="Models\Equipantes\PostEquipanteModel.cs" />
+    <Compile Include="Models\Circulos\PostCirculoModel.cs" />
+    <Compile Include="Models\Eventos\PostEventoModel.cs" />
+    <Compile Include="Models\Arquivos\PostArquivoModel.cs" />
+    <Compile Include="Models\Lancamento\FiltrosLancamentoModel.cs" />
+    <Compile Include="Models\Lancamento\GetPagamentosModel.cs" />
+    <Compile Include="Models\Lancamento\PostLancamentoModel.cs" />
+    <Compile Include="Models\Lancamento\PostPagamentoModel.cs" />
+    <Compile Include="Models\Reunioes\PostReuniaoModel.cs" />
+    <Compile Include="Models\MeioPagamento\PostMeioPagamentoModel.cs" />
+    <Compile Include="Models\Participantes\PostInscricaoModel.cs" />
+    <Compile Include="Models\ContaBancaria\PostContaBancariaModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{3c3633e8-c6ab-49f4-b086-73c67e2166f1}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{B80464A2-9875-4821-B21A-6C62C8362B08}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <Version>2.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Identity.Owin">
+      <Version>2.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Linq.Dynamic">
+      <Version>1.0.8</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

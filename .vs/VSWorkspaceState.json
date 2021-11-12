@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Data",
+    "\\Data\\Entities",
+    "\\Data\\Migrations",
+    "\\Web",
+    "\\Web\\Controllers",
+    "\\Web\\Scripts",
+    "\\Web\\Scripts\\app",
+    "\\Web\\Scripts\\app\\Inscricoes",
+    "\\Web\\Scripts\\app\\Util"
+  ],
+  "SelectedNode": "\\Web\\Scripts\\app\\Inscricoes\\inscricoes.js",
+  "PreviewInSolutionExplorer": false
+}

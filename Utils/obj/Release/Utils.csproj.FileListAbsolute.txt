@@ -1,0 +1,46 @@
+C:\Realidade\Utils\bin\Release\Utils.dll
+C:\Realidade\Utils\bin\Release\Utils.pdb
+C:\Realidade\Utils\obj\Release\Utils.csproj.CoreCompileInputs.cache
+C:\Realidade\Utils\obj\Release\Utils.dll
+C:\Realidade\Utils\obj\Release\Utils.pdb
+C:\Realidade\Utils\bin\Release\EPPlus.dll
+C:\Realidade\Utils\obj\Release\Utils.csprojAssemblyReference.cache
+C:\Realidade\Utils\obj\Release\Utils.csproj.CopyComplete
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\bin\Release\Utils.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\bin\Release\Utils.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\bin\Release\EPPlus.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\obj\Release\Utils.csprojAssemblyReference.cache
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\obj\Release\Utils.csproj.CoreCompileInputs.cache
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\obj\Release\Utils.csproj.CopyComplete
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\obj\Release\Utils.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\obj\Release\Utils.pdb
+C:\Users\felip\Source\Repos\Seminarios IECB\Utils\obj\Release\Utils.csprojAssemblyReference.cache
+C:\Users\felip\Source\Repos\Seminarios IECB\Utils\obj\Release\Utils.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Utils\obj\Release\Utils.pdb
+C:\Users\felip\source\repos\Seminarios IECB\Utils\bin\Release\Utils.dll
+C:\Users\felip\source\repos\Seminarios IECB\Utils\bin\Release\Utils.pdb
+C:\Users\felip\source\repos\Seminarios IECB\Utils\bin\Release\EPPlus.dll
+C:\Users\felip\source\repos\Seminarios IECB\Utils\obj\Release\Utils.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\bin\Release\Utils.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\bin\Release\Utils.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\bin\Release\EPPlus.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\obj\Release\Utils.csprojAssemblyReference.cache
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\obj\Release\Utils.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\obj\Release\Utils.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\obj\Release\Utils.pdb
+C:\Users\felipe\Source\Repos\Realidade\Utils\bin\Release\Utils.dll
+C:\Users\felipe\Source\Repos\Realidade\Utils\bin\Release\Utils.pdb
+C:\Users\felipe\Source\Repos\Realidade\Utils\bin\Release\EPPlus.dll
+C:\Users\felipe\Source\Repos\Realidade\Utils\obj\Release\Utils.csprojAssemblyReference.cache
+C:\Users\felipe\Source\Repos\Realidade\Utils\obj\Release\Utils.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Realidade\Utils\obj\Release\Utils.dll
+C:\Users\felipe\Source\Repos\Realidade\Utils\obj\Release\Utils.pdb
+C:\Users\User\source\repos\Realidade\Utils\bin\Release\Utils.dll
+C:\Users\User\source\repos\Realidade\Utils\bin\Release\Utils.pdb
+C:\Users\User\source\repos\Realidade\Utils\bin\Release\EPPlus.dll
+C:\Users\User\source\repos\Realidade\Utils\bin\Release\System.Linq.Dynamic.dll
+C:\Users\User\source\repos\Realidade\Utils\obj\Release\Utils.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Realidade\Utils\obj\Release\Utils.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Realidade\Utils\obj\Release\Utils.csproj.CopyComplete
+C:\Users\User\source\repos\Realidade\Utils\obj\Release\Utils.dll
+C:\Users\User\source\repos\Realidade\Utils\obj\Release\Utils.pdb

@@ -1,0 +1,175 @@
+﻿@{
+    Layout = null;
+    ViewBag.Numero = new Random().Next();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realidade</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
+    <link href="~/Content/animate.css" rel="stylesheet">
+    <link href="~/Content/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="~/Content/style.css" rel="stylesheet">
+    <link href="~/Content/evento.css" rel="stylesheet">
+    <link href="~/Content/coordenador.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <div class="widget-head-color-box navy-bg p-lg text-center">
+                    <div class="m-b-md">
+                        <h2 class="font-bold no-margins">
+                            @ViewBag.Equipante.Nome
+                        </h2>
+                        <small>@ViewBag.Equipe</small>
+                    </div>
+                    <div>
+                        <span>Membros na Equipe: @ViewBag.QtdMembros</span>
+                    </div>
+                </div>
+                <div class="widget-text-box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Sexo</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Idade</th>
+                                <th scope="col">Oferta</th>
+                                <th scope="col">Vacina</th>
+                                <th scope="col">Foto</th>
+                                <th scope="col">Faltas</th>
+                                <th scope="col">Contato</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var membro in ViewBag.Membros)
+                            {
+                            <tr>
+                                <td data-label="Sexo"><span style="font-size:24px;" class="p-l-xs"> <i class="fa @(membro.Sexo == "Masculino" ? "fa-male" : "fa-female") " aria-hidden="true"></i></span></td>
+                                <td data-label="Nome">@membro.Nome</td>
+                                <td data-label="Idade">@membro.Idade</td>
+                                <td data-label="Oferta"> <span style="font-size:24px;"> <i class="fa @(@membro.Oferta ? "fa-check" : "fa-times") " aria-hidden="true"></i></span></td>
+                                <td data-label="Vacina"> <span style="font-size:24px;"> <i class="fa @(@membro.Vacina ? "fa-check" : "fa-times") " aria-hidden="true"></i></span></td>
+                                <td data-label="Foto"> <span style="font-size:24px;"> <i class="fa @(@membro.Foto ? "fa-check" : "fa-times") " aria-hidden="true"></i></span></td>
+                                <td data-label="Faltas">@membro.Faltas</td>
+                                <td data-label="Contato" class="membro-fone">@membro.Fone</td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                    @*<div class="row">
+                            <div class="col-xs-10 col-xs-offset-2">
+                                <h4>Nome</h4>
+                            </div>
+
+                        </div>
+                        @foreach (var membro in ViewBag.Membros)
+                        {
+                            <div class="linha-coordenador">
+                                <div class="row">
+                                    <div class="col-xs-2 text-center">
+                                        <span style="font-size:24px;" class="p-l-xs"> <i class="fa @(membro.Sexo == "Masculino" ? "fa-male" : "fa-female") " aria-hidden="true"></i></span>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <span>@membro.Nome</span>
+                                    </div>
+                                    <div class="col-xs-2 text-center">
+                                        <span>@membro.Idade</span>
+                                    </div>
+                                </div>
+                                <div class="row m-t-sm">
+                                    <div class="col-xs-2 text-center">
+                                        <h4>Idade</h4>
+                                        <span>@membro.Idade</span>
+                                    </div>
+                                    <div class="col-xs-2 text-center">
+                                        <h4>Oferta</h4>
+                                        <span style="font-size:24px;"> <i class="fa @(@membro.Oferta ? "fa-check" : "fa-times") " aria-hidden="true"></i></span>
+                                    </div>
+                                    <div class="col-xs-2 text-center">
+                                        <h4>Vacina</h4>
+                                        <span style="font-size:24px;"> <i class="fa @(@membro.Vacina ? "fa-check" : "fa-times") " aria-hidden="true"></i></span>
+                                    </div>
+                                    <div class="col-xs-2 text-center">
+                                        <h4>Faltas</h4>
+                                        <span>  @membro.Faltas</span>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <h4>Contato</h4>
+                                        <span class="membro-fone">@membro.Faltas</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        }*@
+
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="widget-head-color-box navy-bg p-lg text-center">
+                    <div class="m-b-md">
+                        <h2 class="font-bold no-margins">
+                            <i class="fa fa-calendar-check-o" aria-hidden="true"></i> Reuniões
+                        </h2>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-4 col-lg-offset-4 col-xs-6 col-xs-offset-3">
+                                <select class="form-control text-center" id="reuniaoid" style="background-color: #1ab394;" onchange="CarregarTabelaPresenca()">
+                                    @foreach (var reuniao in ViewBag.Reunioes)
+                                    {
+                                        <option value="@reuniao.Id">@reuniao.DataReuniao.ToString("dd/MM/yyyy")</option>
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-text-box">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="width:85%">Nome</th>
+                                <th style="width:15%">Compareceu?</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbpresenca"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-12 col-xs-12">
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                {
+                    <div class="widget-head-color-box navy-bg p-lg text-center">
+                        @Html.AntiForgeryToken()
+                        <h2 class="font-bold no-margins pointer" onclick="javascript:document.getElementById('logoutForm').submit()">
+                            Sair <i class="fa fa-sign-out"></i>
+                        </h2>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script src="~/Scripts/plugins/imaskjs/imask.js"></script>
+<script src="~/Scripts/plugins/iCheck/icheck.min.js"></script>
+<script src="~/Scripts/app/Util/forms.js"></script>
+<script src="~/Scripts/app/Util/buttons.js"></script>
+<script src="~/Scripts/app/Util/extensions.js"></script>
+<script src="~/Scripts/app/Home/coordenador.js?@ViewBag.Numero"></script>
+
+

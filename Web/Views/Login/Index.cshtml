@@ -1,0 +1,63 @@
+﻿@model SysIgreja.ViewModels.LoginViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realidade | Login</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">    
+    <link rel="icon" type="image/png" href="~/Images/logo-branco.png" />
+    <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
+    <link href="~/Content/animate.css" rel="stylesheet">
+    <link href="~/Content/style.css" rel="stylesheet">
+    <link href="~/Content/evento.css" rel="stylesheet">
+</head>
+<body class="background-evento">
+    <div class="middle-box text-center loginscreen animated fadeInDown ">
+        <div>
+            @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.ValidationSummary(true)
+                <div class="form-group ">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <img style="width:85% !important" src="~/Images/logo-branco.png" alt="Igreja Episcopal Carismática do Brasil" />
+                        </div>                        
+                    </div>                    
+                </div>
+                <div class="form-group ">
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control text-lowercase", placeholder = "Login" })
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control text-lowercase", placeholder = "Senha" })
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input type="submit" value="Entrar" class="btn btn-rounded btn-juventude w-150" />
+                        <a href="@Url.Action("Index","Inscricoes")" class="btn m-l-sm w-150 btn-rounded btn-juventude">Inscrições</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    .validation-summary-errors {
+        color: white;
+    }
+</style>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

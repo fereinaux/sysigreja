@@ -1,0 +1,137 @@
+C:\Realidade\Data\bin\Release\Data.dll
+C:\Realidade\Data\bin\Release\Data.pdb
+C:\Realidade\Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Realidade\Data\bin\Release\EntityFramework.dll
+C:\Realidade\Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Realidade\Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Realidade\Data\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+C:\Realidade\Data\bin\Release\Microsoft.Owin.dll
+C:\Realidade\Data\bin\Release\Microsoft.Owin.Security.dll
+C:\Realidade\Data\bin\Release\Microsoft.Owin.Security.Cookies.dll
+C:\Realidade\Data\bin\Release\Microsoft.Owin.Security.OAuth.dll
+C:\Realidade\Data\bin\Release\Newtonsoft.Json.dll
+C:\Realidade\Data\bin\Release\Owin.dll
+C:\Realidade\Data\bin\Release\Utils.dll
+C:\Realidade\Data\bin\Release\Utils.pdb
+C:\Realidade\Data\obj\Release\Data.csprojAssemblyReference.cache
+C:\Realidade\Data\obj\Release\Data.Migrations.Inicial.resources
+C:\Realidade\Data\obj\Release\Data.csproj.GenerateResource.cache
+C:\Realidade\Data\obj\Release\Data.csproj.CoreCompileInputs.cache
+C:\Realidade\Data\obj\Release\Data.csproj.CopyComplete
+C:\Realidade\Data\obj\Release\Data.dll
+C:\Realidade\Data\obj\Release\Data.pdb
+C:\Realidade\Data\bin\Release\EPPlus.dll
+C:\Realidade\Data\obj\Release\Data.Migrations.Second.resources
+C:\Realidade\Data\obj\Release\Data.Migrations.Third.resources
+C:\Realidade\Data\obj\Release\Data.Migrations.Fourth.resources
+C:\Realidade\Data\obj\Release\Data.Migrations.Fifth.resources
+C:\Realidade\Data\obj\Release\Data.Migrations.Sixth.resources
+C:\Realidade\Data\obj\Release\Data.Migrations.Seventh.resources
+C:\Realidade\Data\obj\Release\Data.Migrations.Eighth.resources
+C:\Realidade\Data\obj\Release\Data.Migrations.Ninth.resources
+C:\Realidade\Data\obj\Release\Data.Migrations.Tenth.resources
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Data.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Data.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\EntityFramework.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\EPPlus.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.Owin.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.Owin.Security.Cookies.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.Owin.Security.OAuth.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Newtonsoft.Json.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Owin.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Utils.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\bin\Release\Utils.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\obj\Release\Data.csprojAssemblyReference.cache
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\obj\Release\Data.csproj.CoreCompileInputs.cache
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\obj\Release\Data.csproj.CopyComplete
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\obj\Release\Data.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Data\obj\Release\Data.pdb
+C:\Users\felip\Source\Repos\Seminarios IECB\Data\obj\Release\Data.csprojAssemblyReference.cache
+C:\Users\felip\Source\Repos\Seminarios IECB\Data\obj\Release\Data.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Data\obj\Release\Data.pdb
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Data.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Data.pdb
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\EntityFramework.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\EPPlus.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Microsoft.Owin.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Microsoft.Owin.Security.Cookies.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Microsoft.Owin.Security.OAuth.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Newtonsoft.Json.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Owin.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Utils.dll
+C:\Users\felip\source\repos\Seminarios IECB\Data\bin\Release\Utils.pdb
+C:\Users\felip\source\repos\Seminarios IECB\Data\obj\Release\Data.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\obj\Release\Data.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\obj\Release\Data.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Data.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Data.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\EntityFramework.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\EPPlus.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.Owin.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.Owin.Security.Cookies.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Microsoft.Owin.Security.OAuth.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Newtonsoft.Json.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Owin.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Utils.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\bin\Release\Utils.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\obj\Release\Data.csprojAssemblyReference.cache
+C:\Users\felipe\Source\Repos\Seminarios IECB\Data\obj\Release\Data.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Data.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Data.pdb
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\EntityFramework.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\EPPlus.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Microsoft.Owin.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Microsoft.Owin.Security.Cookies.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Microsoft.Owin.Security.OAuth.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Newtonsoft.Json.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Owin.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Utils.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\bin\Release\Utils.pdb
+C:\Users\felipe\Source\Repos\Realidade\Data\obj\Release\Data.csprojAssemblyReference.cache
+C:\Users\felipe\Source\Repos\Realidade\Data\obj\Release\Data.Migrations.InitialCreate.resources
+C:\Users\felipe\Source\Repos\Realidade\Data\obj\Release\Data.csproj.GenerateResource.cache
+C:\Users\felipe\Source\Repos\Realidade\Data\obj\Release\Data.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Realidade\Data\obj\Release\Data.dll
+C:\Users\felipe\Source\Repos\Realidade\Data\obj\Release\Data.pdb
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Data.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Data.pdb
+C:\Users\User\source\repos\Realidade\Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\EntityFramework.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\EPPlus.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Microsoft.Owin.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Microsoft.Owin.Security.Cookies.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Microsoft.Owin.Security.OAuth.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Newtonsoft.Json.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Owin.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\System.Linq.Dynamic.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Utils.dll
+C:\Users\User\source\repos\Realidade\Data\bin\Release\Utils.pdb
+C:\Users\User\source\repos\Realidade\Data\obj\Release\Data.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Realidade\Data\obj\Release\Data.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Realidade\Data\obj\Release\Data.csproj.CopyComplete
+C:\Users\User\source\repos\Realidade\Data\obj\Release\Data.dll
+C:\Users\User\source\repos\Realidade\Data\obj\Release\Data.pdb

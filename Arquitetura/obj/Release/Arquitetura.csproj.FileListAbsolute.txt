@@ -1,0 +1,190 @@
+C:\Realidade\Arquitetura\bin\Release\Arquitetura.dll
+C:\Realidade\Arquitetura\bin\Release\Arquitetura.pdb
+C:\Realidade\Arquitetura\bin\Release\EntityFramework.SqlServer.dll
+C:\Realidade\Arquitetura\bin\Release\EntityFramework.dll
+C:\Realidade\Arquitetura\bin\Release\EPPlus.dll
+C:\Realidade\Arquitetura\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Realidade\Arquitetura\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Realidade\Arquitetura\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+C:\Realidade\Arquitetura\bin\Release\System.Web.Mvc.dll
+C:\Realidade\Arquitetura\bin\Release\System.Web.Razor.dll
+C:\Realidade\Arquitetura\bin\Release\System.Web.Helpers.dll
+C:\Realidade\Arquitetura\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Realidade\Arquitetura\bin\Release\System.Web.WebPages.Razor.dll
+C:\Realidade\Arquitetura\bin\Release\System.Web.WebPages.dll
+C:\Realidade\Arquitetura\bin\Release\Microsoft.Owin.dll
+C:\Realidade\Arquitetura\bin\Release\Microsoft.Owin.Security.dll
+C:\Realidade\Arquitetura\bin\Release\Microsoft.Owin.Security.Cookies.dll
+C:\Realidade\Arquitetura\bin\Release\Microsoft.Owin.Security.OAuth.dll
+C:\Realidade\Arquitetura\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Realidade\Arquitetura\bin\Release\Newtonsoft.Json.dll
+C:\Realidade\Arquitetura\bin\Release\Owin.dll
+C:\Realidade\Arquitetura\bin\Release\Core.dll
+C:\Realidade\Arquitetura\bin\Release\Data.dll
+C:\Realidade\Arquitetura\bin\Release\Utils.dll
+C:\Realidade\Arquitetura\bin\Release\Core.pdb
+C:\Realidade\Arquitetura\bin\Release\Data.pdb
+C:\Realidade\Arquitetura\bin\Release\Utils.pdb
+C:\Realidade\Arquitetura\obj\Release\Arquitetura.csprojAssemblyReference.cache
+C:\Realidade\Arquitetura\obj\Release\Arquitetura.csproj.CoreCompileInputs.cache
+C:\Realidade\Arquitetura\obj\Release\Arquitetura.csproj.CopyComplete
+C:\Realidade\Arquitetura\obj\Release\Arquitetura.dll
+C:\Realidade\Arquitetura\obj\Release\Arquitetura.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Arquitetura.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Arquitetura.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\EntityFramework.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\EPPlus.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.Mvc.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.Razor.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.Helpers.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.WebPages.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Owin.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Owin.Security.Cookies.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Owin.Security.OAuth.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Newtonsoft.Json.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Owin.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Core.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Data.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Utils.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Core.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Data.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Utils.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.csprojAssemblyReference.cache
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.csproj.CoreCompileInputs.cache
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.csproj.CopyComplete
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.pdb
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.csprojAssemblyReference.cache
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.pdb
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Arquitetura.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Arquitetura.pdb
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\EntityFramework.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\EPPlus.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.Mvc.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.Razor.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.Helpers.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.WebPages.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Owin.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Owin.Security.Cookies.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Owin.Security.OAuth.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Newtonsoft.Json.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Owin.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Core.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Data.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Utils.dll
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Core.pdb
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Data.pdb
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\bin\Release\Utils.pdb
+C:\Users\felip\source\repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Arquitetura.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Arquitetura.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\EntityFramework.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\EPPlus.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.Mvc.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.Razor.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.Helpers.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\System.Web.WebPages.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Owin.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Owin.Security.Cookies.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Owin.Security.OAuth.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Newtonsoft.Json.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Owin.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Core.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Data.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Utils.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Core.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Data.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Release\Utils.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.csprojAssemblyReference.cache
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\obj\Release\Arquitetura.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Arquitetura.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Arquitetura.pdb
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\EntityFramework.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\EPPlus.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\System.Web.Mvc.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\System.Web.Razor.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\System.Web.Helpers.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\System.Web.WebPages.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Microsoft.Owin.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Microsoft.Owin.Security.Cookies.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Microsoft.Owin.Security.OAuth.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Newtonsoft.Json.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Owin.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Core.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Data.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Utils.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Core.pdb
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Data.pdb
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Release\Utils.pdb
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\obj\Release\Arquitetura.csprojAssemblyReference.cache
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\obj\Release\Arquitetura.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\obj\Release\Arquitetura.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\obj\Release\Arquitetura.pdb
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Arquitetura.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Arquitetura.pdb
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\EntityFramework.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\EPPlus.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\System.Web.Mvc.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\System.Web.Razor.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\System.Web.Helpers.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\System.Web.WebPages.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Microsoft.Owin.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Microsoft.Owin.Security.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Microsoft.Owin.Security.Cookies.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Microsoft.Owin.Security.OAuth.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Newtonsoft.Json.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Owin.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\System.Linq.Dynamic.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Core.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Data.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Utils.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Core.pdb
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Data.pdb
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Utils.pdb
+C:\Users\User\source\repos\Realidade\Arquitetura\obj\Release\Arquitetura.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Realidade\Arquitetura\obj\Release\Arquitetura.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Realidade\Arquitetura\obj\Release\Arquitetura.csproj.CopyComplete
+C:\Users\User\source\repos\Realidade\Arquitetura\obj\Release\Arquitetura.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\obj\Release\Arquitetura.pdb

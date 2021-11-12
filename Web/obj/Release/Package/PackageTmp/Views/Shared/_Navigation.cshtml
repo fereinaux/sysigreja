@@ -1,0 +1,87 @@
+﻿@using Microsoft.AspNet.Identity
+@using Utils.Constants;
+
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header" style="padding:0px !important">
+                <div class="dropdown profile-element">
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <a href="@Url.Action("Index", "Home")"><img class="full-width" style="padding-top:2.5em" src="~/Images/logo-branco.png" alt="Realidade" /></a>
+                        </div>
+                    </div>
+                </div><a href="@Url.Action("Index", "Home")">
+                    <div class="logo-element">
+                        R
+                    </div>
+                </a>
+            </li>
+
+            @if (User.IsInRole(Usuario.Admin) || User.IsInRole(Usuario.Master) || User.IsInRole(Usuario.Secretaria))
+            {
+                <li class="@Html.IsSelected(action: "Checkin", controller: "Participante")"><a href="@Url.Action("Checkin", "Participante")"><i class="fa fa-suitcase"></i><span class="nav-label">Check-in</span></a></li>
+            }
+
+            @if (User.IsInRole(Usuario.Admin) || User.IsInRole(Usuario.Master) || User.IsInRole(Usuario.Secretaria))
+            {
+                <li class="@Html.IsSelected(action: "Index", controller: "Participante")"><a href="@Url.Action("Index", "Participante")"><i class="fa fa-users"></i><span class="nav-label">Participantes</span></a></li>
+            }
+
+     
+
+            @if (User.IsInRole(Usuario.Admin) || User.IsInRole(Usuario.Master) || User.IsInRole(Usuario.Secretaria))
+            {
+                <li class="@Html.IsSelected(action: "Index", controller: "Circulo")"><a href="@Url.Action("Index", "Circulo")"><i class="far fa-circle"></i><span class="nav-label title-circulo">Círculos</span></a></li>
+            }
+
+            @if (User.IsInRole(Usuario.Admin) || User.IsInRole(Usuario.Master) || User.IsInRole(Usuario.Secretaria))
+            {
+                <li class="@Html.IsSelected(action: "Index", controller: "Quarto")"><a href="@Url.Action("Index", "Quarto")"><i class="fa fa-home"></i><span class="nav-label">Quartos</span></a></li>
+            }
+
+            @if (User.IsInRole(Usuario.Admin) || User.IsInRole(Usuario.Master) || User.IsInRole(Usuario.Secretaria))
+            {
+                <li class="@Html.IsSelected(action: "Etiquetas", controller: "Participante")"><a href="@Url.Action("Etiquetas", "Participante")"><i class="fa fa-tags"></i><span class="nav-label">Etiquetas</span></a></li>
+            }
+            <li class="@Html.IsSelected(action: "Index", controller:"Equipe")"><a href="@Url.Action("Index", "Equipe")"><i class="fa fa-paste"></i><span class="nav-label">Equipes</span></a></li>
+            <li class="@Html.IsSelected(action: "Presenca", controller:"Equipe")"><a href="@Url.Action("Presenca", "Equipe")"><i class="fa fa-list-ol"></i><span class="nav-label">Ata de Presença</span></a></li>
+
+            @if (User.IsInRole(Usuario.Admin) || User.IsInRole(Usuario.Master))
+            {
+                <li class="@Html.IsSelected(action: "Index", controller: "Lancamento")"><a href="@Url.Action("Index", "Lancamento")"><i class="far fa-money-bill-alt"></i><span class="nav-label">Financeiro</span></a></li>
+
+            }
+
+            @if (User.IsInRole(Usuario.Admin) || User.IsInRole(Usuario.Master) || User.IsInRole(Usuario.Secretaria))
+            {
+                <li class="@Html.IsSelectedMenuItem(controller: new string[] {"Evento","Reuniao","Equipante"}, actions: new List<string> { "Index" })">
+                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Cadastros</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse @Html.IsSelectedMenuItem(controller: new string[] {"Evento","Reuniao","Equipante"}, actions: new List<string> { "Index" }, cssClass: "in")">
+                        <li class="@Html.IsSelected(action: "Index", controller:"Equipante")"><a href="@Url.Action("Index", "Equipante")">Equipantes</a></li>
+                        <li class="@Html.IsSelected(action: "Index", controller:"Evento")"><a href="@Url.Action("Index", "Evento")">Eventos</a></li>
+                        <li class="@Html.IsSelected(action: "Index", controller:"Reuniao")"><a href="@Url.Action("Index", "Reuniao")">Reuniões</a></li>
+                    </ul>
+                </li>
+            }
+
+            @if (User.IsInRole(Usuario.Admin) || User.IsInRole(Usuario.Master))
+            {
+                <li class="@Html.IsSelectedMenuItem(controller: new string[] { "MeioPagamento", "Account","ContaBancaria","CentroCusto","Arquivo" }, actions: new List<string> { "Index" })">
+                    <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">Configurações</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse @Html.IsSelectedMenuItem(controller: new string[] { "MeioPagamento", "Account","ContaBancaria","CentroCusto","Arquivo" }, actions: new List<string> { "Index" }, cssClass: "in")">
+                        <li class="@Html.IsSelected(action: "Index", controller: "MeioPagamento")"><a href="@Url.Action("Index", "MeioPagamento")">Formas de Pagamento</a></li>
+                        <li class="@Html.IsSelected(action: "Index", controller: "CentroCusto")"><a href="@Url.Action("Index", "CentroCusto")">Centros de Custo</a></li>
+                        <li class="@Html.IsSelected(action: "Index", controller: "Account")"><a href="@Url.Action("Index", "Account")">Usuários</a></li>
+                        <li class="@Html.IsSelected(action: "Index", controller: "Arquivo")"><a href="@Url.Action("Index", "Arquivo")">Arquivos</a></li>
+                    </ul>
+                </li>
+            }
+
+            @if (User.IsInRole(Usuario.Admin) || User.IsInRole(Usuario.Master) || User.IsInRole(Usuario.Secretaria))
+            {
+                <li class="@Html.IsSelected(action: "Index", controller: "Relatorio")"><a href="@Url.Action("Index", "Relatorio")"><i class="fa fa-chart-area"></i><span class="nav-label">Relatórios</span></a></li>
+            }
+        </ul>
+    </div>
+</nav>
