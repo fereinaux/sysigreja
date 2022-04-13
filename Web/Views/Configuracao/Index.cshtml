@@ -1,0 +1,251 @@
+﻿<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>@ViewBag.Title</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/Home/Index">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#">Configurações</a>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="ibox">
+        <div class="ibox-title" style="display: flex;justify-content: space-between;">
+            <h4>@ViewBag.Title</h4>
+
+        </div>
+        <div class="ibox-content">
+            <div class="row p-h-xs" id="form-config">
+                <div class="col-sm-12 p-w-md m-t-md text-center">
+                    <h5>Título</h5>
+
+                    <input type="text" class="form-control required" id="config-titulo" data-field="Título" />
+                </div>
+
+                <div class="col-sm-6 p-w-md m-t-md text-center">
+                    <h5>Cor Botão</h5>
+
+                    <input type="color" style="padding:0" class="form-control" id="config-corbotao" name="color" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" value="#bada55" data-field="Cor Botão">
+                </div>
+
+                <div class="col-sm-6 p-w-md m-t-md text-center">
+                    <h5>Cor Hover Botão</h5>
+
+                    <input type="color" style="padding:0" class="form-control" id="config-corhoverbotao" name="color" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" value="#bada55" data-field="Cor Hover Botão">
+                </div>
+
+                <div class="col-sm-6 p-w-md m-t-md text-center">
+                    <h5>Cor Scroll</h5>
+
+                    <input type="color" opacity style="padding:0" class="form-control" id="config-corscroll" name="color" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" value="#bada55" data-field="Cor Scroll">
+                </div>
+
+                <div class="col-sm-6 p-w-md m-t-md text-center">
+                    <h5>Cor Hover Scroll</h5>
+
+                    <input type="color" opacity style="padding:0" class="form-control" id="config-corhoverscroll" name="color" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" value="#bada55" data-field="Cor Hover Scroll">
+                </div>
+
+                <div class="col-sm-6 p-w-md m-t-md text-center">
+                    <h5>Cor Login Box</h5>
+
+                    <input type="color" opacity style="padding:0" class="form-control" id="config-corloginbox" name="color" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" value="#bada55" data-field="Cor Login Box">
+                </div>
+
+                <div class="col-sm-6 p-w-md m-t-md text-center">
+                    <h5>Campos</h5>
+
+                    <select class="form-control" id="config-campos" multiple="multiple" style="width: 100%" data-field="Campos">
+                    </select>
+                </div>
+
+
+
+                <div class="col-sm-6 p-w-md m-t-md text-center">
+                    <h5>Logo</h5>
+                    <img id="img-logo" style="width:20%;margin:auto" src="" class="m-auto" />
+                    <form enctype="multipart/form-data" id="frm-logo" method="post" novalidate="novalidate">
+                        <label for="logo" class="inputFile">
+                            <span id="add-logo" class="btn btn-default inputFile m-md" style="width: 100%;" aria-hidden="true"><i class="fas fa-upload m-xs"></i> Escolher Arquivo</span>
+                            <input accept="image/*" onchange='Logo()' style="display: none;" class="custom-file-input inputFile" id="logo" name="logo" type="file" value="">
+                        </label>
+                    </form>
+                </div>
+
+                <div class="col-sm-6 p-w-md m-t-md text-center">
+                    <h5>Background</h5>
+                    <img id="img-background" style="width:50%;margin:auto" src="" class="m-auto" />
+                    <form enctype="multipart/form-data" id="frm-background" method="post" novalidate="novalidate">
+                        <label for="background" class="inputFile">
+                            <span id="add-background" class="btn btn-default inputFile m-md" style="width: 100%;" aria-hidden="true"><i class="fas fa-upload m-xs"></i> Escolher Arquivo</span>
+                            <input accept="image/*" onchange='Background()' style="display: none;" class="custom-file-input inputFile" id="background" name="background" type="file" value="">
+                        </label>
+                    </form>
+                </div>
+
+                <div class="col-sm-12 p-w-md m-t-md text-center">
+                    <button type="button" class="btn btn-primary" onclick="PostConfig()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Styles {
+    <style>
+        span .inputFile {
+            width: 100%;
+        }
+    </style>
+}
+
+@section Scripts {
+
+    <script>
+
+        function PostConfig() {
+            if (ValidateForm(`#form-config`)) {
+                $.ajax({
+                    url: "/Configuracao/PostConfiguracao/",
+                    datatype: "json",
+                    type: "POST",
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify(
+                        {
+                            Titulo: $('#config-titulo').val(),
+                            CorHoverBotao: $('#config-corhoverbotao').val(),
+                            CorBotao: $('#config-corbotao').val(),
+                            CorLoginBox: $('#config-corloginbox').val(),
+                            CorScroll: $('#config-corscroll').val(),
+                            CorHoverScroll: $('#config-corhoverscroll').val(),
+                        }),
+                    success: function () {
+                        SuccessMesageOperation()
+                        carregarConfiguracoes()
+                    }
+                });
+
+                $.ajax({
+                    url: "/Configuracao/PostCampos/",
+                    datatype: "json",
+                    type: "POST",
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify(
+                        {
+                            campos: $('#config-campos').val().map(campo => { return { CampoId: campo } })
+
+                        }),
+                    success: function () {
+                        SuccessMesageOperation()
+                        carregarConfiguracoes()
+                    }
+                });
+            }
+        }
+
+        function carregarConfiguracoes() {
+            $.ajax({
+                url: "/Configuracao/GetConfiguracao/",
+                datatype: "json",
+                type: "GET",
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                    config = data.Configuracao
+                    $('#config-titulo').val(config.Titulo)
+                    $('#config-corhoverbotao').val(config.CorHoverBotao)
+                    $('#config-corbotao').val(config.CorBotao)
+                    $('#config-corloginbox').val(config.CorLoginBox)
+                    $('#config-corscroll').val(config.CorScroll)
+                    $('#config-corhoverscroll').val(config.CorHoverScroll)
+                    if (config.LogoId) {
+                        $('#img-logo').css('display', 'block')
+                        $('#img-logo').attr("src", 'data:image/jpeg;base64,' + config.Logo)
+                    } else {
+                        $('#img-logo').css('display', 'none')
+                    }
+
+
+                    if (config.BackgroundId) {
+                        $('#img-background').css('display', 'block')
+                        $('#img-background').attr("src", 'data:image/jpeg;base64,' + config.Background)
+                    } else {
+                        $('#img-background').css('display', 'none')
+                    }
+                }
+            });
+            $.ajax({
+                url: "/Configuracao/GetCamposEnum/",
+                datatype: "json",
+                type: "GET",
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                    campos = data.Campos
+                    $("#config-campos").html(`
+${campos.map(p => `<option value=${p.Id}>${p.Description}</option>`)}
+`)
+                    $('#config-campos').select2();
+                    $.ajax({
+                        url: "/Configuracao/GetCampos/",
+                        datatype: "json",
+                        type: "GET",
+                        contentType: 'application/json; charset=utf-8',
+                        success: function (data) {
+                            campos = data.Campos
+                            $("#config-campos").val(campos.map(campo => campo.CampoId));
+                            $('#config-campos').select2();
+                        }
+                    });
+                }
+            });
+
+        }
+
+        $(document).ready(function () {
+            carregarConfiguracoes()
+        })
+
+        function postArquivo(tipo) {
+            var dataToPost = new FormData($(`#frm-${tipo.toLowerCase()}`)[0]);
+            var filename = dataToPost.get(tipo.toLowerCase()).name
+            var arquivo = new File([dataToPost.get(tipo.toLowerCase())], tipo + ' Sistema' + filename.substr(filename.indexOf('.')));
+            dataToPost.set('Arquivo', arquivo)
+            $.ajax(
+                {
+                    processData: false,
+                    contentType: false,
+                    type: "POST",
+                    data: dataToPost,
+                    url: "Arquivo/PostArquivo",
+                    success: function (data) {
+                        $.ajax(
+                            {
+                                datatype: "json",
+                                type: "POST",
+                                contentType: 'application/json; charset=utf-8',
+                                url: `Configuracao/Post${tipo}`,
+                                data: JSON.stringify(
+                                    {
+                                        Id: data
+                                    }),
+                                success: function () {
+                                    carregarConfiguracoes()
+                                }
+                            });
+                    }
+                });
+        }
+
+        function Logo() {
+            postArquivo('Logo')
+        }
+
+        function Background() {
+            postArquivo('Background')
+        }
+    </script>
+}

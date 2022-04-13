@@ -1,0 +1,305 @@
+﻿@using Microsoft.AspNet.Identity
+@using Utils.Constants;
+@{
+    ViewBag.Numero = new Random().Next();
+}
+
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12" style="padding:5px">
+            <select class="form-control" id="eventoid" onchange="GetResultadosAdmin()">
+                @foreach (var evento in ViewBag.Eventos)
+                {
+                    <option value="@evento.Id">@evento.TipoEvento @evento.Numeracao.ToString()</option>
+                }
+            </select>
+        </div>
+        <div class="col-lg-6 col-xs-12 p-w-xs">
+            <div class="row vertical-align">
+                <div class="pointer" style="width:100%;" onclick="window.location.href='@Url.Action("Index", "Participante")'">
+                    <div class="col-xs-12 col-lg-4 p-w-xs">
+                        <div class="width100 bloco widget blue-bg p-md text-center">
+                            <div class="m-b-xs">
+                                <i class="m-b-sm fa fa-users fa-3x"></i>
+                                <h1 class="m-xs" id="total"></h1>
+
+                                <small>Participantes</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-lg-4 p-w-xs">
+                        <div class="width100 bloco widget navy-bg p-md text-center">
+                            <div class="m-b-xs">
+                                <i class="m-b-sm fa fa-check fa-3x"></i>
+                                <h1 class="m-xs" id="confirmados"></h1>
+
+                                <small>Confirmados</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-lg-4 p-w-xs">
+                        <div class="width100 bloco widget black-bg p-md text-center">
+                            <div class="m-b-xs">
+                                <i class="m-b-sm fa fa-suitcase fa-3x"></i>
+                                <h1 class="m-xs" id="presentes"></h1>
+
+                                <small>Presentes</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-lg-3 p-w-xs">
+                        <div class="width100 bloco widget red-bg p-md text-center">
+                            <div class="m-b-xs">
+                                <i class="m-b-sm fa fa-times fa-3x"></i>
+                                <h1 class="m-xs" id="cancelados"></h1>
+
+                                <small>Cancelados</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-lg-3 p-w-xs">
+                        <div class="width100 bloco widget bg-warning p-md text-center">
+                            <div class="m-b-xs">
+                                <i class="m-b-sm fa fa-user-clock fa-3x"></i>
+                                <h1 class="m-xs" id="espera"></h1>
+
+                                <small>em Espera</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-lg-3 p-w-xs">
+                        <div class="width100 bloco widget male p-lg text-center">
+                            <div class="m-b-xs">
+                                <i class="m-b-sm fa fa-male fa-3x male"></i>
+                                <h1 class="m-xs" id="meninos"></h1>
+
+                                <small>Homens</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-lg-3 p-w-xs">
+                        <div class="width100 bloco widget female p-lg text-center">
+                            <div class="m-b-xs">
+                                <i class="m-b-sm fa fa-female fa-3x female"></i>
+                                <h1 class="m-xs" id="meninas"></h1>
+
+                                <small>Mulheres</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="col-xs-6 col-lg-3 p-w-xs">
+            <div class="width100 bloco widget yellow-bg p-md text-center">
+                <div class="m-b-xs">
+                    <i class="m-b-sm fa fa-barcode fa-3x"></i>
+                    <h1 class="m-xs" id="boletos"></h1>
+
+                    <small>Boletos Pendentes</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-lg-3 p-w-xs">
+            <div class="width100 bloco widget lazur-bg p-md text-center">
+                <div class="m-b-xs">
+                    <i class="m-b-sm fab fa-whatsapp fa-3x"></i>
+                    <h1 class="m-xs" id="contatos"></h1>
+
+                    <small>Contatos Pendentes</small>
+                </div>
+            </div>
+        </div>*@
+                @if (User.IsInRole(Usuario.Admin) || User.IsInRole(Usuario.Master))
+                {
+                    <div class="col-xs-6 col-lg-6 p-w-xs pointer" onclick="window.location.href='@Url.Action("Index", "Lancamento")'">
+                        <div class="width100 bloco widget red-bg p-md text-center">
+                            <div class="m-b-xs">
+                                <i class="m-b-sm far fa-money-bill-alt fa-3x"></i>
+                                <h2 class="m-xs" id="despesa"></h2>
+
+                                <small>Total Despesas</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-lg-6 p-w-xs pointer" onclick="window.location.href='@Url.Action("Index", "Lancamento")'">
+                        <div class="width100 bloco widget navy-bg p-md text-center">
+                            <div class="m-b-xs">
+                                <i class="m-b-sm far fa-money-bill-alt fa-3x"></i>
+                                <h2 class="m-xs" id="receita"></h2>
+
+                                <small>Total Receita</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-lg-4 p-w-xs pointer" onclick="window.location.href='@Url.Action("Index", "Lancamento")'">
+                        <div class="width100 bloco widget blue-bg p-md text-center">
+                            <div class="m-b-xs">
+                                <i class="m-b-sm far fa-money-bill-alt fa-3x"></i>
+                                <h2 class="m-xs" id="saldopix"></h2>
+
+                                <small>Saldo PIX</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-lg-4 p-w-xs pointer" onclick="window.location.href='@Url.Action("Index", "Lancamento")'">
+                        <div class="width100 bloco widget blue-bg p-md text-center">
+                            <div class="m-b-xs">
+                                <i class="m-b-sm far fa-money-bill-alt fa-3x"></i>
+                                <h2 class="m-xs" id="saldodinheiro"></h2>
+
+                                <small>Saldo Dinheiro</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-lg-4 p-w-xs pointer" onclick="window.location.href='@Url.Action("Index", "Lancamento")'">
+                        <div class="width100 bloco widget blue-bg p-md text-center">
+                            <div class="m-b-xs">
+                                <i class="m-b-sm far fa-money-bill-alt fa-3x"></i>
+                                <h2 class="m-xs" id="saldo"></h2>
+
+                                <small>Saldo Geral</small>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="row">
+                <div class="pointer" onclick="window.location.href='@Url.Action("Index", "Participante")'">
+                    <div class="col-xs-12 p-w-xs">
+                        <div class="widget-head-color-box lazur-bg p-lg text-center">
+                            <div class="m-b-md">
+                                <h2 class="font-bold no-margins">
+                                    Últimos Inscritos
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="widget-text-box">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Idade</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ultimos-inscritos"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xs-12 p-w-xs">
+            <div class="pointer">
+                <div class="widget-head-color-box black-bg p-lg text-center">
+                    <div class="m-b-md">
+                        <h2 class="font-bold no-margins">
+                            Equipes
+                        </h2>
+                    </div>
+
+                    <div style="display:flex">
+                        <div style="display:flex; margin:auto">
+                            <i class="m-b-sm fa fa-female fa-2x m-r-xs" style="color: white !important; margin-top: auto; margin-bottom: auto"></i>
+                            <span class="m-r-lg" style="margin-top:auto;margin-bottom:auto" id="equipe-female">32</span>
+                            <i class="m-b-sm fa fa-male fa-2x m-r-xs" style="color: white !important; margin-top: auto; margin-bottom: auto"></i>
+                            <span class="m-r-lg" style="margin-top:auto;margin-bottom:auto" id="equipe-male">32</span>
+                            <i onclick="getEquipantesExcel()" class="m-b-sm fa fa-file-excel fa-2x m-r-xs" style="color: white !important; margin-top: auto; margin-bottom: auto"></i>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-text-box">
+                    <table class="table desktop">
+                        <thead>
+                            <tr>
+                                <th>Equipe</th>
+                                <th>Membros</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb-equipes"></tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <th id="totalEquipe"></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div class="mobile">
+                        <div class="row justify-content-center text-center equipe-mobile-container">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pointer" onclick="window.location.href='@Url.Action("Index", "Reuniao")'">
+                <div class="widget-head-color-box blue-bg p-lg text-center">
+                    <div class="m-b-md">
+                        <h2 class="font-bold no-margins">
+                            Reuniões
+                        </h2>
+                    </div>
+                </div>
+                <div class="widget-text-box">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Reunião</th>
+                                <th>Presentes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb-reunioes"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row detalhamento-equipes">
+        <div class="col-lg-12 col-xs-12">
+            <div class="widget-head-color-box black-bg p-lg text-center">
+                <div class="m-b-md">
+                    <h2 class="font-bold no-margins">
+                        Detalhamento das Equipes
+                    </h2>
+                </div>
+            </div>
+            <div class="widget-text-box">
+                <table class="table desktop">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Fone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb-detalhamento-equipes">
+                    </tbody>
+                </table>
+                <div class="mobile">
+                    <div class="row justify-content-center text-center detalhamento-mobile-container">
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Styles {
+    <link href="~/Content/admin.css" rel="stylesheet">
+
+    <style>
+        .bloco {
+            max-height: 160px;
+        }
+    </style>
+}
+
+@section Scripts {
+
+    <script src="~/Scripts/app/Home/admin.js?@ViewBag.Numero"></script>
+
+    <script>
+
+    </script>
+}

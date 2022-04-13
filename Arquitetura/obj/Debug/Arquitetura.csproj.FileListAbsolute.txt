@@ -1,0 +1,225 @@
+C:\Realidade\Arquitetura\bin\Debug\Arquitetura.dll
+C:\Realidade\Arquitetura\bin\Debug\Arquitetura.pdb
+C:\Realidade\Arquitetura\bin\Debug\EntityFramework.SqlServer.dll
+C:\Realidade\Arquitetura\bin\Debug\EntityFramework.dll
+C:\Realidade\Arquitetura\bin\Debug\EPPlus.dll
+C:\Realidade\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Realidade\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Realidade\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Realidade\Arquitetura\bin\Debug\System.Web.Mvc.dll
+C:\Realidade\Arquitetura\bin\Debug\System.Web.Razor.dll
+C:\Realidade\Arquitetura\bin\Debug\System.Web.Helpers.dll
+C:\Realidade\Arquitetura\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Realidade\Arquitetura\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Realidade\Arquitetura\bin\Debug\System.Web.WebPages.dll
+C:\Realidade\Arquitetura\bin\Debug\Microsoft.Owin.dll
+C:\Realidade\Arquitetura\bin\Debug\Microsoft.Owin.Security.dll
+C:\Realidade\Arquitetura\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Realidade\Arquitetura\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Realidade\Arquitetura\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Realidade\Arquitetura\bin\Debug\Newtonsoft.Json.dll
+C:\Realidade\Arquitetura\bin\Debug\Owin.dll
+C:\Realidade\Arquitetura\bin\Debug\Core.dll
+C:\Realidade\Arquitetura\bin\Debug\Data.dll
+C:\Realidade\Arquitetura\bin\Debug\Utils.dll
+C:\Realidade\Arquitetura\bin\Debug\Core.pdb
+C:\Realidade\Arquitetura\bin\Debug\Data.pdb
+C:\Realidade\Arquitetura\bin\Debug\Utils.pdb
+C:\Realidade\Arquitetura\obj\Debug\Arquitetura.csprojAssemblyReference.cache
+C:\Realidade\Arquitetura\obj\Debug\Arquitetura.csproj.CoreCompileInputs.cache
+C:\Realidade\Arquitetura\obj\Debug\Arquitetura.csproj.CopyComplete
+C:\Realidade\Arquitetura\obj\Debug\Arquitetura.dll
+C:\Realidade\Arquitetura\obj\Debug\Arquitetura.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Arquitetura.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Arquitetura.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\EntityFramework.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\EPPlus.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.Mvc.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.Razor.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.Helpers.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.WebPages.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Owin.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Newtonsoft.Json.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Owin.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Core.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Data.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Utils.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Core.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Data.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Utils.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.csprojAssemblyReference.cache
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.csproj.CoreCompileInputs.cache
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.csproj.CopyComplete
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.pdb
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Arquitetura.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Arquitetura.pdb
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\EntityFramework.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\EPPlus.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.Mvc.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.Razor.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.Helpers.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.WebPages.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Owin.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Newtonsoft.Json.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Owin.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Core.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Data.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Utils.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Core.pdb
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Data.pdb
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Utils.pdb
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.csprojAssemblyReference.cache
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.csproj.CopyComplete
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Arquitetura.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Arquitetura.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\EntityFramework.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\EPPlus.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.Mvc.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.Razor.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.Helpers.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\System.Web.WebPages.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Owin.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Newtonsoft.Json.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Owin.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Core.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Data.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Utils.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Core.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Data.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\bin\Debug\Utils.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.csprojAssemblyReference.cache
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Arquitetura\obj\Debug\Arquitetura.pdb
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Arquitetura.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Arquitetura.pdb
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\EntityFramework.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\EPPlus.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\System.Web.Mvc.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\System.Web.Razor.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\System.Web.Helpers.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\System.Web.WebPages.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Microsoft.Owin.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Newtonsoft.Json.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Owin.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Core.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Data.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Utils.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Core.pdb
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Data.pdb
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\bin\Debug\Utils.pdb
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\obj\Debug\Arquitetura.csprojAssemblyReference.cache
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\obj\Debug\Arquitetura.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\obj\Debug\Arquitetura.dll
+C:\Users\felipe\Source\Repos\Realidade\Arquitetura\obj\Debug\Arquitetura.pdb
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Arquitetura.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Arquitetura.pdb
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\EPPlus.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\System.Web.Mvc.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\System.Web.Razor.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\System.Web.Helpers.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\System.Web.WebPages.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Microsoft.Owin.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Owin.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Core.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Data.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Utils.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Core.pdb
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Data.pdb
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Utils.pdb
+C:\Users\User\source\repos\Realidade\Arquitetura\obj\Debug\Arquitetura.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Realidade\Arquitetura\obj\Debug\Arquitetura.csproj.CopyComplete
+C:\Users\User\source\repos\Realidade\Arquitetura\obj\Debug\Arquitetura.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\obj\Debug\Arquitetura.pdb
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\System.Linq.Dynamic.dll
+C:\Users\User\source\repos\Realidade\Arquitetura\obj\Debug\Arquitetura.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Arquitetura.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Arquitetura.pdb
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\EntityFramework.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\EPPlus.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\System.Web.Mvc.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\System.Web.Razor.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\System.Web.Helpers.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\System.Web.WebPages.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Microsoft.Owin.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Owin.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\System.Linq.Dynamic.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Core.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Data.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Utils.dll
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Core.pdb
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Data.pdb
+C:\Users\User\source\repos\ejc\Arquitetura\bin\Debug\Utils.pdb
+C:\Users\User\source\repos\ejc\Arquitetura\obj\Debug\Arquitetura.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ejc\Arquitetura\obj\Debug\Arquitetura.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ejc\Arquitetura\obj\Debug\Arquitetura.csproj.CopyComplete
+C:\Users\User\source\repos\ejc\Arquitetura\obj\Debug\Arquitetura.dll
+C:\Users\User\source\repos\ejc\Arquitetura\obj\Debug\Arquitetura.pdb

@@ -1,0 +1,15 @@
+.main-container ul{
+  width: 50%;
+  list-style: none;
+  display: grid;
+  grid-gap: 20px;
+}
+
+.main-container .main-ul {  
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.main-container .second-ul {  
+  grid-template-columns: repeat(2, 1fr);
+}
+

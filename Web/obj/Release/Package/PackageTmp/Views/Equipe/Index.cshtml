@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Numero = new Random().Next();
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>@ViewBag.Title</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/Home/Index">Home</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>@ViewBag.Title</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="ibox">
+        <div class="ibox-title" style="display: flex;justify-content: space-between;">
+            <h4>@ViewBag.Title</h4>
+            <div class="ibox-tools pull-right">
+                <select class="form-control" id="equipe-eventoid" onchange="CarregarTabelaEquipe()">
+                    @foreach (var evento in ViewBag.Eventos)
+                    {
+                        <option value="@evento.Id">@evento.TipoEvento @evento.Numeracao.ToString()</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <table id="table-equipe" class="table table-striped table-bordered table-hover" cellspacing="0" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>Equipe</th>
+                        <th>Membros</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="modal-membros-equipe" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                <h5 class="modal-title titulo-equipe"></h5>
+            </div>
+            <div class="modal-body">
+                <div class="moldura-modal p-h-xs">
+                    <div class="row p-h-xs">
+                        <input type="hidden" id="equipe-id" />
+                        <div class="col-sm-12 p-w-md m-b-sm">
+                            <h5>Adicionar Membro</h5>
+                            <select class="form-control chosen-select" id="equipe-equipantes" onchange="AddMembroEquipe()"></select>
+                        </div>
+                        <div class="col-sm-12 p-md">
+                            <table id="table-membros-equipe" class="table table-striped table-bordered table-hover" cellspacing="0" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Idade</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white pull-right m-l-sm" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-white pull-right m-l-sm" onclick="PrintEquipe()">Imprimir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    <script src="~/Scripts/app/Util/pdf.js"></script>
+    <script src="~/Scripts/app/Relatorio/relatorio.js?@ViewBag.Numero"></script>
+    <script src="~/Scripts/app/Equipe/equipe.js?@ViewBag.Numero"></script>
+
+    <script>
+
+    </script>
+}

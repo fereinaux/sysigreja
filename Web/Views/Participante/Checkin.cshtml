@@ -1,0 +1,508 @@
+﻿@{
+    ViewBag.Numero = new Random().Next();
+}
+@using Utils.Enums;
+@using Utils.Extensions;
+
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="moldura-modal p-h-xs m-b-md">
+                <div class="row m-sm">
+                    <div class="col-sm-3 text-right">
+                        <h4>Evento</h4>
+                    </div>
+                    <div class="col-sm-9">
+                        <select class="chosen-select" id="eventoid" onchange="Refresh()">
+                            @foreach (var evento in ViewBag.Eventos)
+                            {
+                                <option value="@evento.Id">@evento.TipoEvento @evento.Numeracao.ToString()</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row m-sm">
+                    <div class="col-sm-3 text-right">
+                        <h4>Participante</h4>
+                    </div>
+                    <div class="col-sm-9">
+                        <select class="chosen-select" id="participantes" onchange="GetParticipante()"></select>
+                    </div>
+
+                </div>
+
+
+                <div class="row m-sm">
+                    <div class="col-sm-3 text-right">
+                        <h4>Equipante</h4>
+                    </div>
+                    <div class="col-sm-9">
+                        <select class="chosen-select" id="equipantes" onchange="GetEquipante()"></select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="moldura-modal p-h-xs participante-info m-b-md">
+                <div class="row p-h-xs">
+                    <input type="hidden" id="pagamentos-participanteid" />
+                    <input type="hidden" id="pagamentos-equipanteid" />
+                    <input type="hidden" id="pagamentos-whatsapp" />
+                    <div class="col-sm-6 p-w-md text-center">
+                        <h5>Forma de Pagamento</h5>
+
+                        <select class="form-control" id="pagamentos-meiopagamento">
+                            @foreach (var meioPagamento in ViewBag.MeioPagamentos)
+                            {
+                                <option data-taxa="@meioPagamento.Taxa" value="@meioPagamento.Id">@meioPagamento.Descricao</option>
+                            }
+                        </select>
+
+                    </div>
+                    <div class="col-sm-6 p-w-md text-center d-none contabancaria">
+                        <h5>Banco</h5>
+
+                        <select class="form-control" id="pagamentos-contabancaria">
+                            @foreach (var contabancaria in ViewBag.ContasBancarias)
+                            {
+                                <option value="@contabancaria.Id">@contabancaria.Banco</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-sm-6 p-w-md text-center">
+                        <h5>Valor</h5>
+
+                        <input type="number" step="any" value="0" class="form-control required" data-valor-equipante="@ViewBag.ValorEquipante" data-valor-realista="@ViewBag.ValorRealista" id="pagamentos-valor" data-field="Valor" />
+                    </div>
+                    <div class="col-sm-12 p-md text-center">
+                        <button type="button" class="btn btn-white" onclick="PostPagamento()">Salvar</button>
+                    </div>
+                    <div class="col-sm-12 p-md">
+                        <table id="table-pagamentos" class="table table-striped table-bordered table-hover" cellspacing="0" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th>Forma de Pagamento</th>
+                                    <th>Valor</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="moldura-modal p-h-xs">
+
+                <div class="row p-md">
+                    <form enctype="multipart/form-data" id="frm-upload-arquivo-modal" method="post" novalidate="novalidate">
+                        <input type="hidden" name="ParticipanteIdModal" id="ParticipanteIdModal" />
+                        <input type="hidden" name="LancamentoIdModal" id="LancamentoIdModal" />
+                        <label for="arquivo-modal" style="width: 100%;" class="inputFile">
+                            <span class="btn btn-default inputFile" style="width: 100%;" aria-hidden="true">Adicionar</span>
+                            <input style="display: none;" class="custom-file-input inputFile" id="arquivo-modal" name="arquivo-modal" type="file" value="">
+                        </label>
+                    </form>
+                    <table id="table-anexos" class="table table-striped table-bordered table-hover" cellspacing="0" style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th>Arquivo</th>
+                                <th>Extensão</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="row m-md moldura-modal " style="margin:0px;position:relative">
+                <div onclick="Refresh()" class="refresh-panel pointer">
+                    <i class="fa fa-sync "></i>
+                </div>
+
+                <div class="col-xs-12 col-md-6 ">
+                    <row class="row m-sm">
+                        <h3 class="text-center">Participantes</h3>
+                        <div class="col-xs-6 panel-total p-w-md text-center">
+                            <i class="fa fa-check fa-3x"></i>
+                            <h5 class="text-center">Confirmados</h5>
+                            <h3 class="text-center confirmados"></h3>
+                        </div>
+                        <div class="col-xs-6 panel-total p-w-md text-center">
+                            <i class="fa fa-suitcase fa-3x"></i>
+                            <h5 class="text-center">Presentes</h5>
+                            <h3 class="text-center presentes"></h3>
+                        </div>
+                    </row>
+                </div>
+                <div class="col-xs-12 col-md-6 ">
+                    <row class="row m-sm">
+                        <h3 class="text-center">Equipantes</h3>
+                        <div class="col-xs-6 panel-total p-w-md text-center">
+                            <i class="fa fa-check fa-3x"></i>
+                            <h5 class="text-center">Confirmados</h5>
+                            <h3 class="text-center confirmados-equipantes"></h3>
+                        </div>
+                        <div class="col-xs-6 panel-total p-w-md text-center">
+                            <i class="fa fa-suitcase fa-3x"></i>
+                            <h5 class="text-center">Presentes</h5>
+                            <h3 class="text-center presentes-equipantes"></h3>
+                        </div>
+                    </row>
+                </div>
+
+            </div>
+            <div class="moldura-modal p-h-xs m-t-md m-b-md participante-info d-none">
+                <div class="row p-h-xs ">
+                    <div class="col-xs-4 col-md-2 p-w-md text-center">
+                        <i class="fa fa-info-circle fa-3x"></i>
+                        <h5 class="text-center status"></h5>
+                    </div>
+                    <div class="col-xs-4 col-md-2 p-w-md text-center dados-participante-contato">
+                        <i class="far fa-circle fa-3x"></i>
+                        <h5 class="text-center circulo"></h5>
+                    </div>
+                    <div class="col-xs-4 col-md-2 p-w-md text-center dados-participante-contato">
+                        <i class="fa fa-home fa-3x"></i>
+                        <h5 class="text-center quarto"></h5>
+                    </div>
+                    <div class="col-xs-4 col-md-2 p-w-md text-center dados-equipante">
+                        <i class="fa fa-paste fa-3x"></i>
+                        <h5 class="text-center equipe"></h5>
+                    </div>
+                    <div class="col-xs-4 col-md-2 p-w-md text-center">
+                        <div id="vacina"></div>
+                        <h5 class="text-center">Vacina</h5>
+                    </div>
+                    <div class="col-xs-4 col-md-2 p-w-md text-center">
+                        <div id="teste"></div>
+                        <h5 class="text-center">Teste</h5>
+                    </div>
+                    <div class="col-xs-4 col-md-2 p-w-md text-center dados-participante-contato">
+                        <i class="fas fa-laptop fa-3x"></i>
+                        <h5 class="text-center padrinho">Padrinho</h5>
+                    </div>
+                </div>
+                <div class="row p-h-xs  dados-participante-contato">
+                    <div class="col-xs-12 col-md-12 p-w-md text-center ">
+                        <div id="marcadores">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="moldura-modal p-h-xs d-none" id="form-participante">
+                <div class="row">
+                    <div class="col-sm-12 p-w-md">
+                        <button class="btn btn-info btn-checkin participante-info" onclick="Checkin()">Check-in</button>
+                        <button class="btn btn-danger btn-cancelarcheckin participante-info" onclick="Checkin()">Cancelar Check-in</button>
+                        <div class="pull-right">
+                            @*<button class="btn btn-primary m-r-xs" onclick="NewParticipante()">Novo</button>*@
+                            <button class="btn btn-primary" onclick="PostParticipante()">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-h-xs">
+
+                    <input type="hidden" id="participante-id" />
+                    <input type="hidden" id="equipante-id" />
+                    <input type="hidden" id="participante-checkin" />
+                    <input type="hidden" id="participante-cancelarcheckin" />
+                    <div class="col-sm-6" style="display:none" id="div-foto">
+                        <img id="foto" style="height:300px;margin:auto" src="" class="m-auto" />
+                    </div>
+                    <div class="col-sm-6 p-w-md m-t-md text-center dados-participante-contato">
+                        <h5>Marcadores</h5>
+                        <select class="form-control participante-etiquetas" id="participante-etiquetas" multiple="multiple" style="width: 100%">
+                        </select>
+                    </div>
+
+                    @if (ViewBag.Campos.Contains(CamposEnum.Nome.GetDescription()))
+                    {
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Nome</h5>
+
+                            <input type="text" class="form-control required" id="participante-nome" data-field="Nome" />
+                        </div>
+                    }
+                    @if (ViewBag.Campos.Contains(CamposEnum.Apelido.GetDescription()))
+                    {
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Apelido</h5>
+
+                            <input type="text" class="form-control required" id="participante-apelido" data-field="Apelido" />
+                        </div>
+                    }
+                    @if (ViewBag.Campos.Contains(CamposEnum.DataNascimento.GetDescription()))
+                    {
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Data de Nascimento</h5>
+
+                            <input type="text" class="form-control full-date required" id="participante-data-nascimento" data-field="Data de Nascimento" />
+                        </div>
+                    }
+                    @if (ViewBag.Campos.Contains(CamposEnum.Genero.GetDescription()))
+                    {
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Sexo</h5>
+
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="participante-sexo" checked="" value="1" name="participante-sexo"> <i></i> Masculino </label></div>
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="participante-sexo" value="2" name="participante-sexo"> <i></i> Feminino </label></div>
+                        </div>
+                    }
+
+                    <div class="col-sm-6 p-w-md m-t-md text-center">
+                        <h5>Email</h5>
+
+                        <input type="text" class="form-control" id="participante-email" data-field="Email" />
+                    </div>
+                    @if (ViewBag.Campos.Contains(CamposEnum.Fone.GetDescription()))
+                    {
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>WhatsApp</h5>
+
+                            <input type="text" class="form-control fone" id="participante-fone" data-field="WhatsApp" placeholder="+55 (81) 9999-9999" />
+                        </div>
+                    }
+                    @if (ViewBag.Campos.Contains(CamposEnum.Instagram.GetDescription()))
+                    {
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Instagram</h5>
+
+                            <input type="text" class="form-control " id="participante-instagram" data-field="Instagram" />
+                        </div>
+                    }
+                    @if (ViewBag.Campos.Contains(CamposEnum.Endereco.GetDescription()))
+                    {
+
+                <div class="col-sm-3 p-w-md m-t-md text-center">
+                    <h5>CEP</h5>
+
+                    <input type="text" class="form-control required cep" id="participante-cep" data-field="CEP" onkeyup="verificaCep(this)" />
+                    <input type="hidden" id="participante-latitude" />
+                    <input type="hidden" id="participante-longitude" />
+                </div>
+
+                        <div class="col-sm-9 p-w-md m-t-md text-center">
+                            <h5>Logradouro</h5>
+
+                            <input type="text" class="form-control required" disabled id="participante-logradouro" data-field="Logradouro" />
+                        </div>
+
+                        <div class="col-sm-5 p-w-md m-t-md text-center">
+                            <h5>Bairro</h5>
+
+                            <input type="text" class="form-control required" disabled id="participante-bairro" data-field="Bairro" />
+                        </div>
+
+                        <div class="col-sm-5 p-w-md m-t-md text-center">
+                            <h5>
+                                Cidade
+                            </h5>
+
+                            <input type="text" class="form-control required" disabled id="participante-cidade" data-field="Cidade" />
+                        </div>
+
+                        <div class="col-sm-2 p-w-md m-t-md text-center">
+                            <h5>
+                                Estado
+                            </h5>
+
+                            <input type="text" class="form-control required" disabled id="participante-estado" data-field="Estado" />
+                        </div>
+
+                        <div class="col-sm-4 p-w-md m-t-md text-center">
+                            <h5>
+                                Número
+                            </h5>
+
+                            <input type="text" class="form-control" id="participante-numero" data-field="Número" />
+                        </div>
+
+
+                        <div class="col-sm-8 p-w-md m-t-md text-center">
+                            <h5>
+                                Complemento
+                            </h5>
+
+                            <input type="text" class="form-control" id="participante-complemento" data-field="Complemento" />
+                        </div>
+
+
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>
+                                Ponto de Referência
+                            </h5>
+
+                            <input type="text" class="form-control" id="participante-referencia" data-field="Ponto de Referência" />
+                        </div>
+
+                        <div class="col-sm-12 p-w-md m-t-md text-center div-map" style="display: none">
+                            <div id="map" style="height:300px;">
+                            </div>
+                        </div>
+                    }
+                <div class="dados-participante-contato">
+                    @if (ViewBag.Campos.Contains(CamposEnum.Mae.GetDescription()))
+                    {
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Nome da Mãe</h5>
+                            <input type="text" class="form-control required" id="participante-nome-mae" data-field="Nome da Mãe" />
+                        </div>
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Fone da Mãe</h5>
+                            <input type="text" class="form-control fone" id="participante-fone-mae" data-field="Fone da Mãe" />
+                        </div>
+                    }
+
+                    @if (ViewBag.Campos.Contains(CamposEnum.Pai.GetDescription()))
+                    {
+
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Nome do Pai</h5>
+                            <input type="text" class="form-control required" id="participante-nome-pai" data-field="Nome do Pai" />
+                        </div>
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Fone do Pai</h5>
+                            <input type="text" class="form-control fone" id="participante-fone-pai" data-field="Fone do Pai" />
+                        </div>
+                    }
+
+                    @if (ViewBag.Campos.Contains(CamposEnum.Contato.GetDescription()))
+                    {
+
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Pessoa de Contato</h5>
+
+                            <input type="text" class="form-control required" id="participante-nome-contato" data-field="Pessoa de Contato" />
+                        </div>
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Fone do Contato</h5>
+
+                            <input type="text" class="form-control fone" id="participante-fone-contato" data-field="Fone do Contato" placeholder="+55 (81) 9999-9999" />
+                        </div>
+                    }
+
+                    @if (ViewBag.Campos.Contains(CamposEnum.Convite.GetDescription()))
+                    {
+
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Pessoa que convidou</h5>
+
+                            <input type="text" class="form-control required" id="participante-nome-convite" data-field="Pessoa que convidou" />
+                        </div>
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Fone de quem convidou</h5>
+
+                            <input type="text" class="form-control fone" id="participante-fone-convite" data-field="Fone de quem convidou" placeholder="+55 (81) 9999-9999" />
+                        </div>
+                    }
+                </div>
+
+                    @if (ViewBag.Campos.Contains(CamposEnum.Medicacao.GetDescription()))
+                    {
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Toma alguma medicação?</h5>
+
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="has-medicacao" value="true" name="participante-hasmedicacao"> <i></i> Sim </label></div>
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="not-medicacao" checked="" value="false" name="participante-hasmedicacao"> <i></i> Não </label></div>
+
+                            <div class="medicacao d-none">
+                                <h5>Qual?</h5>
+                                <input type="text" class="form-control" id="participante-medicacao" data-field="Medicação" />
+                            </div>
+                        </div>
+                    }
+
+                    @if (ViewBag.Campos.Contains(CamposEnum.Alergia.GetDescription()))
+                    {
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Tem alguma alergia?</h5>
+
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="has-alergia" value="true" name="participante-hasalergia"> <i></i> Sim </label></div>
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="not-alergia" checked="" value="false" name="participante-hasalergia"> <i></i> Não </label></div>
+
+                            <div class="alergia d-none">
+                                <h5>Qual?</h5>
+                                <input type="text" class="form-control" id="participante-alergia" data-field="Alergia" />
+                            </div>
+                        </div>
+                    }
+
+                    @if (ViewBag.Campos.Contains(CamposEnum.Restricao.GetDescription()))
+                    {
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Tem alguma restrição alimentar?</h5>
+
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="has-restricaoalimentar" value="true" name="participante-hasrestricaoalimentar"> <i></i> Sim </label></div>
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="not-restricaoalimentar" checked="" value="false" name="participante-hasrestricaoalimentar"> <i></i> Não </label></div>
+
+                            <div class="restricaoalimentar d-none">
+                                <h5>Qual?</h5>
+                                <input type="text" class="form-control" id="participante-restricaoalimentar" data-field="Restrição Alimentar" />
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div id="form-info" class="d-none">
+
+
+                    <h3 class="text-center">Observações</h3>
+                    <div class="row m-md">
+                        <textarea style="height: 200px" class="form-control required" id="participante-obs"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="modal-etiquetas" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-body">
+                <div class="row p-w-md">
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(1) "><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(2) "><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(3) "><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(4) "><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(5) "><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(6) "><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(7) "><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(8) "><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(9) "><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(10)"><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(11)"><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(12)"><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(13)"><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                    <div class="col-xs-6 p-xs" onclick="CarregarEtiquetaIndividual(14)"><div class="pointer" style="height:55px;width:100%;background-color:#d1dce3;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css"
+          type="text/css" />
+    <style>
+        .d-none {
+            display: none;
+        }
+    </style>
+}
+
+@section Scripts {
+
+    <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
+    <script src="~/Scripts/app/Util/mapa.js"></script>
+    <script src="~/Scripts/app/Participante/checkin.js?@ViewBag.Numero"></script>
+
+    <script>
+
+    </script>
+}

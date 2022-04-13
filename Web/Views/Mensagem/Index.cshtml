@@ -1,0 +1,97 @@
+﻿<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>@ViewBag.Title</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/Home/Index">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#">Configurações</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>@ViewBag.Title</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="ibox">
+        <div class="ibox-title" style="display: flex;justify-content: space-between;">
+            <h4>@ViewBag.Title</h4>
+            <div class="ibox-tools pull-right">
+                <button class="btn btn-default" id="btn_Adicionar" onclick="EditMensagem(0)">Adicionar</button>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <table id="table-mensagem" class="table table-striped table-bordered table-hover" cellspacing="0" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="modal-mensagem" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-body">
+                <div class="moldura-modal p-h-xs" id="form-mensasgem">
+                    <div class="row p-h-xs">
+                        <input type="hidden" id="mensagem-id" />
+                        <div class="col-sm-12 p-w-md text-center">
+                            <h5>Título</h5>
+
+                            <input type="text" class="form-control required" id="mensagem-titulo" data-field="Título" />
+                        </div>
+
+                        <div class="col-sm-12 p-w-md  m-t-md text-center">
+                            <h5>Conteúdo</h5>
+
+                            <ul class="list-opcoes-msg">
+                                <li><span onclick="AddText('${Nome Participante}')" class="badge m-r-xs badge-primary">Nome Participante</span></li>
+                                <li><span onclick="AddText('${Nome Contato}')" class="badge m-r-xs badge-info">Nome Contato</span></li>
+                            </ul>
+                            <textarea style="height: 200px" class="form-control required" id="mensagem-conteudo" data-field="Conteúdo"></textarea>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white pull-right m-l-sm" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-white pull-right" onclick="PostMensagem()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+
+    .list-opcoes-msg {
+        display: flex;
+        list-style-type: none;
+        padding:0;
+    }
+
+        .list-opcoes-msg li {
+            cursor:pointer;
+        }
+    </style>
+}
+
+@section Scripts {
+
+    <script src="~/Scripts/app/Mensagem/mensagem.js"></script>
+
+    <script>
+
+    </script>
+}

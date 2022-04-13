@@ -1,0 +1,622 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NWebsec.AspNetCore.Mvc</name>
+    </assembly>
+    <members>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspAttribute">
+            <summary>
+            When applied to a controller or action method, enables the Content-Security-Policy header (assuming there are directives enabled). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspBaseUriAttribute">
+            <summary>
+            When applied to a controller or action method, enables the base-uri directive for the CSP header (CSP 2). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspBaseUriReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the base-uri directive for the CSP Report Only header (CSP 2). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspBlockAllMixedContentAttribute">
+            <summary>
+            When applied to a controller or action method, enables the block-all-mixed-content directive for the CSP header (CSP 3.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspBlockAllMixedContentReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the block-all-mixed-content directive for the CSP header (CSP 3.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspChildSrcAttribute">
+            <summary>
+            When applied to a controller or action method, enables the child-src directive for the CSP header (CSP 2). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspChildSrcReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the child-src directive for the CSP Report Only header (CSP 2). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspConnectSrcAttribute">
+            <summary>
+            When applied to a controller or action method, enables the connect-src directive for the CSP header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspConnectSrcReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the connect-src directive for the CSP Report Only header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspDefaultSrcAttribute">
+            <summary>
+            When applied to a controller or action method, enables the default-src directive for the CSP header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspDefaultSrcReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the default-src directive for the CSP Report Only header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspFontSrcAttribute">
+            <summary>
+            When applied to a controller or action method, enables the font-src directive for the CSP header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspFontSrcReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the font-src directive for the CSP Report Only header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspFormActionAttribute">
+            <summary>
+            When applied to a controller or action method, enables the form-action directive for the CSP header (CSP 2). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspFormActionReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the form-action directive for the CSP Report Only header (CSP 2). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspFrameAncestorsAttribute">
+            <summary>
+            When applied to a controller or action method, enables the frame-ancestors directive for the CSP header (CSP 2). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspFrameAncestorsReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the frame-ancestors directive for the CSP Report Only header (CSP 2). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspFrameSrcAttribute">
+            <summary>
+            When applied to a controller or action method, enables the frame-src directive for the CSP header (CSP 1.0). 
+            <remarks>This directive has been deprecated in CSP 2, consider using child-src instead.</remarks>
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspFrameSrcReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the frame-src directive for the CSP Report Only header (CSP 1.0). 
+            <remarks>This directive has been deprecated in CSP 2, consider using child-src instead.</remarks>
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspImgSrcAttribute">
+            <summary>
+            When applied to a controller or action method, enables the img-src directive for the CSP header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspImgSrcReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the img-src directive for the CSP Report Only header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspManifestSrcAttribute">
+            <summary>
+            When applied to a controller or action method, enables the manifest-src directive for the CSP header (CSP 3). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspManifestSrcReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the manifest-src directive for the CSP Report Only header (CSP 3). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspMediaSrcAttribute">
+            <summary>
+            When applied to a controller or action method, enables the media-src directive for the CSP header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspMediaSrcReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the media-src directive for the CSP Report Only header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspObjectSrcAttribute">
+            <summary>
+            When applied to a controller or action method, enables the object-src directive for the CSP header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspObjectSrcReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the object-src directive for the CSP Report Only header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspPluginTypesAttribute">
+            <summary>
+            When applied to a controller or action method, enables the plugin-types directive for the CSP header (CSP 2). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspPluginTypesReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the plugin-types directive for the CSP Report Only header (CSP 2). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the Content-Security-Policy-Report-Only header (assuming there are directives enabled). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspReportUriAttribute">
+            <summary>
+            When applied to a controller or action method, enables the report-uri directive for the CSP header (CSP 1.0).
+            Support for absolute URIs was added in CSP 2. 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspReportUriReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the report-uri directive for the CSP Report Only header (CSP 1.0).
+            Support for absolute URIs was added in CSP 2.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspSandboxAttribute">
+            <summary>
+            When applied to a controller or action method, enables the sandbox directive for the CSP header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspSandboxReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the sandbox directive for the CSP header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspScriptSrcAttribute">
+            <summary>
+            When applied to a controller or action method, enables the script-src directive for the CSP header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.CspScriptSrcAttribute.UnsafeInline">
+            <summary>
+            Gets or sets whether the 'unsafe-inline' source is included in the directive. Not setting it will inherit existing configuration.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.CspScriptSrcAttribute.UnsafeEval">
+            <summary>
+            Gets or sets whether the 'unsafe-eval' source is included in the directive. Not setting it will inherit existing configuration.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.CspScriptSrcAttribute.StrictDynamic">
+            <summary>
+            Gets or sets whether the 'strict-dynamic' source is included in the directive. Not setting it will inherit existing configuration.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspScriptSrcReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the script-src directive for the CSP Report Only header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspStyleSrcAttribute">
+            <summary>
+            When applied to a controller or action method, enables the style-src directive for the CSP header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.CspStyleSrcAttribute.UnsafeInline">
+            <summary>
+            Gets or sets whether the 'unsafe-inline' source is included in the directive. Not setting it will inherit existing configuration.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspStyleSrcReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the style-src directive for the CSP Report Only header (CSP 1.0). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspWorkerSrcAttribute">
+            <summary>
+            When applied to a controller or action method, enables the worker-src directive for the CSP header (CSP 3). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.CspWorkerSrcReportOnlyAttribute">
+            <summary>
+            When applied to a controller or action method, enables the worker-src directive for the CSP Report Only header (CSP 3). 
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.Internals.CspAttributeBase">
+            <summary>
+            This is an abstract class which cannot be used directly.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspAttributeBase.Enabled">
+            <summary>
+            Gets or sets whether the header is set in the HTTP response. The default is true.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.Internals.CspBlockAllMixedContentAttributeBase">
+            <summary>
+            This class is abstract and cannot be used directly.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspBlockAllMixedContentAttributeBase.Enabled">
+            <summary>
+            Sets whether the block-all-mixed-content directive is enabled in the CSP header. The default is true.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.Internals.CspDirectiveAttributeBase">
+            <summary>
+            This is a base class which should not be used directly.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspDirectiveAttributeBase.Enabled">
+            <summary>
+            Gets or sets whether the CSP directive is enabled in the CSP header. The default is true.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspDirectiveAttributeBase.None">
+            <summary>
+            Sets whether the 'none' source is included in the directive. Not setting it will inherit existing configuration.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspDirectiveAttributeBase.Self">
+            <summary>
+            Gets or sets whether the 'self' source is included in the directive. Not setting it will inherit existing configuration (default behaviour).
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspDirectiveAttributeBase.InheritCustomSources">
+            <summary>
+            Gets or sets whether CustomSources should be inherited from previous settings. The default is true.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspDirectiveAttributeBase.CustomSources">
+            <summary>
+            Gets or sets other sources for the directive. Sources are separated by exactly one whitespace. Source examples are scheme only ("https:"), any host ("*"),
+            a host ("*.nwebsec.com", "www.nwebsec.com", "https://www.nwebsec.com", "www.nwebsec.com:443", "https://www.nwebsec.com:*").
+            See the Content Security Policy Level 2 standard for details.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.Internals.CspPluginTypesAttributeBase">
+            <summary>
+            This class is abstract and cannot be used directly.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspPluginTypesAttributeBase.Enabled">
+            <summary>
+            Sets whether the plugin-types directive is enabled in the CSP header. The default is true.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspPluginTypesAttributeBase.InheritMediaSources">
+            <summary>
+            Gets or sets whether Media Types should be inherited from previous settings. The default is true.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspPluginTypesAttributeBase.MediaTypes">
+            <summary>
+            Sets the media types for the directive. Media types are separated by exactly one whitespace.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.Internals.CspReportUriAttributeBase">
+            <summary>
+            This class is abstract and cannot be used directly.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspReportUriAttributeBase.Enabled">
+            <summary>
+            Gets or sets whether the report-uri directive is enabled in the CSP header. The default is true.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspReportUriAttributeBase.ReportUris">
+            <summary>
+            Gets or sets custom report URIs for the directive. Report URIs are separated by exactly one whitespace.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.Csp.Internals.CspSandboxAttributeBase">
+            <summary>
+            This class is abstract and cannot be used directly.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspSandboxAttributeBase.Enabled">
+            <summary>
+            Sets whether the sandbox directive is enabled in the CSP header. The default is true.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspSandboxAttributeBase.AllowForms">
+            <summary>
+            Sets whether the allow-forms flag is included in the sandbox directive. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspSandboxAttributeBase.AllowModals">
+            <summary>
+            Sets whether the allow-modals flag is included in the sandbox directive. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspSandboxAttributeBase.AllowOrientationLock">
+            <summary>
+            Sets whether the allow-orientation-lock flag is included in the sandbox directive. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspSandboxAttributeBase.AllowPointerLock">
+            <summary>
+            Sets whether the allow-pointer-lock flag is included in the sandbox directive. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspSandboxAttributeBase.AllowPopups">
+            <summary>
+            Sets whether the allow-popups flag is included in the sandbox directive. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspSandboxAttributeBase.AllowPopupsToEscapeSandbox">
+            <summary>
+            Sets whether the allow-popups-to-escape-sandbox flag is included in the sandbox directive. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspSandboxAttributeBase.AllowPresentation">
+            <summary>
+            Sets whether the allow-presentation flag is included in the sandbox directive. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspSandboxAttributeBase.AllowSameOrigin">
+            <summary>
+            Sets whether the allow-same-origin flag is included in the sandbox directive. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspSandboxAttributeBase.AllowScripts">
+            <summary>
+            Sets whether the allow-scripts flag is included in the sandbox directive. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.Csp.Internals.CspSandboxAttributeBase.AllowTopNavigation">
+            <summary>
+            Sets whether the allow-top-navigation flag is included in the sandbox directive. The default is false.
+            </summary>
+        </member>
+        <member name="M:NWebsec.AspNetCore.Mvc.Internals.HttpHeaderAttributeBase.CreateAttributeException(System.String,System.Exception)">
+            <summary>
+            Creates an exception with message prefixed with the current type name, to give a hint about the current attribute.
+            </summary>
+            <param name="message"></param>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.NoCacheHttpHeadersAttribute">
+            <summary>
+            Specifies whether appropriate headers to prevent browser caching should be set in the HTTP response.
+            </summary>
+        </member>
+        <member name="M:NWebsec.AspNetCore.Mvc.NoCacheHttpHeadersAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NWebsec.AspNetCore.Mvc.NoCacheHttpHeadersAttribute"/> class
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.NoCacheHttpHeadersAttribute.Enabled">
+            <summary>
+            Gets of sets whether cache headers should be included in the response to prevent browser caching. The default is true.
+            </summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.ReferrerPolicy.Disabled">
+            <summary>Specifies that the Referrer-Policy header should not be set in the HTTP response.</summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.ReferrerPolicy.NoReferrer">
+            <summary>
+            Enables the no-referrer policy, instructing the browser to not send referrer information.
+            </summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.ReferrerPolicy.NoReferrerWhenDowngrade">
+            <summary>
+            Enables the no-referrer-when-downgrade policy, instructing the browser to send full referrer
+            information unless navigation is from HTTPS->HTTP.
+            </summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.ReferrerPolicy.SameOrigin">
+            <summary>
+            Enables the same-origin policy, instructing the browser to send full referrer information for
+            same-origin requests and no referrer for cross-origin requests.
+            </summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.ReferrerPolicy.Origin">
+            <summary>
+            Enables the origin policy, instructing the browser to send origin (no path and query) as
+            referrer information for both same-origin and cross-origin requests.
+            </summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.ReferrerPolicy.StrictOrigin">
+            <summary>
+            Enables the strict-origin policy, instructing the browser to send origin (no path and query) as
+            referrer information for both same-origin and cross-origin HTTPS -> HTTPS and HTTP -> HTTP requests.
+            HTTPS -> HTTP requests will not include referrer information.
+            </summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.ReferrerPolicy.OriginWhenCrossOrigin">
+            <summary>
+            Enables the origin-when-cross-origin policy, instructing the browser to send full referrer information for
+            same-origin requests and origin (no path and query) as referrer information for cross-origin requests (includes HTTPS -> HTTP and HTTP -> HTTPS).
+            </summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.ReferrerPolicy.StrictOriginWhenCrossOrigin">
+            <summary>
+            Enables the strict-origin-when-cross-origin policy, instructing the browser to send full referrer information for
+            same-origin requests and origin (no path and query) as referrer information for cross-origin requests. Referrer information
+            is not sent for HTTPS -> HTTP requests.
+            </summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.ReferrerPolicy.UnsafeUrl">
+            <summary>
+            Enables the unsafe-url policy, instructing the browser to send full referrer information for all requests.
+            Note that this will leak full referrer information for HTTPS -> HTTP requests, which is even more unsafe than default browser behaviour.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.ReferrerPolicyAttribute">
+            <summary>
+            Specifies whether the Referrer-Policy security header should be set in the HTTP response.
+            </summary>
+        </member>
+        <member name="M:NWebsec.AspNetCore.Mvc.ReferrerPolicyAttribute.#ctor(NWebsec.AspNetCore.Mvc.ReferrerPolicy)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NWebsec.AspNetCore.Mvc.ReferrerPolicyAttribute"/> class
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.XContentTypeOptionsAttribute">
+            <summary>
+            Specifies whether the X-Content-Type-Options security header should be set in the HTTP response.
+            </summary>
+        </member>
+        <member name="M:NWebsec.AspNetCore.Mvc.XContentTypeOptionsAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NWebsec.AspNetCore.Mvc.XContentTypeOptionsAttribute"/> class
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XContentTypeOptionsAttribute.Enabled">
+            <summary>
+            Gets or sets whether the X-Content-Type-Options security header should be set in the HTTP response. The default is true.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.XDownloadOptionsAttribute">
+            <summary>
+            Specifies whether the X-Download-Options security header should be set in the HTTP response.
+            </summary>
+        </member>
+        <member name="M:NWebsec.AspNetCore.Mvc.XDownloadOptionsAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NWebsec.AspNetCore.Mvc.XDownloadOptionsAttribute"/> class
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XDownloadOptionsAttribute.Enabled">
+            <summary>
+            Gets or sets whether the X-Download-Options security header should be set in the HTTP response. The default is true.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.XFrameOptionsAttribute">
+            <summary>
+            Specifies whether the X-Frame-Options security header should be set in the HTTP response.
+            </summary>
+        </member>
+        <member name="M:NWebsec.AspNetCore.Mvc.XFrameOptionsAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NWebsec.AspNetCore.Mvc.XFrameOptionsAttribute"/> class
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XFrameOptionsAttribute.Policy">
+            <summary>
+            Gets or sets whether the X-Frame-Options security header should be set in the HTTP response.
+            Possible values are: Disabled, Deny, SameOrigin. The default is Deny.
+            </summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.XFrameOptionsPolicy.Disabled">
+            <summary>Specifies that the X-Frame-Options header should not be set in the HTTP response.</summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.XFrameOptionsPolicy.Deny">
+            <summary>
+                Specifies that the X-Frame-Options header should be set in the HTTP response, instructing the browser to not
+                display the page when it is loaded in an iframe.
+            </summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.XFrameOptionsPolicy.SameOrigin">
+            <summary>
+                Specifies that the X-Frame-Options header should be set in the HTTP response, instructing the browser to
+                display the page when it is loaded in an iframe - but only if the iframe is from the same origin as the page.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.XRobotsTagAttribute">
+            <summary>
+            Specifies whether the X-Robots-Tag header should be set in the HTTP response.
+            </summary>
+        </member>
+        <member name="M:NWebsec.AspNetCore.Mvc.XRobotsTagAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NWebsec.AspNetCore.Mvc.XRobotsTagAttribute"/> class
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XRobotsTagAttribute.Enabled">
+            <summary>
+            Gets or sets whether the X-Robots-Tag header should be set in the HTTP response. The default is true.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XRobotsTagAttribute.NoIndex">
+            <summary>
+            Gets of sets whether search engines are instructed to not index the page. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XRobotsTagAttribute.NoFollow">
+            <summary>
+            Gets of sets whether search engines are instructed to not follow links on the page. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XRobotsTagAttribute.NoSnippet">
+            <summary>
+            Gets of sets whether search engines are instructed to not display a snippet for the page in search results. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XRobotsTagAttribute.NoArchive">
+            <summary>
+            Gets of sets whether search engines are instructed to not offer a cached version of the page in search results. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XRobotsTagAttribute.NoOdp">
+            <summary>
+            Gets of sets whether search engines are instructed to not use information from the Open Directory Project for the page's title or snippet. The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XRobotsTagAttribute.NoTranslate">
+            <summary>
+            Gets of sets whether search engines are instructed to not offer translation of the page in search results (Google only). The default is false.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XRobotsTagAttribute.NoImageIndex">
+            <summary>
+             Gets of sets whether search engines are instructed to not index images on the page (Google only). The default is false.
+            </summary>
+        </member>
+        <member name="T:NWebsec.AspNetCore.Mvc.XXssProtectionAttribute">
+            <summary>
+            Specifies whether the X-Xss-Protection security header should be set in the HTTP response.
+            </summary>
+        </member>
+        <member name="M:NWebsec.AspNetCore.Mvc.XXssProtectionAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NWebsec.AspNetCore.Mvc.XXssProtectionAttribute"/> class
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XXssProtectionAttribute.Policy">
+            <summary>
+            Gets or sets whether the X-Xss-Protection security header should be set in the HTTP response.
+            Possible values are: Disabled, FilterDisabled, FilterEnabled. The default is FilterEnabled.
+            </summary>
+        </member>
+        <member name="P:NWebsec.AspNetCore.Mvc.XXssProtectionAttribute.BlockMode">
+            <summary>
+            Gets or sets whether to enable the IE XSS filter block mode. This setting only takes effect when the Policy is set to FilterEnabled.
+            The default is true.
+            </summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.XXssProtectionPolicy.Disabled">
+            <summary>Specifies that the X-Xss-Protection header should not be set in the HTTP response.</summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.XXssProtectionPolicy.FilterDisabled">
+            <summary>
+                Specifies that the X-Xss-Protection header should be set in the HTTP response, explicitly disabling the IE XSS
+                filter.
+            </summary>
+        </member>
+        <member name="F:NWebsec.AspNetCore.Mvc.XXssProtectionPolicy.FilterEnabled">
+            <summary>
+                Specifies that the X-Xss-Protection header should be set in the HTTP response, explicitly enabling the IE XSS
+                filter.
+            </summary>
+        </member>
+        <member name="T:NWebsec.Mvc.Common.Helpers.CspConfigMapper">
+            <summary>
+            Infrastructure. Not intended to be called by your code directly.
+            </summary>
+        </member>
+        <member name="T:NWebsec.Mvc.Common.Helpers.ICspConfigMapper">
+            <summary>
+            Infrastructure. Not intended to be called by your code directly.
+            </summary>
+        </member>
+    </members>
+</doc>

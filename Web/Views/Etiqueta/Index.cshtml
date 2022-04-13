@@ -1,0 +1,80 @@
+﻿<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>@ViewBag.Title</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/Home/Index">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#">Cadastros</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>@ViewBag.Title</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="ibox">
+        <div class="ibox-title" style="display: flex;justify-content: space-between;">
+            <h4>@ViewBag.Title</h4>
+            <div class="ibox-tools pull-right">
+                <button class="btn btn-default" id="btn_Adicionar" onclick="EditEtiqueta(0)">Adicionar</button>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <table id="table-etiquetas" class="table table-striped table-bordered table-hover" cellspacing="0" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>Marcador</th>
+                        <th>Cor</th>
+                        <th>Ações</th>  
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="modal-etiqueta" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-body">
+                <div class="moldura-modal p-h-xs" id="form-etiqueta">
+                    <div class="row p-h-xs">
+                        <input type="hidden" id="etiqueta-id" />
+                        <div class="col-sm-6 p-w-md text-center">
+                            <h5>Marcador</h5>
+
+                            <input type="text" class="form-control" id="etiqueta-nome" data-field="Marcador" />
+                        </div>
+                        <div class="col-sm-6 p-w-md text-center">
+                            <h5>Cor</h5>
+                            <input type="color" style="padding:0" class="form-control" id="etiqueta-cor" name="color" pattern="^#+([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$" value="#bada55"  data-field="Cor">
+                        </div>
+                    </div>
+                </div>             
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white pull-right m-l-sm" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-white pull-right" onclick="PostEtiqueta()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {   
+    
+}
+
+@section Scripts {
+    
+    <script src="~/Scripts/app/Etiqueta/etiqueta.js"></script>
+
+    <script>
+
+    </script>
+}

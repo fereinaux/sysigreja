@@ -1,0 +1,331 @@
+﻿@using System.Collections.Generic;
+@using System.Linq;
+@using Utils.Enums;
+@using Utils.Extensions;
+@{
+    Layout = null;
+    ViewBag.Numero = new Random().Next();
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Configuracao.Titulo | Inscrições</title>
+    <link href="~/Content/bootstrap4.css" rel="stylesheet">
+    <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css"
+          type="text/css" />
+    @if (ViewBag.Configuracao.LogoId != null)
+    {
+
+        <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,@ViewBag.Configuracao.Logo" />
+    }
+    <link href="~/Content/animate.css" rel="stylesheet">
+    <link href="~/Content/style.css" rel="stylesheet">
+    <link href="~/Content/evento.css" rel="stylesheet">
+    <link href="~/Content/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="~/Content/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="~/Content/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <style>
+    </style>
+</head>
+<body class="background-evento">
+    <div style=" display: flex; flex-direction: column; width: 100vw; height: 100vh;">
+        <div class="middle-box inscricoes animated fadeInDown " style="display:flex">
+            <div style="margin:auto;width:95%">
+
+                @if (ViewBag.Configuracao.LogoId != null)
+                {
+                    <div class="row justify-content-center">
+                        <div class="col col-6" style="display:flex">
+                            <img style="max-width:100%;max-height:200px;margin:auto" alt="@ViewBag.Configuracao.Titulo" src="data:image/png;base64,@ViewBag.Configuracao.Logo" />
+                        </div>
+
+                    </div>
+                }
+                <div class="row justify-content-center">
+                    <div class="col col-12">
+                        <div class="p-h-xs m-b-lg" id="form-inscricao">
+                            <div class="form-group">
+                                <label for="participante-email" class="text-white">Digite o email do Participante</label>
+                                <input type="email" class="form-control" name="email" id="participante-email" data-field="Email" />
+                            </div>
+                            <div class="pnl-cadastro">
+                                @if (ViewBag.Campos.Contains(CamposEnum.Nome.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-nome" class="text-white">Nome Completo do Participante</label>
+                                        <input type="text" class="form-control required" id="participante-nome" name="name" data-field="Nome" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Apelido.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-apelido" class="text-white">Como o Participante gostaria de ser chamado no Realidade?</label>
+                                        <input type="text" class="form-control required" id="participante-apelido" name"nickname" data-field="Apelido" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Genero.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-sexo" class="text-white block">Gênero do Paricipante</label>
+                                        <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="sexo-masculino" checked="" value="1" name="participante-sexo"> <i></i> Masculino </label></div>
+                                        <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="sexo-feminino" value="2" name="participante-sexo"> <i></i> Feminino </label></div>
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.DataNascimento.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-data-nascimento" class="text-white">Data de Nascimento do Participante</label>
+                                        <input type="text" class="form-control full-date required" id="participante-data-nascimento" data-field="Data de Nascimento" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Fone.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-fone" class="text-white">Fone do Participante</label>
+                                        <input type="text" class="form-control fone" id="participante-fone" data-field="Fone do Participante" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Instagram.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-instagram" class="text-white">Instagram do Participante</label>
+                                        <input type="text" class="form-control" id="participante-instagram" data-field="Instagram do Participante" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Endereco.GetDescription()))
+                                {
+                                    <div class="row justify-content-center">
+                                        <div class="col col-3">
+                                            <div class="form-group">
+                                                <label for="participante-cep" class="text-white">CEP</label>
+                                                <input type="text" class="form-control required cep" id="participante-cep" data-field="CEP" onkeyup="verificaCep(this)" />
+                                                <input type="hidden" id="participante-latitude" />
+                                                <input type="hidden" id="participante-longitude" />
+                                            </div>
+                                        </div>
+                                        <div class="col col-9">
+                                            <div class="form-group">
+                                                <label for="participante-logradouro" class="text-white">Logradouro</label>
+                                                <input type="text" class="form-control required" disabled id="participante-logradouro" data-field="Logradouro" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col col-5">
+                                            <div class="form-group">
+                                                <label for="participante-bairro" class="text-white">Bairro</label>
+                                                <input type="text" class="form-control required" disabled id="participante-bairro" data-field="Bairro" />
+                                            </div>
+                                        </div>
+                                        <div class="col col-5">
+                                            <div class="form-group">
+                                                <label for="participante-cidade" class="text-white">Cidade</label>
+                                                <input type="text" class="form-control required" disabled id="participante-cidade" data-field="Cidade" />
+                                            </div>
+                                        </div>
+                                        <div class="col col-2">
+                                            <div class="form-group">
+                                                <label for="participante-estado" class="text-white">Estado</label>
+                                                <input type="text" class="form-control required" disabled id="participante-estado" data-field="Estado" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col col-4">
+                                            <div class="form-group">
+                                                <label for="participante-numero" class="text-white">Número</label>
+                                                <input type="text" class="form-control" id="participante-numero" data-field="Número" />
+                                            </div>
+                                        </div>
+                                        <div class="col col-8">
+                                            <div class="form-group">
+                                                <label for="participante-complemento" class="text-white">Complemento</label>
+                                                <input type="text" class="form-control" id="participante-complemento" data-field="Complemento" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="participante-referencia" class="text-white">Ponto de Referência</label>
+                                        <input type="text" class="form-control" id="participante-referencia" data-field="Ponto de Referência" />
+                                    </div>
+                                    <div class="form-group">
+                                        <div id="map" style="height:300px;display:none">
+                                        </div>
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Mae.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-nome-mae" class="text-white">Nome da Mãe</label>
+                                        <input type="text" class="form-control required" id="participante-nome-mae" data-field="Nome da Mãe" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="participante-fone-mae" class="text-white">Fone da Mãe</label>
+                                        <input type="text" class="form-control fone" id="participante-fone-mae" data-field="Fone da Mãe" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Pai.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-nome-pai" class="text-white">Nome do Pai</label>
+                                        <input type="text" class="form-control required" id="participante-nome-pai" data-field="Nome do Pai" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="participante-fone-pai" class="text-white">Fone do Pai</label>
+                                        <input type="text" class="form-control fone" id="participante-fone-pai" data-field="Fone do Pai" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Contato.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-nome-contato" class="text-white">Pessoa de contato</label>
+                                        <input type="text" class="form-control required" id="participante-nome-contato" data-field="Pessoa de contato" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="participante-fone-contato" class="text-white">Fone do contato</label>
+                                        <input type="text" class="form-control fone" id="participante-fone-contato" data-field="Fone do contato" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Convite.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-nome-convite" class="text-white">Pessoa que lhe convidou</label>
+                                        <input type="text" class="form-control required" id="participante-nome-convite" data-field="Pessoa que convidou" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="participante-fone-convite" class="text-white">Fone de quem lhe convidou</label>
+                                        <input type="text" class="form-control fone" id="participante-fone-convite" data-field="Fone da pessoa que convidou" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Parente.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-hasparente" class="text-white block">Tem algum Parente fazendo o @ViewBag.Configuracao.Titulo?</label>
+                                        <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="has-parente" value="true" name="participante-hasparente"> <i></i> Sim </label></div>
+                                        <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="not-parente" checked="" value="false" name="participante-hasparente"> <i></i> Não </label></div>
+                                    </div>
+                                    <div class="form-group parente d-none">
+                                        <label for="participante-parente" class="text-white">Nome do Parente</label>
+                                        <input type="text" class="form-control" id="participante-parente" data-field="Nome do Parente" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Congregacao.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-congregacao" class="text-white block">Participa de qual Congregação?</label>
+                                        <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="trindade" checked="" value="Trindade" name="participante-congregacao"> <i></i> Trindade </label></div>
+                                        <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="recon" value="Recon" name="participante-congregacao"> <i></i> Reconciliação </label></div>
+                                        <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="outra" value="Outra" name="participante-congregacao"> <i></i> Outra </label></div>
+                                    </div>
+                                    <div class="form-group congregacao d-none">
+                                        <label for="participante-congregacaodescricao" class="text-white">Qual?</label>
+                                        <input type="text" class="form-control" id="participante-congregacaodescricao" data-field="Congregação" />
+                                    </div>
+                                }
+
+                                @if (ViewBag.Campos.Contains(CamposEnum.Medicacao.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-hasmedicacao" class="text-white block">Toma alguma medicação?</label>
+                                        <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="has-medicacao" value="true" name="participante-hasmedicacao"> <i></i> Sim </label></div>
+                                        <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="not-medicacao" checked="" value="false" name="participante-hasmedicacao"> <i></i> Não </label></div>
+                                    </div>
+                                    <div class="form-group medicacao d-none">
+                                        <label for="participante-medicacao" class="text-white">Qual?</label>
+                                        <input type="text" class="form-control" id="participante-medicacao" data-field="Medicação" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Alergia.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-hasalergia" class="text-white block">Tem alguma alergia?</label>
+                                        <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="has-alergia" value="true" name="participante-hasalergia"> <i></i> Sim </label></div>
+                                        <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="not-alergia" checked="" value="false" name="participante-hasalergia"> <i></i> Não </label></div>
+                                    </div>
+                                    <div class="form-group alergia d-none">
+                                        <label for="participante-alergia" class="text-white">Qual?</label>
+                                        <input type="text" class="form-control" id="participante-alergia" data-field="Alergia" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Restricao.GetDescription()))
+                                {
+                                    <div class="form-group">
+                                        <label for="participante-hasrestricaoalimentar" class="text-white block">Tem alguma restrição alimentar?</label>
+                                        <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="has-restricaoalimentar" value="true" name="participante-hasrestricaoalimentar"> <i></i> Sim </label></div>
+                                        <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="not-restricaoalimentar" checked="" value="false" name="participante-hasrestricaoalimentar"> <i></i> Não </label></div>
+                                    </div>
+                                    <div class="form-group restricaoalimentar d-none">
+                                        <label for="participante-restricaoalimentar" class="text-white">Qual?</label>
+                                        <input type="text" class="form-control" id="participante-restricaoalimentar" data-field="Restrição Alimentar" />
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div style="margin-bottom:auto">
+
+            <button type="button" class="btn btn-rounded btn-float btn-juventude pnl-verifica" onclick="VerificaCadastro()">Seguinte</button>
+
+            <button type="button" class="btn btn-rounded btn-float btn-juventude pnl-cadastro" style="height: 60px; width: 60px; margin-top: -30px;" onclick="PostInscricao()"><i class="fa fa-2x fa-paper-plane m-r-sm"></i></button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script src="~/Scripts/plugins/imaskjs/imask.js"></script>
+<script src="~/Scripts/app/Util/extensions.js"></script>
+<script src="~/Scripts/app/Util/forms.js"></script>
+<script src="~/Scripts/app/Util/inputs.js"></script>
+<script src="~/Scripts/app/Util/messages.js"></script>
+<script src="~/Scripts/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="~/Scripts/plugins/iCheck/icheck.min.js"></script>
+<script src="~/Scripts/plugins/moment/moment-with-locales.min.js"></script>
+<script src="~/Scripts/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script src="~/Scripts/plugins/chosen/chosen.jquery.js"></script>
+<script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
+<script src="~/Scripts/app/Util/mapa.js"></script>
+
+<script src="~/Scripts/app/Inscricoes/inscricoes.js?@ViewBag.Numero"></script>
+
+<script>
+    $(document).ready(function () {
+        @if (ViewBag.Configuracao.BackgroundId != null)
+        {
+            <text> $('.background-evento').css('background', `url(data:image/jpeg;base64,@ViewBag.Configuracao.Background) no-repeat center center fixed`) </text>
+            <text> $('.background-evento').css('background-size', 'cover')</text>
+        }
+
+        $('.btn-juventude').css('background-color', '@ViewBag.Configuracao.CorBotao')
+        $('.btn-juventude').css('border-color', '@ViewBag.Configuracao.CorBotao')
+
+        $('.btn-juventude').hover(function() {
+            $(this).css('background-color', '@ViewBag.Configuracao.CorHoverBotao')
+            $(this).css('border-color', '@ViewBag.Configuracao.CorHoverBotao')
+        }, function() {
+            $(this).css('background-color', '@ViewBag.Configuracao.CorBotao')
+            $(this).css('border-color', '@ViewBag.Configuracao.CorBotao')
+        })
+
+        picker = ".inscricoes.middle-box::-webkit-scrollbar-thumb { background: @ViewBag.Configuracao.CorScroll;}  .inscricoes.middle-box::-webkit-scrollbar-thumb:hover { background: @ViewBag.Configuracao.CorHoverScroll;}  ";
+        new_stylesheet = "<style type='text/css' id='currentCSS'>" + picker + "</style>";
+
+        //check if stylsheet exists
+        existingStylesheet = $("#currentCSS");
+        if (existingStylesheet.length) { $(existingStylesheet).replaceWith(new_stylesheet); }
+        else { $(new_stylesheet).appendTo('head'); }
+        var corLoginBox = '@ViewBag.Configuracao.CorLoginBox';
+        var rgbLoginBox = corLoginBox.convertToRGB()
+        $('.inscricoes.middle-box').css('background-color', `rgba(${rgbLoginBox[0]},${rgbLoginBox[1]},${rgbLoginBox[2]},0.7)`)
+    })
+</script>

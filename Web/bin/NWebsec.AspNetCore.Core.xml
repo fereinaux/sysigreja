@@ -1,0 +1,723 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NWebsec.AspNetCore.Core</name>
+    </assembly>
+    <members>
+        <member name="T:NWebsec.Core.Common.Fluent.IFluentInterface">
+            <summary>
+                Interface that is used to build fluent interfaces and hides methods declared by <see cref="T:System.Object" /> from
+                IntelliSense.
+            </summary>
+            <remarks>
+                Code that consumes implementations of this interface should expect one of two things:
+                <list type="number">
+                    <item>
+                        When referencing the interface from within the same solution (project reference), you will still see the
+                        methods this interface is meant to hide.
+                    </item>
+                    <item>
+                        When referencing the interface through the compiled output assembly (external reference), the standard
+                        Object methods will be hidden as intended.
+                    </item>
+                </list>
+                See http://bit.ly/ifluentinterface for more information.
+            </remarks>
+        </member>
+        <member name="M:NWebsec.Core.Common.Fluent.IFluentInterface.GetType">
+            <summary>
+                Redeclaration that hides the <see cref="M:System.Object.GetType" /> method from IntelliSense.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Fluent.IFluentInterface.GetHashCode">
+            <summary>
+                Redeclaration that hides the <see cref="M:System.Object.GetHashCode" /> method from IntelliSense.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Fluent.IFluentInterface.ToString">
+            <summary>
+                Redeclaration that hides the <see cref="M:System.Object.ToString" /> method from IntelliSense.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Fluent.IFluentInterface.Equals(System.Object)">
+            <summary>
+                Redeclaration that hides the <see cref="M:System.Object.Equals(System.Object)" /> method from IntelliSense.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Helpers.X509.X509Helper.GetSubjectPublicKeyInfoPinValue(System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Returns a string suitable for inclusion in an HPKP header, including hash algoritm.
+            </summary>
+            <param name="cert"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration">
+            <summary>
+                Defines the properties required for CSP directive configuration.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration.Enabled">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration.NoneSrc">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration.SelfSrc">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration.CustomSources">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="T:NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveConfiguration">
+            <summary>
+                Defines the properties required for CSP directive configuration.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveConfiguration.UnsafeEvalSrc">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveConfiguration.StrictDynamicSrc">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="T:NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveUnsafeInlineConfiguration">
+            <summary>
+                Defines the properties required for CSP directive configuration.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveUnsafeInlineConfiguration.UnsafeInlineSrc">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveUnsafeInlineConfiguration.Nonce">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="T:NWebsec.Core.Common.HttpHeaders.Configuration.ICspPluginTypesDirectiveConfiguration">
+            <summary>
+                Defines the properties required for CSP sandbox directive configuration.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspPluginTypesDirectiveConfiguration.Enabled">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspPluginTypesDirectiveConfiguration.MediaTypes">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="T:NWebsec.Core.Common.HttpHeaders.Configuration.ICspSandboxDirectiveConfiguration">
+            <summary>
+                Defines the properties required for CSP sandbox directive configuration.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspSandboxDirectiveConfiguration.Enabled">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspSandboxDirectiveConfiguration.AllowForms">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspSandboxDirectiveConfiguration.AllowModals">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspSandboxDirectiveConfiguration.AllowOrientationLock">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspSandboxDirectiveConfiguration.AllowPointerLock">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspSandboxDirectiveConfiguration.AllowPopups">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspSandboxDirectiveConfiguration.AllowPopupsToEscapeSandbox">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspSandboxDirectiveConfiguration.AllowPresentation">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspSandboxDirectiveConfiguration.AllowSameOrigin">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspSandboxDirectiveConfiguration.AllowScripts">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.ICspSandboxDirectiveConfiguration.AllowTopNavigation">
+            <summary>
+                Infrastructure. Not intended to be used by your code directly. An attempt to hide this from Intellisense has been
+                made.
+            </summary>
+        </member>
+        <member name="T:NWebsec.Core.Common.HttpHeaders.Configuration.ICspUpgradeDirectiveConfiguration">
+            <summary>
+                Defines the properties required for CSP sandbox directive configuration.
+            </summary>
+        </member>
+        <member name="P:NWebsec.Core.Common.HttpHeaders.Configuration.IRedirectValidationConfiguration.AllowedUris">
+            <summary>
+                URIs allowed for redirect. Strings in this list should be created with Uri.AbsoluteUri to assure consistency.
+            </summary>
+        </member>
+        <member name="F:NWebsec.Core.Common.HttpHeaders.XfoPolicy.Disabled">
+            <summary>Specifies that the X-Frame-Options header should not be set in the HTTP response.</summary>
+        </member>
+        <member name="F:NWebsec.Core.Common.HttpHeaders.XfoPolicy.Deny">
+            <summary>
+                Specifies that the X-Frame-Options header should be set in the HTTP response, instructing the browser to not
+                display the page when it is loaded in an iframe.
+            </summary>
+        </member>
+        <member name="F:NWebsec.Core.Common.HttpHeaders.XfoPolicy.SameOrigin">
+            <summary>
+                Specifies that the X-Frame-Options header should be set in the HTTP response, instructing the browser to
+                display the page when it is loaded in an iframe - but only if the iframe is from the same origin as the page.
+            </summary>
+        </member>
+        <member name="F:NWebsec.Core.Common.HttpHeaders.XXssPolicy.Disabled">
+            <summary>Specifies that the X-Xss-Protection header should not be set in the HTTP response.</summary>
+        </member>
+        <member name="F:NWebsec.Core.Common.HttpHeaders.XXssPolicy.FilterDisabled">
+            <summary>
+                Specifies that the X-Xss-Protection header should be set in the HTTP response, explicitly disabling the IE XSS
+                filter.
+            </summary>
+        </member>
+        <member name="F:NWebsec.Core.Common.HttpHeaders.XXssPolicy.FilterEnabled">
+            <summary>
+                Specifies that the X-Xss-Protection header should be set in the HTTP response, explicitly enabling the IE XSS
+                filter.
+            </summary>
+        </member>
+        <member name="T:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions">
+            <summary>
+            Fluent interface to configure options for Content-Security-Options.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.DefaultSources(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the default-src directive (CSP 1.0).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.ScriptSources(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveConfiguration})">
+            <summary>
+            Configures the script-src directive (CSP 1.0).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.ObjectSources(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the object-src directive (CSP 1.0).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.StyleSources(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveUnsafeInlineConfiguration})">
+            <summary>
+            Configures the style-src directive (CSP 1.0).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.ImageSources(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the image-src directive (CSP 1.0).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.MediaSources(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the media-src directive (CSP 1.0).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.FrameSources(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the frame-src directive (CSP 1.0).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.FontSources(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the font-src directive (CSP 1.0).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.ConnectSources(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the connect-src directive (CSP 1.0).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.BaseUris(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the base-uri directive (CSP 2).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.ChildSources(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the child-src directive (CSP 2).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.FormActions(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the form-action directive (CSP 2).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.FrameAncestors(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the frame-ancestors directive (CSP 2).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.ManifestSources(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the manifest-src directive (CSP 3).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.WorkerSources(System.Action{NWebsec.Core.Common.HttpHeaders.Configuration.ICspDirectiveBasicConfiguration})">
+            <summary>
+            Configures the worker-src directive (CSP 3).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.PluginTypes(System.Action{NWebsec.Core.Common.Middleware.Options.IFluentCspPluginTypesDirective})">
+            <summary>
+            Configures the plugin-types directive (CSP 2).
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the media types for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.Sandbox">
+            <summary>
+            Enables the sandbox directive (CSP 2) without further ado.
+            </summary>
+            <remarks>Support for this directive was optional in CSP 1.0, but is mandatory as of CSP 2.</remarks>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.Sandbox(System.Action{NWebsec.Core.Common.Middleware.Options.IFluentCspSandboxDirective})">
+            <summary>
+            Configures the sandbox directive (CSP 2) with one or more sources.
+            </summary>
+            <remarks>Support for this directive was optional in CSP 1.0, but is mandatory as of CSP 2.</remarks>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the sources for the directive.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.UpgradeInsecureRequests(System.Int32)">
+            <summary>
+            Enables the upgrade-insecure-requests directive and redirects conformant UAs to HTTPS.
+            </summary>
+            <remarks>This directive is not part of CSP 1.0 or CSP 2, but is described in a separate specification.</remarks>
+            <param name="httpsPort">The HTTPS port. Defaults to 443.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.BlockAllMixedContent">
+            <summary>
+            Enables the block-all-mixed-content directive.
+            </summary>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspOptions.ReportUris(System.Action{NWebsec.Core.Common.Middleware.Options.IFluentCspReportUriDirective})">
+            <summary>
+            Configures the report-uri directive (CSP 1.0). Support for absolute URIs was introduced in CSP 2.
+            </summary>
+            <param name="configurer">An <see cref="T:System.Action"/> that configures the report URIs.</param>
+            <returns>The current <see cref="T:NWebsec.Core.Common.Middleware.Options.CspOptions" /> instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspPluginTypesDirective.MediaTypes(System.String[])">
+            <summary>
+                Sets the media types for the CSP plugin-types directive.
+            </summary>
+        </member>
+        <member name="T:NWebsec.Core.Common.Middleware.Options.IFluentCspReportUriDirective">
+            <summary>
+            Fluent interface to configure report URIs.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspReportUriDirective.Uris(System.String[])">
+            <summary>
+            Sets report URIs for the CSP directive.
+            </summary>
+            <param name="reportUris">One or more report URIs.</param>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspSandboxDirective.AllowForms">
+            <summary>
+                Sets the 'allow-forms' source for the CSP sandbox directive.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspSandboxDirective.AllowModals">
+            <summary>
+                Sets the 'allow-modals' source for the CSP sandbox directive.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspSandboxDirective.AllowOrientationLock">
+            <summary>
+                Sets the 'allow-orientation-lock' source for the CSP sandbox directive.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspSandboxDirective.AllowPointerLock">
+            <summary>
+                Sets the 'allow-pointer-lock' source for the CSP sandbox directive.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspSandboxDirective.AllowPopups">
+            <summary>
+                Sets the 'allow-popups' source for the CSP sandbox directive.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspSandboxDirective.AllowPopupsToEscapeSandbox">
+            <summary>
+                Sets the 'allow-popups-to-escape-sandbox' source for the CSP sandbox directive.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspSandboxDirective.AllowPresentation">
+            <summary>
+                Sets the 'allow-presentation' source for the CSP sandbox directive.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspSandboxDirective.AllowSameOrigin">
+            <summary>
+                Sets the 'allow-same-origin' source for the CSP sandbox directive.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspSandboxDirective.AllowScripts">
+            <summary>
+                Sets the 'allow-scripts' source for the CSP sandbox directive.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentCspSandboxDirective.AllowTopNavigation">
+            <summary>
+                Sets the 'allow-top-navigation' source for the CSP sandbox directive.
+            </summary>
+        </member>
+        <member name="T:NWebsec.Core.Common.Middleware.Options.IFluentHpkpOptions">
+            <summary>
+            Fluent interface to configure options for Http Strict Transport Security.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentHpkpOptions.MaxAge(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Specifies the max age for the HPKP header.
+            </summary>
+            <param name="days">The number of days added to max age.</param>
+            <param name="hours">The number of hours added to max age.</param>
+            <param name="minutes">The number of minutes added to max age.</param>
+            <param name="seconds">The number of seconds added to max age.</param>
+            <returns>The current instance.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if a negative value was supplied in any of the parameters.</exception>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentHpkpOptions.IncludeSubdomains">
+            <summary>
+            Enables the IncludeSubdomains directive in the HPKP header.
+            </summary>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentHpkpOptions.ReportUri(System.String)">
+            <summary>
+            Specifies a report URI where the browser can send HPKP violations.
+            </summary>
+            <param name="reportUri">The report URI, which is an absolute URI with scheme http or https.</param>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentHpkpOptions.AllResponses">
+            <summary>
+            Specifies that the HPKP header should also be set for HTTP responses. The header is always set for HTTPS responses.
+            </summary>
+            <remarks>The HPKP standard specifies that the header should only be set over secure connections, which is the default behavior.
+            This configuration option exists to accomodate websites running behind an SSL terminator.</remarks>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentHpkpOptions.Sha256Pins(System.String[])">
+            <summary>
+            Specifies one or more certificate pins to include in the HPKP header. A certificate pin is the Base64 encoded SHA-256 hash value of a certficate's SPKI.
+            </summary>
+            <param name="pins">One or more certficate pin values.</param>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentHpkpOptions.PinCertificate(System.String,System.Security.Cryptography.X509Certificates.StoreLocation,System.Security.Cryptography.X509Certificates.StoreName)">
+            <summary>
+            Specifies a certificate that should be pinned in the HPKP header.
+            </summary>
+            <param name="thumbprint">The certificate thumbprint.</param>
+            <param name="storeLocation">The <see cref="T:System.Security.Cryptography.X509Certificates.StoreLocation"/> for the certificate. The default is <see cref="F:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine"/>.</param>
+            <param name="storeName">The <see cref="T:System.Security.Cryptography.X509Certificates.StoreName"/> for the certificate. The default is <see cref="F:System.Security.Cryptography.X509Certificates.StoreName.My"/>.</param>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="T:NWebsec.Core.Common.Middleware.Options.IFluentHstsOptions">
+            <summary>
+            Fluent interface to configure options for Http Strict Transport Security.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentHstsOptions.MaxAge(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Specifies the max age for the HSTS header.
+            </summary>
+            <param name="days">The number of days added to max age.</param>
+            <param name="hours">The number of hours added to max age.</param>
+            <param name="minutes">The number of minutes added to max age.</param>
+            <param name="seconds">The number of seconds added to max age.</param>
+            <returns>The current instance.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if a negative value was supplied in any of the parameters.</exception>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentHstsOptions.IncludeSubdomains">
+            <summary>
+            Enables the IncludeSubdomains directive in the Hsts header.
+            </summary>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentHstsOptions.Preload">
+            <summary>
+            Enables the Preload directive in the HSTS header. MaxAge must be at least 18 weeks, and IncludeSubdomains must be enabled.
+            </summary>
+            <remarks>Read more about preloaded HSTS sites at <a href="https://www.chromium.org/hsts">www.chromium.org/sts</a></remarks>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentHstsOptions.UpgradeInsecureRequests">
+            <summary>
+            Sets the HSTS header only when the user agent signals that it supports the upgrade-insecure-requests CSP directive.
+            </summary>
+            <remarks>This setting is intended to be used in combination with the upgrade-insecure-requests CSP directive.</remarks>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentHstsOptions.AllResponses">
+            <summary>
+            Specifies that the HSTS header should also be set for HTTP responses. The header is always set for HTTPS responses.
+            </summary>
+            <remarks>The HSTS standard specifies that the header should only be set over secure connections, which is the default behavior.
+            This configuration option exists to accomodate websites running behind an SSL terminator.</remarks>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentHstsOptions.HttpsOnly">
+            <summary>
+            Specifies that the HSTS header should be set for HTTPS responses only.
+            </summary>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="T:NWebsec.Core.Common.Middleware.Options.IFluentRedirectValidationOptions">
+            <summary>
+            Fluent interface to configure options for redirect validation.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentRedirectValidationOptions.AllowedDestinations(System.String[])">
+            <summary>
+            Configures the allowed redirect destinations. These must be well formed absolute URIs.
+            </summary>
+            <param name="uris">Allowed redirect destinations.</param>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentRedirectValidationOptions.AllowSameHostRedirectsToHttps(System.Int32[])">
+            <summary>
+            Allows same host redirects to HTTPS.
+            </summary>
+            <param name="httpsPorts">Allowed destination port(s) for redirects to HTTPS. The default HTTPS port (443) is assumed if no values are configured.</param>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="T:NWebsec.Core.Common.Middleware.Options.IFluentReferrerPolicyOptions">
+            <summary>
+            Fluent interface to configure options for Referrer-Policy.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentReferrerPolicyOptions.NoReferrer">
+            <summary>
+            Enables the no-referrer policy, instructing the browser to not send referrer information.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentReferrerPolicyOptions.NoReferrerWhenDowngrade">
+            <summary>
+            Enables the no-referrer-when-downgrade policy, instructing the browser to send full referrer
+            information unless navigation is from HTTPS->HTTP.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentReferrerPolicyOptions.SameOrigin">
+            <summary>
+            Enables the same-origin policy, instructing the browser to send full referrer information for
+            same-origin requests and no referrer for cross-origin requests.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentReferrerPolicyOptions.Origin">
+            <summary>
+            Enables the origin policy, instructing the browser to send origin (no path and query) as
+            referrer information for both same-origin and cross-origin requests.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentReferrerPolicyOptions.StrictOrigin">
+            <summary>
+            Enables the strict-origin policy, instructing the browser to send origin (no path and query) as
+            referrer information for both same-origin and cross-origin HTTPS -> HTTPS and HTTP -> HTTP requests.
+            HTTPS -> HTTP requests will not include referrer information.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentReferrerPolicyOptions.OriginWhenCrossOrigin">
+            <summary>
+            Enables the origin-when-cross-origin policy, instructing the browser to send full referrer information for
+            same-origin requests and origin (no path and query) as referrer information for cross-origin requests (includes HTTPS -> HTTP and HTTP -> HTTPS).
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentReferrerPolicyOptions.StrictOriginWhenCrossOrigin">
+            <summary>
+            Enables the strict-origin-when-cross-origin policy, instructing the browser to send full referrer information for
+            same-origin requests and origin (no path and query) as referrer information for cross-origin requests. Referrer information
+            is not sent for HTTPS -> HTTP requests.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentReferrerPolicyOptions.UnsafeUrl">
+            <summary>
+            Enables the unsafe-url policy, instructing the browser to send full referrer information for all requests.
+            Note that this will leak full referrer information for HTTPS -> HTTP requests, which is even more unsafe than default browser behaviour.
+            </summary>
+        </member>
+        <member name="T:NWebsec.Core.Common.Middleware.Options.IFluentXFrameOptions">
+            <summary>
+            Fluent interface to configure options for X-Frame-Options.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentXFrameOptions.Deny">
+            <summary>
+            Enables the Deny directive.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentXFrameOptions.SameOrigin">
+            <summary>
+            Enables the SameOrigin directive.
+            </summary>
+        </member>
+        <member name="T:NWebsec.Core.Common.Middleware.Options.IFluentXRobotsTagOptions">
+            <summary>
+            Fluent interface to configure options for X-Robots-Tag.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentXRobotsTagOptions.NoIndex">
+            <summary>
+            Enables the noindex directive.
+            </summary>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentXRobotsTagOptions.NoFollow">
+            <summary>
+            Enables the nofollow directive.
+            </summary>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentXRobotsTagOptions.NoSnippet">
+            <summary>
+            Enables the nosnippet directive.
+            </summary>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentXRobotsTagOptions.NoArchive">
+            <summary>
+            Enables the noarchive directive.
+            </summary>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentXRobotsTagOptions.NoOdp">
+            <summary>
+            Enables the noodp directive.
+            </summary>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentXRobotsTagOptions.NoTranslate">
+            <summary>
+            Enables the notranslate directive.
+            </summary>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentXRobotsTagOptions.NoImageIndex">
+            <summary>
+            Enables the noimageindex directive.
+            </summary>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="T:NWebsec.Core.Common.Middleware.Options.IFluentXXssProtectionOptions">
+            <summary>
+            Fluent interface to configure options for X-Xss-Protection.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentXXssProtectionOptions.Disabled">
+            <summary>
+            Configures the header to explicitly disable protection.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentXXssProtectionOptions.Enabled">
+            <summary>
+            Configures the header to explicitly enable protection.
+            </summary>
+        </member>
+        <member name="M:NWebsec.Core.Common.Middleware.Options.IFluentXXssProtectionOptions.EnabledWithBlockMode">
+            <summary>
+            Configures the header to explicitly enable protection with block mode.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,57 @@
+C:\Realidade\Utils\bin\Debug\Utils.dll
+C:\Realidade\Utils\bin\Debug\Utils.pdb
+C:\Realidade\Utils\bin\Debug\EPPlus.dll
+C:\Realidade\Utils\obj\Debug\Utils.csproj.CoreCompileInputs.cache
+C:\Realidade\Utils\obj\Debug\Utils.csproj.CopyComplete
+C:\Realidade\Utils\obj\Debug\Utils.dll
+C:\Realidade\Utils\obj\Debug\Utils.pdb
+C:\Realidade\Utils\obj\Debug\Utils.csprojAssemblyReference.cache
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\bin\Debug\Utils.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\bin\Debug\Utils.pdb
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\bin\Debug\EPPlus.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.csprojAssemblyReference.cache
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.csproj.CoreCompileInputs.cache
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.csproj.CopyComplete
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.dll
+C:\Users\felipe.a.reinaux\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.pdb
+C:\Users\felip\Source\Repos\Seminarios IECB\Utils\bin\Debug\Utils.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Utils\bin\Debug\Utils.pdb
+C:\Users\felip\Source\Repos\Seminarios IECB\Utils\bin\Debug\EPPlus.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.csprojAssemblyReference.cache
+C:\Users\felip\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.csproj.CopyComplete
+C:\Users\felip\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.dll
+C:\Users\felip\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\bin\Debug\Utils.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\bin\Debug\Utils.pdb
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\bin\Debug\EPPlus.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.csprojAssemblyReference.cache
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.dll
+C:\Users\felipe\Source\Repos\Seminarios IECB\Utils\obj\Debug\Utils.pdb
+C:\Users\felipe\Source\Repos\Realidade\Utils\bin\Debug\Utils.dll
+C:\Users\felipe\Source\Repos\Realidade\Utils\bin\Debug\Utils.pdb
+C:\Users\felipe\Source\Repos\Realidade\Utils\bin\Debug\EPPlus.dll
+C:\Users\felipe\Source\Repos\Realidade\Utils\obj\Debug\Utils.csprojAssemblyReference.cache
+C:\Users\felipe\Source\Repos\Realidade\Utils\obj\Debug\Utils.csproj.CopyComplete
+C:\Users\felipe\Source\Repos\Realidade\Utils\obj\Debug\Utils.dll
+C:\Users\felipe\Source\Repos\Realidade\Utils\obj\Debug\Utils.pdb
+C:\Users\User\source\repos\Realidade\Utils\bin\Debug\Utils.dll
+C:\Users\User\source\repos\Realidade\Utils\bin\Debug\Utils.pdb
+C:\Users\User\source\repos\Realidade\Utils\bin\Debug\EPPlus.dll
+C:\Users\User\source\repos\Realidade\Utils\obj\Debug\Utils.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Realidade\Utils\obj\Debug\Utils.csproj.CopyComplete
+C:\Users\User\source\repos\Realidade\Utils\obj\Debug\Utils.dll
+C:\Users\User\source\repos\Realidade\Utils\obj\Debug\Utils.pdb
+C:\Users\User\source\repos\Realidade\Utils\bin\Debug\System.Linq.Dynamic.dll
+C:\Users\User\source\repos\Realidade\Utils\obj\Debug\Utils.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Realidade\Utils\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\User\source\repos\ejc\Utils\bin\Debug\Utils.dll
+C:\Users\User\source\repos\ejc\Utils\bin\Debug\Utils.pdb
+C:\Users\User\source\repos\ejc\Utils\bin\Debug\EPPlus.dll
+C:\Users\User\source\repos\ejc\Utils\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\User\source\repos\ejc\Utils\bin\Debug\System.Linq.Dynamic.dll
+C:\Users\User\source\repos\ejc\Utils\obj\Debug\Utils.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ejc\Utils\obj\Debug\Utils.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ejc\Utils\obj\Debug\Utils.csproj.CopyComplete
+C:\Users\User\source\repos\ejc\Utils\obj\Debug\Utils.dll
+C:\Users\User\source\repos\ejc\Utils\obj\Debug\Utils.pdb

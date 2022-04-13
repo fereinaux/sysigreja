@@ -1,0 +1,126 @@
+﻿@{
+    Layout = null;
+    ViewBag.Numero = new Random().Next();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Configuracao.Titulo | Inscrições</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    @if (ViewBag.Configuracao.LogoId != null)
+    {
+
+        <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,@ViewBag.Configuracao.Logo" />
+    }
+    <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
+    <link href="~/Content/animate.css" rel="stylesheet">
+    <link href="~/Content/style.css" rel="stylesheet">
+    <link href="~/Content/evento.css" rel="stylesheet">
+    <link href="~/Content/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+</head>
+<body class="background-evento" style="display:flex">
+    <div class="middle-box inscricoes animated fadeInDown " style="display:flex;height:550px;margin:auto">
+        <div class="row" style="margin:auto">
+            <div class="col-sm-12">
+                @if (ViewBag.Configuracao.LogoId != null)
+                {
+                    <div class="row justify-content-center">
+                        <div class="col-sm-offset-3 col-sm-6" style="display:flex">
+                            <img style="max-width:100%;max-height:200px;margin:auto" alt="@ViewBag.Configuracao.Titulo" src="data:image/png;base64,@ViewBag.Configuracao.Logo" alt="Igreja Episcopal Carismática do Brasil" />
+                        </div>
+
+                    </div>
+                }
+                <div class="row justify-content-center m-l-lg m-r-lg m-t-lg m-b-sm text-white text-center">
+                    <h2>"@ViewBag.Participante.Apelido"</h2>
+                    <h3>Obrigado por se inscrever no @ViewBag.Participante.Evento!</h3>
+                    <h3>Te adicionamos na nossa lista de espera, pois no momento nos encontramos sem vagas</h3>
+                    <h3>Se chegar a sua vez entraremos em contato contigo o quanto antes</h3>
+                </div>
+            </div>
+
+            <div class="col-sm-12 p-h-sm text-white text-center">
+                <h2>Qualquer dúvida entrar em contato com:</h2>
+                <h3 style="        margin-bottom: 40px;
+
+">
+                    Felipe Reinaux - (81)9.9718-7441
+                </h3>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script src="~/Scripts/plugins/sweetalert/sweetalert.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+            if (@ViewBag.Configuracao.BackgroundId)
+        {
+            $('.background-evento').css('background', `url(data:image/jpeg;base64,@ViewBag.Configuracao.Background) no-repeat center center fixed`)
+            $('.background-evento').css('background-size', 'cover')
+
+        }
+        var ContasBancarias = @Html.Raw(Json.Encode(ViewBag.ContasBancarias));
+        htmlContas = ``
+        var indiceFinal = 0;
+        //$(ContasBancarias).each((index, conta) => {
+
+        //    htmlConta = `<div class="col-xs-5 ${index % 2 == 0 ? "col-xs-offset-1" : ""} ">
+        //                <img style="width:75%" src="/Images/Bancos/${conta.Banco}.png"/>
+        //                <h4>${conta.Operacao}</h4>
+        //                <h4>${conta.Conta}</h4>
+        //                <h4>Ag ${conta.Agencia}</h4>
+        //                <h4>${conta.Nome}</h4>
+        //                <h4>CPF ${conta.CPF}</h4>
+        //            </div>`
+
+        //    htmlContas += htmlConta;
+        //    indiceFinal = index;
+        //});
+
+        //htmlContas += `<div class="pointer col-xs-5 ${(indiceFinal + 1)  % 2 == 0 ? "col-xs-offset-1" : ""} ">
+        //                <img style="width:75%" src="/Images/Bancos/Cartões Crédito.png"/>
+        //                <h4>Débito e Crédito</h4>
+        //                <h4>Após os Cultos</h4>
+        //                <h4>Quartas 19h30</h4>
+        //                <h4>Domingos 10h/17h/19h30</h4>
+        //                <h4>Catedral da Trindade</h4>
+        //            </div>`;
+
+        @*htmlContas += `<div onclick="SolicitarBoleto(${@ViewBag.Participante.Id})" class="pointer col-xs-5 ${(indiceFinal + 2)  % 2 == 0 ? "col-xs-offset-1" : ""} ">
+                        <img style="width:75%" src="/Images/Bancos/Boleto.png"/>
+                        <h4>Solicitar Boleto</h4>
+                    </div>`;*@
+
+        //$('.contas-bancarias').html(htmlContas)
+    });
+
+    function SolicitarBoleto(id) {
+    $.ajax({
+            url: "/Inscricoes/SolicitarBoleto/",
+            datatype: "json",
+            type: "POST",
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(
+                {
+                    ParticipanteId: id
+                }),
+        success: function () {
+                swal({
+                    title: "Sucesso!",
+                    icon: "success",
+                    text: "O Boleto foi solicitado, enviaremos o mesmo em até 24 horas para o WhatsApp do Inscrito"
+                });
+            }
+        });
+    }
+</script>
+
+
