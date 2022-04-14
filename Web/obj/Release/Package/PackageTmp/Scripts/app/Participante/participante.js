@@ -679,6 +679,7 @@ function select2(destinatario) {
     $('.mae').removeClass('moldura-modal')
     $('.pai').removeClass('moldura-modal')
     $('.convite').removeClass('moldura-modal')
+    $('.contato').removeClass('moldura-modal')
     $('.realista').removeClass('moldura-modal')
     destinatarioGlobal = destinatario
     $(`.${destinatario}`).addClass('moldura-modal')
@@ -700,6 +701,9 @@ function getNome(destinatario) {
         case 'convite':
             return realista.NomeConvite.trim()
             break;
+        case 'contato':
+            return realista.NomeContato.trim()
+            break;
         default:
             break;
     }
@@ -718,6 +722,9 @@ function getTelefone(destinatario) {
             break;
         case 'convite':
             return realista.FoneConvite
+            break;
+        case 'contato':
+            return realista.FoneContato
             break;
         default:
             break;
@@ -905,6 +912,7 @@ function Opcoes(row) {
             $('.realista-nome').text(realista.Nome)
             $('.paitext').text(realista.NomePai)
             $('.convitetext').text(realista.NomeConvite)
+            $('.contatotext').text(realista.NomeContato)
 
             $('.pagamento').show()
             $('#participante-obs').val(realista.Observacao)
@@ -983,6 +991,8 @@ function GetParticipanteContato(id) {
             $(`#participante-fonemae`).val(data.Participante.FoneMae);
             $(`#participante-nomeconvite`).val(data.Participante.NomeConvite);
             $(`#participante-foneconvite`).val(data.Participante.FoneConvite);
+            $(`#participante-nomecontato`).val(data.Participante.NomeContato);
+            $(`#participante-fonecontato`).val(data.Participante.FoneContato);
             $(`#participante-restricaoalimentar`).val(data.Participante.RestricaoAlimentar);
             $(`#participante-medicacao`).val(data.Participante.Medicacao);
             $(`#participante-alergia`).val(data.Participante.Alergia);
@@ -1017,6 +1027,8 @@ function GetParticipante(id) {
                 $(`#participante-fonemae`).val(data.Participante.FoneMae);
                 $(`#participante-nomeconvite`).val(data.Participante.NomeConvite);
                 $(`#participante-foneconvite`).val(data.Participante.FoneConvite);
+                $(`#participante-nomecontato`).val(data.Participante.NomeContato);
+                $(`#participante-fonecontato`).val(data.Participante.FoneContato);
                 $(`#participante-restricaoalimentar`).val(data.Participante.RestricaoAlimentar);
                 $(`#participante-medicacao`).val(data.Participante.Medicacao);
                 $(`#participante-alergia`).val(data.Participante.Alergia);
@@ -1045,6 +1057,8 @@ function GetParticipante(id) {
         $(`#participante-fonemae`).val("");
         $(`#participante-nomeconvite`).val("");
         $(`#participante-foneconvite`).val("");
+        $(`#participante-nomecontato`).val("");
+        $(`#participante-fonecontato`).val("");
         $(`input[type=radio][name=participante-sexo][value=1]`).iCheck('check');
         $(`input[type=radio][name=participante-hasalergia][value=false]`).iCheck('check');
         $(`input[type=radio][name=participante-hasmedicacao][value=false]`).iCheck('check');
@@ -1080,6 +1094,8 @@ function PostParticipante() {
                     FoneMae: $(`#participante-fonemae`).val(),
                     NomeConvite: $(`#participante-nomeconvite`).val(),
                     FoneConvite: $(`#participante-foneconvite`).val(),
+                    NomeContato: $(`#participante-nomecontato`).val(),
+                    FoneContato: $(`#participante-fonecontato`).val(),
                     HasRestricaoAlimentar: $("input[type=radio][name=participante-hasrestricaoalimentar]:checked").val(),
                     RestricaoAlimentar: $(`#participante-restricaoalimentar`).val(),
                     HasMedicacao: $("input[type=radio][name=participante-hasmedicacao]:checked").val(),

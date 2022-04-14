@@ -87,6 +87,8 @@ function PostParticipante() {
                         FoneMae: $(`#participante-fone-mae`).val(),
                         NomeConvite: $(`#participante-nome-convite`).val(),
                         FoneConvite: $(`#participante-fone-convite`).val(),
+                        NomeContato: $(`#participante-nome-contato`).val(),
+                        FoneContato: $(`#participante-fone-contato`).val(),
                     }),
                 success: function (data) {
                     $.ajax({
@@ -177,10 +179,10 @@ function GetParticipante() {
                 $("#participante-data-nascimento").val(moment(data.Participante.DataNascimento).format('DD/MM/YYYY'));
                 $(`#participante-email`).val(data.Participante.Email);
                 $(`#participante-fone`).val(data.Participante.Fone);
-                $(`#participante-nomepai`).val(data.Participante.NomePai);
-                $(`#participante-fonepai`).val(data.Participante.FonePai);
-                $(`#participante-nomemae`).val(data.Participante.NomeMae);
-                $(`#participante-fonemae`).val(data.Participante.FoneMae);
+                $(`#participante-nome-pai`).val(data.Participante.NomePai);
+                $(`#participante-fone-pai`).val(data.Participante.FonePai);
+                $(`#participante-nome-mae`).val(data.Participante.NomeMae);
+                $(`#participante-fone-mae`).val(data.Participante.FoneMae);
                 $(`#participante-cep`).val(data.Participante.CEP);
                 $(`#participante-logradouro`).val(data.Participante.Logradouro);
                 $(`#participante-bairro`).val(data.Participante.Bairro);
@@ -193,8 +195,10 @@ function GetParticipante() {
                 $(`#participante-latitude`).val((data.Participante.Latitude || '').replaceAll(',', '.'));
                 $(`#participante-longitude`).val((data.Participante.Longitude || '').replaceAll(',', '.'));
                 montarMapa()
-                $(`#participante-nomeconvite`).val(data.Participante.NomeConvite);
-                $(`#participante-foneconvite`).val(data.Participante.FoneConvite);
+                $(`#participante-nome-convite`).val(data.Participante.NomeConvite);
+                $(`#participante-fone-convite`).val(data.Participante.FoneConvite);
+                $(`#participante-nome-contato`).val(data.Participante.NomeContato);
+                $(`#participante-fone-contato`).val(data.Participante.FoneContato);
                 $(`#participante-restricaoalimentar`).val(data.Participante.RestricaoAlimentar);
                 $(`#participante-medicacao`).val(data.Participante.Medicacao);
                 $(`#participante-alergia`).val(data.Participante.Alergia);
@@ -212,6 +216,7 @@ function GetParticipante() {
                 $('.realista-nome').text(realista.Nome)
                 $('.paitext').text(realista.NomePai)
                 $('.convitetext').text(realista.NomeConvite)
+                $('.contatotext').text(realista.NomeContato)
                 $('#marcadores').html(realista.Etiquetas.map(etiqueta => `<span  class="badge m-r-xs" style="background-color:${etiqueta.Cor};color:#fff">${etiqueta.Nome}</span>`).join().replace(/,/g, ''))
                 $('#participante-etiquetas').html(`${data.Etiquetas.map(etiqueta => `<option data-cor="${etiqueta.Cor}" value=${etiqueta.Id}>${etiqueta.Nome}</option>`)
                     }`)
@@ -881,7 +886,7 @@ if ($('#map').length > 0) {
         var marker = L.marker([$(`#participante-latitude`).val().toString(), $(`#participante-longitude`).val().toString()], { icon: getIcon('vermelho') }).addTo(markerLayer);
         marker.bindPopup(`<h4>${$(`#participante-nome`).val()}</h4>`).openPopup();
         $('.div-map').css('display', 'block')
-        map.setView([$(`#participante-latitude`).val(), $(`#participante-longitude`).val()], 14);
+        map.setView([$(`#participante-latitude`).val(), $(`#participante-longitude`).val()], 18);
     }
     function verificaCep(input) {
         let cep = $(input).val()

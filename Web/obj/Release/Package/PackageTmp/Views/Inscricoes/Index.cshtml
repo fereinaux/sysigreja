@@ -184,12 +184,23 @@
                                 @if (ViewBag.Campos.Contains(CamposEnum.Contato.GetDescription()))
                                 {
                                     <div class="form-group">
+                                        <label for="participante-nome-contato" class="text-white">Pessoa de contato</label>
+                                        <input type="text" class="form-control required" id="participante-nome-contato" data-field="Pessoa de contato" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="participante-fone-contato" class="text-white">Fone do contato</label>
+                                        <input type="text" class="form-control fone" id="participante-fone-contato" data-field="Fone do contato" />
+                                    </div>
+                                }
+                                @if (ViewBag.Campos.Contains(CamposEnum.Convite.GetDescription()))
+                                {
+                                    <div class="form-group">
                                         <label for="participante-nome-convite" class="text-white">Pessoa que lhe convidou</label>
-                                        <input type="text" class="form-control required" id="participante-nome-convite" data-field="Pessoa de contato" />
+                                        <input type="text" class="form-control required" id="participante-nome-convite" data-field="Pessoa que convidou" />
                                     </div>
                                     <div class="form-group">
                                         <label for="participante-fone-convite" class="text-white">Fone de quem lhe convidou</label>
-                                        <input type="text" class="form-control fone" id="participante-fone-convite" data-field="Fone do contato" />
+                                        <input type="text" class="form-control fone" id="participante-fone-convite" data-field="Fone da pessoa que convidou" />
                                     </div>
                                 }
                                 @if (ViewBag.Campos.Contains(CamposEnum.Parente.GetDescription()))

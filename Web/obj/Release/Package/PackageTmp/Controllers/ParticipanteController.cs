@@ -137,6 +137,8 @@ namespace SysIgreja.Controllers
                 EventoId = x.EventoId,
                 Fone = x.Fone,
                 FoneConvite = x.FoneConvite,
+                FoneContato = x.FoneContato,
+                NomeContato = x.NomeContato,
                 FoneMae = x.FoneMae,
                 FonePai = x.FonePai,
                 HasAlergia = x.HasAlergia,

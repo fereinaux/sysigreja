@@ -344,47 +344,62 @@
                             </div>
                         </div>
                     }
-                    <div class="dados-participante-contato">
-                        @if (ViewBag.Campos.Contains(CamposEnum.Mae.GetDescription()))
-                        {
-                            <div class="col-sm-6 p-w-md m-t-md text-center">
-                                <h5>Nome da Mãe</h5>
-                                <input type="text" class="form-control required" id="participante-nomemae" data-field="Nome da Mãe" />
-                            </div>
-                            <div class="col-sm-6 p-w-md m-t-md text-center">
-                                <h5>Fone da Mãe</h5>
-                                <input type="text" class="form-control fone" id="participante-fonemae" data-field="Fone da Mãe" />
-                            </div>
-                        }
+                <div class="dados-participante-contato">
+                    @if (ViewBag.Campos.Contains(CamposEnum.Mae.GetDescription()))
+                    {
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Nome da Mãe</h5>
+                            <input type="text" class="form-control required" id="participante-nome-mae" data-field="Nome da Mãe" />
+                        </div>
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Fone da Mãe</h5>
+                            <input type="text" class="form-control fone" id="participante-fone-mae" data-field="Fone da Mãe" />
+                        </div>
+                    }
 
-                        @if (ViewBag.Campos.Contains(CamposEnum.Pai.GetDescription()))
-                        {
+                    @if (ViewBag.Campos.Contains(CamposEnum.Pai.GetDescription()))
+                    {
 
-                            <div class="col-sm-6 p-w-md m-t-md text-center">
-                                <h5>Nome do Pai</h5>
-                                <input type="text" class="form-control required" id="participante-nomepai" data-field="Nome do Pai" />
-                            </div>
-                            <div class="col-sm-6 p-w-md m-t-md text-center">
-                                <h5>Fone do Pai</h5>
-                                <input type="text" class="form-control fone" id="participante-fonepai" data-field="Fone do Pai" />
-                            </div>
-                        }
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Nome do Pai</h5>
+                            <input type="text" class="form-control required" id="participante-nome-pai" data-field="Nome do Pai" />
+                        </div>
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Fone do Pai</h5>
+                            <input type="text" class="form-control fone" id="participante-fone-pai" data-field="Fone do Pai" />
+                        </div>
+                    }
 
-                        @if (ViewBag.Campos.Contains(CamposEnum.Contato.GetDescription()))
-                        {
+                    @if (ViewBag.Campos.Contains(CamposEnum.Contato.GetDescription()))
+                    {
 
-                            <div class="col-sm-6 p-w-md m-t-md text-center">
-                                <h5>Pessoa de Contato</h5>
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Pessoa de Contato</h5>
 
-                                <input type="text" class="form-control required" id="participante-nomeconvite" data-field="Pessoa de Contato" />
-                            </div>
-                            <div class="col-sm-6 p-w-md m-t-md text-center">
-                                <h5>Fone do Contato</h5>
+                            <input type="text" class="form-control required" id="participante-nome-contato" data-field="Pessoa de Contato" />
+                        </div>
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Fone do Contato</h5>
 
-                                <input type="text" class="form-control fone" id="participante-foneconvite" data-field="Fone do Contato" placeholder="+55 (81) 9999-9999" />
-                            </div>
-                        }
-                    </div>
+                            <input type="text" class="form-control fone" id="participante-fone-contato" data-field="Fone do Contato" placeholder="+55 (81) 9999-9999" />
+                        </div>
+                    }
+
+                    @if (ViewBag.Campos.Contains(CamposEnum.Convite.GetDescription()))
+                    {
+
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Pessoa que convidou</h5>
+
+                            <input type="text" class="form-control required" id="participante-nome-convite" data-field="Pessoa que convidou" />
+                        </div>
+                        <div class="col-sm-6 p-w-md m-t-md text-center">
+                            <h5>Fone de quem convidou</h5>
+
+                            <input type="text" class="form-control fone" id="participante-fone-convite" data-field="Fone de quem convidou" placeholder="+55 (81) 9999-9999" />
+                        </div>
+                    }
+                </div>
 
                     @if (ViewBag.Campos.Contains(CamposEnum.Medicacao.GetDescription()))
                     {

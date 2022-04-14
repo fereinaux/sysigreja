@@ -21,10 +21,9 @@ if ($('#map').length > 0) {
                     $(`#participante-latitude`).val(data.lat)
                     $(`#participante-longitude`).val(data.lon)
                     markerLayer.getLayers().forEach(mark => mark.remove())
-                    var marker = L.marker([lat, lon], { icon: getIcon('vermelho') }).addTo(markerLayer);
-                    marker.bindPopup(`<h4>${$(`#participante-nome`).val()}</h4>`).openPopup();
+                    var marker = L.marker([data.lat, data.lon], { icon: getIcon('vermelho') }).addTo(markerLayer);
                     $('#map').css('display', 'block')
-                    map.setView([lat, lon], 14);
+                    map.setView([data.lat, data.lon], 18);
                 }
             })
         }
@@ -49,12 +48,14 @@ function VerificaCadastro() {
                     $("#participante-data-nascimento").val(moment(data.Participante.DataNascimento).format('DD/MM/YYYY'));
                     $(`#participante-email`).val(data.Participante.Email);
                     $(`#participante-fone`).val(data.Participante.Fone);
-                    $(`#participante-nomepai`).val(data.Participante.NomePai);
-                    $(`#participante-fonepai`).val(data.Participante.FonePai);
-                    $(`#participante-nomemae`).val(data.Participante.NomeMae);
-                    $(`#participante-fonemae`).val(data.Participante.FoneMae);
-                    $(`#participante-nomeconvite`).val(data.Participante.NomeConvite);
-                    $(`#participante-foneconvite`).val(data.Participante.FoneConvite);
+                    $(`#participante-nome-pai`).val(data.Participante.NomePai);
+                    $(`#participante-fone-pai`).val(data.Participante.FonePai);
+                    $(`#participante-nome-mae`).val(data.Participante.NomeMae);
+                    $(`#participante-fone-mae`).val(data.Participante.FoneMae);
+                    $(`#participante-nome-convite`).val(data.Participante.NomeConvite);
+                    $(`#participante-fone-convite`).val(data.Participante.FoneConvite);
+                    $(`#participante-nome-contato`).val(data.Participante.NomeContato);
+                    $(`#participante-fone-contato`).val(data.Participante.FoneContato);
                     $(`#participante-restricaoalimentar`).val(data.Participante.RestricaoAlimentar);
                     $(`#participante-medicacao`).val(data.Participante.Medicacao);
                     $(`#participante-alergia`).val(data.Participante.Alergia);
@@ -99,6 +100,8 @@ function PostInscricao() {
                     DataNascimento: moment($("#participante-data-nascimento").val(), 'DD/MM/YYYY', 'pt-br').toJSON(),
                     Email: $(`#participante-email`).val(),
                     Fone: $(`#participante-fone`).val(),
+                    Instagram: $(`#participante-instagram`).val(),
+                    Profissao: $(`#participante-profissao`).val(),
                     CEP: $(`#participante-cep`).val(),
                     Logradouro: $(`#participante-logradouro`).val(),
                     Bairro: $(`#participante-bairro`).val(),
@@ -121,7 +124,9 @@ function PostInscricao() {
                     NomeMae: $(`#participante-nome-mae`).val(),
                     FoneMae: $(`#participante-fone-mae`).val(),
                     NomeConvite: $(`#participante-nome-convite`).val(),
-                    FoneConvite: $(`#participante-fone-convite`).val(),       
+                    FoneConvite: $(`#participante-fone-convite`).val(),
+                    NomeContato: $(`#participante-nome-contato`).val(),
+                    FoneContato: $(`#participante-fone-contato`).val(),
                 }),
             success: function (url) {
                 window.location.href = url;

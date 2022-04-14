@@ -68,7 +68,7 @@ namespace SysIgreja.Controllers
                                 .ForMember(dest => dest.HasOferta, opt => opt.MapFrom(x => x.Lancamentos.Any(y => y.EventoId == (eventoId ?? x.Equipes.LastOrDefault().EventoId))))
                                 .ForMember(dest => dest.Faltas, opt => opt.MapFrom(x => qtdReunioes - x.Equipes.LastOrDefault().Presencas.Count()))
                                 .ForMember(dest => dest.Status, opt => opt.MapFrom(x => x.Status.GetDescription()))
-                                .ForMember(dest => dest.Equipe, opt => opt.MapFrom(x => x.Equipes.LastOrDefault().EventoId == eventoId ? x.Equipes.LastOrDefault().Equipe.GetDescription() : null));
+                                .ForMember(dest => dest.Equipe, opt => opt.MapFrom(x => (x.Equipes.Any() && x.Equipes.LastOrDefault().EventoId == eventoId) ? x.Equipes.LastOrDefault().Equipe.GetDescription() : null));
                 cfg.CreateMap<Equipante, EquipanteExcelModel>()
                   .ForMember(dest => dest.Nome, opt => opt.MapFrom(x => UtilServices.CapitalizarNome(x.Nome)))
                  .ForMember(dest => dest.Apelido, opt => opt.MapFrom(x => UtilServices.CapitalizarNome(x.Apelido)))
