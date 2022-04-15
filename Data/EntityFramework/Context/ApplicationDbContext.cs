@@ -20,7 +20,7 @@ namespace Data.Context
         public virtual Equipante Equipante { get; set; }
     }
 
-    public class ConsultaDbContext: DbContext
+    public class ConsultaDbContext : DbContext
     {
         public ConsultaDbContext(string connection)
     : base(connection)
@@ -102,10 +102,22 @@ namespace Data.Context
         public DbSet<Lancamento> Lancamentos { get; set; }
         public DbSet<Arquivo> Arquivos { get; set; }
         public DbSet<Etiqueta> Etiquetas { get; set; }
+        public DbSet<Carona> Caronas { get; set; }
+        public DbSet<CaronaParticipante> CaronaParticipantes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Carona>()
+              .HasOptional<Evento>(q => q.Evento)
+               .WithOptionalDependent()
+               .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Carona>()
+                .HasOptional<Equipante>(c => c.Motorista)
+                .WithMany()
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Circulo>()
                 .HasOptional<Evento>(c => c.Evento)
@@ -149,11 +161,8 @@ namespace Data.Context
             modelBuilder.Entity<Equipante>()
                 .HasMany(x => x.Equipes);
 
-
             modelBuilder.Entity<EquipanteEvento>()
                 .HasMany(x => x.Presencas);
-
-
         }
 
         public override int SaveChanges()

@@ -1,5 +1,6 @@
 using Core.Business.Account;
 using Core.Business.Arquivos;
+using Core.Business.Caronas;
 using Core.Business.CentroCusto;
 using Core.Business.Circulos;
 using Core.Business.Configuracao;
@@ -58,6 +59,8 @@ namespace Web
             container.RegisterType<IGenericRepository<Mensagem>, GenericRepository<Mensagem>>();
             container.RegisterType<IGenericRepository<Configuracao>, GenericRepository<Configuracao>>();
             container.RegisterType<IGenericRepository<ConfiguracaoCampos>, GenericRepository<ConfiguracaoCampos>>();
+            container.RegisterType<IGenericRepository<Carona>, GenericRepository<Carona>>();
+            container.RegisterType<IGenericRepository<CaronaParticipante>, GenericRepository<CaronaParticipante>>();
 
             container.RegisterType<IEmailSender, EmailSender>();
             container.RegisterType<IDatatableService, DatatableService>();
@@ -76,6 +79,7 @@ namespace Web
             container.RegisterType<IAccountBusiness, AccountBusiness>();
             container.RegisterType<IReunioesBusiness, ReunioesBusiness>();
             container.RegisterType<ICirculosBusiness, CirculosBusiness>();
+            container.RegisterType<ICaronasBusiness, CaronasBusiness>();
             container.RegisterType<IQuartosBusiness, QuartosBusiness>();
             container.RegisterType<IMensagemBusiness, MenssagemBusinesss>();
             container.RegisterType<IConfiguracaoBusiness, ConfiguracaoBusiness>();

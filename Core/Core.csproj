@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Business\Account\AccountBusiness.cs" />
     <Compile Include="Business\Account\IAccountBusiness.cs" />
+    <Compile Include="Business\Caronas\CaronasBusiness.cs" />
+    <Compile Include="Business\Caronas\ICaronasBusiness.cs" />
     <Compile Include="Business\CentroCusto\CentroCustoBusiness.cs" />
     <Compile Include="Business\CentroCusto\ICentroCustoBusiness.cs" />
     <Compile Include="Business\Configuracao\ConfiguracaoBusiness.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Business\Newsletter\NewsletterBusiness.cs" />
     <Compile Include="Business\Participantes\ParticipantesBusiness.cs" />
     <Compile Include="Business\Participantes\IParticipantesBusiness.cs" />
+    <Compile Include="Models\Caronas\PostCaronaModel.cs" />
     <Compile Include="Models\CentroCusto\PostCentroCustoModel.cs" />
     <Compile Include="Models\Configuracao\PostConfiguracaoModel.cs" />
     <Compile Include="Models\DataTable\DataTableModel.cs" />

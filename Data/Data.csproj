@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Carona.cs" />
+    <Compile Include="Entities\CaronaParticipante.cs" />
     <Compile Include="Entities\ConfiguracaoCampos.cs" />
     <Compile Include="Entities\Configuracao.cs" />
     <Compile Include="Entities\Mensagem.cs" />
