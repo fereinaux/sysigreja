@@ -3,14 +3,14 @@ using Core.Models.Equipe;
 using Data.Context;
 using Data.Entities;
 using Data.Repository;
-using System.Data.Entity;
 using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading;
 using Utils.Enums;
 using static Utils.Extensions.EnumExtensions;
-using System;
 
 namespace Core.Business.Equipes
 {
@@ -57,6 +57,7 @@ namespace Core.Business.Equipes
             return equipanteEventoRepository
                 .GetAll()
                 .Include(x => x.Equipante)
+                 .Include(x => x.Equipante.ParticipantesEtiquetas).Include(x => x.Equipante.ParticipantesEtiquetas.Select(y => y.Etiqueta))
                 .Include(x => x.Evento)
                 .ToList()
                 .FirstOrDefault(x => x.EventoId == eventoId && x.EquipanteId == usuarioRepository.GetById(userId).EquipanteId);
@@ -77,6 +78,7 @@ namespace Core.Business.Equipes
             return equipanteEventoRepository
                 .GetAll()
                 .Include(x => x.Equipante)
+                .Include(x => x.Equipante.ParticipantesEtiquetas).Include(x => x.Equipante.ParticipantesEtiquetas.Select(y => y.Etiqueta))
                 .Include(x => x.Equipante.Arquivos)
                 .Include(x => x.Equipe)
                 .Where(x => x.EventoId == eventoId)
@@ -119,6 +121,7 @@ namespace Core.Business.Equipes
             return equipanteEventoRepository
                 .GetAll(x => x.Equipe == equipeId && x.EventoId == eventoId)
                 .Include(x => x.Equipante.Arquivos)
+                .Include(x => x.Equipante.ParticipantesEtiquetas).Include(x => x.Equipante.ParticipantesEtiquetas.Select(y => y.Etiqueta))
                 .OrderBy(x => new { x.Tipo, x.Equipante.Nome });
         }
 

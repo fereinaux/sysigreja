@@ -7,5 +7,5 @@
         public int QuantidadeMembros { get; set; }
     }
 
-    
+
 }

@@ -1,11 +1,8 @@
-﻿using System;
-using Utils.Enums;
-
-namespace Core.Models.Participantes
+﻿namespace Core.Models.Participantes
 {
     public class PostInfoModel
     {
-        public int Id { get; set; }    
+        public int Id { get; set; }
         public bool MsgPagamento { get; set; }
         public bool MsgVacina { get; set; }
         public bool MsgGeral { get; set; }

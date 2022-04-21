@@ -11,5 +11,5 @@
         public string Banco { get; set; }
     }
 
-    
+
 }

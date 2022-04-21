@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SysIgreja.ViewModels
+﻿namespace SysIgreja.ViewModels
 {
     public class CirculoViewModel
     {
@@ -11,5 +9,5 @@ namespace SysIgreja.ViewModels
         public string Cor { get; set; }
     }
 
-    
+
 }

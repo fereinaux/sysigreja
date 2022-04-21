@@ -1,5 +1,5 @@
 ﻿using Core.Models.DataTable;
-using System;
+using Core.Models.Etiquetas;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Utils.Enums;
@@ -9,8 +9,11 @@ namespace Core.Models.Equipantes
 
     public class FilterModel
     {
-        public int EventoId { get; set; }
+        public int? EventoId { get; set; }
         public EquipesEnum? Equipe { get; set; }
+        public string Status { get; set; }
+        public List<string> Etiquetas { get; set; }
+        public List<string> NaoEtiquetas { get; set; }
         public int Start { get; set; }
         public int Length { get; set; }
         public List<Column> columns { get; set; }
@@ -38,6 +41,7 @@ namespace Core.Models.Equipantes
         public string Alergia { get; set; }
         public string Medicacao { get; set; }
         public string RestricaoAlimentar { get; set; }
+        public IEnumerable<PostEtiquetaModel> Etiquetas { get; set; }
     }
 
 

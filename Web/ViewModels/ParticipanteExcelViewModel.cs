@@ -15,7 +15,7 @@ namespace SysIgreja.ViewModels
         [DisplayName("Nome da Mãe")]
         public string NomeMae { get; set; }
         [DisplayName("Fone da Mãe")]
-        public string FoneMae{ get; set; }
+        public string FoneMae { get; set; }
         [DisplayName("Nome do Pai")]
         public string NomePai { get; set; }
         [DisplayName("Fone do Pai")]

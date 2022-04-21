@@ -1,5 +1,4 @@
 ﻿using Core.Business.Equipes;
-using Core.Models.Eventos;
 using Core.Models.Reunioes;
 using Data.Entities;
 using Data.Repository;
@@ -20,7 +19,7 @@ namespace Core.Business.Reunioes
             this.reuniaoRepository = reuniaoRepository;
             this.equipanteRepository = equipanteRepository;
             this.equipesBusiness = equipesBusiness;
-    }
+        }
 
         public void DeleteReuniao(int id)
         {
@@ -30,8 +29,8 @@ namespace Core.Business.Reunioes
 
         public int? GetFaltasByEquipanteId(int equipanteId, int eventoId)
         {
-            if (equipesBusiness.GetEquipeAtual(eventoId,equipanteId) != null)                          
-                return reuniaoRepository.GetAll(x => x.EventoId == eventoId && x.DataReuniao < System.DateTime.Today && !x.Presenca.Any(y => y.EquipanteEvento.EquipanteId == equipanteId) ).Include(x => x.Presenca).Count();
+            if (equipesBusiness.GetEquipeAtual(eventoId, equipanteId) != null)
+                return reuniaoRepository.GetAll(x => x.EventoId == eventoId && x.DataReuniao < System.DateTime.Today && !x.Presenca.Any(y => y.EquipanteEvento.EquipanteId == equipanteId)).Include(x => x.Presenca).Count();
 
             return null;
         }

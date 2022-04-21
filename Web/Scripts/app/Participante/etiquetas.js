@@ -55,7 +55,8 @@
                 url: '/Equipe/GetMembrosEquipe',
                 data: {
                     EventoId: $("#etiquetas-eventoid").val(),
-                    EquipeId: $("#etiquetas-equipes").val()
+                    EquipeId: $("#etiquetas-equipes").val(),
+                    Foto: $('.cracha:checked').val() == 1
                 },
                 datatype: "json",
                 type: "POST",

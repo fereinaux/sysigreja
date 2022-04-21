@@ -1,22 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "MyR9OjD23Yec3SSvstH3dtJiZXwYb81VLk7AlwBOSZ/ELrUTzvRqTCDVWd5xF3m0AmEBWNoNc2Q6OVeGeiUI2A==",
+  "dgSpecHash": "mKRYPKYSIzrddyDyKeKyV1TxKb/XJseSU9Q1R/G3HwmQwSR35EOZDL/6/7+syBToWG2YXVHYdToiCK8JYReyNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\felip\\source\\repos\\ejc\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\ejc\\Core\\Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\felip\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\epplus\\4.5.3.2\\epplus.4.5.3.2.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.2\\microsoft.aspnet.identity.core.2.2.2.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.2\\microsoft.aspnet.identity.entityframework.2.2.2.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnet.identity.owin\\2.2.2\\microsoft.aspnet.identity.owin.2.2.2.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\microsoft.owin\\3.0.1\\microsoft.owin.3.0.1.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\microsoft.owin.security\\3.0.1\\microsoft.owin.security.3.0.1.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\microsoft.owin.security.cookies\\3.0.1\\microsoft.owin.security.cookies.3.0.1.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\microsoft.owin.security.oauth\\3.0.1\\microsoft.owin.security.oauth.3.0.1.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\microsoft.sqlserver.types\\14.0.1016.290\\microsoft.sqlserver.types.14.0.1016.290.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\newtonsoft.json\\6.0.4\\newtonsoft.json.6.0.4.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\owin\\1.0.0\\owin.1.0.0.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\system.linq.dynamic\\1.0.8\\system.linq.dynamic.1.0.8.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\epplus\\4.5.3.2\\epplus.4.5.3.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.2\\microsoft.aspnet.identity.core.2.2.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.2\\microsoft.aspnet.identity.entityframework.2.2.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.identity.owin\\2.2.2\\microsoft.aspnet.identity.owin.2.2.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.owin\\3.0.1\\microsoft.owin.3.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.owin.security\\3.0.1\\microsoft.owin.security.3.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.owin.security.cookies\\3.0.1\\microsoft.owin.security.cookies.3.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.owin.security.oauth\\3.0.1\\microsoft.owin.security.oauth.3.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.sqlserver.types\\14.0.1016.290\\microsoft.sqlserver.types.14.0.1016.290.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\6.0.4\\newtonsoft.json.6.0.4.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\owin\\1.0.0\\owin.1.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.linq.dynamic\\1.0.8\\system.linq.dynamic.1.0.8.nupkg.sha512"
   ],
   "logs": []
 }

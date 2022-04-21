@@ -1,5 +1,4 @@
-﻿using Core.Models.Lancamento;
-using Core.Models.Participantes;
+﻿using Core.Models.Participantes;
 using System.Linq;
 
 namespace Core.Business.Participantes

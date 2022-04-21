@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
-
-namespace Core.Models.Etiquetas
+﻿namespace Core.Models.Etiquetas
 {
     public class PostEtiquetaModel
     {

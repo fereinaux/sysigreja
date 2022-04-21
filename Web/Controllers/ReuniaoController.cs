@@ -20,7 +20,7 @@ namespace SysIgreja.Controllers
         private readonly IReunioesBusiness reuniaosBusiness;
         private readonly IEquipesBusiness equipesBusiness;
 
-        public ReuniaoController(IReunioesBusiness ReuniaosBusiness, IEquipesBusiness equipesBusiness, IEventosBusiness eventosBusiness, IConfiguracaoBusiness configuracaoBusiness, IAccountBusiness accountBusiness) :base(eventosBusiness, accountBusiness, configuracaoBusiness)
+        public ReuniaoController(IReunioesBusiness ReuniaosBusiness, IEquipesBusiness equipesBusiness, IEventosBusiness eventosBusiness, IConfiguracaoBusiness configuracaoBusiness, IAccountBusiness accountBusiness) : base(eventosBusiness, accountBusiness, configuracaoBusiness)
         {
             this.reuniaosBusiness = ReuniaosBusiness;
             this.equipesBusiness = equipesBusiness;
@@ -45,9 +45,10 @@ namespace SysIgreja.Controllers
                     Id = x.Id,
                     DataReuniao = x.DataReuniao,
                     Presenca = x.Presenca.Count(),
-                    Equipes = x.Presenca.GroupBy(y => y.EquipanteEvento.Equipe).Select(z => new EquipesModel {
+                    Equipes = x.Presenca.GroupBy(y => y.EquipanteEvento.Equipe).Select(z => new EquipesModel
+                    {
                         Equipe = z.Key.GetDescription(),
-                        Presenca = $"{z.Count()}/{equipesBusiness.GetMembrosEquipe(EventoId, z.Key).Count()}" ,
+                        Presenca = $"{z.Count()}/{equipesBusiness.GetMembrosEquipe(EventoId, z.Key).Count()}",
                         PresencaOrder = z.Count()/equipesBusiness.GetMembrosEquipe(EventoId, z.Key).Count()
                     }).ToList()
                 }); ;

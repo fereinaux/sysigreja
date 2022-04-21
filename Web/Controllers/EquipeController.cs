@@ -1,15 +1,12 @@
 ﻿using Arquitetura.Controller;
-using Arquitetura.ViewModels;
 using Core.Business.Account;
 using Core.Business.Configuracao;
-using Core.Business.Equipantes;
 using Core.Business.Equipes;
 using Core.Business.Eventos;
 using Core.Business.Reunioes;
 using Core.Models.Equipe;
 using SysIgreja.ViewModels;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Utils.Enums;
@@ -158,7 +155,7 @@ namespace SysIgreja.Controllers
                     Nome = UtilServices.CapitalizarNome(x.Nome),
                     Apelido = UtilServices.CapitalizarNome(x.Apelido),
                     Foto = x.Arquivos.Any(y => y.IsFoto) ? Convert.ToBase64String(x.Arquivos.FirstOrDefault(y => y.IsFoto).Conteudo) : ""
-                }).ToList().OrderBy(x => x.Equipe ).ThenBy(x => x.Nome);
+                }).ToList().OrderBy(x => x.Equipe).ThenBy(x => x.Nome);
 
             var json = Json(new { data = result }, JsonRequestBehavior.AllowGet);
             json.MaxJsonLength = Int32.MaxValue;
@@ -166,7 +163,7 @@ namespace SysIgreja.Controllers
         }
 
         [HttpPost]
-        public ActionResult GetMembrosEquipe(int EventoId, EquipesEnum EquipeId)
+        public ActionResult GetMembrosEquipe(int EventoId, EquipesEnum EquipeId, bool Foto)
         {
             var query = equipesBusiness
                 .GetMembrosEquipe(EventoId, EquipeId)
@@ -182,7 +179,7 @@ namespace SysIgreja.Controllers
                 Idade = UtilServices.GetAge(x.Equipante.DataNascimento),
                 Tipo = x.Tipo.GetDescription(),
                 x.Equipante.Fone,
-                Foto = x.Equipante.Arquivos.Any(y => y.IsFoto) ? Convert.ToBase64String(x.Equipante.Arquivos.FirstOrDefault(y => y.IsFoto).Conteudo) : ""
+                Foto = Foto && x.Equipante.Arquivos.Any(y => y.IsFoto) ? Convert.ToBase64String(x.Equipante.Arquivos.FirstOrDefault(y => y.IsFoto).Conteudo) : ""
             });
 
             var json = Json(new { data = result }, JsonRequestBehavior.AllowGet);

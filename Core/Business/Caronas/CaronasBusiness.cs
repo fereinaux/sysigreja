@@ -1,16 +1,12 @@
 ﻿using Core.Business.Configuracao;
 using Core.Models.Carona;
-using Core.Models.Circulos;
-using Core.Models.Eventos;
 using Data.Entities;
 using Data.Repository;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Spatial;
 using System.Linq;
 using Utils.Enums;
-using Utils.Extensions;
 using Utils.Services;
 
 namespace Core.Business.Caronas
@@ -32,12 +28,17 @@ namespace Core.Business.Caronas
             this.eventoeRepository = eventoeRepository;
         }
 
-        public void ChangeCarona(int participanteId, int? destinoId)
+        public string ChangeCarona(int participanteId, int? destinoId)
         {
             var caronaParticipante = caronaParticipanteRepository.GetAll(x => x.ParticipanteId == participanteId).FirstOrDefault();
-
+            string msg = "OK";
             if (destinoId.HasValue)
             {
+                var carona = caronaRepo.GetById(destinoId.Value);
+                if (carona.Capacidade < caronaParticipanteRepository.GetAll(x => x.CaronaId == carona.Id).Count() + 1)
+                {
+                    msg = "Capacidade da carona excedida";
+                }
                 if (caronaParticipante == null)
                     caronaParticipante = new CaronaParticipante
                     {
@@ -56,6 +57,7 @@ namespace Core.Business.Caronas
             }
 
             caronaParticipanteRepository.Save();
+            return msg;
         }
 
         public void DeleteCarona(int id)
@@ -70,31 +72,26 @@ namespace Core.Business.Caronas
             var caronas = caronaRepo.GetAll(x => x.EventoId == eventoId).Include(x => x.Motorista).ToList();
             List<Participante> listParticipantes = GetParticipantesSemCarona(eventoId);
             var countParticipantes = listParticipantes.Count;
-            int countDistrbuir = (int)Math.Ceiling((decimal)(countParticipantes / caronas.Count()));
-            var caronaAtual = 0;
 
             listParticipantes = listParticipantes.Where(x => !string.IsNullOrEmpty(x.CEP)).ToList();
-            countParticipantes = listParticipantes.Count();
-            countDistrbuir = (int)Math.Ceiling((decimal)(countParticipantes / caronas.Count()));
-            var pontoZero = DbGeography.FromText($"POINT({caronas[caronaAtual].Motorista.Latitude} {caronas[caronaAtual].Motorista.Longitude})");
-            while (listParticipantes.Count() > 0)
+
+            caronas.ForEach(carona =>
             {
+                var pontoZero = DbGeography.FromText($"POINT({carona.Motorista.Latitude} {carona.Motorista.Longitude})");
                 listParticipantes = listParticipantes.OrderBy(x => pontoZero.Distance(DbGeography.FromText($"POINT({x.Latitude} {x.Longitude})"))).ToList();
-                for (int i = 0; i < countDistrbuir; i++)
+                while (caronaParticipanteRepository.GetAll(x => x.CaronaId == carona.Id).Count() < carona.Capacidade)
                 {
                     caronaParticipanteRepository.Insert(
                           new CaronaParticipante
                           {
                               ParticipanteId = listParticipantes[0].Id,
-                              CaronaId = caronas[caronaAtual].Id
+                              CaronaId = carona.Id
                           });
                     caronaParticipanteRepository.Save();
                     listParticipantes.RemoveAt(0);
                 }
-                caronaAtual++;
-                pontoZero = DbGeography.FromText($"POINT({caronas[caronaAtual].Motorista.Latitude} {caronas[caronaAtual].Motorista.Longitude})");
-            }
 
+            });
         }
 
         public Carona GetCaronaById(int id)
@@ -117,24 +114,54 @@ namespace Core.Business.Caronas
               .OrderBy(x => x.CaronaId);
         }
 
-        public Carona GetNextCarona(int eventoId)
-        {
-            throw new NotImplementedException();
-        }
-
         public IQueryable<CaronaParticipante> GetParticipantesByCaronas(int id)
         {
-            throw new NotImplementedException();
+            return caronaParticipanteRepository.GetAll(x => x.CaronaId == id).Include(x => x.Participante);
         }
 
         public List<Participante> GetParticipantesSemCarona(int eventoId)
         {
-            throw new NotImplementedException();
+            var listParticipantesId = caronaParticipanteRepository
+                           .GetAll(x => x.Carona.EventoId == eventoId && x.Participante.Status != StatusEnum.Cancelado && x.Participante.Status != StatusEnum.Espera)
+                           .Select(x => x.ParticipanteId)
+                           .ToList();
+
+            var listParticipantes = participanteRepository
+                 .GetAll(x => x.EventoId == eventoId && !listParticipantesId.Contains(x.Id) && x.Status != StatusEnum.Cancelado && x.Status != StatusEnum.Espera)
+                 .OrderBy(x => x.DataCadastro)
+                 .ToList();
+
+            listParticipantes.ForEach(x => x.Nome = UtilServices.CapitalizarNome(x.Nome));
+            listParticipantes.ForEach(x => x.Apelido = UtilServices.CapitalizarNome(x.Apelido));
+
+            return listParticipantes;
         }
 
         public void PostCarona(PostCaronaModel model)
         {
-            throw new NotImplementedException();
+            Carona carona = null;
+
+            if (model.Id > 0)
+            {
+                carona = caronaRepo.GetById(model.Id);
+                carona.Capacidade = model.Capacidade;
+                carona.MotoristaId = model.MotoristaId;
+
+                caronaRepo.Update(carona);
+            }
+            else
+            {
+                carona = new Carona
+                {
+                    EventoId = model.EventoId,
+                    Capacidade = model.Capacidade,
+                    MotoristaId = model.MotoristaId
+                };
+
+                caronaRepo.Insert(carona);
+            }
+
+            caronaRepo.Save();
         }
     }
 }

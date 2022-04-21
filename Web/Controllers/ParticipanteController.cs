@@ -1,5 +1,4 @@
 ﻿using Arquitetura.Controller;
-using Arquitetura.ViewModels;
 using AutoMapper;
 using Core.Business.Account;
 using Core.Business.Arquivos;
@@ -14,15 +13,12 @@ using Core.Business.MeioPagamento;
 using Core.Business.Participantes;
 using Core.Business.Quartos;
 using Core.Models.Etiquetas;
-using Core.Models.Lancamento;
 using Core.Models.Participantes;
 using Core.Models.Quartos;
-using Data.Entities;
 using SysIgreja.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Globalization;
 using System.Linq;
 using System.Linq.Dynamic;
 using System.Web.Mvc;
@@ -189,7 +185,7 @@ namespace SysIgreja.Controllers
             result.Nome = UtilServices.CapitalizarNome(result.Nome);
             result.Apelido = UtilServices.CapitalizarNome(result.Apelido);
 
-            var quartoAtual = quartosBusiness.GetNextQuarto(result.EventoId, result.Sexo);
+            var quartoAtual = quartosBusiness.GetNextQuarto(result.EventoId, result.Sexo, TipoPessoaEnum.Participante);
 
             var etiquetas = etiquetasBusiness.GetEtiquetas().ToList()
                 .Select(x => new
@@ -203,11 +199,11 @@ namespace SysIgreja.Controllers
             {
                 Circulo = circulosBusiness.GetCirculosComParticipantes(result.EventoId).Where(x => x.ParticipanteId == Id)?.FirstOrDefault()?.Circulo?.Cor.GetDescription() ?? "",
                 Status = result.Status.GetDescription(),
-                Quarto = quartosBusiness.GetQuartosComParticipantes(result.EventoId).Where(x => x.ParticipanteId == Id).FirstOrDefault()?.Quarto?.Titulo ?? "",
+                Quarto = quartosBusiness.GetQuartosComParticipantes(result.EventoId, TipoPessoaEnum.Participante).Where(x => x.ParticipanteId == Id).FirstOrDefault()?.Quarto?.Titulo ?? "",
                 QuartoAtual = new
                 {
                     Quarto = mapper.Map<PostQuartoModel>(quartoAtual),
-                    Participantes = quartoAtual != null ? quartosBusiness.GetParticipantesByQuartos(quartoAtual.Id).Count() : 0
+                    Participantes = quartoAtual != null ? quartosBusiness.GetParticipantesByQuartos(quartoAtual.Id, TipoPessoaEnum.Participante).Count() : 0
                 }
             };
 
@@ -243,7 +239,7 @@ namespace SysIgreja.Controllers
         [HttpGet]
         public ActionResult GetParticipantesByQuarto(int QuartoId)
         {
-            var result = quartosBusiness.GetParticipantesByQuartos(QuartoId).ToList().Select(x => new
+            var result = quartosBusiness.GetParticipantesByQuartos(QuartoId, TipoPessoaEnum.Participante).ToList().Select(x => new
             {
                 Nome = UtilServices.CapitalizarNome(x.Participante.Nome),
                 Medicacao = (x.Participante.Medicacao ?? "-") + "/" + (x.Participante.Alergia ?? "-")
@@ -259,7 +255,7 @@ namespace SysIgreja.Controllers
             {
                 Nome = UtilServices.CapitalizarNome(x.Nome),
                 Apelido = UtilServices.CapitalizarNome(x.Apelido),
-                Dia = x.DataNascimento.HasValue ? x.DataNascimento.Value.ToString("dd") : "", 
+                Dia = x.DataNascimento.HasValue ? x.DataNascimento.Value.ToString("dd") : "",
                 Idade = UtilServices.GetAge(x.DataNascimento).ToString()
             }).ToList();
 
@@ -352,7 +348,7 @@ namespace SysIgreja.Controllers
                 .GetParticipantesByEvento(model.EventoId);
                 var data = mapper.Map<IEnumerable<ParticipanteExcelViewModel>>(result);
 
-                Session[g.ToString()] = datatableService.GenerateExcel(data.ToList()); 
+                Session[g.ToString()] = datatableService.GenerateExcel(data.ToList());
 
                 return Content(g.ToString());
             }

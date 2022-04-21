@@ -29,6 +29,8 @@
                         <li class="@Html.IsSelected(action: "Index", controller:"Participante")"><a href="@Url.Action("Index", "Participante")">Cadastro</a></li>
                         <li class="@Html.IsSelected(action: "Index", controller:"Circulo")"><a href="@Url.Action("Index", "Circulo")">Círculos</a></li>
                         <li class="@Html.IsSelected(action: "Index", controller:"Quarto")"><a href="@Url.Action("Index", "Quarto")">Quartos</a></li>
+                        <li class="@Html.IsSelected(action: "Index", controller:"Carona")"><a href="@Url.Action("Index", "Carona")">Caronas</a></li>
+          
                     </ul>
                 </li>
             }
@@ -41,6 +43,7 @@
                         <li class="@Html.IsSelected(action: "Index", controller:"Equipante")"><a href="@Url.Action("Index", "Equipante")">Cadastro</a></li>
                         <li class="@Html.IsSelected(action: "Index", controller:"Equipe")"><a href="@Url.Action("Index", "Equipe")">Equipes</a></li>
                         <li class="@Html.IsSelected(action: "Presenca", controller:"Equipe")"><a href="@Url.Action("Presenca", "Equipe")">Ata de Presença</a></li>
+                        <li class="@Html.IsSelected(action: "QuartoEquipe", controller:"Quarto")"><a href="@Url.Action("QuartoEquipe", "Quarto")">Quartos</a></li>
                     </ul>
                 </li>
             }

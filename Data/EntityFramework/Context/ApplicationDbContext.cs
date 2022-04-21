@@ -1,12 +1,10 @@
 ﻿using Data.Entities;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-using System.Data.Entity.Migrations;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data.Entity.Validation;
 using Utils.Enums;
-using Utils.Extensions;
 
 namespace Data.Context
 {
@@ -108,12 +106,7 @@ namespace Data.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<Carona>()
-              .HasOptional<Evento>(q => q.Evento)
-               .WithOptionalDependent()
-               .WillCascadeOnDelete(false);
-
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Entity<Carona>()
                 .HasOptional<Equipante>(c => c.Motorista)
                 .WithMany()

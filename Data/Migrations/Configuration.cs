@@ -1,7 +1,6 @@
 namespace Data.Migrations
 {
     using Data.Context;
-    using Data.Entities;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System.Data.Entity;

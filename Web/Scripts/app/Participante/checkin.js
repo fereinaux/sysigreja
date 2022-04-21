@@ -137,7 +137,8 @@ function PostParticipante() {
                         Medicacao: $(`#participante-medicacao`).val(),
                         HasAlergia: $("input[type=radio][name=participante-hasalergia]:checked").val(),
                         Alergia: $(`#participante-alergia`).val(),
-                        Sexo: $("input[type=radio][name=participante-sexo]:checked").val()
+                        Sexo: $("input[type=radio][name=participante-sexo]:checked").val(),
+                        Etiquetas: $('.participante-etiquetas').val()
                     }),
                 success: function () {
                     SuccessMesageOperation();
@@ -320,6 +321,11 @@ function GetEquipante() {
                 $('.dados-equipante').removeClass('d-none');
                 $('.dados-participante-contato input').removeClass('required');
                 $('.dados-participante-contato input[id*="fone"]').removeClass('fone');
+                $('#marcadores').html(data.Equipante.EtiquetasList.map(etiqueta => `<span  class="badge m-r-xs" style="background-color:${etiqueta.Cor};color:#fff">${etiqueta.Nome}</span>`).join().replace(/,/g, ''))
+                $('#participante-etiquetas').html(`${data.Etiquetas.map(etiqueta => `<option data-cor="${etiqueta.Cor}" value=${etiqueta.Id}>${etiqueta.Nome}</option>`)
+                    }`)
+                $('#participante-etiquetas').val(data.Equipante.EtiquetasList.map(etiqueta => etiqueta.Id))
+                $('.participante-etiquetas').select2()
                 if (data.Equipante.Foto) {
 
                     $('#foto').attr("src", 'data:image/jpeg;base64,' + data.Equipante.Foto)

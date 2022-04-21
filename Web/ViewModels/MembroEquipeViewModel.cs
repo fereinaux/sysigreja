@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SysIgreja.ViewModels
+﻿namespace SysIgreja.ViewModels
 {
     public class MembroEquipeViewModel
     {

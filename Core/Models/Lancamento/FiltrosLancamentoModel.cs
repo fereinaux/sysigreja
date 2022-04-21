@@ -1,5 +1,4 @@
 ﻿using System;
-using Utils.Enums;
 
 namespace Core.Models.Lancamento
 {

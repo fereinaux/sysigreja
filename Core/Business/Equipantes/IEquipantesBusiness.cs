@@ -5,9 +5,9 @@ namespace Core.Business.Equipantes
 {
     public interface IEquipantesBusiness
     {
-        IQueryable<Data.Entities.Equipante> GetEquipantes();        
+        IQueryable<Data.Entities.Equipante> GetEquipantes();
         Data.Entities.Equipante GetEquipanteById(int id);
-        void PostEquipante(PostEquipanteModel model);
+        Data.Entities.Equipante PostEquipante(PostEquipanteModel model);
         void DeleteEquipante(int id);
         void ToggleSexo(int id);
         void ToggleVacina(int id);

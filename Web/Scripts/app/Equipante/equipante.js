@@ -1,5 +1,23 @@
 ﻿var realista;
+$.ajax({
+    url: '/Etiqueta/GetEtiquetas',
+    datatype: "json",
+    type: "POST",
+    success: (result) => {
+        $("#equipante-marcadores").html(`
+${result.data.map(p => `<option value=${p.Id}>${p.Nome}</option>`)}
+`)
+        $("#equipante-nao-marcadores").html(`
+${result.data.map(p => `<option value=${p.Id}>${p.Nome}</option>`)}
+`)
+        $('#equipante-marcadores').select2();
+        $('#equipante-nao-marcadores').select2();
+    }
+});
+
 function CarregarTabelaEquipante() {
+
+
     const tableEquipanteConfig = {
         language: languageConfig,
         searchDelay: 750,
@@ -32,7 +50,14 @@ function CarregarTabelaEquipante() {
                     return `<span onclick="ToggleSexo(${row.Id})" style = "font-size:18px;color:${cor};" class="p-l-xs pointer"> <i class="fa ${icon}" aria-hidden="true" title="${data}"></i></span >`;
                 }
             },
-            { data: "Nome", name: "Nome", autoWidth: true },
+            {
+                data: "Nome", name: "Nome", width: "25%", render: function (data, type, row) {
+                    return `<div>
+                        <span>${row.Nome}</br></span>
+                        ${row.Etiquetas.map(etiqueta => `<span  class="badge m-r-xs" style="background-color:${etiqueta.Cor};color:#fff">${etiqueta.Nome}</span>`).join().replace(/,/g, '')}
+                    </div>`
+                }
+            },
             { data: "Idade", name: "Idade", autoWidth: true },
             { data: "Equipe", name: "Equipe", autoWidth: true },
             { data: "Faltas", name: "Faltas", autoWidth: true },
@@ -76,7 +101,8 @@ ${GetIconWhatsApp(row.Fone)}
         ],
         ajax: {
             url: '/Equipante/GetEquipantesDataTable',
-            data: { Equipe: $("#equipe-select").val() != 999 ? $("#equipe-select").val() : null },
+            
+            data: { EventoId: $("#equipante-eventoid-filtro").val() != 999 ? $("#equipante-eventoid-filtro").val() : null, Status: $("#equipante-status").val(), Etiquetas: $("#equipante-marcadores").val(), NaoEtiquetas: $("#equipante-nao-marcadores").val(), Equipe: $("#equipe-select").val() != 999 ? $("#equipe-select").val() : null },
             datatype: "json",
             type: "POST"
         }
@@ -513,6 +539,7 @@ function Pagamentos(row) {
 }
 
 function GetEquipante(id) {
+                $('.equipante-etiquetas').select2({ dropdownParent: $("#form-equipante") });
     if (id > 0) {
         $.ajax({
             url: "/Equipante/GetEquipante/",
@@ -534,7 +561,9 @@ function GetEquipante(id) {
                 $(`input[type=radio][name=equipante-hasalergia][value=${data.Equipante.HasAlergia}]`).iCheck('check');
                 $(`input[type=radio][name=equipante-hasmedicacao][value=${data.Equipante.HasMedicacao}]`).iCheck('check');
                 $(`input[type=radio][name=equipante-hasrestricaoalimentar][value=${data.Equipante.HasRestricaoAlimentar}]`).iCheck('check');
-
+                $('#equipante-etiquetas').html(`${data.Etiquetas.map(etiqueta => `<option data-cor="${etiqueta.Cor}" value=${etiqueta.Id}>${etiqueta.Nome}</option>`)
+                    }`)
+                $('#equipante-etiquetas').val(data.Equipante.EtiquetasList.map(etiqueta => etiqueta.Id))
                 $("#equipante-numeracao").val(data.Equipante.Numeracao);
             }
         });
@@ -603,7 +632,8 @@ function PostEquipante() {
                     Medicacao: $(`#equipante-medicacao`).val(),
                     HasAlergia: $("input[type=radio][name=equipante-hasalergia]:checked").val(),
                     Alergia: $(`#equipante-alergia`).val(),
-                    Sexo: $("input[type=radio][name=equipante-sexo]:checked").val()
+                    Sexo: $("input[type=radio][name=equipante-sexo]:checked").val(),
+                    Etiquetas: $('.equipante-etiquetas').val()
                 }),
             success: function () {
                 SuccessMesageOperation();

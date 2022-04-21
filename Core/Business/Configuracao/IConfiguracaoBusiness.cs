@@ -1,7 +1,5 @@
 ﻿using Core.Models.Configuracao;
-using Core.Models.Eventos;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Core.Business.Configuracao
 {

@@ -1,7 +1,5 @@
-﻿using Core.Models.Eventos;
-using Data.Context;
+﻿using Data.Context;
 using Data.Entities;
-using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,6 +12,6 @@ namespace Core.Business.Account
         List<Equipante> GetEquipantesUsuario(string idUsuario);
         ApplicationUser GetUsuarioById(string id);
         void ToggleUsuarioStatus(string id);
-        void DeleteUsuario(string id);        
+        void DeleteUsuario(string id);
     }
 }

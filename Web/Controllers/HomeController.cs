@@ -9,9 +9,7 @@ using Core.Business.Participantes;
 using Core.Business.Reunioes;
 using SysIgreja.ViewModels;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Utils.Constants;
 using Utils.Enums;
@@ -32,7 +30,7 @@ namespace SysIgreja.Controllers
         private readonly IArquivosBusiness arquivosBusiness;
         private readonly IAccountBusiness accountBusiness;
 
-        public HomeController(IEquipesBusiness equipesBusiness, IParticipantesBusiness participantesBusiness, IArquivosBusiness arquivosBusiness,ILancamentoBusiness lancamentoBusiness, IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness, IReunioesBusiness reunioesBusiness, IConfiguracaoBusiness configuracaoBusiness) : base(eventosBusiness, accountBusiness,configuracaoBusiness)
+        public HomeController(IEquipesBusiness equipesBusiness, IParticipantesBusiness participantesBusiness, IArquivosBusiness arquivosBusiness, ILancamentoBusiness lancamentoBusiness, IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness, IReunioesBusiness reunioesBusiness, IConfiguracaoBusiness configuracaoBusiness) : base(eventosBusiness, accountBusiness, configuracaoBusiness)
         {
             this.lancamentoBusiness = lancamentoBusiness;
             this.participantesBusiness = participantesBusiness;
@@ -64,7 +62,7 @@ namespace SysIgreja.Controllers
             var TotalReceber = lancamentoBusiness.GetPagamentosEvento(EventoId).Where(x => x.Tipo == TiposLancamentoEnum.Receber).Select(x => x.Valor).DefaultIfEmpty(0).Sum();
             var TotalPagar = lancamentoBusiness.GetPagamentosEvento(EventoId).Where(x => x.Tipo == TiposLancamentoEnum.Pagar).Select(x => x.Valor).DefaultIfEmpty(0).Sum();
             var SaldoGeral = TotalReceber - TotalPagar;
-            var result = new 
+            var result = new
             {
                 Evento = eventosBusiness.GetEventoById(EventoId).Status.GetDescription(),
                 Confirmados = participantesBusiness.GetParticipantesByEvento(EventoId).Where(x => x.Status == StatusEnum.Confirmado).Count(),

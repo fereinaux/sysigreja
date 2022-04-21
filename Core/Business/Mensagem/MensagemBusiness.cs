@@ -1,20 +1,16 @@
-﻿using Core.Models.CentroCusto;
-using Core.Models.Eventos;
-using Core.Models.Mensagem;
-using Data.Entities;
+﻿using Core.Models.Mensagem;
 using Data.Repository;
 using System.Linq;
-using Utils.Enums;
 
 namespace Core.Business.Mensagem
 {
     public class MenssagemBusinesss : IMensagemBusiness
     {
-        private readonly IGenericRepository<Data.Entities.Mensagem> repo;        
+        private readonly IGenericRepository<Data.Entities.Mensagem> repo;
 
         public MenssagemBusinesss(IGenericRepository<Data.Entities.Mensagem> repo)
         {
-            this.repo = repo;            
+            this.repo = repo;
         }
 
 
@@ -62,6 +58,6 @@ namespace Core.Business.Mensagem
             repo.Save();
         }
 
-   
+
     }
 }

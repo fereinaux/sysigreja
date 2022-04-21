@@ -50,7 +50,7 @@ namespace Arquitetura.Controller
                     Numeracao = x.Numeracao,
                     TipoEvento = x.TipoEvento.GetNickname(),
                     Status = x.Status.GetDescription()
-                }); 
+                });
         }
 
         public void GetConfiguracao()

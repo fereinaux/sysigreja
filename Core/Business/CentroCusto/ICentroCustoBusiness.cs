@@ -1,5 +1,4 @@
 ﻿using Core.Models.CentroCusto;
-using Core.Models.Eventos;
 using System.Linq;
 
 namespace Core.Business.CentroCusto

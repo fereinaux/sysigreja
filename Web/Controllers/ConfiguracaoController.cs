@@ -1,10 +1,7 @@
-﻿using Core.Business.CentroCusto;
-using Core.Business.Configuracao;
-using Core.Models.CentroCusto;
+﻿using Core.Business.Configuracao;
 using Core.Models.Configuracao;
-using SysIgreja.ViewModels;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web.Mvc;
 using Utils.Constants;
 using Utils.Enums;
@@ -28,14 +25,16 @@ namespace SysIgreja.Controllers
             ViewBag.Title = "Parâmetros";
 
             return View();
-        }    
+        }
 
         [HttpGet]
         public ActionResult GetConfiguracao()
         {
             var result = configuracaoBusiness.GetConfiguracao();
 
-            return Json(new { Configuracao = result }, JsonRequestBehavior.AllowGet);
+            var jsonRes = Json(new { Configuracao = result }, JsonRequestBehavior.AllowGet);
+            jsonRes.MaxJsonLength = Int32.MaxValue;
+            return jsonRes;
         }
 
         [HttpGet]

@@ -1,5 +1,4 @@
-﻿using Core.Models.Eventos;
-using Data.Context;
+﻿using Data.Context;
 using Data.Entities;
 using Data.Repository;
 using Microsoft.AspNet.Identity;
@@ -21,9 +20,9 @@ namespace Core.Business.Account
 
         public AccountBusiness(IGenericRepository<ApplicationUser> accountRepository, IGenericRepository<Equipante> equipanteRepository, ApplicationDbContext context)
         {
-            this.accountRepository = accountRepository;            
-            this.equipanteRepository = equipanteRepository;            
-            this.context = context;            
+            this.accountRepository = accountRepository;
+            this.equipanteRepository = equipanteRepository;
+            this.context = context;
         }
 
         public List<Equipante> GetEquipantesUsuario(string idUsuario)

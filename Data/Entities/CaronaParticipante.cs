@@ -1,9 +1,5 @@
-﻿using Data.Context;
-using Data.Entities.Base;
-using System;
+﻿using Data.Entities.Base;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Utils.Enums;
 
 namespace Data.Entities
 {

@@ -766,6 +766,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CentroCustoController.cs" />
+    <Compile Include="Controllers\CaronaController.cs" />
     <Compile Include="Controllers\QuartoController.cs" />
     <Compile Include="Controllers\EquipeController.cs" />
     <Compile Include="Controllers\EquipanteController.cs" />
@@ -787,6 +788,7 @@
     <Compile Include="Mapper\Mapper.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="ViewModels\AdminViewModel.cs" />
+    <Compile Include="ViewModels\CaronaViewModel.cs" />
     <Compile Include="ViewModels\QuartoViewModel.cs" />
     <Compile Include="ViewModels\ContaBancariaViewModel.cs" />
     <Compile Include="ViewModels\CentroCustoViewModel.cs" />
@@ -1037,6 +1039,7 @@
     <Content Include="Images\Bancos\NuBank.png" />
     <Content Include="Images\Bancos\Santander.png" />
     <Content Include="Images\tag-background.jpg" />
+    <Content Include="Scripts\app\Carona\carona.js" />
     <Content Include="Scripts\app\Etiqueta\etiqueta.js" />
     <Content Include="Scripts\app\Mensagem\mensagem.js" />
     <Content Include="Scripts\app\Participante\checkin.js" />
@@ -1174,7 +1177,10 @@
     <Content Include="Views\Quarto\Index.cshtml" />
     <Content Include="Views\Participante\Checkin.cshtml" />
     <Content Include="Views\Inscricoes\InscricaoCompleta.cshtml" />
+    <None Include="Properties\PublishProfiles\ejc.iecbeventos.com.br - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\encareasua.com.br - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\encareasua.com.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\Realidade.pubxml" />
     <Content Include="Scripts\plugins\jsCrop-master\LICENSE" />
     <Content Include="Scripts\plugins\jsCrop-master\README.md" />
@@ -1182,6 +1188,10 @@
     <Content Include="Views\Etiqueta\Index.cshtml" />
     <Content Include="Views\Configuracao\Index.cshtml" />
     <Content Include="Views\Mensagem\Index.cshtml" />
+    <Content Include="Views\Carona\Index.cshtml" />
+    <Content Include="Views\Quarto\QuartoEquipe.cshtml" />
+    <Content Include="Views\Inscricoes\Equipe.cshtml" />
+    <Content Include="Views\Equipante\InscricaoConcluida.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

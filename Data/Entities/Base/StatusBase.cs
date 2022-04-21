@@ -2,7 +2,6 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using Utils.Enums;
-using Utils.Extensions;
 
 namespace Data.Entities.Base
 {

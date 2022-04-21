@@ -9,7 +9,7 @@
         fixedHeader: true,
         filter: true,
         orderMulti: false,
-        responsive: true,stateSave: true,
+        responsive: true, stateSave: true,
         destroy: true,
         dom: domConfigNoButtons,
         columns: [
@@ -17,7 +17,7 @@
             { data: "Sexo", name: "Sexo", autoWidth: true },
             { data: "Capacidade", name: "Capacidade", autoWidth: true },
             {
-                data: "Id", name: "Id", orderable: false, width: "15%",
+                data: "Id", name: "Id", className: "text-center", orderable: false, width: "15%",
                 "render": function (data, type, row) {
                     return `
                             ${GetButton('PrintQuarto', JSON.stringify(row), 'green', 'fa-print', 'Imprimir')}  
@@ -32,14 +32,16 @@
         ajax: {
             url: '/Quarto/GetQuartos',
             datatype: "json",
-            data: { EventoId: $("#quarto-eventoid").val() },
+            data: { EventoId: $("#quarto-eventoid").val(), Tipo: window.location.href.includes('QuartoEquipe') ? 0 : 1 },
             type: "POST"
         }
     };
     $("#table-quarto").DataTable(tableQuartoConfig);
 }
 
+
 $(document).ready(function () {
+    $('#col-chave').text(window.location.href.includes('QuartoEquipe') ? 'Equipantes' : 'Participantes')
 
     $("#Participante").on("keyup", function () {
         var value = $(this).val().toLowerCase();
@@ -55,7 +57,7 @@ $(document).ready(function () {
 
 function PrintQuarto(row) {
     $.ajax({
-        url: '/Participante/GetParticipantesByQuarto',
+        url: window.location.href.includes('QuartoEquipe') ? '/Quarto/GetEquipantesByQuarto' : '/Participante/GetParticipantesByQuarto',
         data: { QuartoId: row.Id },
         datatype: "json",
         type: "GET",
@@ -65,17 +67,17 @@ function PrintQuarto(row) {
             doc = AddCabecalhoEvento(doc, titulo, $("#quarto-eventoid option:selected").text());
             doc.line(10, 38, 195, 38);
 
-            doc.setFont('helvetica',"bold")
-            doc.text(12, 43, "Título");
-            doc.text(95, 43, "Medicamento/Alergia");
+            doc.setFont('helvetica', "bold")
+            doc.text(12, 43, "Nome");
+            doc.text(95, 43, window.location.href.includes('QuartoEquipe') ? "Apelido" : "Medicamento/Alergia");
 
             doc.line(10, 45, 195, 45);
-            doc.setFont('helvetica',"normal")
+            doc.setFont('helvetica', "normal")
             height = 50;
 
             $(result.data).each((index, participante) => {
                 doc.text(12, height, participante.Nome);
-                var splitMedicacao = doc.splitTextToSize(participante.Medicacao, 80);
+                var splitMedicacao = doc.splitTextToSize(window.location.href.includes('QuartoEquipe') ? participante.Apelido : participante.Medicacao, 80);
                 doc.text(95, height, splitMedicacao);
                 height += 6 * splitMedicacao.length;
             });
@@ -96,7 +98,7 @@ function GetQuarto(id) {
             type: "GET",
             contentType: 'application/json; charset=utf-8',
             success: function (data) {
-                
+
                 $("#quarto-id").val(data.Quarto.Id);
                 $("#quarto-titulo").val(data.Quarto.Titulo);
                 $("#quarto-capacidade").val(data.Quarto.Capacidade);
@@ -166,6 +168,32 @@ function PostQuarto() {
     }
 }
 
+function PostQuartoEquipe() {
+    if (ValidateForm(`#form-quarto`)) {
+        $.ajax({
+            url: "/Quarto/PostQuarto/",
+            datatype: "json",
+            type: "POST",
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(
+                {
+                    Id: $("#quarto-id").val(),
+                    EventoId: $("#quarto-eventoid").val(),
+                    Titulo: $("#quarto-titulo").val(),
+                    Sexo: $("input[type=radio][name=quarto-sexo]:checked").val(),
+                    Capacidade: $("#quarto-capacidade").val(),
+                    TipoPessoa: 0
+                }),
+            success: function () {
+                SuccessMesageOperation();
+                CarregarTabelaQuarto();
+                GetQuartosComParticipantes();
+                $("#modal-quarto").modal("hide");
+            }
+        });
+    }
+}
+
 function DistribuirQuartos() {
     $.ajax({
         url: "/Quarto/DistribuirQuartos/",
@@ -191,7 +219,7 @@ function GetParticipantesSemQuarto() {
 
     $.ajax({
         url: "/Quarto/GetParticipantesSemQuarto/",
-        data: { EventoId: $("#quarto-eventoid").val() },
+        data: { EventoId: $("#quarto-eventoid").val(), Tipo: window.location.href.includes('QuartoEquipe') ? 0 : 1 },
         datatype: "json",
         type: "GET",
         contentType: 'application/json; charset=utf-8',
@@ -212,7 +240,7 @@ function GetQuartosComParticipantes() {
     $.ajax({
         url: '/Quarto/GetQuartos',
         datatype: "json",
-        data: { EventoId: $("#quarto-eventoid").val() },
+        data: { EventoId: $("#quarto-eventoid").val(), Tipo: window.location.href.includes('QuartoEquipe') ? 0 : 1 },
         type: "POST",
         success: function (data) {
             data.data.forEach(function (quarto, index, array) {
@@ -230,7 +258,7 @@ function GetQuartosComParticipantes() {
 
             $.ajax({
                 url: "/Quarto/GetQuartosComParticipantes/",
-                data: { EventoId: $("#quarto-eventoid").val() },
+                data: { EventoId: $("#quarto-eventoid").val(), Tipo: window.location.href.includes('QuartoEquipe') ? 0 : 1 },
                 datatype: "json",
                 type: "GET",
                 contentType: 'application/json; charset=utf-8',
@@ -251,7 +279,7 @@ function DragDropg() {
 
     $('.quarto').droppable({
         drop: function (event, ui) {
-            var origem = $($($(ui.draggable).parent().parent().parent().parent().children()[0]).children()[0]);      
+            var origem = $($($(ui.draggable).parent().parent().parent().parent().children()[0]).children()[0]);
             $(ui.draggable).parent().remove();
             ChangeQuarto($(ui.draggable).data('id'), $(this).data('id'));
             origem.text(AddMembroQuarto(origem.text(), -1));
@@ -293,7 +321,8 @@ function ChangeQuarto(participanteId, destinoId) {
         data: JSON.stringify(
             {
                 ParticipanteId: participanteId,
-                DestinoId: destinoId
+                DestinoId: destinoId,
+                tipo: window.location.href.includes('QuartoEquipe') ? 0 : 1
             }),
         success: function () {
             CarregarTabelaQuarto();

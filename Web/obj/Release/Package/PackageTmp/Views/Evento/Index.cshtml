@@ -1,0 +1,136 @@
+﻿<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>@ViewBag.Title</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/Home/Index">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#">Cadastros</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>@ViewBag.Title</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="ibox">
+        <div class="ibox-title" style="display: flex;justify-content: space-between;">
+            <h4>@ViewBag.Title</h4>
+            <div class="ibox-tools pull-right">
+                <button class="btn btn-default" id="btn_Adicionar" onclick="EditEvento(0)">Adicionar</button>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <table id="table-eventos" class="table table-striped table-bordered table-hover" cellspacing="0" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Capacidade</th>
+                        <th>Valor</th>
+                        <th>Data do Evento</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="modal-eventos" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-body">
+                <div class="moldura-modal p-h-xs" id="form-evento">
+                    <div class="row p-h-xs">
+                        <input type="hidden" id="evento-id" />
+                        <div class="col-sm-6 p-w-md text-center">
+                            <h5>Numeraçao</h5>
+
+                            <input type="number" class="form-control required" id="evento-numeracao" data-field="Numeração" />
+                        </div>
+
+                        <div class="col-sm-6 p-w-md text-center">
+                            <h5>Capacidade</h5>
+
+                            <input type="number" class="form-control required" id="evento-capacidade" data-field="Capacidade" />
+                        </div>
+
+                        <div class="col-sm-6 p-w-md text-center">
+                            <h5>Data</h5>
+
+                            <input type="text" class="form-control full-date required" id="evento-data" data-field="Data" />
+                        </div>
+                        <div class="col-sm-6 p-w-md text-center">
+                            <h5>Tipo do Evento</h5>
+
+                            <select class="form-control chosen-select" id="evento-tipo"></select>
+                        </div>
+                        <div class="col-sm-6 p-w-md text-center">
+                            <h5>Valor</h5>
+
+                            <input type="number" class="form-control required" id="evento-valor" data-field="Valor" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white pull-right m-l-sm" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-white pull-right" onclick="PostEvento()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal inmodal" id="modal-anexos" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-body">
+                <div class="moldura-modal p-h-xs">
+                    <div class="row p-md">
+                        <form enctype="multipart/form-data" id="frm-upload-arquivos" method="post" novalidate="novalidate">
+                            <input type="hidden" name="EventoId" id="EventoId" />
+                            <label for="arquivo" style="width: 100%;" class="inputFile">
+                                <span class="btn btn-default inputFile" style="width: 100%;" aria-hidden="true">Adicionar</span>
+                                <input style="display: none;" class="custom-file-input inputFile" id="arquivo" name="arquivo" type="file" value="">
+                            </label>
+                        </form>
+                        <table id="table-anexos" class="table table-striped table-bordered table-hover" cellspacing="0" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th>Arquivo</th>
+                                    <th>Extensão</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white pull-right m-l-sm" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Styles {
+
+}
+
+@section Scripts {
+
+    <script src="~/Scripts/app/Evento/evento.js"></script>
+
+    <script>
+
+    </script>
+}

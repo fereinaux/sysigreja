@@ -1,11 +1,11 @@
 ﻿using Arquitetura.Controller;
+using AutoMapper;
 using Core.Business.Account;
-using Core.Business.Quartos;
+using Core.Business.Configuracao;
 using Core.Business.Equipes;
 using Core.Business.Eventos;
-using Core.Business.Reunioes;
+using Core.Business.Quartos;
 using Core.Models.Quartos;
-using Core.Models.Reunioes;
 using SysIgreja.ViewModels;
 using System.Linq;
 using System.Web.Mvc;
@@ -13,8 +13,6 @@ using Utils.Constants;
 using Utils.Enums;
 using Utils.Extensions;
 using Utils.Services;
-using AutoMapper;
-using Core.Business.Configuracao;
 
 namespace SysIgreja.Controllers
 {
@@ -41,20 +39,28 @@ namespace SysIgreja.Controllers
             return View();
         }
 
+        public ActionResult QuartoEquipe()
+        {
+            ViewBag.Title = "Quartos da Equipe";
+            GetEventos();
+
+            return View();
+        }
+
         [HttpPost]
-        public ActionResult GetQuartos(int EventoId)
+        public ActionResult GetQuartos(int EventoId, TipoPessoaEnum? tipo)
         {
             var result = quartosBusiness
                 .GetQuartos()
-                .Where(x => x.EventoId == EventoId)
+                .Where(x => x.EventoId == EventoId && x.TipoPessoa == (tipo ?? TipoPessoaEnum.Participante))
                 .ToList()
                 .Select(x => new QuartoViewModel
                 {
                     Id = x.Id,
-                    Capacidade = $"{quartosBusiness.GetParticipantesByQuartos(x.Id).Count().ToString()}/{x.Capacidade.ToString()}",
+                    Capacidade = $"{quartosBusiness.GetParticipantesByQuartos(x.Id, tipo).Count().ToString()}/{x.Capacidade.ToString()}",
                     Titulo = x.Titulo,
                     Sexo = x.Sexo.GetDescription()
-                }).OrderByDescending(x => x.Id);
+                });
 
             return Json(new { data = result }, JsonRequestBehavior.AllowGet);
         }
@@ -84,48 +90,88 @@ namespace SysIgreja.Controllers
         }
 
         [HttpPost]
-        public ActionResult DistribuirQuartos(int EventoId)
+        public ActionResult DistribuirQuartos(int EventoId, TipoPessoaEnum? tipo)
         {
-            quartosBusiness.DistribuirQuartos(EventoId);
+            quartosBusiness.DistribuirQuartos(EventoId, tipo ?? TipoPessoaEnum.Participante);
 
             return new HttpStatusCodeResult(200);
         }
 
         [HttpGet]
-        public ActionResult GetParticipantesSemQuarto(int EventoId)
+        public ActionResult GetParticipantesSemQuarto(int EventoId, TipoPessoaEnum? tipo)
         {
-            return Json(new { Participantes = quartosBusiness.GetParticipantesSemQuarto(EventoId).Select(x => new { 
-                Id = x.Id,
-                Nome = x.Nome
-            }).ToList() }, JsonRequestBehavior.AllowGet);
-        }
 
-        [HttpGet]
-        public ActionResult GetQuartosComParticipantes(int EventoId)
-        {
+
             return Json(new
             {
-                Quartos = quartosBusiness.GetQuartosComParticipantes(EventoId).ToList().Select(x => new
+                Participantes = tipo == TipoPessoaEnum.Equipante ? quartosBusiness.GetEquipantesSemQuarto(EventoId).Select(x => new
                 {
-                    Nome = UtilServices.CapitalizarNome(x.Participante.Nome),
-                    ParticipanteId = x.ParticipanteId,
-                    QuartoId = x.QuartoId,
-                    Sexo = x.Quarto.Sexo.GetDescription(),
-                    Capacidade = $"{quartosBusiness.GetParticipantesByQuartos(x.QuartoId).Count().ToString()}/{x.Quarto.Capacidade.ToString()}",
+                    Id = x.Id,
+                    Nome = x.Nome
+                }).ToList() : quartosBusiness.GetParticipantesSemQuarto(EventoId).Select(x => new
+                {
+                    Id = x.Id,
+                    Nome = x.Nome
                 }).ToList()
             }, JsonRequestBehavior.AllowGet);
         }
 
-        [HttpPost]
-        public ActionResult ChangeQuarto(int ParticipanteId, int? DestinoId)
+        [HttpGet]
+        public ActionResult GetQuartosComParticipantes(int EventoId, TipoPessoaEnum? tipo)
         {
-            var mensagem = quartosBusiness.ChangeQuarto(ParticipanteId, DestinoId);
+            if (tipo == TipoPessoaEnum.Equipante)
+            {
+                return Json(new
+                {
+                    Quartos = quartosBusiness.GetQuartosComParticipantes(EventoId, TipoPessoaEnum.Equipante).ToList().Select(x => new
+                    {
+                        Nome = UtilServices.CapitalizarNome(x.Equipante.Nome),
+                        ParticipanteId = x.EquipanteId,
+                        QuartoId = x.QuartoId,
+                        Sexo = x.Quarto.Sexo.GetDescription(),
+                        Capacidade = $"{quartosBusiness.GetParticipantesByQuartos(x.QuartoId, TipoPessoaEnum.Equipante).Count().ToString()}/{x.Quarto.Capacidade.ToString()}",
+                    }).ToList()
+                }, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+
+                return Json(new
+                {
+                    Quartos = quartosBusiness.GetQuartosComParticipantes(EventoId, TipoPessoaEnum.Participante).ToList().Select(x => new
+                    {
+                        Nome = UtilServices.CapitalizarNome(x.Participante.Nome),
+                        ParticipanteId = x.ParticipanteId,
+                        QuartoId = x.QuartoId,
+                        Sexo = x.Quarto.Sexo.GetDescription(),
+                        Capacidade = $"{quartosBusiness.GetParticipantesByQuartos(x.QuartoId, TipoPessoaEnum.Participante).Count().ToString()}/{x.Quarto.Capacidade.ToString()}",
+                    }).ToList()
+                }, JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult ChangeQuarto(int ParticipanteId, int? DestinoId, TipoPessoaEnum? tipo)
+        {
+            var mensagem = quartosBusiness.ChangeQuarto(ParticipanteId, DestinoId, tipo);
             if (mensagem == "OK")
             {
                 return new HttpStatusCodeResult(200);
             }
 
             return new HttpStatusCodeResult(400, mensagem);
+        }
+
+        [HttpGet]
+        public ActionResult GetEquipantesByQuarto(int QuartoId)
+        {
+            var result = quartosBusiness.GetParticipantesByQuartos(QuartoId, TipoPessoaEnum.Equipante).ToList().Select(x => new
+            {
+                Nome = UtilServices.CapitalizarNome(x.Equipante.Nome),
+                Apelido = UtilServices.CapitalizarNome(x.Equipante.Apelido),
+            });
+
+            return Json(new { data = result }, JsonRequestBehavior.AllowGet);
         }
     }
 }

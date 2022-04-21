@@ -1,5 +1,4 @@
 ﻿using Core.Models.Arquivos;
-using Core.Models.Eventos;
 using System.Linq;
 
 namespace Core.Business.Arquivos

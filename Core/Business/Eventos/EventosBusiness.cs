@@ -2,18 +2,17 @@
 using Data.Entities;
 using Data.Repository;
 using System.Linq;
-using System.Data.Entity;
 using Utils.Enums;
 
 namespace Core.Business.Eventos
 {
     public class EventosBusiness : IEventosBusiness
     {
-        private readonly IGenericRepository<Evento> eventoRepository;        
+        private readonly IGenericRepository<Evento> eventoRepository;
 
         public EventosBusiness(IGenericRepository<Evento> eventoRepository)
         {
-            this.eventoRepository = eventoRepository;            
+            this.eventoRepository = eventoRepository;
         }
 
         public void DeleteEvento(int id)

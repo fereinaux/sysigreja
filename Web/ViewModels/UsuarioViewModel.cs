@@ -9,5 +9,5 @@
         public int? EquipanteId { get; set; }
     }
 
-    
+
 }

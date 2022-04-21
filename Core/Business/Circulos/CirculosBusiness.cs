@@ -1,6 +1,5 @@
 ﻿using Core.Business.Configuracao;
 using Core.Models.Circulos;
-using Core.Models.Eventos;
 using Data.Entities;
 using Data.Repository;
 using System;

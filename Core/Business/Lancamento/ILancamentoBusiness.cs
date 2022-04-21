@@ -1,5 +1,4 @@
 ﻿using Core.Models.Lancamento;
-using Core.Models.MeioPagamento;
 using System.Linq;
 
 namespace Core.Business.Lancamento

@@ -1,6 +1,4 @@
-﻿using Core.Models.CentroCusto;
-using Core.Models.Eventos;
-using Core.Models.Mensagem;
+﻿using Core.Models.Mensagem;
 using System.Linq;
 
 namespace Core.Business.Mensagem

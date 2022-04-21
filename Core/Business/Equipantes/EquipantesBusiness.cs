@@ -1,23 +1,27 @@
-﻿using Core.Models.Equipantes;
-using Core.Models.Eventos;
+﻿using Core.Business.Eventos;
+using Core.Models.Equipantes;
 using Data.Entities;
 using Data.Repository;
-using System.Linq;
+using System;
 using System.Data.Entity;
+using System.Linq;
 using Utils.Enums;
-using Utils.Extensions;
 
 namespace Core.Business.Equipantes
 {
     public class EquipantesBusiness : IEquipantesBusiness
     {
+        private readonly IEventosBusiness eventosBusiness;
         private readonly IGenericRepository<Equipante> equipanteRepository;
         private readonly IGenericRepository<EquipanteEvento> equipanteEventoRepository;
+        private readonly IGenericRepository<ParticipantesEtiquetas> ParticipantesEtiquetasRepo;
 
-        public EquipantesBusiness(IGenericRepository<Equipante> equipanteRepository, IGenericRepository<EquipanteEvento> equipanteEventoRepository)
+        public EquipantesBusiness(IGenericRepository<Equipante> equipanteRepository, IEventosBusiness eventosBusiness, IGenericRepository<ParticipantesEtiquetas> ParticipantesEtiquetasRepo, IGenericRepository<EquipanteEvento> equipanteEventoRepository)
         {
             this.equipanteRepository = equipanteRepository;
+            this.eventosBusiness = eventosBusiness;
             this.equipanteEventoRepository = equipanteEventoRepository;
+            this.ParticipantesEtiquetasRepo = ParticipantesEtiquetasRepo;
         }
 
         public void DeleteEquipante(int id)
@@ -28,15 +32,16 @@ namespace Core.Business.Equipantes
 
         public Equipante GetEquipanteById(int id)
         {
-            return equipanteRepository.GetById(id);
+
+            return equipanteRepository.GetAll(x => x.Id == id).Include(x => x.ParticipantesEtiquetas).Include(x => x.ParticipantesEtiquetas.Select(y => y.Etiqueta)).SingleOrDefault();
         }
 
         public IQueryable<Equipante> GetEquipantes()
-        {            
-            return equipanteRepository.GetAll();
+        {
+            return equipanteRepository.GetAll().Include(x => x.ParticipantesEtiquetas).Include(x => x.ParticipantesEtiquetas.Select(y => y.Etiqueta));
         }
 
-        public void PostEquipante(PostEquipanteModel model)
+        public Equipante PostEquipante(PostEquipanteModel model)
         {
             Equipante equipante = null;
 
@@ -56,12 +61,23 @@ namespace Core.Business.Equipantes
                 equipante.HasRestricaoAlimentar = model.HasRestricaoAlimentar;
                 equipante.RestricaoAlimentar = model.HasRestricaoAlimentar ? model.RestricaoAlimentar : null;
                 equipante.Sexo = model.Sexo;
-                equipante.HasVacina = model.HasVacina;                
+                equipante.HasVacina = model.HasVacina;
+                var eventoAtivo = eventosBusiness.GetEventoAtivo();
+                ParticipantesEtiquetasRepo.GetAll(x => x.EquipanteId == model.Id).ToList().ForEach(etiqueta => ParticipantesEtiquetasRepo.Delete(etiqueta.Id));
+                if (model.Etiquetas != null)
+                {
+                    foreach (var etiqueta in model.Etiquetas)
+                    {
+                        ParticipantesEtiquetasRepo.Insert(new ParticipantesEtiquetas { EquipanteId = model.Id, EventoId = eventoAtivo?.Id ?? null, EtiquetaId = Int32.Parse(etiqueta) });
+                    }
+
+                }
+                ParticipantesEtiquetasRepo.Save();
 
                 equipanteRepository.Update(equipante);
             }
             else
-            {                       
+            {
                 equipante = new Equipante
                 {
                     Nome = model.Nome,
@@ -80,9 +96,10 @@ namespace Core.Business.Equipantes
                 };
 
                 equipanteRepository.Insert(equipante);
-            }         
-            
+            }
+
             equipanteRepository.Save();
+            return equipante;
         }
 
         public void ToggleSexo(int id)
@@ -110,7 +127,7 @@ namespace Core.Business.Equipantes
         }
 
         public void ToggleCheckin(int id, int eventoid)
-        {           
+        {
             var equipante = equipanteEventoRepository.GetAll(x => x.EventoId == eventoid && x.EquipanteId == id).FirstOrDefault();
             equipante.Checkin = !equipante.Checkin;
             equipanteEventoRepository.Update(equipante);

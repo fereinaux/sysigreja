@@ -1,12 +1,11 @@
 ﻿using Core.Models.DataTable;
 using Core.Models.Etiquetas;
-using System;
 using System.Collections.Generic;
 using Utils.Enums;
 
 namespace Core.Models.Participantes
 {
-   
+
     public class FilterModel
     {
         public int EventoId { get; set; }
@@ -55,7 +54,7 @@ namespace Core.Models.Participantes
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-      
+
 
     }
 }

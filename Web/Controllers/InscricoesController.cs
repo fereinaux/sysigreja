@@ -6,22 +6,13 @@ using Core.Business.Lancamento;
 using Core.Business.MeioPagamento;
 using Core.Business.Newsletter;
 using Core.Business.Participantes;
-using Core.Models.Lancamento;
 using Core.Models.Participantes;
 using Data.Entities;
 using SysIgreja.ViewModels;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
-using System.Xml;
 using Utils.Enums;
 using Utils.Extensions;
 
@@ -57,7 +48,16 @@ namespace SysIgreja.Controllers
             var evento = eventosBusiness.GetEventoAtivo();
             if (evento == null)
                 return RedirectToAction("InscricoesEncerradas");
-            ViewBag.Logo = evento.TipoEvento.GetNickname() + ".png";
+            return View();
+        }
+
+        public ActionResult Equipe()
+        {
+            ViewBag.Title = "Inscrições";
+            ViewBag.Configuracao = configuracaoBusiness.GetConfiguracao();
+            var evento = eventosBusiness.GetEventoAtivo();
+            if (evento == null)
+                return RedirectToAction("InscricoesEncerradas");
             return View();
         }
 

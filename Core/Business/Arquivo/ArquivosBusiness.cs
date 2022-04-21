@@ -1,11 +1,8 @@
 ﻿using Core.Models.Arquivos;
-using Core.Models.Eventos;
 using Data.Entities;
 using Data.Repository;
 using System.IO;
 using System.Linq;
-using System.Data.Entity;
-using Utils.Enums;
 
 namespace Core.Business.Arquivos
 {
@@ -25,7 +22,7 @@ namespace Core.Business.Arquivos
         }
 
         public void DeleteFotoEquipante(int id)
-        {            
+        {
             arquivoRepository.Delete(arquivoRepository.GetAll(x => x.EquipanteId == id && x.IsFoto).FirstOrDefault().Id);
             arquivoRepository.Save();
         }
@@ -58,7 +55,7 @@ namespace Core.Business.Arquivos
 
         public IQueryable<Arquivo> GetArquivosByEvento(int eventoId)
         {
-            return arquivoRepository.GetAll(x => x.EventoId == eventoId && !x.EquipanteId.HasValue );
+            return arquivoRepository.GetAll(x => x.EventoId == eventoId && !x.EquipanteId.HasValue);
         }
 
         public IQueryable<Arquivo> GetArquivosByLancamento(int lancamentoId)

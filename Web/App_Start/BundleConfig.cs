@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace SysIgreja
 {
@@ -35,7 +34,7 @@ namespace SysIgreja
             // jsCropCSS 
             bundles.Add(new StyleBundle("~/bundles/jscropcss").Include(
                    "~/Scripts/plugins/jsCrop-master/js-crop.css"));
-            
+
             // jQueryUI CSS
             bundles.Add(new ScriptBundle("~/Scripts/plugins/jquery-ui/jqueryuiStyles").Include(
                         "~/Scripts/plugins/jquery-ui/jquery-ui.min.css"));

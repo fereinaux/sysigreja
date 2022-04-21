@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Core.Models.MeioPagamento;
-using Data.Entities;
+﻿using Core.Models.MeioPagamento;
 using Data.Repository;
+using System.Linq;
 using Utils.Enums;
 
 namespace Core.Business.MeioPagamento
@@ -32,7 +27,7 @@ namespace Core.Business.MeioPagamento
 
         public IQueryable<Data.Entities.MeioPagamento> GetMeioPagamentos()
         {
-             return meioPagamentoRepository.GetAll(mp => mp.IsEditavel == true);
+            return meioPagamentoRepository.GetAll(mp => mp.IsEditavel == true);
         }
 
         public IQueryable<Data.Entities.MeioPagamento> GetAllMeioPagamentos()
@@ -59,7 +54,7 @@ namespace Core.Business.MeioPagamento
                 {
                     Descricao = model.Descricao,
                     Taxa = model.Taxa,
-                    Status = StatusEnum.Ativo, 
+                    Status = StatusEnum.Ativo,
                     IsEditavel = true
                 };
 

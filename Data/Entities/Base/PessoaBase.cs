@@ -1,10 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
-using System.Data.Entity.Core.Objects;
 using Utils.Enums;
-using Utils.Extensions;
 using Utils.Services;
 
 namespace Data.Entities.Base
@@ -27,7 +24,7 @@ namespace Data.Entities.Base
             set { apelido = value; }
         }
         public DateTime? DataNascimento { get; set; }
-     
+
         public string Email { get; set; }
         public string Fone { get; set; }
         public string Profissão { get; set; }

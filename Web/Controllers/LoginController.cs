@@ -5,14 +5,11 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using SysIgreja.ViewModels;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Utils.Constants;
 using Utils.Enums;
-using Utils.Extensions;
-using Utils.Services;
 
 namespace SysIgreja.Controllers
 {
@@ -55,14 +52,14 @@ namespace SysIgreja.Controllers
                 {
                     await SignInAsync(user, model.RememberMe);
 
-                        return RedirectToAction("Index", "Home");                    
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                     ModelState.AddModelError("", "Usuário e/ou senha inválidos.");
 
             }
 
-            return View("Index",model);
+            return View("Index", model);
         }
 
 

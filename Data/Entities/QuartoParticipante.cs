@@ -1,9 +1,5 @@
-﻿using Data.Context;
-using Data.Entities.Base;
-using System;
+﻿using Data.Entities.Base;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Utils.Enums;
 
 namespace Data.Entities
 {
@@ -13,7 +9,9 @@ namespace Data.Entities
         public int Id { get; set; }
         public int QuartoId { get; set; }
         public Quarto Quarto { get; set; }
-        public int ParticipanteId { get; set; }
+        public int? ParticipanteId { get; set; }
         public Participante Participante { get; set; }
+        public int? EquipanteId { get; set; }
+        public Equipante Equipante { get; set; }
     }
 }

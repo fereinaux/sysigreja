@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace Utils.Enums
@@ -12,6 +11,14 @@ namespace Utils.Enums
         Aleatorio,
         [Description("Idade")]
         Idade,
+    }
+
+    public enum TipoPessoaEnum
+    {
+        [Description("Equipante")]
+        Equipante,
+        [Description("Participante")]
+        Participante
     }
     public enum CamposEnum
     {
@@ -125,7 +132,7 @@ namespace Utils.Enums
         [Description("Infraestrutura")]
         Infraestrutura = 17,
         [Description("Finanças")]
-        Financas = 18,     
+        Financas = 18,
         [Description("Recepção aos Palestrantes")]
         Recepcao = 19,
         [Description("Externa")]
@@ -141,14 +148,14 @@ namespace Utils.Enums
         [Description("Equipe Dirigente")]
         ED = 25,
         [Description("Lider Espiritual")]
-        LiderEspiritual = 26,        
+        LiderEspiritual = 26,
     }
 
     public enum TiposEventoEnum
     {
         [Nickname("EJC")]
         [Description("Encontro de Jovens com Cristo")]
-        [Equipes(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 })]
+        [Equipes(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 })]
         EJC = 1,
 
     }

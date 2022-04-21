@@ -22,13 +22,59 @@
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="ibox">
         <div class="ibox-title" style="display: flex;justify-content: space-between;">
+            <h4>Filtros</h4>
+            <div class="ibox-tools pull-right">
+                <button class="btn btn-primary" id="btn_Filtrar" onclick="CarregarTabelaParticipante()">Filtrar</button>
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-xs-12 col-lg-2">
+                    <h5>Evento</h5>
+                    <select class="form-control" id="equipante-eventoid-filtro" onchange="CarregarTabelaEquipante()">
+                        <option data-status="Selecione" value=999>Selecione</option>
+                        @foreach (var evento in ViewBag.Eventos)
+                        {
+                            <option data-status="@evento.Status" value="@evento.Id">@evento.TipoEvento @evento.Numeracao.ToString()</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-xs-12 col-lg-2">
+                    <h5>Status</h5>
+                    <select class="form-control" id="equipante-status" onchange="CarregarTabelaEquipante()">
+
+                        <option value=999>Selecione</option>
+                        <option value="pendente">Pendente</option>
+                        <option value="pago">Pago</option>
+
+                    </select>
+                </div>
+                <div class="col-xs-12 col-lg-2">
+                    <h5>Equipe</h5>
+                    <select class="form-control" id="equipe-select" onchange="CarregarTabelaEquipante()">
+                    </select>
+                </div>               
+                <div class="col-xs-12 col-lg-2">
+                    <h5>Tem Marcador</h5>
+                    <select class="form-control" id="equipante-marcadores" multiple onchange="CarregarTabelaEquipante()">
+                    </select>
+                </div>
+                <div class="col-xs-12 col-lg-2">
+                    <h5>Não tem Marcador</h5>
+                    <select class="form-control" id="equipante-nao-marcadores" multiple onchange="CarregarTabelaEquipante()">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ibox">
+        <div class="ibox-title" style="display: flex;justify-content: space-between;">
             <h4>@ViewBag.Title</h4>
             <div style=" width: 20%;" class="ibox-tools pull-right">
-                <div class="row">
-                    <div class="col-sm-8">
-                        <select class="form-control" id="equipe-select" onchange="CarregarTabelaEquipante()">
-                        </select>
-                    </div>
+                <div class="row">              
                     <div class="col-sm-4">
                         <button class="btn btn-default" id="btn_Adicionar" onclick="EditEquipante(0)">Adicionar</button>
                     </div>
@@ -62,6 +108,12 @@
                 <div class="moldura-modal p-h-xs" id="form-equipante">
                     <div class="row p-h-xs">
                         <input type="hidden" id="equipante-id" />
+                        
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Marcadores</h5>
+                                <select class="form-control equipante-etiquetas" id="equipante-etiquetas" multiple="multiple" style="width: 100%">
+                                </select>
+                        </div>
                         <div class="col-sm-12 p-w-md m-t-md text-center">
                             <h5>Nome</h5>
 
@@ -82,11 +134,6 @@
 
                             <div class="radio i-checks-green inline"><label> <input type="radio" id="equipante-sexo" checked="" value="1" name="equipante-sexo"> <i></i> Masculino </label></div>
                             <div class="radio i-checks-green inline"><label> <input type="radio" id="equipante-sexo" value="2" name="equipante-sexo"> <i></i> Feminino </label></div>
-                        </div>
-                        <div class="col-sm-12 p-w-md m-t-md text-center">
-                            <h5>Email</h5>
-
-                            <input type="text" class="form-control" id="equipante-email" data-field="Email" />
                         </div>
                         <div class="col-sm-12 p-w-md m-t-md text-center">
                             <h5>WhatsApp</h5>

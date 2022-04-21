@@ -1,5 +1,4 @@
 ﻿using Core.Models.ContaBancaria;
-using Core.Models.Eventos;
 using System.Linq;
 
 namespace Core.Business.ContaBancaria

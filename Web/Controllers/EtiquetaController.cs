@@ -1,9 +1,6 @@
-﻿using Core.Business.Arquivos;
-using Core.Business.Etiquetas;
+﻿using Core.Business.Etiquetas;
 using Core.Business.Eventos;
-using Core.Models.Arquivos;
 using Core.Models.Etiquetas;
-using SysIgreja.ViewModels;
 using System.Linq;
 using System.Web.Mvc;
 using Utils.Constants;
@@ -36,7 +33,7 @@ namespace SysIgreja.Controllers
             var result = etiquetasBusiness
                 .GetEtiquetas()
                 .ToList()
-                .Select(x => new 
+                .Select(x => new
                 {
                     Nome = x.Nome,
                     Id = x.Id,
@@ -51,7 +48,7 @@ namespace SysIgreja.Controllers
         {
             var result = etiquetasBusiness.GetEtiquetaById(Id);
 
-            return Json(new { Etiqueta = new { Id= result.Id, Nome = result.Nome, Cor = result.Cor} }, JsonRequestBehavior.AllowGet);
+            return Json(new { Etiqueta = new { Id = result.Id, Nome = result.Nome, Cor = result.Cor } }, JsonRequestBehavior.AllowGet);
         }
 
 
@@ -70,5 +67,5 @@ namespace SysIgreja.Controllers
 
             return new HttpStatusCodeResult(200);
         }
-   }
+    }
 }

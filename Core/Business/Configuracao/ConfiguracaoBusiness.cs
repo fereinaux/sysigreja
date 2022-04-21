@@ -1,13 +1,10 @@
-﻿using Core.Models.CentroCusto;
-using Core.Models.Configuracao;
-using Core.Models.Eventos;
+﻿using Core.Models.Configuracao;
 using Data.Entities;
 using Data.Repository;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using Utils.Enums;
 using Utils.Extensions;
 
 namespace Core.Business.Configuracao
@@ -39,7 +36,7 @@ namespace Core.Business.Configuracao
                 LogoId = x.LogoId,
                 Logo = x.Logo != null ? Convert.ToBase64String(x.Logo.Conteudo) : "",
                 Background = x.Background != null ? Convert.ToBase64String(x.Background.Conteudo) : ""
-                
+
             }).FirstOrDefault();
         }
 

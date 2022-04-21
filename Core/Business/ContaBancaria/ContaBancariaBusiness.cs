@@ -1,6 +1,4 @@
 ﻿using Core.Models.ContaBancaria;
-using Core.Models.Eventos;
-using Data.Entities;
 using Data.Repository;
 using System.Linq;
 using Utils.Enums;
@@ -9,11 +7,11 @@ namespace Core.Business.ContaBancaria
 {
     public class ContaBancariaBusiness : IContaBancariaBusiness
     {
-        private readonly IGenericRepository<Data.Entities.ContaBancaria> contaBancariaRepository;        
+        private readonly IGenericRepository<Data.Entities.ContaBancaria> contaBancariaRepository;
 
         public ContaBancariaBusiness(IGenericRepository<Data.Entities.ContaBancaria> contaBancariaRepository)
         {
-            this.contaBancariaRepository = contaBancariaRepository;            
+            this.contaBancariaRepository = contaBancariaRepository;
         }
 
         public void DeleteContaBancaria(int id)

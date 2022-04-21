@@ -1,11 +1,5 @@
-﻿using Data.Context;
-using Data.Entities.Base;
-using System;
+﻿using Data.Entities.Base;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
 
 namespace Data.Entities
 {
@@ -39,7 +33,7 @@ namespace Data.Entities
         public bool PendenciaContato { get; set; }
         public bool Carona { get; set; }
         public bool Boleto { get; set; }
-        public bool PendenciaBoleto { get; set; }    
+        public bool PendenciaBoleto { get; set; }
         public bool MsgPagamento { get; set; }
         public bool MsgVacina { get; set; }
         public bool MsgGeral { get; set; }

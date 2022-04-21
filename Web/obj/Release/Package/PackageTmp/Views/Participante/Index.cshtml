@@ -1,0 +1,423 @@
+﻿@{
+    ViewBag.Numero = new Random().Next();
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>@ViewBag.Title</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/Home/Index">Home</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>@ViewBag.Title</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="ibox">
+        <div class="ibox-title" style="display: flex;justify-content: space-between;">
+            <h4>Filtros</h4>
+            <div class="ibox-tools pull-right">
+                <button class="btn btn-primary" id="btn_Filtrar" onclick="CarregarTabelaParticipante()">Filtrar</button>
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-xs-12 col-lg-2">
+                    <h5>Evento</h5>
+                    <select class="form-control" id="participante-eventoid" onchange="CarregarTabelaParticipante()">
+                        @foreach (var evento in ViewBag.Eventos)
+                        {
+                            <option data-status="@evento.Status" value="@evento.Id">@evento.TipoEvento @evento.Numeracao.ToString()</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-xs-12 col-lg-2">
+                    <h5>Status</h5>
+                    <select class="form-control" id="participante-status" onchange="CarregarTabelaParticipante()">
+
+                        <option value=999>Selecione</option>
+                        <option value=8>Inscrito</option>
+                        <option value=9>Confirmado</option>
+                        <option value=10>Em Espera</option>
+                        <option value=6>Cancelado</option>
+
+                    </select>
+                </div>
+                <div class="col-xs-12 col-lg-2">
+                    <h5>Padrinho</h5>
+                    <select class="form-control" id="participante-padrinhoid" onchange="CarregarTabelaParticipante()">
+                    </select>
+                </div>
+                <div class="col-xs-12 col-lg-2">
+                    <h5>Tem Marcador</h5>
+                    <select class="form-control" id="participante-marcadores" multiple onchange="CarregarTabelaParticipante()">
+                    </select>
+                </div>
+                <div class="col-xs-12 col-lg-2">
+                    <h5>Não tem Marcador</h5>
+                    <select class="form-control" id="participante-nao-marcadores" multiple onchange="CarregarTabelaParticipante()">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ibox">
+        <div class="ibox-title" style="display: flex;justify-content: space-between;">
+            <h4>@ViewBag.Title</h4>
+            <div style=" width: 70%;" class="ibox-tools pull-right">
+                <button class="btn btn-default" id="btn_Adicionar" onclick="EditParticipante(0)">Adicionar</button>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <table id="table-participante" class="table table-striped table-bordered table-hover" cellspacing="0" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Padrinho</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal inmodal" id="modal-fotos" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-body">
+                <div class="moldura-modal p-h-xs">
+
+                    <div class="row p-md">
+                        <div class="col-lg-12" id="fotocontent">
+
+                            <div id="main-cropper"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary pull-right m-l-sm" onclick="ConfirmFoto()">Confirmar</button>
+                    <button type="button" class="btn btn-white pull-right m-l-sm" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="modal-anexos" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-body">
+                <div class="moldura-modal p-h-xs">
+
+                    <div class="row p-md">
+                        <select class="form-control m-b-sm" id="equipante-eventoid">
+                            @foreach (var evento in ViewBag.Eventos)
+                            {
+                                <option value="@evento.Id">@evento.TipoEvento @evento.Numeracao.ToString()</option>
+                            }
+                        </select>
+                        <form enctype="multipart/form-data" id="frm-upload-arquivo-modal" method="post" novalidate="novalidate">
+                            <input type="hidden" name="ParticipanteIdModal" id="ParticipanteIdModal" />
+                            <input type="hidden" name="LancamentoIdModal" id="LancamentoIdModal" />
+                            <label for="arquivo-modal" style="width: 100%;" class="inputFile">
+                                <span class="btn btn-default inputFile" style="width: 100%;" aria-hidden="true">Adicionar</span>
+                                <input style="display: none;" class="custom-file-input inputFile" id="arquivo-modal" name="arquivo-modal" type="file" value="">
+                            </label>
+                        </form>
+                        <table id="table-anexos" class="table table-striped table-bordered table-hover" cellspacing="0" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th>Arquivo</th>
+                                    <th>Extensão</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white pull-right m-l-sm" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="modal-opcoes" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-body">
+                <div class="moldura-modal p-h-xs" id="form-opcoes">
+                    <h2 class="text-center realista-nome">Nome</h2>
+                    <h3 class="text-center">Mensagem</h3>
+                    <div class="row m-md">
+                        <div class="col-lg-12">
+                            <select class="form-control" id="msg-list">
+                            </select>
+                        </div>
+                    </div>
+
+                    <h3 class="text-center">Destinatário</h3>
+                    <div class="row m-md">               
+                        <div class="col-lg-3 col-sm-6 panel-msg p-w-md text-center pointer convite" onclick="select2('convite')">
+                            <div style="margin:auto">
+                                <i style='color: #d46415' class="fa fa-user fa-3x m-t-sm"></i>
+                                <h4 class="text-center m-t-sm">Indicação</h4>
+                                <h5 class="text-center convitetext"></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 panel-msg p-w-md text-center pointer contato" onclick="select2('contato')">
+                            <div style="margin:auto">
+                                <i style='color: #d46415' class="fa fa-user fa-3x m-t-sm"></i>
+                                <h4 class="text-center m-t-sm">Contato</h4>
+                                <h5 class="text-center contatotext"></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 panel-msg p-w-md text-center pointer realista" onclick="select2('realista')">
+                            <div style="margin:auto">
+                                <i class="fa fa-user fa-3x m-t-sm"></i>
+                                <h4 class="text-center m-t-sm">Realista</h4>
+                                <h5 class="text-center realistatext"></h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-center">Marcadores</h3>
+                    <div class="row m-md">
+                        <select class="form-control participante-etiquetas" id="participante-etiquetas" multiple="multiple" style="width: 100%">
+                        </select>
+                    </div>
+
+
+                    <h3 class="text-center">Observações</h3>
+                    <div class="row m-md">
+                        <textarea style="height: 200px" class="form-control required" id="participante-obs"></textarea>
+                    </div>
+
+
+                    <div style="display:flex; width:100%">
+
+                        <button type="button" class="btn btn-primary" style="margin-left:auto;margin-right:10px" onclick="enviar()">Enviar</button>
+                        <a target="_blank" href="#" class="btn btn-info btn-ligar" style="margin-right:auto">Ligar</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white pull-right m-l-sm" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="modal-participantes" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-body">
+                <div class="moldura-modal p-h-xs" id="form-participante">
+                    <div class="row p-h-xs">
+                        <input type="hidden" id="participante-id" />
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Nome</h5>
+
+                            <input type="text" class="form-control required" id="participante-nome" data-field="Nome" />
+                        </div>
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Apelido</h5>
+
+                            <input type="text" class="form-control required" id="participante-apelido" data-field="Apelido" />
+                        </div>
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Data de Nascimento</h5>
+
+                            <input type="text" class="form-control full-date required" id="participante-data-nascimento" data-field="Data de Nascimento" />
+                        </div>
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Sexo</h5>
+
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="participante-sexo" checked="" value="1" name="participante-sexo"> <i></i> Masculino </label></div>
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="participante-sexo" value="2" name="participante-sexo"> <i></i> Feminino </label></div>
+                        </div>
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Email</h5>
+
+                            <input type="email" class="form-control" id="participante-email" data-field="Email" />
+                        </div>
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>WhatsApp</h5>
+
+                            <input type="text" class="form-control fone" id="participante-fone" data-field="WhatsApp" placeholder="+55 (81) 9999-9999" />
+                        </div>
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Nome da Mãe</h5>
+
+                            <input type="text" class="form-control required" id="participante-nomemae" data-field="Nome da Mã" />
+                        </div>
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Fone da Mãe</h5>
+
+                            <input type="text" class="form-control fone" id="participante-fonemae" data-field="Fone da Mãe" placeholder="+55 (81) 9999-9999" />
+                        </div>
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Nome do Pai</h5>
+
+                            <input type="text" class="form-control required" id="participante-nomepai" data-field="Nome do Pai" />
+                        </div>
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Fone do Pai</h5>
+
+                            <input type="text" class="form-control fone" id="participante-fonepai" data-field="Fone do Pai" placeholder="+55 (81) 9999-9999" />
+                        </div>
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Pessoa de Contato</h5>
+
+                            <input type="text" class="form-control required" id="participante-nomeconvite" data-field="Pessoa de Contato" />
+                        </div>
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Fone do Contato</h5>
+
+                            <input type="text" class="form-control fone" id="participante-foneconvite" data-field="Fone do Contato" placeholder="+55 (81) 9999-9999" />
+                        </div>
+
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Toma alguma medicação?</h5>
+
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="has-medicacao" value="true" name="participante-hasmedicacao"> <i></i> Sim </label></div>
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="not-medicacao" checked="" value="false" name="participante-hasmedicacao"> <i></i> Não </label></div>
+
+                            <div class="medicacao d-none">
+                                <h5>Qual?</h5>
+                                <input type="text" class="form-control" id="participante-medicacao" data-field="Medicação" />
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Tem alguma alergia?</h5>
+
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="has-alergia" value="true" name="participante-hasalergia"> <i></i> Sim </label></div>
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="not-alergia" checked="" value="false" name="participante-hasalergia"> <i></i> Não </label></div>
+
+                            <div class="alergia d-none">
+                                <h5>Qual?</h5>
+                                <input type="text" class="form-control" id="participante-alergia" data-field="Alergia" />
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 p-w-md m-t-md text-center">
+                            <h5>Tem alguma restrição alimentar?</h5>
+
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="has-restricaoalimentar" value="true" name="participante-hasrestricaoalimentar"> <i></i> Sim </label></div>
+                            <div class="radio i-checks-green inline"><label> <input type="radio" id="not-restricaoalimentar" checked="" value="false" name="participante-hasrestricaoalimentar"> <i></i> Não </label></div>
+
+                            <div class="restricaoalimentar d-none">
+                                <h5>Qual?</h5>
+                                <input type="text" class="form-control" id="participante-restricaoalimentar" data-field="Restrição Alimentar" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white pull-right m-l-sm" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-white pull-right" onclick="PostParticipante()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal inmodal" id="modal-pagamentos" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-body">
+                <div class="moldura-modal p-h-xs" id="form-pagamentos">
+                    <div class="row p-h-xs">
+                        <input type="hidden" id="pagamentos-participanteid" />
+                        <input type="hidden" id="pagamentos-whatsapp" />
+                        <div class="col-sm-6 p-w-md text-center">
+                            <h5>Forma de Pagamento</h5>
+
+                            <select class="form-control" id="pagamentos-meiopagamento" onchange="CarregarValorTaxa()">
+                                @foreach (var meioPagamento in ViewBag.MeioPagamentos)
+                                {
+                                    <option data-taxa="@meioPagamento.Taxa" value="@meioPagamento.Id">@meioPagamento.Descricao</option>
+                                }
+                            </select>
+
+                        </div>
+                        <div class="col-sm-6 p-w-md text-center d-none contabancaria">
+                            <h5>Banco</h5>
+
+                            <select class="form-control" id="pagamentos-contabancaria">
+                                @foreach (var contabancaria in ViewBag.ContasBancarias)
+                                {
+                                    <option value="@contabancaria.Id">@contabancaria.Banco</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-sm-6 p-w-md text-center">
+                            <h5>Valor</h5>
+
+                            <input type="number" step="any" value="0" class="form-control required" data-valor="@ViewBag.Valor" id="pagamentos-valor" data-field="Valor" />
+                        </div>
+                        <div class="col-sm-12 p-md text-center">
+                            <button type="button" class="btn btn-white" onclick="PostPagamento()">Salvar</button>
+                        </div>
+                        <div class="col-sm-12 p-md">
+                            <table id="table-pagamentos" class="table table-striped table-bordered table-hover" cellspacing="0" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                        <th>Forma de Pagamento</th>
+                                        <th>Valor</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white pull-right m-l-sm" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+
+
+}
+
+@section Scripts {
+
+    <script src="~/Scripts/app/Participante/participante.js?@ViewBag.Numero"></script>
+
+    <script>
+
+    </script>
+}

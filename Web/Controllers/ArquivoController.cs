@@ -1,7 +1,6 @@
 ﻿using Core.Business.Arquivos;
 using Core.Business.Eventos;
 using Core.Models.Arquivos;
-using SysIgreja.ViewModels;
 using System.Linq;
 using System.Web.Mvc;
 using Utils.Constants;
@@ -45,9 +44,9 @@ namespace SysIgreja.Controllers
         }
 
         [HttpPost]
-        public ActionResult GetArquivosEquipanteEvento(int eventoid,int equipanteid)
+        public ActionResult GetArquivosEquipanteEvento(int eventoid, int equipanteid)
         {
-            var query = arquivosBusiness.GetArquivosByEquipanteEvento(equipanteid,eventoid );
+            var query = arquivosBusiness.GetArquivosByEquipanteEvento(equipanteid, eventoid);
 
             return MapAqruivos(query);
         }
@@ -87,7 +86,7 @@ namespace SysIgreja.Controllers
             var arquivo = arquivosBusiness.GetArquivoById(Id);
 
             return File(arquivo.Conteudo, arquivo.Tipo, arquivo.Nome);
-        }       
+        }
 
         [HttpPost]
         public int PostArquivo(PostArquivoModel model)

@@ -1,27 +1,14 @@
-﻿using Arquitetura.ViewModels;
-using AutoMapper;
-using Core.Business.Arquivos;
-using Core.Business.ContaBancaria;
-using Core.Business.Equipantes;
-using Core.Business.Equipes;
-using Core.Business.Eventos;
-using Core.Business.Lancamento;
-using Core.Business.MeioPagamento;
-using Core.Business.Reunioes;
+﻿using AutoMapper;
+using Core.Models.Carona;
 using Core.Models.Equipantes;
 using Core.Models.Etiquetas;
 using Core.Models.Eventos;
-using Core.Models.Lancamento;
 using Core.Models.Participantes;
 using Core.Models.Quartos;
 using Data.Entities;
 using SysIgreja.ViewModels;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web.Mvc;
-using Utils.Constants;
-using Utils.Enums;
 using Utils.Extensions;
 using Utils.Services;
 
@@ -38,7 +25,10 @@ namespace SysIgreja.Controllers
             var configuration = new MapperConfiguration(cfg =>
             {
 
-                cfg.CreateMap<Equipante, PostEquipanteModel>().ForMember(dest => dest.Foto, opt => opt.MapFrom(x => x.Arquivos.Any(y => y.IsFoto) ? Convert.ToBase64String(x.Arquivos.FirstOrDefault(y => y.IsFoto).Conteudo) : ""));
+                cfg.CreateMap<Equipante, PostEquipanteModel>()
+                .ForMember(dest => dest.EtiquetasList, opt => opt.MapFrom(x => x.ParticipantesEtiquetas.Select(y => y.Etiqueta)))
+                .ForMember(dest => dest.Foto, opt => opt.MapFrom(x => x.Arquivos.Any(y => y.IsFoto) ? Convert.ToBase64String(x.Arquivos.FirstOrDefault(y => y.IsFoto).Conteudo) : ""));
+                cfg.CreateMap<Carona, PostCaronaModel>().ForMember(dest => dest.Motorista, opt => opt.MapFrom(x => x.Motorista.Nome));
                 cfg.CreateMap<Quarto, PostQuartoModel>();
                 cfg.CreateMap<Evento, PostEventoModel>();
                 cfg.CreateMap<Participante, ParticipanteSelectModel>();
@@ -61,6 +51,7 @@ namespace SysIgreja.Controllers
                     .ForMember(dest => dest.Etiquetas, opt => opt.MapFrom(x => x.ParticipantesEtiquetas.Select(y => y.Etiqueta)))
                     .ForMember(dest => dest.Status, opt => opt.MapFrom(x => x.Status.GetDescription()));
                 cfg.CreateMap<Equipante, EquipanteListModel>()
+                .ForMember(dest => dest.Etiquetas, opt => opt.MapFrom(x => x.ParticipantesEtiquetas.Select(y => y.Etiqueta)))
                         .ForMember(dest => dest.Idade, opt => opt.MapFrom(x => UtilServices.GetAge(x.DataNascimento)))
                                 .ForMember(dest => dest.Sexo, opt => opt.MapFrom(x => x.Sexo.GetDescription()))
                                      .ForMember(dest => dest.HasFoto, opt => opt.MapFrom(x => x.Arquivos.Any(y => y.IsFoto)))
@@ -85,4 +76,4 @@ namespace SysIgreja.Controllers
         }
     }
 
-}   
+}

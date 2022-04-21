@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace Utils.Services
+﻿namespace Utils.Services
 {
     public interface IEmailSender
     {

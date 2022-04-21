@@ -505,7 +505,6 @@ C:\Users\User\source\repos\ejc\Web\bin\Utils.dll
 C:\Users\User\source\repos\ejc\Web\bin\WebEssentials.AspNetCore.Pwa.dll
 C:\Users\User\source\repos\ejc\Web\bin\WebGrease.dll
 C:\Users\User\source\repos\ejc\Web\bin\EPPlus.dll
-C:\Users\User\source\repos\ejc\Web\bin\System.Threading.Tasks.Extensions.dll
 C:\Users\User\source\repos\ejc\Web\bin\Arquitetura.pdb
 C:\Users\User\source\repos\ejc\Web\bin\Core.pdb
 C:\Users\User\source\repos\ejc\Web\bin\Data.pdb

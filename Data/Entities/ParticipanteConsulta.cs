@@ -1,11 +1,6 @@
-﻿using Data.Context;
-using Data.Entities.Base;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
 using Utils.Enums;
 using Utils.Services;
 

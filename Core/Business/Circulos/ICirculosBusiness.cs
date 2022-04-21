@@ -1,5 +1,4 @@
 ﻿using Core.Models.Circulos;
-using Core.Models.Eventos;
 using System.Collections.Generic;
 using System.Linq;
 

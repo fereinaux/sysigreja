@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\felip\\source\\repos\\ejc\\Data\\Data.csproj": {}
+    "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\felip\\source\\repos\\ejc\\Data\\Data.csproj": {
+    "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\felip\\source\\repos\\ejc\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\felip\\source\\repos\\ejc\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\felip\\source\\repos\\ejc\\Data\\obj\\",
+        "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\ejc\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\felip\\source\\repos\\ejc\\Utils\\Utils.csproj": {
-                "projectPath": "C:\\Users\\felip\\source\\repos\\ejc\\Utils\\Utils.csproj"
+              "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj"
               }
             }
           }
@@ -73,18 +73,18 @@
         }
       }
     },
-    "C:\\Users\\felip\\source\\repos\\ejc\\Utils\\Utils.csproj": {
+    "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\felip\\source\\repos\\ejc\\Utils\\Utils.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj",
         "projectName": "Utils",
-        "projectPath": "C:\\Users\\felip\\source\\repos\\ejc\\Utils\\Utils.csproj",
-        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\felip\\source\\repos\\ejc\\Utils\\obj\\",
+        "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

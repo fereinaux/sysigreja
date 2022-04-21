@@ -1,0 +1,75 @@
+﻿@using Utils.Extensions;
+@{
+    ViewBag.Numero = new Random().Next();
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>@ViewBag.Title</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/Home/Index">Home</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>@ViewBag.Title</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="ibox">
+        <div class="ibox-title" style="display: flex;justify-content: space-between;">
+            <h4>@ViewBag.Title</h4>
+            <div class="ibox-tools pull-right">
+                <select class="form-control" id="relatorio-eventoid">
+                    @foreach (var evento in ViewBag.Eventos)
+                    {
+                        <option value="@evento.Id">@evento.TipoEvento @evento.Numeracao.ToString()</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <table id="table-relatorios" class="table table-striped table-bordered table-hover" cellspacing="0" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>Relatório</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aniversariantes</td>
+                        <td class="aniversariantes"></td>
+                    </tr>
+                    <tr>
+                        <td>Restrições Alimentares</td>
+                        <td class="restricoes"></td>
+                    </tr>       
+                    <tr>
+                        <td>Relatório Financeiro</td>
+                        <td class="financeiro"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+
+}
+
+@section Scripts {
+
+    <script src="~/Scripts/app/Relatorio/relatorio.js?@ViewBag.Numero"></script>
+    <script src="~/Scripts/app/Relatorio/aniversariantes.js?@ViewBag.Numero"></script>
+    <script src="~/Scripts/app/Relatorio/restricoes.js?@ViewBag.Numero"></script>
+    <script src="~/Scripts/app/Relatorio/parentes.js"></script>
+    <script src="~/Scripts/app/Relatorio/financeiro.js"></script>
+
+    <script>
+
+    </script>
+}

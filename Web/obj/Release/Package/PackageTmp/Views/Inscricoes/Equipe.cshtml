@@ -1,0 +1,264 @@
+﻿@{
+    Layout = null;
+    ViewBag.Numero = new Random().Next();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Configuracao.Titulo | Inscrições</title>
+    <link href="~/Content/bootstrap4.css" rel="stylesheet">
+    <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
+    @if (ViewBag.Configuracao.LogoId != null)
+    {
+
+        <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,@ViewBag.Configuracao.Logo" />
+    }
+    <link href="~/Content/animate.css" rel="stylesheet">
+    <link href="~/Content/style.css" rel="stylesheet">
+    <link href="~/Content/evento.css" rel="stylesheet">
+    <link href="~/Content/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="~/Content/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="~/Content/plugins/datapicker/datepicker3.css" rel="stylesheet">
+</head>
+<body class="background-evento">
+    <div style=" display: flex; flex-direction: column; width: 100vw; height: 100vh;">
+        <div class="middle-box inscricoes animated fadeInDown " style="display:flex">
+            <div style="margin:auto;width:95%">
+                @if (ViewBag.Configuracao.LogoId != null)
+                {
+                    <div class="row justify-content-center">
+                        <div class="col col-6" style="display:flex">
+                            <img style="max-width:100%;max-height:200px;margin:auto" alt="@ViewBag.Configuracao.Titulo" src="data:image/png;base64,@ViewBag.Configuracao.Logo" />
+                        </div>
+
+                    </div>
+                }
+                <div class="row justify-content-center">
+                    <div class="col col-12">
+                        <div class="p-h-xs m-b-lg" id="form-inscricao">
+                            <div class="form-group">
+                                <label for="participante-fone" class="text-white">Fone </label>
+                                <input type="text" class="form-control fone" id="participante-fone" data-field="Fone do Participante" />
+                            </div>
+                            <div class="pnl-cadastro">
+
+                                <div class="form-group">
+                                    <label for="participante-nome" class="text-white">Nome Completo</label>
+                                    <input type="text" class="form-control required" id="participante-nome" data-field="Nome" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="participante-apelido" class="text-white">Como você gostaria que seu crachá fosse Impresso?</label>
+                                    <input type="text" class="form-control required" id="participante-apelido" data-field="Apelido" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="participante-sexo" class="text-white block">Sexo</label>
+                                    <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="sexo-masculino" checked="" value="1" name="participante-sexo"> <i></i> Masculino </label></div>
+                                    <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="sexo-feminino" value="2" name="participante-sexo"> <i></i> Feminino </label></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="participante-data-nascimento" class="text-white">Data de Nascimento</label>
+                                    <input type="text" class="form-control full-date required" id="participante-data-nascimento" data-field="Data de Nascimento" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="participante-hasmedicacao" class="text-white block">Toma alguma medicação?</label>
+                                    <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="has-medicacao" value="true" name="participante-hasmedicacao"> <i></i> Sim </label></div>
+                                    <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="not-medicacao" checked="" value="false" name="participante-hasmedicacao"> <i></i> Não </label></div>
+                                </div>
+                                <div class="form-group medicacao d-none">
+                                    <label for="participante-medicacao" class="text-white">Qual?</label>
+                                    <input type="text" class="form-control" id="participante-medicacao" data-field="Medicação" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="participante-hasalergia" class="text-white block">Tem alguma alergia?</label>
+                                    <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="has-alergia" value="true" name="participante-hasalergia"> <i></i> Sim </label></div>
+                                    <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="not-alergia" checked="" value="false" name="participante-hasalergia"> <i></i> Não </label></div>
+                                </div>
+                                <div class="form-group alergia d-none">
+                                    <label for="participante-alergia" class="text-white">Qual?</label>
+                                    <input type="text" class="form-control" id="participante-alergia" data-field="Alergia" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="participante-hasrestricaoalimentar" class="text-white block">Tem alguma restrição alimentar?</label>
+                                    <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="has-restricaoalimentar" value="true" name="participante-hasrestricaoalimentar"> <i></i> Sim </label></div>
+                                    <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="not-restricaoalimentar" checked="" value="false" name="participante-hasrestricaoalimentar"> <i></i> Não </label></div>
+                                </div>
+                                <div class="form-group restricaoalimentar d-none">
+                                    <label for="participante-restricaoalimentar" class="text-white">Qual?</label>
+                                    <input type="text" class="form-control" id="participante-restricaoalimentar" data-field="Restrição Alimentar" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div style="margin-bottom:auto">
+
+            <button type="button" class="btn btn-rounded btn-float btn-juventude pnl-verifica" onclick="VerificaCadastro()">Seguinte</button>
+
+            <button type="button" class="btn btn-rounded btn-float btn-juventude pnl-cadastro" style="height: 60px; width: 60px; margin-top: -30px;" onclick="PostInscricao()"><i class="fa fa-2x fa-paper-plane m-r-sm"></i></button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script src="~/Scripts/plugins/imaskjs/imask.js"></script>
+<script src="~/Scripts/app/Util/forms.js"></script>
+<script src="~/Scripts/app/Util/inputs.js"></script>
+<script src="~/Scripts/app/Util/messages.js"></script>
+<script src="~/Scripts/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="~/Scripts/plugins/iCheck/icheck.min.js"></script>
+<script src="~/Scripts/plugins/moment/moment-with-locales.min.js"></script>
+<script src="~/Scripts/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script src="~/Scripts/plugins/chosen/chosen.jquery.js"></script>
+
+<script>
+
+      $(document).ready(function () {
+        @if (ViewBag.Configuracao.BackgroundId != null)
+        {
+            <text> $('.background-evento').css('background', `url(data:image/jpeg;base64,@ViewBag.Configuracao.Background) no-repeat center center fixed`) </text>
+            <text> $('.background-evento').css('background-size', 'cover')</text>
+        }
+
+        $('.btn-juventude').css('background-color', '@ViewBag.Configuracao.CorBotao')
+        $('.btn-juventude').css('border-color', '@ViewBag.Configuracao.CorBotao')
+
+        $('.btn-juventude').hover(function() {
+            $(this).css('background-color', '@ViewBag.Configuracao.CorHoverBotao')
+            $(this).css('border-color', '@ViewBag.Configuracao.CorHoverBotao')
+        }, function() {
+            $(this).css('background-color', '@ViewBag.Configuracao.CorBotao')
+            $(this).css('border-color', '@ViewBag.Configuracao.CorBotao')
+        })
+
+        picker = ".inscricoes.middle-box::-webkit-scrollbar-thumb { background: @ViewBag.Configuracao.CorScroll;}  .inscricoes.middle-box::-webkit-scrollbar-thumb:hover { background: @ViewBag.Configuracao.CorHoverScroll;}  ";
+        new_stylesheet = "<style type='text/css' id='currentCSS'>" + picker + "</style>";
+
+        //check if stylsheet exists
+        existingStylesheet = $("#currentCSS");
+        if (existingStylesheet.length) { $(existingStylesheet).replaceWith(new_stylesheet); }
+        else { $(new_stylesheet).appendTo('head'); }
+        var corLoginBox = '@ViewBag.Configuracao.CorLoginBox';
+        var rgbLoginBox = corLoginBox.convertToRGB()
+        $('.inscricoes.middle-box').css('background-color', `rgba(${rgbLoginBox[0]},${rgbLoginBox[1]},${rgbLoginBox[2]},0.7)`)
+    })
+
+    function VerificaCadastro() {
+        $.ajax({
+            url: "/Equipante/VerificaCadastro",
+            datatype: "json",
+            type: "POST",
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify({
+                Fone: $(`#participante-fone`).val()
+            }),
+            success: function (url) {
+                if (url) {
+                    window.location.href = url;
+                } else {
+                    $("#participante-fone").prop("disabled", true)
+                    $(".pnl-cadastro").show();
+                    $(".pnl-verifica").hide();
+                    $('.inscricoes.middle-box').height('80%');
+                    $('.float').css("bottom", "40px")
+                }
+            }
+        })
+    }
+
+    function PostInscricao() {
+        if (ValidateForm(`#form-inscricao`)) {
+            $.ajax({
+                url: "/Equipante/PostEquipante/",
+                datatype: "json",
+                type: "POST",
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify(
+                    {
+                        Nome: $(`#participante-nome`).val(),
+                        Apelido: $(`#participante-apelido`).val(),
+                        DataNascimento: moment($("#participante-data-nascimento").val(), 'DD/MM/YYYY', 'pt-br').toJSON(),
+                        Email: $(`#participante-email`).val(),
+                        Fone: $(`#participante-fone`).val(),
+                        HasRestricaoAlimentar: $("input[type=radio][name=participante-hasrestricaoalimentar]:checked").val(),
+                        RestricaoAlimentar: $(`#participante-restricaoalimentar`).val(),
+                        HasMedicacao: $("input[type=radio][name=participante-hasmedicacao]:checked").val(),
+                        Medicacao: $(`#participante-medicacao`).val(),
+                        HasAlergia: $("input[type=radio][name=participante-hasalergia]:checked").val(),
+                        Alergia: $(`#participante-alergia`).val(),
+                        Inscricao: true,
+                        Sexo: $("input[type=radio][name=participante-sexo]:checked").val(),
+                    }),
+                success: function (url) {
+                    window.location.href = url;
+                }
+            });
+        }
+    }
+
+    $('#trindade').on('ifChecked', function (event) {
+        $('.congregacao').addClass('d-none');
+        $("#participante-congregacaodescricao").removeClass('required');
+    });
+
+    $('#recon').on('ifChecked', function (event) {
+        $('.congregacao').addClass('d-none');
+        $("#participante-congregacaodescricao").removeClass('required');
+    });
+
+    $('#outra').on('ifChecked', function (event) {
+        $('.congregacao').removeClass('d-none');
+        $("#participante-congregacaodescricao").addClass('required');
+    });
+
+
+    $('#has-medicacao').on('ifChecked', function (event) {
+        $('.medicacao').removeClass('d-none');
+        $("#participante-medicacao").addClass('required');
+    });
+
+    $('#has-parente').on('ifChecked', function (event) {
+        $('.parente').removeClass('d-none');
+        $("#participante-parente").addClass('required');
+    });
+
+    $('#not-parente').on('ifChecked', function (event) {
+        $('.parente').addClass('d-none');
+        $("#participante-parente").removeClass('required');
+    });
+
+    $('#not-medicacao').on('ifChecked', function (event) {
+        $('.medicacao').addClass('d-none');
+        $("#participante-medicacao").removeClass('required');
+    });
+
+    $('#has-alergia').on('ifChecked', function (event) {
+        $('.alergia').removeClass('d-none');
+        $("#participante-alergia").addClass('required');
+    });
+
+    $('#not-alergia').on('ifChecked', function (event) {
+        $('.alergia').addClass('d-none');
+        $("#participante-alergia").removeClass('required');
+    });
+
+    $('#has-restricaoalimentar').on('ifChecked', function (event) {
+        $('.restricaoalimentar').removeClass('d-none');
+        $("#participante-restricaoalimentar").addClass('required');
+    });
+
+    $('#not-restricaoalimentar').on('ifChecked', function (event) {
+        $('.restricaoalimentar').addClass('d-none');
+        $("#participante-restricaoalimentar").removeClass('required');
+    });
+    $(".pnl-cadastro").hide();
+    $('.inscricoes.middle-box').height('40%');
+    $('.float').css("bottom", "25%")
+</script>
+

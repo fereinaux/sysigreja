@@ -1,7 +1,4 @@
-﻿using System;
-using Utils.Enums;
-
-namespace Core.Models.Lancamento
+﻿namespace Core.Models.Lancamento
 {
     public class GetPagamentosModel
     {

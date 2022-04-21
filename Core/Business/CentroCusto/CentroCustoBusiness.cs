@@ -1,19 +1,16 @@
 ﻿using Core.Models.CentroCusto;
-using Core.Models.Eventos;
-using Data.Entities;
 using Data.Repository;
 using System.Linq;
-using Utils.Enums;
 
 namespace Core.Business.CentroCusto
 {
     public class CentroCustoBusiness : ICentroCustoBusiness
     {
-        private readonly IGenericRepository<Data.Entities.CentroCusto> centroCustoRepository;        
+        private readonly IGenericRepository<Data.Entities.CentroCusto> centroCustoRepository;
 
         public CentroCustoBusiness(IGenericRepository<Data.Entities.CentroCusto> centroCustoRepository)
         {
-            this.centroCustoRepository = centroCustoRepository;            
+            this.centroCustoRepository = centroCustoRepository;
         }
 
         public void DeleteCentroCusto(int id)

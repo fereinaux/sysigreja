@@ -1,6 +1,4 @@
-﻿using Data.Context;
-using Data.Entities.Base;
-using System;
+﻿using Data.Entities.Base;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Utils.Enums;
@@ -16,6 +14,7 @@ namespace Data.Entities
         public Evento Evento { get; set; }
         public string Titulo { get; set; }
         public SexoEnum Sexo { get; set; }
+        public TipoPessoaEnum TipoPessoa { get; set; }
         public int Capacidade { get; set; }
     }
 }

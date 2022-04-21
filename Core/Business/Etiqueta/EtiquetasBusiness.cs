@@ -1,13 +1,8 @@
-﻿using Core.Models.Arquivos;
-using Core.Models.Eventos;
+﻿using Core.Models.Etiquetas;
 using Data.Entities;
 using Data.Repository;
-using System.IO;
-using System.Linq;
 using System.Data.Entity;
-using Utils.Enums;
-using Core.Business.Etiquetas;
-using Core.Models.Etiquetas;
+using System.Linq;
 
 namespace Core.Business.Etiquetas
 {
@@ -35,12 +30,17 @@ namespace Core.Business.Etiquetas
 
         public IQueryable<Etiqueta> GetEtiquetas()
         {
-           return etiquetaRepo.GetAll();
+            return etiquetaRepo.GetAll();
         }
 
         public IQueryable<Etiqueta> GetEtiquetasByParticipante(int participanteId)
         {
             return ParticipanteEtiquetasRepo.GetAll(x => x.ParticipanteId == participanteId)?.Include(x => x.Etiqueta)?.Select(x => x.Etiqueta);
+        }
+
+        public IQueryable<Etiqueta> GetEtiquetasByEquipante(int equipanteId, int eventoId)
+        {
+            return ParticipanteEtiquetasRepo.GetAll(x => x.EquipanteId == equipanteId && x.EventoId == eventoId)?.Include(x => x.Etiqueta)?.Select(x => x.Etiqueta);
         }
 
         public void PostEtiqueta(PostEtiquetaModel model)

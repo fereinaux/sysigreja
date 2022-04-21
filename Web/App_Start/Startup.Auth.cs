@@ -16,7 +16,7 @@ namespace SysIgreja
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
                 LoginPath = new PathString("/login")
             });
-            app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);          
+            app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
         }
     }
 }

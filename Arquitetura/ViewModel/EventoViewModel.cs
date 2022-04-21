@@ -14,5 +14,5 @@ namespace Arquitetura.ViewModels
         public int QtdAnexos { get; set; }
     }
 
-    
+
 }
