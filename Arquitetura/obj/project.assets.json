@@ -1363,11 +1363,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\ejc\\Arquitetura\\Arquitetura.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\sysigreja\\Arquitetura\\Arquitetura.csproj",
       "projectName": "Arquitetura",
-      "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Arquitetura\\Arquitetura.csproj",
+      "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Arquitetura\\Arquitetura.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\ejc\\Arquitetura\\obj\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Arquitetura\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1384,14 +1384,14 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\ejc\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Core\\Core.csproj"
+            "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\Core.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj"
+            "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj"
+            "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj"
             }
           }
         }

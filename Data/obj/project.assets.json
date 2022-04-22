@@ -944,11 +944,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj",
+      "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\ejc\\Data\\obj\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -965,8 +965,8 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj"
+            "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj"
             }
           }
         }

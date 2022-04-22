@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {}
+    "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {
+    "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj",
         "projectName": "Utils",
-        "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [

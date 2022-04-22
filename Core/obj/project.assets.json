@@ -1026,11 +1026,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\ejc\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Core\\Core.csproj",
+      "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\ejc\\Core\\obj\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1047,11 +1047,11 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj"
+            "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj"
+            "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj"
             }
           }
         }
