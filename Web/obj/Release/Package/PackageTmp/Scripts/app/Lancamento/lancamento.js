@@ -5,11 +5,7 @@
         {
             EventoId: $('#lancamento-eventoid').val(),
             MeioPagamentoId: $('#busca-meiopagamento').val() == 0 ? null : $('#busca-meiopagamento').val(),
-<<<<<<< HEAD
             CentroCustoId: $('#busca-centrocusto').val() == 0 ? null : $('#busca-centrocusto').val()
-=======
-            ContaBancariaId: $('#busca-contabancaria').val() == 0 ? null : $('#busca-contabancaria').val()
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         },
         datatype: "json",
         type: "POST"
@@ -49,11 +45,7 @@
             [1, "asc"]
         ],
         ajax: ajaxOptions,
-<<<<<<< HEAD
         drawCallback: function (row, data, start, end, display) {
-=======
-        footerCallback: function (row, data, start, end, display) {
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             var api = this.api(), data;
             var intVal = function (i) {
                 return typeof i === 'string' ?
@@ -61,25 +53,15 @@
                     typeof i === 'number' ?
                         i : 0;
             };
-<<<<<<< HEAD
 
             total = api
                 .column(3, { selected: true, search: 'applied' })
-=======
-                       
-            total = api
-                .column(3)
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 .data()
                 .reduce(function (a, b) {
                     return intVal(a) + intVal(b);
                 }, 0);
-<<<<<<< HEAD
 
 
-=======
-          
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             $(api.column(3).footer()).html(
                 total.toLocaleString('pt-BR', { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' })
             );

@@ -10,11 +10,7 @@
     <WebStackScaffolding_DbContextTypeFullName>Realidade.Models.ScaffoldingContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
     <ProjectView>ShowAllFiles</ProjectView>
-<<<<<<< HEAD
     <NameOfLastUsedPublishProfile>C:\Users\User\source\repos\ejc\Web\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
-=======
-    <NameOfLastUsedPublishProfile>C:\Users\User\source\repos\Realidade\Web\Properties\PublishProfiles\Realidade.pubxml</NameOfLastUsedPublishProfile>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <UseIISExpress>true</UseIISExpress>
     <LastActiveSolutionConfig>Release|Any CPU</LastActiveSolutionConfig>

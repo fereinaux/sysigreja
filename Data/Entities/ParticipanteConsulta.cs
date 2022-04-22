@@ -1,17 +1,6 @@
-<<<<<<< HEAD
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-=======
-﻿using Data.Context;
-using Data.Entities.Base;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Utils.Enums;
 using Utils.Services;
 
@@ -35,11 +24,7 @@ namespace Data.Entities
             get { return UtilServices.CapitalizarNome(apelido); }
             set { apelido = value; }
         }
-<<<<<<< HEAD
         public DateTime? DataNascimento { get; set; }
-=======
-        public DateTime DataNascimento { get; set; }
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
         public string Email { get; set; }
         public string Instagram { get; set; }
@@ -51,7 +36,6 @@ namespace Data.Entities
         public string Medicacao { get; set; }
         public bool HasAlergia { get; set; }
         public string Alergia { get; set; }
-<<<<<<< HEAD
         public string CEP { get; set; }
         public string Logradouro { get; set; }
         public string Bairro { get; set; }
@@ -62,11 +46,6 @@ namespace Data.Entities
         public string Referencia { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }
-=======
-        public string Logradouro { get; set; }
-        public string Complemento { get; set; }
-        public string Bairro { get; set; }
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         public SexoEnum Sexo { get; set; }
         public string NomePai { get; set; }
         public string FonePai { get; set; }

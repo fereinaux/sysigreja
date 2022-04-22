@@ -7,7 +7,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>@ViewBag.Configuracao.Titulo | Login</title>
     <link href="~/Content/bootstrap.css" rel="stylesheet">
     @if (ViewBag.Configuracao.LogoId != null)
@@ -15,18 +14,12 @@
 
         <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,@ViewBag.Configuracao.Logo" />
     }
-=======
-    <title>Realidade | Login</title>
-    <link href="~/Content/bootstrap.css" rel="stylesheet">    
-    <link rel="icon" type="image/png" href="~/Images/logo-branco.png" />
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
     <link href="~/Content/animate.css" rel="stylesheet">
     <link href="~/Content/style.css" rel="stylesheet">
     <link href="~/Content/evento.css" rel="stylesheet">
 </head>
 <body class="background-evento">
-<<<<<<< HEAD
     <div class="middle-box text-center loginscreen animated fadeInDown " style="display:flex;flex-direction:column">
         <div style="margin:auto">
             @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
@@ -43,20 +36,6 @@
                 }
                 @Html.ValidationSummary(true)
 
-=======
-    <div class="middle-box text-center loginscreen animated fadeInDown ">
-        <div>
-            @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.ValidationSummary(true)
-                <div class="form-group ">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <img style="width:85% !important" src="~/Images/logo-branco.png" alt="Igreja Episcopal Carismática do Brasil" />
-                        </div>                        
-                    </div>                    
-                </div>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 <div class="form-group ">
                     <div class="col-md-12">
                         @Html.TextBoxFor(m => m.UserName, new { @class = "form-control text-lowercase", placeholder = "Login" })
@@ -87,7 +66,6 @@
     }
 </style>
 
-<<<<<<< HEAD
 <script src="~/Scripts/jquery-3.1.1.min.js"></script>
 <script src="~/Scripts/app/Util/extensions.js"></script>
 <script>
@@ -116,8 +94,3 @@
     })
 </script>
 
-=======
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566

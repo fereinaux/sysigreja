@@ -22,7 +22,6 @@ C:\Users\User\source\repos\Realidade\Core\obj\Release\Core.csproj.CoreCompileInp
 C:\Users\User\source\repos\Realidade\Core\obj\Release\Core.csproj.CopyComplete
 C:\Users\User\source\repos\Realidade\Core\obj\Release\Core.dll
 C:\Users\User\source\repos\Realidade\Core\obj\Release\Core.pdb
-<<<<<<< HEAD
 C:\Users\User\source\repos\Realidade\Core\bin\Release\Microsoft.SqlServer.Types.dll
 C:\Users\felip\source\repos\ejc\Core\bin\Release\Core.dll
 C:\Users\felip\source\repos\ejc\Core\bin\Release\Core.pdb
@@ -74,5 +73,3 @@ C:\Users\User\source\repos\ejc\Core\obj\Release\Core.csproj.CoreCompileInputs.ca
 C:\Users\User\source\repos\ejc\Core\obj\Release\Core.csproj.CopyComplete
 C:\Users\User\source\repos\ejc\Core\obj\Release\Core.dll
 C:\Users\User\source\repos\ejc\Core\obj\Release\Core.pdb
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566

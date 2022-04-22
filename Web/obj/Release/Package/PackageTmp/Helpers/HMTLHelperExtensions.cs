@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-<<<<<<< HEAD
 using System.Web.Mvc;
-=======
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Mvc.Html;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 namespace SysIgreja
 {
@@ -16,11 +10,7 @@ namespace SysIgreja
         public static string IsSelected(this HtmlHelper html, string controller = null, string action = null, string cssClass = null)
         {
 
-<<<<<<< HEAD
             if (String.IsNullOrEmpty(cssClass))
-=======
-            if (String.IsNullOrEmpty(cssClass)) 
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 cssClass = "active";
 
             string currentAction = (string)html.ViewContext.RouteData.Values["action"];
@@ -67,9 +57,5 @@ namespace SysIgreja
             return currentAction;
         }
 
-<<<<<<< HEAD
     }
-=======
-	}
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 }

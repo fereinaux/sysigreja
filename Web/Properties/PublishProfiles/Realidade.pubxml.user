@@ -7,19 +7,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>C:\Realidade</_PublishTargetUrl>
-<<<<<<< HEAD
     <History>False|2022-03-30T11:12:14.3623149Z;False|2022-03-30T08:10:00.1358085-03:00;False|2022-03-19T14:09:23.7949565-03:00;True|2022-03-18T12:13:34.2916170-03:00;True|2022-03-07T21:10:16.1525062-03:00;True|2022-03-02T13:30:53.3353585-03:00;True|2022-03-02T10:27:45.7626706-03:00;True|2022-03-02T10:27:18.9442907-03:00;True|2022-02-23T18:23:14.7217721-03:00;True|2022-02-23T18:11:10.6448507-03:00;True|2022-02-15T14:33:14.6977526-03:00;True|2022-02-08T11:59:14.4528570-03:00;True|2022-02-08T11:59:03.2029265-03:00;True|2021-11-12T13:51:36.8449734-03:00;True|2021-10-29T00:18:01.8043323-03:00;True|2021-10-29T00:07:05.6143587-03:00;True|2021-10-28T11:44:46.3381909-03:00;True|2021-10-28T11:36:36.3610219-03:00;True|2021-10-28T11:36:15.5492477-03:00;True|2021-10-27T23:42:25.1741732-03:00;True|2021-10-27T23:34:27.9204170-03:00;True|2021-10-27T23:26:37.5337531-03:00;True|2021-10-26T23:31:49.9333154-03:00;True|2021-10-26T23:31:29.6117464-03:00;True|2021-10-26T23:08:41.9068692-03:00;True|2021-10-26T23:07:43.2998638-03:00;True|2021-10-26T11:23:37.5592713-03:00;True|2021-10-26T11:18:24.1984062-03:00;True|2021-10-26T02:58:29.4048838-03:00;True|2021-10-21T16:31:29.7868028-03:00;True|2021-10-20T10:38:25.9355695-03:00;True|2021-10-15T13:28:49.6061813-03:00;True|2021-10-15T13:17:46.1163452-03:00;True|2021-10-14T23:22:16.4509282-03:00;True|2021-10-14T16:38:39.7895619-03:00;True|2021-10-10T18:55:26.7159731-03:00;True|2021-10-08T03:49:47.1240202-03:00;True|2021-10-07T15:49:15.6134925-03:00;True|2021-10-07T13:53:49.6775150-03:00;True|2021-10-04T13:18:32.1138356-03:00;True|2021-10-04T13:18:17.8816268-03:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Start/BundleConfig.cs">
       <publishTime>10/08/2021 11:28:56</publishTime>
-=======
-    <History>True|2021-11-12T16:51:36.8449734Z;True|2021-10-29T00:18:01.8043323-03:00;True|2021-10-29T00:07:05.6143587-03:00;True|2021-10-28T11:44:46.3381909-03:00;True|2021-10-28T11:36:36.3610219-03:00;True|2021-10-28T11:36:15.5492477-03:00;True|2021-10-27T23:42:25.1741732-03:00;True|2021-10-27T23:34:27.9204170-03:00;True|2021-10-27T23:26:37.5337531-03:00;True|2021-10-26T23:31:49.9333154-03:00;True|2021-10-26T23:31:29.6117464-03:00;True|2021-10-26T23:08:41.9068692-03:00;True|2021-10-26T23:07:43.2998638-03:00;True|2021-10-26T11:23:37.5592713-03:00;True|2021-10-26T11:18:24.1984062-03:00;True|2021-10-26T02:58:29.4048838-03:00;True|2021-10-21T16:31:29.7868028-03:00;True|2021-10-20T10:38:25.9355695-03:00;True|2021-10-15T13:28:49.6061813-03:00;True|2021-10-15T13:17:46.1163452-03:00;True|2021-10-14T23:22:16.4509282-03:00;True|2021-10-14T16:38:39.7895619-03:00;True|2021-10-10T18:55:26.7159731-03:00;True|2021-10-08T03:49:47.1240202-03:00;True|2021-10-07T15:49:15.6134925-03:00;True|2021-10-07T13:53:49.6775150-03:00;True|2021-10-04T13:18:32.1138356-03:00;True|2021-10-04T13:18:17.8816268-03:00;</History>
-  </PropertyGroup>
-  <ItemGroup>
-    <File Include="App_Start/BundleConfig.cs">
-      <publishTime>08/10/2021 11:28:56</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="App_Start/FilterConfig.cs">
       <publishTime>08/23/2021 09:48:43</publishTime>
@@ -31,11 +23,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/21/2021 13:01:20</publishTime>
     </File>
     <File Include="App_Start/UnityConfig.cs">
-<<<<<<< HEAD
       <publishTime>03/21/2022 21:22:24</publishTime>
-=======
-      <publishTime>10/15/2021 16:26:04</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>08/23/2021 09:48:51</publishTime>
@@ -44,49 +32,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:51</publishTime>
     </File>
     <File Include="bin/Arquitetura.dll">
-<<<<<<< HEAD
       <publishTime>03/30/2022 08:31:07</publishTime>
     </File>
     <File Include="bin/Arquitetura.pdb">
       <publishTime>03/30/2022 08:31:07</publishTime>
-=======
-      <publishTime>10/29/2021 00:15:31</publishTime>
-    </File>
-    <File Include="bin/Arquitetura.pdb">
-      <publishTime>10/29/2021 00:15:31</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="bin/AutoMapper.dll">
       <publishTime>10/16/2020 15:36:54</publishTime>
     </File>
     <File Include="bin/Core.dll">
-<<<<<<< HEAD
       <publishTime>03/30/2022 08:31:07</publishTime>
     </File>
     <File Include="bin/Core.pdb">
       <publishTime>03/30/2022 08:31:07</publishTime>
-=======
-      <publishTime>10/29/2021 00:15:31</publishTime>
-    </File>
-    <File Include="bin/Core.pdb">
-      <publishTime>10/29/2021 00:15:31</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="bin/CsQuery.dll">
       <publishTime>08/23/2021 09:48:51</publishTime>
     </File>
     <File Include="bin/Data.dll">
-<<<<<<< HEAD
       <publishTime>03/30/2022 08:31:06</publishTime>
     </File>
     <File Include="bin/Data.pdb">
       <publishTime>03/30/2022 08:31:06</publishTime>
-=======
-      <publishTime>10/27/2021 00:18:40</publishTime>
-    </File>
-    <File Include="bin/Data.pdb">
-      <publishTime>10/27/2021 00:18:40</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="bin/en-html2enml.dll">
       <publishTime>08/23/2021 09:49:12</publishTime>
@@ -343,12 +310,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
       <publishTime>08/23/2021 09:48:54</publishTime>
     </File>
-<<<<<<< HEAD
     <File Include="bin/Microsoft.SqlServer.Types.dll">
       <publishTime>09/27/2018 06:33:46</publishTime>
     </File>
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>08/23/2021 09:48:54</publishTime>
     </File>
@@ -542,11 +506,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:56</publishTime>
     </File>
     <File Include="bin/pl/System.Web.Optimization.resources.dll">
-<<<<<<< HEAD
       <publishTime>02/11/2014 13:28:42</publishTime>
-=======
-      <publishTime>11/02/2014 13:28:42</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="bin/pl/System.Web.Razor.resources.dll">
       <publishTime>11/28/2018 11:00:30</publishTime>
@@ -560,7 +520,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/SgmlReaderDll.dll">
       <publishTime>08/23/2021 09:48:57</publishTime>
     </File>
-<<<<<<< HEAD
     <File Include="bin/SqlServerTypes/x64/msvcr120.dll">
       <publishTime>03/29/2022 15:21:02</publishTime>
     </File>
@@ -573,8 +532,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/SqlServerTypes/x86/SqlServerSpatial140.dll">
       <publishTime>03/29/2022 15:21:02</publishTime>
     </File>
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <File Include="bin/System.Buffers.dll">
       <publishTime>08/23/2021 09:48:57</publishTime>
     </File>
@@ -621,11 +578,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:49:08</publishTime>
     </File>
     <File Include="bin/System.Threading.Tasks.Extensions.dll">
-<<<<<<< HEAD
       <publishTime>10/04/2021 12:41:01</publishTime>
-=======
-      <publishTime>04/10/2021 12:41:01</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>08/23/2021 09:48:51</publishTime>
@@ -667,7 +620,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:49:12</publishTime>
     </File>
     <File Include="bin/Utils.dll">
-<<<<<<< HEAD
       <publishTime>03/30/2022 08:31:06</publishTime>
     </File>
     <File Include="bin/Utils.pdb">
@@ -678,18 +630,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/Web.pdb">
       <publishTime>03/30/2022 08:31:08</publishTime>
-=======
-      <publishTime>10/27/2021 00:18:40</publishTime>
-    </File>
-    <File Include="bin/Utils.pdb">
-      <publishTime>10/27/2021 00:18:40</publishTime>
-    </File>
-    <File Include="bin/Web.dll">
-      <publishTime>10/29/2021 00:15:32</publishTime>
-    </File>
-    <File Include="bin/Web.pdb">
-      <publishTime>10/29/2021 00:15:32</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="bin/WebEssentials.AspNetCore.Pwa.dll">
       <publishTime>08/23/2021 09:49:12</publishTime>
@@ -764,11 +704,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:43</publishTime>
     </File>
     <File Include="Content/evento.css">
-<<<<<<< HEAD
       <publishTime>03/23/2022 17:14:37</publishTime>
-=======
-      <publishTime>08/10/2021 11:48:45</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Content/Images/30horas.png">
       <publishTime>08/23/2021 09:48:43</publishTime>
@@ -975,7 +911,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:43</publishTime>
     </File>
     <File Include="Content/style.css">
-<<<<<<< HEAD
       <publishTime>03/07/2022 16:06:53</publishTime>
     </File>
     <File Include="Controllers/AccountController.cs">
@@ -992,27 +927,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Controllers/ConfiguracaoController.cs">
       <publishTime>03/22/2022 21:27:53</publishTime>
-=======
-      <publishTime>10/15/2021 14:12:37</publishTime>
-    </File>
-    <File Include="Controllers/AccountController.cs">
-      <publishTime>09/20/2021 10:57:34</publishTime>
-    </File>
-    <File Include="Controllers/ArquivoController.cs">
-      <publishTime>07/10/2021 13:30:13</publishTime>
-    </File>
-    <File Include="Controllers/CentroCustoController.cs">
-      <publishTime>08/23/2021 09:48:43</publishTime>
-    </File>
-    <File Include="Controllers/CirculoController.cs">
-      <publishTime>09/30/2021 12:07:39</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Controllers/ContaBancariaController.cs">
       <publishTime>08/23/2021 09:48:43</publishTime>
     </File>
     <File Include="Controllers/EquipanteController.cs">
-<<<<<<< HEAD
       <publishTime>03/22/2022 09:26:13</publishTime>
     </File>
     <File Include="Controllers/EquipeController.cs">
@@ -1053,48 +972,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Controllers/ReuniaoController.cs">
       <publishTime>03/18/2022 10:08:32</publishTime>
-=======
-      <publishTime>10/27/2021 23:25:55</publishTime>
-    </File>
-    <File Include="Controllers/EquipeController.cs">
-      <publishTime>10/26/2021 02:11:39</publishTime>
-    </File>
-    <File Include="Controllers/EventoController.cs">
-      <publishTime>10/10/2021 18:38:18</publishTime>
-    </File>
-    <File Include="Controllers/HomeController.cs">
-      <publishTime>10/21/2021 11:37:07</publishTime>
-    </File>
-    <File Include="Controllers/InscricoesController.cs">
-      <publishTime>10/15/2021 16:54:38</publishTime>
-    </File>
-    <File Include="Controllers/LancamentoController.cs">
-      <publishTime>09/30/2021 06:25:42</publishTime>
-    </File>
-    <File Include="Controllers/LoginController.cs">
-      <publishTime>09/20/2021 10:58:02</publishTime>
-    </File>
-    <File Include="Controllers/MeioPagamentoController.cs">
-      <publishTime>08/23/2021 09:48:43</publishTime>
-    </File>
-    <File Include="Controllers/ParticipanteController.cs">
-      <publishTime>10/29/2021 00:15:30</publishTime>
-    </File>
-    <File Include="Controllers/QuartoController.cs">
-      <publishTime>10/27/2021 23:32:33</publishTime>
-    </File>
-    <File Include="Controllers/RelatorioController.cs">
-      <publishTime>08/23/2021 09:48:43</publishTime>
-    </File>
-    <File Include="Controllers/ReuniaoController.cs">
-      <publishTime>08/23/2021 09:48:43</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="favicon.ico">
       <publishTime>08/23/2021 09:48:47</publishTime>
     </File>
     <File Include="fonts/font-awesome/css/all.css">
-<<<<<<< HEAD
       <publishTime>08/04/2021 17:25:46</publishTime>
     </File>
     <File Include="fonts/font-awesome/css/all.min.css">
@@ -1105,18 +987,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="fonts/font-awesome/css/brands.min.css">
       <publishTime>08/04/2021 17:25:46</publishTime>
-=======
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/css/all.min.css">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/css/brands.css">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/css/brands.min.css">
-      <publishTime>04/08/2021 17:25:46</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="fonts/font-awesome/css/font-awesome.css">
       <publishTime>08/23/2021 09:48:47</publishTime>
@@ -1125,7 +995,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:47</publishTime>
     </File>
     <File Include="fonts/font-awesome/css/fontawesome.css">
-<<<<<<< HEAD
       <publishTime>08/04/2021 17:25:46</publishTime>
     </File>
     <File Include="fonts/font-awesome/css/fontawesome.min.css">
@@ -1154,36 +1023,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="fonts/font-awesome/css/v4-shims.min.css">
       <publishTime>08/04/2021 17:25:46</publishTime>
-=======
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/css/fontawesome.min.css">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/css/regular.css">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/css/regular.min.css">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/css/solid.css">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/css/solid.min.css">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/css/svg-with-js.css">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/css/svg-with-js.min.css">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/css/v4-shims.css">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/css/v4-shims.min.css">
-      <publishTime>04/08/2021 17:25:46</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="fonts/font-awesome/fonts/fontawesome-webfont.eot">
       <publishTime>08/23/2021 09:48:47</publishTime>
@@ -1282,7 +1121,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:47</publishTime>
     </File>
     <File Include="fonts/font-awesome/webfonts/fa-brands-400.eot">
-<<<<<<< HEAD
       <publishTime>08/04/2021 17:25:46</publishTime>
     </File>
     <File Include="fonts/font-awesome/webfonts/fa-brands-400.svg">
@@ -1326,51 +1164,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="fonts/font-awesome/webfonts/fa-solid-900.woff2">
       <publishTime>08/04/2021 17:25:46</publishTime>
-=======
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-brands-400.svg">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-brands-400.ttf">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-brands-400.woff">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-brands-400.woff2">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-regular-400.eot">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-regular-400.svg">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-regular-400.ttf">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-regular-400.woff">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-regular-400.woff2">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-solid-900.eot">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-solid-900.svg">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-solid-900.ttf">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-solid-900.woff">
-      <publishTime>04/08/2021 17:25:46</publishTime>
-    </File>
-    <File Include="fonts/font-awesome/webfonts/fa-solid-900.woff2">
-      <publishTime>04/08/2021 17:25:46</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>08/23/2021 09:48:47</publishTime>
@@ -1391,11 +1184,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:43</publishTime>
     </File>
     <File Include="Global.asax.cs">
-<<<<<<< HEAD
       <publishTime>03/29/2022 15:22:18</publishTime>
-=======
-      <publishTime>08/23/2021 09:48:43</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Helpers/HMTLHelperExtensions.cs">
       <publishTime>08/23/2021 09:48:43</publishTime>
@@ -1407,11 +1196,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Images/background-login.png">
-<<<<<<< HEAD
       <publishTime>03/22/2022 12:40:35</publishTime>
-=======
-      <publishTime>09/23/2021 15:11:09</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Images/Bancos/Banco do Brasil.png">
       <publishTime>08/23/2021 09:48:43</publishTime>
@@ -1444,7 +1229,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Images/calibri-bold.js">
-<<<<<<< HEAD
       <publishTime>10/08/2021 02:38:57</publishTime>
     </File>
     <File Include="Images/calibri-normal.js">
@@ -1455,34 +1239,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Images/circulos/Azul Claro.png">
       <publishTime>03/21/2022 21:08:02</publishTime>
-=======
-      <publishTime>08/10/2021 02:38:57</publishTime>
-    </File>
-    <File Include="Images/calibri-normal.js">
-      <publishTime>08/10/2021 02:31:15</publishTime>
-    </File>
-    <File Include="Images/circulos/Amarelo.png">
-      <publishTime>08/10/2021 00:32:55</publishTime>
-    </File>
-    <File Include="Images/circulos/Azul Claro.png">
-      <publishTime>08/10/2021 00:32:55</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Images/circulos/Azul.png">
       <publishTime>08/10/2021 00:32:55</publishTime>
     </File>
     <File Include="Images/circulos/Laranja.png">
-<<<<<<< HEAD
       <publishTime>03/24/2022 14:21:19</publishTime>
-=======
-      <publishTime>08/10/2021 00:32:55</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Images/circulos/Lilas.png">
       <publishTime>10/08/2021 00:32:55</publishTime>
     </File>
     <File Include="Images/circulos/Lilás.png">
-<<<<<<< HEAD
       <publishTime>03/21/2022 21:08:12</publishTime>
     </File>
     <File Include="Images/circulos/Rosa.png">
@@ -1496,27 +1263,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Images/circulos/Vermelho.png">
       <publishTime>03/21/2022 21:08:18</publishTime>
-=======
-      <publishTime>08/10/2021 00:32:55</publishTime>
-    </File>
-    <File Include="Images/circulos/Rosa.png">
-      <publishTime>08/10/2021 00:32:55</publishTime>
-    </File>
-    <File Include="Images/circulos/Verde Claro.png">
-      <publishTime>10/27/2021 00:19:43</publishTime>
-    </File>
-    <File Include="Images/circulos/Verde Escuro.png">
-      <publishTime>10/27/2021 00:19:36</publishTime>
-    </File>
-    <File Include="Images/circulos/Vermelho.png">
-      <publishTime>08/10/2021 00:32:55</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Images/crown.png">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Images/equipes/Bomboniere.png">
-<<<<<<< HEAD
       <publishTime>03/21/2022 21:04:06</publishTime>
     </File>
     <File Include="Images/equipes/Circulação.png">
@@ -1524,21 +1275,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Images/equipes/Coordenação.png">
       <publishTime>03/21/2022 21:04:15</publishTime>
-=======
-      <publishTime>10/21/2021 11:23:10</publishTime>
-    </File>
-    <File Include="Images/equipes/Circulação.png">
-      <publishTime>08/10/2021 00:32:55</publishTime>
-    </File>
-    <File Include="Images/equipes/Coordenação.png">
-      <publishTime>10/26/2021 15:07:52</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Images/equipes/Cozinha.png">
       <publishTime>08/10/2021 00:32:55</publishTime>
     </File>
     <File Include="Images/equipes/Drama.png">
-<<<<<<< HEAD
       <publishTime>03/21/2022 21:04:52</publishTime>
     </File>
     <File Include="Images/equipes/Grupo de Oração e Encorajamento.png">
@@ -1546,25 +1287,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Images/equipes/Louvor.png">
       <publishTime>03/21/2022 21:05:12</publishTime>
-=======
-      <publishTime>08/10/2021 00:32:55</publishTime>
-    </File>
-    <File Include="Images/equipes/Grupo de Oração e Encorajamento.png">
-      <publishTime>08/10/2021 00:32:55</publishTime>
-    </File>
-    <File Include="Images/equipes/Louvor.png">
-      <publishTime>10/21/2021 00:07:50</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Images/equipes/Midia.png">
       <publishTime>08/10/2021 00:32:55</publishTime>
     </File>
     <File Include="Images/equipes/Mídia.png">
-<<<<<<< HEAD
       <publishTime>03/21/2022 21:05:18</publishTime>
-=======
-      <publishTime>08/10/2021 00:32:55</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Images/equipes/Pastores.png">
       <publishTime>08/10/2021 03:06:29</publishTime>
@@ -1573,7 +1301,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/10/2021 00:32:55</publishTime>
     </File>
     <File Include="Images/equipes/Refeitório.png">
-<<<<<<< HEAD
       <publishTime>03/21/2022 21:04:22</publishTime>
     </File>
     <File Include="Images/equipes/Reitores.png">
@@ -1587,21 +1314,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Images/equipes/Vaila de Pequeno Grupo.png">
       <publishTime>03/21/2022 21:05:27</publishTime>
-=======
-      <publishTime>08/10/2021 00:32:55</publishTime>
-    </File>
-    <File Include="Images/equipes/Reitores.png">
-      <publishTime>08/10/2021 03:06:28</publishTime>
-    </File>
-    <File Include="Images/equipes/Secretaria.png">
-      <publishTime>08/10/2021 00:32:55</publishTime>
-    </File>
-    <File Include="Images/equipes/Vaila de Apoio Integral.png">
-      <publishTime>08/10/2021 00:32:55</publishTime>
-    </File>
-    <File Include="Images/equipes/Vaila de Pequeno Grupo.png">
-      <publishTime>08/10/2021 03:06:29</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Images/Icons/128x128.png">
       <publishTime>08/23/2021 09:48:44</publishTime>
@@ -1634,11 +1346,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/09/2020 13:51:15</publishTime>
     </File>
     <File Include="Images/logo-iecb.png">
-<<<<<<< HEAD
       <publishTime>10/04/2021 11:31:22</publishTime>
-=======
-      <publishTime>01/09/2020 13:51:15</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Images/logo-preto.png">
       <publishTime>08/23/2021 09:48:44</publishTime>
@@ -1656,7 +1364,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/09/2020 13:51:15</publishTime>
     </File>
     <File Include="Images/logo_sombra.png">
-<<<<<<< HEAD
       <publishTime>10/08/2021 00:57:42</publishTime>
     </File>
     <File Include="Images/mapa/amarelo-crown.png">
@@ -1730,9 +1437,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Images/Montserrat-normal.js">
       <publishTime>03/21/2022 19:19:04</publishTime>
-=======
-      <publishTime>08/10/2021 00:57:42</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Images/pagSeguro.png">
       <publishTime>08/23/2021 09:48:44</publishTime>
@@ -1741,11 +1445,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/19/2021 15:00:19</publishTime>
     </File>
     <File Include="Images/qrcode pix.png">
-<<<<<<< HEAD
       <publishTime>03/02/2022 12:01:52</publishTime>
-=======
-      <publishTime>09/19/2021 14:52:08</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Images/SOZO_Logomarca2.png">
       <publishTime>01/09/2020 13:51:15</publishTime>
@@ -1756,37 +1456,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Images/SVES_Logomarca1.psd">
       <publishTime>01/09/2020 13:51:15</publishTime>
     </File>
-<<<<<<< HEAD
     <File Include="Images/tag-background.jpg">
       <publishTime>03/24/2022 17:01:07</publishTime>
     </File>
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <File Include="manifest.json">
       <publishTime>09/20/2021 13:27:57</publishTime>
     </File>
     <File Include="Mapper/Mapper.cs">
-<<<<<<< HEAD
       <publishTime>03/29/2022 11:05:41</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>03/29/2022 15:20:57</publishTime>
-=======
-      <publishTime>10/26/2021 01:10:49</publishTime>
-    </File>
-    <File Include="packages.config">
-      <publishTime>10/14/2021 15:00:32</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Properties/AssemblyInfo.cs">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Properties/PublishProfiles/encareasua.com.br - Web Deploy.pubxml">
-<<<<<<< HEAD
       <publishTime>10/07/2021 16:51:37</publishTime>
-=======
-      <publishTime>07/10/2021 16:51:37</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Properties/PublishProfiles/Realidade.pubxml">
       <publishTime>08/23/2021 09:48:44</publishTime>
@@ -1795,7 +1481,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/09/2020 13:51:15</publishTime>
     </File>
     <File Include="Scripts/app/Arquivo/arquivo.js">
-<<<<<<< HEAD
       <publishTime>10/04/2021 13:03:55</publishTime>
     </File>
     <File Include="Scripts/app/CentroCusto/centro-custo.js">
@@ -1824,49 +1509,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/app/Home/admin.js">
       <publishTime>02/23/2022 17:57:24</publishTime>
-=======
-      <publishTime>04/10/2021 13:03:55</publishTime>
-    </File>
-    <File Include="Scripts/app/CentroCusto/centro-custo.js">
-      <publishTime>04/10/2021 13:03:55</publishTime>
-    </File>
-    <File Include="Scripts/app/Circulo/circulo.js">
-      <publishTime>08/10/2021 03:12:22</publishTime>
-    </File>
-    <File Include="Scripts/app/ContaBancaria/conta-bancaria.js">
-      <publishTime>04/10/2021 13:03:55</publishTime>
-    </File>
-    <File Include="Scripts/app/Equipante/equipante.js">
-      <publishTime>10/26/2021 10:42:50</publishTime>
-    </File>
-    <File Include="Scripts/app/Equipe/equipe.js">
-      <publishTime>08/10/2021 03:12:22</publishTime>
-    </File>
-    <File Include="Scripts/app/Equipe/presenca.js">
-      <publishTime>04/10/2021 13:03:55</publishTime>
-    </File>
-    <File Include="Scripts/app/Evento/evento.js">
-      <publishTime>04/10/2021 13:03:55</publishTime>
-    </File>
-    <File Include="Scripts/app/Home/admin.js">
-      <publishTime>10/20/2021 11:39:41</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Scripts/app/Home/coordenador.js">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Scripts/app/Inscricoes/inscricoes.js">
-<<<<<<< HEAD
       <publishTime>03/29/2022 14:30:14</publishTime>
-=======
-      <publishTime>10/15/2021 16:58:40</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Scripts/app/inspinia.js">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Scripts/app/Lancamento/lancamento.js">
-<<<<<<< HEAD
       <publishTime>03/02/2022 13:28:09</publishTime>
     </File>
     <File Include="Scripts/app/MeioPagamento/meio-pagamento.js">
@@ -1910,80 +1563,26 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/app/Reuniao/reuniao.js">
       <publishTime>03/02/2022 13:20:51</publishTime>
-=======
-      <publishTime>08/10/2021 03:12:22</publishTime>
-    </File>
-    <File Include="Scripts/app/MeioPagamento/meio-pagamento.js">
-      <publishTime>04/10/2021 13:03:55</publishTime>
-    </File>
-    <File Include="Scripts/app/Participante/boletos.js">
-      <publishTime>04/10/2021 13:03:55</publishTime>
-    </File>
-    <File Include="Scripts/app/Participante/checkin.js">
-      <publishTime>10/29/2021 00:17:30</publishTime>
-    </File>
-    <File Include="Scripts/app/Participante/etiquetas.js">
-      <publishTime>10/28/2021 16:34:33</publishTime>
-    </File>
-    <File Include="Scripts/app/Participante/lista-telefonica.js">
-      <publishTime>04/10/2021 13:03:55</publishTime>
-    </File>
-    <File Include="Scripts/app/Participante/participante.js">
-      <publishTime>10/28/2021 23:29:44</publishTime>
-    </File>
-    <File Include="Scripts/app/Quarto/quarto.js">
-      <publishTime>08/10/2021 03:12:22</publishTime>
-    </File>
-    <File Include="Scripts/app/Relatorio/aniversariantes.js">
-      <publishTime>08/10/2021 03:12:22</publishTime>
-    </File>
-    <File Include="Scripts/app/Relatorio/financeiro.js">
-      <publishTime>08/10/2021 02:50:14</publishTime>
-    </File>
-    <File Include="Scripts/app/Relatorio/parentes.js">
-      <publishTime>08/10/2021 03:12:22</publishTime>
-    </File>
-    <File Include="Scripts/app/Relatorio/relatorio.js">
-      <publishTime>04/10/2021 13:03:55</publishTime>
-    </File>
-    <File Include="Scripts/app/Relatorio/restricoes.js">
-      <publishTime>08/10/2021 03:12:22</publishTime>
-    </File>
-    <File Include="Scripts/app/Reuniao/reuniao.js">
-      <publishTime>04/10/2021 13:03:55</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Scripts/app/skin.config.min.js">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Scripts/app/Usuario/usuario.js">
-<<<<<<< HEAD
       <publishTime>03/02/2022 12:28:45</publishTime>
     </File>
     <File Include="Scripts/app/Util/buttons.js">
       <publishTime>03/29/2022 11:12:31</publishTime>
-=======
-      <publishTime>04/10/2021 13:03:55</publishTime>
-    </File>
-    <File Include="Scripts/app/Util/buttons.js">
-      <publishTime>09/30/2021 06:11:54</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Scripts/app/Util/constants.js">
       <publishTime>10/10/2021 18:27:49</publishTime>
     </File>
     <File Include="Scripts/app/Util/extensions.js">
-<<<<<<< HEAD
       <publishTime>03/22/2022 15:04:22</publishTime>
-=======
-      <publishTime>08/23/2021 09:48:44</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Scripts/app/Util/forms.js">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Scripts/app/Util/inputs.js">
-<<<<<<< HEAD
       <publishTime>03/22/2022 21:55:22</publishTime>
     </File>
     <File Include="Scripts/app/Util/mapa.js">
@@ -1994,15 +1593,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/app/Util/pdf.js">
       <publishTime>10/08/2021 03:12:22</publishTime>
-=======
-      <publishTime>08/23/2021 09:48:44</publishTime>
-    </File>
-    <File Include="Scripts/app/Util/messages.js">
-      <publishTime>09/28/2021 14:11:06</publishTime>
-    </File>
-    <File Include="Scripts/app/Util/pdf.js">
-      <publishTime>08/10/2021 03:12:22</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
       <publishTime>08/23/2021 09:48:44</publishTime>
@@ -2056,11 +1646,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Scripts/plugins/dataTables/datatables.min.js">
-<<<<<<< HEAD
       <publishTime>10/08/2021 02:44:10</publishTime>
-=======
-      <publishTime>08/10/2021 02:44:10</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Scripts/plugins/dataTables/dataTables.responsive.min.js">
       <publishTime>09/30/2021 05:55:59</publishTime>
@@ -2102,7 +1688,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Scripts/plugins/jsCrop-master/js-crop-min.css">
-<<<<<<< HEAD
       <publishTime>07/01/2019 09:30:33</publishTime>
     </File>
     <File Include="Scripts/plugins/jsCrop-master/js-crop-min.js">
@@ -2128,33 +1713,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/plugins/jsPDF/jsPDF.js">
       <publishTime>10/08/2021 02:45:42</publishTime>
-=======
-      <publishTime>01/07/2019 09:30:33</publishTime>
-    </File>
-    <File Include="Scripts/plugins/jsCrop-master/js-crop-min.js">
-      <publishTime>01/07/2019 09:30:33</publishTime>
-    </File>
-    <File Include="Scripts/plugins/jsCrop-master/js-crop.css">
-      <publishTime>01/07/2019 09:30:33</publishTime>
-    </File>
-    <File Include="Scripts/plugins/jsCrop-master/js-crop.js">
-      <publishTime>01/07/2019 09:30:33</publishTime>
-    </File>
-    <File Include="Scripts/plugins/jsCrop-master/LICENSE">
-      <publishTime>01/07/2019 09:30:33</publishTime>
-    </File>
-    <File Include="Scripts/plugins/jsCrop-master/README.md">
-      <publishTime>01/07/2019 09:30:33</publishTime>
-    </File>
-    <File Include="Scripts/plugins/jsPDF/default_vfs.js">
-      <publishTime>08/10/2021 02:16:17</publishTime>
-    </File>
-    <File Include="Scripts/plugins/jsPDF/jspdf.customfonts.min.js">
-      <publishTime>08/10/2021 01:38:32</publishTime>
-    </File>
-    <File Include="Scripts/plugins/jsPDF/jsPDF.js">
-      <publishTime>08/10/2021 02:45:42</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Scripts/plugins/metisMenu/jquery.metisMenu.js">
       <publishTime>08/23/2021 09:48:44</publishTime>
@@ -2180,7 +1738,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="service-worker.js">
       <publishTime>08/23/2021 09:48:50</publishTime>
     </File>
-<<<<<<< HEAD
     <File Include="SqlServerTypes/Loader.cs">
       <publishTime>03/29/2022 15:20:57</publishTime>
     </File>
@@ -2199,8 +1756,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="SqlServerTypes/x86/SqlServerSpatial140.dll">
       <publishTime>03/29/2022 15:21:02</publishTime>
     </File>
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <File Include="Startup.cs">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
@@ -2223,17 +1778,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="ViewModels/EquipanteViewModel.cs">
-<<<<<<< HEAD
       <publishTime>10/08/2021 03:17:24</publishTime>
     </File>
     <File Include="ViewModels/InscricaoConcluidaViewModel.cs">
       <publishTime>03/02/2022 12:04:46</publishTime>
-=======
-      <publishTime>08/10/2021 03:17:24</publishTime>
-    </File>
-    <File Include="ViewModels/InscricaoConcluidaViewModel.cs">
-      <publishTime>08/23/2021 09:48:44</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="ViewModels/LancamentosViewModel.cs">
       <publishTime>09/30/2021 06:25:21</publishTime>
@@ -2251,11 +1799,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="ViewModels/ParticipanteExcelViewModel.cs">
-<<<<<<< HEAD
       <publishTime>03/19/2022 14:08:44</publishTime>
-=======
-      <publishTime>08/23/2021 09:48:44</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="ViewModels/ParticipanteViewModel.cs">
       <publishTime>08/23/2021 09:48:44</publishTime>
@@ -2267,11 +1811,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="ViewModels/ReuniaoViewModel.cs">
-<<<<<<< HEAD
       <publishTime>03/02/2022 13:19:54</publishTime>
-=======
-      <publishTime>08/23/2021 09:48:44</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="ViewModels/UsuarioViewModel.cs">
       <publishTime>08/23/2021 09:48:44</publishTime>
@@ -2289,24 +1829,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Views/Circulo/Index.cshtml">
-<<<<<<< HEAD
       <publishTime>03/30/2022 08:08:40</publishTime>
     </File>
     <File Include="Views/Configuracao/Index.cshtml">
       <publishTime>03/22/2022 21:32:45</publishTime>
-=======
-      <publishTime>08/23/2021 09:48:44</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Views/ContaBancaria/Index.cshtml">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Views/Equipante/Index.cshtml">
-<<<<<<< HEAD
       <publishTime>02/23/2022 10:32:46</publishTime>
-=======
-      <publishTime>10/14/2021 23:10:08</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Views/Equipe/Index.cshtml">
       <publishTime>09/20/2021 12:54:08</publishTime>
@@ -2314,27 +1846,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Equipe/Presenca.cshtml">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
-<<<<<<< HEAD
     <File Include="Views/Etiqueta/Index.cshtml">
       <publishTime>03/07/2022 15:56:42</publishTime>
     </File>
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <File Include="Views/Evento/Index.cshtml">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Views/Home/Admin.cshtml">
-<<<<<<< HEAD
       <publishTime>03/02/2022 14:55:29</publishTime>
-=======
-      <publishTime>10/22/2021 11:42:36</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Views/Home/Coordenador.cshtml">
       <publishTime>10/11/2021 10:55:16</publishTime>
     </File>
     <File Include="Views/Inscricoes/Index.cshtml">
-<<<<<<< HEAD
       <publishTime>03/29/2022 13:31:32</publishTime>
     </File>
     <File Include="Views/Inscricoes/InscricaoCompleta.cshtml">
@@ -2354,42 +1878,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Views/Login/Index.cshtml">
       <publishTime>03/22/2022 15:08:14</publishTime>
-=======
-      <publishTime>09/23/2021 15:16:19</publishTime>
-    </File>
-    <File Include="Views/Inscricoes/InscricaoCompleta.cshtml">
-      <publishTime>01/10/2021 19:17:59</publishTime>
-    </File>
-    <File Include="Views/Inscricoes/InscricaoConcluida.cshtml">
-      <publishTime>10/10/2021 18:52:47</publishTime>
-    </File>
-    <File Include="Views/Inscricoes/InscricaoEspera.cshtml">
-      <publishTime>10/10/2021 18:52:52</publishTime>
-    </File>
-    <File Include="Views/Inscricoes/InscricoesEncerradas.cshtml">
-      <publishTime>10/27/2021 23:38:28</publishTime>
-    </File>
-    <File Include="Views/Lancamento/Index.cshtml">
-      <publishTime>09/29/2021 10:51:29</publishTime>
-    </File>
-    <File Include="Views/Login/Index.cshtml">
-      <publishTime>09/23/2021 15:24:11</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Views/MeioPagamento/Index.cshtml">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
-<<<<<<< HEAD
     <File Include="Views/Mensagem/Index.cshtml">
       <publishTime>03/18/2022 11:48:52</publishTime>
     </File>
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <File Include="Views/Participante/Boletos.cshtml">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Views/Participante/Checkin.cshtml">
-<<<<<<< HEAD
       <publishTime>03/29/2022 13:31:21</publishTime>
     </File>
     <File Include="Views/Participante/Etiquetas.cshtml">
@@ -2397,15 +1896,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Views/Participante/Index.cshtml">
       <publishTime>03/18/2022 12:04:31</publishTime>
-=======
-      <publishTime>10/29/2021 00:17:37</publishTime>
-    </File>
-    <File Include="Views/Participante/Etiquetas.cshtml">
-      <publishTime>08/10/2021 03:42:33</publishTime>
-    </File>
-    <File Include="Views/Participante/Index.cshtml">
-      <publishTime>10/14/2021 23:18:20</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Views/Participante/ListaTelefonica.cshtml">
       <publishTime>09/28/2021 22:46:54</publishTime>
@@ -2417,27 +1907,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Views/Reuniao/Index.cshtml">
-<<<<<<< HEAD
       <publishTime>03/02/2022 13:21:34</publishTime>
-=======
-      <publishTime>08/23/2021 09:48:44</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Views/Shared/_Footer.cshtml">
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-<<<<<<< HEAD
       <publishTime>03/22/2022 15:32:09</publishTime>
     </File>
     <File Include="Views/Shared/_Navigation.cshtml">
       <publishTime>03/22/2022 13:06:04</publishTime>
-=======
-      <publishTime>10/13/2021 23:15:11</publishTime>
-    </File>
-    <File Include="Views/Shared/_Navigation.cshtml">
-      <publishTime>01/10/2021 19:11:01</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Views/Shared/_TopNavbar.cshtml">
       <publishTime>08/23/2021 09:48:44</publishTime>
@@ -2449,7 +1928,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/23/2021 09:48:44</publishTime>
     </File>
     <File Include="Web.config">
-<<<<<<< HEAD
       <publishTime>03/30/2022 08:09:59</publishTime>
     </File>
     <File Include="Web.csproj">
@@ -2457,15 +1935,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Web.csproj.user">
       <publishTime>03/30/2022 08:31:05</publishTime>
-=======
-      <publishTime>10/27/2021 23:26:34</publishTime>
-    </File>
-    <File Include="Web.csproj">
-      <publishTime>10/27/2021 00:20:07</publishTime>
-    </File>
-    <File Include="Web.csproj.user">
-      <publishTime>10/27/2021 00:20:07</publishTime>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </File>
     <File Include="Web.Debug.config">
       <publishTime>08/23/2021 09:48:44</publishTime>

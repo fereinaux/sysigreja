@@ -59,16 +59,11 @@ function PostParticipante() {
                         Id: $("#participante-id").val(),
                         Checkin: $("#participante-checkin").val(),
                         CancelarCheckin: false,
-<<<<<<< HEAD
-=======
-                        EventoId: $("#eventoid").val(),
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                         Nome: $(`#participante-nome`).val(),
                         Apelido: $(`#participante-apelido`).val(),
                         DataNascimento: moment($("#participante-data-nascimento").val(), 'DD/MM/YYYY', 'pt-br').toJSON(),
                         Email: $(`#participante-email`).val(),
                         Fone: $(`#participante-fone`).val(),
-<<<<<<< HEAD
                         CEP: $(`#participante-cep`).val(),
                         Logradouro: $(`#participante-logradouro`).val(),
                         Bairro: $(`#participante-bairro`).val(),
@@ -79,21 +74,12 @@ function PostParticipante() {
                         Referencia: $(`#participante-referencia`).val(),
                         Latitude: $(`#participante-latitude`).val(),
                         Longitude: $(`#participante-longitude`).val(),
-=======
-                        NomePai: $(`#participante-nomepai`).val(),
-                        FonePai: $(`#participante-fonepai`).val(),
-                        NomeMae: $(`#participante-nomemae`).val(),
-                        FoneMae: $(`#participante-fonemae`).val(),
-                        NomeConvite: $(`#participante-nomeconvite`).val(),
-                        FoneConvite: $(`#participante-foneconvite`).val(),
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                         HasRestricaoAlimentar: $("input[type=radio][name=participante-hasrestricaoalimentar]:checked").val(),
                         RestricaoAlimentar: $(`#participante-restricaoalimentar`).val(),
                         HasMedicacao: $("input[type=radio][name=participante-hasmedicacao]:checked").val(),
                         Medicacao: $(`#participante-medicacao`).val(),
                         HasAlergia: $("input[type=radio][name=participante-hasalergia]:checked").val(),
                         Alergia: $(`#participante-alergia`).val(),
-<<<<<<< HEAD
                         Sexo: $("input[type=radio][name=participante-sexo]:checked").val(),
                         NomePai: $(`#participante-nome-pai`).val(),
                         FonePai: $(`#participante-fone-pai`).val(),
@@ -131,35 +117,6 @@ function PostParticipante() {
                 }
             });
 
-=======
-                        Sexo: $("input[type=radio][name=participante-sexo]:checked").val()
-                    }),
-                success: function (data) {
-                    SuccessMesageOperation();
-                    GetParticipantes(data.Id);
-                    GetTotaisCheckin();
-                }
-            });
-            $.ajax({
-                url: "/Participante/PostInfo/",
-                datatype: "json",
-                type: "POST",
-                contentType: 'application/json; charset=utf-8',
-                data: JSON.stringify(
-                    {
-                        Id: $("#participante-id").val(),
-                        Observacao: $('#participante-obs').val(),
-                        MsgVacina: $(`#participante-msgcovid`).prop("checked"),
-                        MsgPagamento: $(`#participante-msgpagamento`).prop("checked"),
-                        MsgNoitita: $(`#participante-msgnoitita`).prop("checked"),
-                        MsgGeral: $(`#participante-msggeral`).prop("checked"),
-                        MsgFoto: $(`#participante-msgfoto`).prop("checked")
-                    }),
-                success: function () {
-
-                }
-            });
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         } else {
             $.ajax({
                 url: "/Equipante/PostEquipante/",
@@ -180,7 +137,6 @@ function PostParticipante() {
                         Medicacao: $(`#participante-medicacao`).val(),
                         HasAlergia: $("input[type=radio][name=participante-hasalergia]:checked").val(),
                         Alergia: $(`#participante-alergia`).val(),
-<<<<<<< HEAD
                         Sexo: $("input[type=radio][name=participante-sexo]:checked").val(),
                         Etiquetas: $('.participante-etiquetas').val()
                     }),
@@ -188,14 +144,6 @@ function PostParticipante() {
                     SuccessMesageOperation();
                     GetEquipantes($("#equipante-id").val())
 
-=======
-                        Sexo: $("input[type=radio][name=participante-sexo]:checked").val()
-                    }),
-                success: function () {
-                    SuccessMesageOperation();
-                    GetEquipantes($("#equipante-id").val())   
-        
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 }
             });
         }
@@ -220,10 +168,7 @@ function GetParticipante() {
             type: "GET",
             contentType: 'application/json; charset=utf-8',
             success: function (data) {
-<<<<<<< HEAD
                 $('.div-map').css('display', 'none')
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 $("#equipantes").val("Pesquisar").trigger("chosen:updated");
                 $('#form-participante').removeClass('d-none');
                 $('#form-info').removeClass('d-none');
@@ -235,7 +180,6 @@ function GetParticipante() {
                 $("#participante-data-nascimento").val(moment(data.Participante.DataNascimento).format('DD/MM/YYYY'));
                 $(`#participante-email`).val(data.Participante.Email);
                 $(`#participante-fone`).val(data.Participante.Fone);
-<<<<<<< HEAD
                 $(`#participante-nome-pai`).val(data.Participante.NomePai);
                 $(`#participante-fone-pai`).val(data.Participante.FonePai);
                 $(`#participante-nome-mae`).val(data.Participante.NomeMae);
@@ -256,14 +200,6 @@ function GetParticipante() {
                 $(`#participante-fone-convite`).val(data.Participante.FoneConvite);
                 $(`#participante-nome-contato`).val(data.Participante.NomeContato);
                 $(`#participante-fone-contato`).val(data.Participante.FoneContato);
-=======
-                $(`#participante-nomepai`).val(data.Participante.NomePai);
-                $(`#participante-fonepai`).val(data.Participante.FonePai);
-                $(`#participante-nomemae`).val(data.Participante.NomeMae);
-                $(`#participante-fonemae`).val(data.Participante.FoneMae);
-                $(`#participante-nomeconvite`).val(data.Participante.NomeConvite);
-                $(`#participante-foneconvite`).val(data.Participante.FoneConvite);
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 $(`#participante-restricaoalimentar`).val(data.Participante.RestricaoAlimentar);
                 $(`#participante-medicacao`).val(data.Participante.Medicacao);
                 $(`#participante-alergia`).val(data.Participante.Alergia);
@@ -275,26 +211,18 @@ function GetParticipante() {
                 $('.dados-participante-contato input[id*="nome"]').addClass('required');
                 $('.dados-participante-contato input[id*="fone"]').addClass('fone');
                 $('.dados-equipante').addClass('d-none');
-<<<<<<< HEAD
                 $('.padrinho').text(data.Participante.Padrinho)
-=======
-                $('#mensagens').text('Padrinho: ' +data.Participante.Padrinho)
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 realista = data.Participante
                 $('.maetext').text(realista.NomeMae)
                 $('.realista-nome').text(realista.Nome)
                 $('.paitext').text(realista.NomePai)
                 $('.convitetext').text(realista.NomeConvite)
-<<<<<<< HEAD
                 $('.contatotext').text(realista.NomeContato)
                 $('#marcadores').html(realista.Etiquetas.map(etiqueta => `<span  class="badge m-r-xs" style="background-color:${etiqueta.Cor};color:#fff">${etiqueta.Nome}</span>`).join().replace(/,/g, ''))
                 $('#participante-etiquetas').html(`${data.Etiquetas.map(etiqueta => `<option data-cor="${etiqueta.Cor}" value=${etiqueta.Id}>${etiqueta.Nome}</option>`)
                     }`)
                 $('#participante-etiquetas').val(data.Participante.Etiquetas.map(etiqueta => etiqueta.Id))
                 $('.participante-etiquetas').select2()
-=======
-
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 $('.pagamento').show()
                 $('#participante-obs').val(realista.Observacao)
                 $(`#participante-msgcovid`).iCheck(realista.MsgVacina ? 'check' : 'uncheck');
@@ -363,21 +291,13 @@ function GetEquipante() {
     id = $("#equipantes").val() == "Pesquisar" ? 0 : $("#equipantes").val();
     if (id > 0) {
         $.ajax({
-<<<<<<< HEAD
             url: "/Equipante/GetEquipanteEvento/",
             data: { Id: id, EventoId: $("#eventoid").val(), },
-=======
-            url: "/Equipante/GetEquipante/",
-            data: { Id: id },
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             datatype: "json",
             type: "GET",
             contentType: 'application/json; charset=utf-8',
             success: function (data) {
-<<<<<<< HEAD
                 $('.div-map').css('display', 'none')
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 $("#participantes").val("Pesquisar").trigger("chosen:updated");
                 $('#form-participante').removeClass('d-none');
                 $("#equipante-id").val(data.Equipante.Id);
@@ -388,11 +308,7 @@ function GetEquipante() {
                 $("#participante-data-nascimento").val(moment(data.Equipante.DataNascimento).format('DD/MM/YYYY'));
                 $(`#participante-email`).val(data.Equipante.Email);
                 $(`#participante-fone`).val(data.Equipante.Fone);
-<<<<<<< HEAD
 
-=======
-                
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 $(`#participante-restricaoalimentar`).val(data.Equipante.RestricaoAlimentar);
                 $(`#participante-medicacao`).val(data.Equipante.Medicacao);
                 $(`#participante-alergia`).val(data.Equipante.Alergia);
@@ -405,30 +321,20 @@ function GetEquipante() {
                 $('.dados-equipante').removeClass('d-none');
                 $('.dados-participante-contato input').removeClass('required');
                 $('.dados-participante-contato input[id*="fone"]').removeClass('fone');
-<<<<<<< HEAD
                 $('#marcadores').html(data.Equipante.EtiquetasList.map(etiqueta => `<span  class="badge m-r-xs" style="background-color:${etiqueta.Cor};color:#fff">${etiqueta.Nome}</span>`).join().replace(/,/g, ''))
                 $('#participante-etiquetas').html(`${data.Etiquetas.map(etiqueta => `<option data-cor="${etiqueta.Cor}" value=${etiqueta.Id}>${etiqueta.Nome}</option>`)
                     }`)
                 $('#participante-etiquetas').val(data.Equipante.EtiquetasList.map(etiqueta => etiqueta.Id))
                 $('.participante-etiquetas').select2()
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 if (data.Equipante.Foto) {
 
                     $('#foto').attr("src", 'data:image/jpeg;base64,' + data.Equipante.Foto)
                     $('#div-foto').css('display', 'flex')
                 } else {
-<<<<<<< HEAD
                     $('#div-foto').css('display', 'none')
                 }
                 Pagamentos($("#equipantes").val());
                 GetAnexos();
-=======
-                    $('#div-foto').css('display','none')
-                }
-                Pagamentos($("#equipantes").val());
-                GetAnexos();    
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
                 $(`.equipe`).text(data.Equipante.Equipe);
                 $('#vacina').html(`<form enctype="multipart/form-data" id="frm-vacina" method="post" novalidate="novalidate">
@@ -446,13 +352,8 @@ function GetEquipante() {
                     </form>`)
 
                 $(".participante-info").removeClass('d-none');
-<<<<<<< HEAD
 
                 $(".quarto-info").addClass('d-none');
-=======
-               
-                    $(".quarto-info").addClass('d-none');
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 
                 if (data.Equipante.Checkin) {
@@ -516,11 +417,7 @@ function toggleVacina(id) {
                 } else {
                     GetEquipante()
                 }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 
             }
@@ -535,11 +432,7 @@ function PostTeste(id, realista) {
     var arquivo = new File([dataToPost.get(`input-teste`)], 'Teste COVID ' + realista.Nome + filename.substr(filename.indexOf('.')));
     console.log(dataToPost.get(`input-teste`))
     dataToPost.set('Arquivo', arquivo)
-<<<<<<< HEAD
     console.log(arquivo)
-=======
-     console.log(arquivo)
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     dataToPost.set('EventoId', $("#eventoid").val())
     $.ajax(
         {
@@ -557,11 +450,7 @@ function PostTeste(id, realista) {
 
 function PostVacina(id, realista) {
     var dataToPost = new FormData($(`#frm-vacina`)[0]);
-<<<<<<< HEAD
     dataToPost.set($("#pagamentos-participanteid").val() > 0 ? 'ParticipanteId' : 'EquipanteId', $("#pagamentos-participanteid").val() > 0 ? $("#pagamentos-participanteid").val() : $("#pagamentos-equipanteid").val())
-=======
-    dataToPost.set($("#pagamentos-participanteid").val() > 0 ?'ParticipanteId':'EquipanteId', $("#pagamentos-participanteid").val() > 0 ? $("#pagamentos-participanteid").val() : $("#pagamentos-equipanteid").val())
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     var filename = dataToPost.get(`input-vacina`).name
     var arquivo = new File([dataToPost.get(`input-vacina`)], 'Vacina ' + realista.Nome + filename.substr(filename.indexOf('.')));
     dataToPost.set('Arquivo', arquivo)
@@ -597,11 +486,7 @@ function PostPagamento() {
                     Valor: Number($("#pagamentos-valor").val())
                 }),
             success: function () {
-<<<<<<< HEAD
                 Pagamentos($("#pagamentos-participanteid").val() > 0 ? $("#pagamentos-participanteid").val() : $("#pagamentos-equipanteid").val());
-=======
-                Pagamentos($("#pagamentos-participanteid").val() > 0 ? $("#pagamentos-participanteid").val() : $("#pagamentos-equipanteid").val() );
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 SuccessMesageOperation();
                 GetParticipante();
                 GetTotaisCheckin();
@@ -685,11 +570,7 @@ function GetAnexos(id) {
         order: [
             [0, "asc"]
         ],
-<<<<<<< HEAD
         ajax: {
-=======
-        ajax: { 
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             url: $("#participante-id").val() > 0 ? '/Arquivo/GetArquivosParticipante' : '/Arquivo/GetArquivosEquipanteEvento',
             data: $("#participante-id").val() > 0 ? { ParticipanteId: $("#participante-id").val() } : { EquipanteId: $("#equipante-id").val(), eventoid: $("#eventoid").val() },
             datatype: "json",
@@ -705,22 +586,14 @@ function PostArquivo() {
     var filename = dataToPost.get('arquivo-modal').name
     var arquivo = new File([dataToPost.get('arquivo-modal')], filename);
     dataToPost.set('Arquivo', arquivo)
-<<<<<<< HEAD
     dataToPost.set('ParticipanteId', $("#participante-id").val() > 0 ? $("#participante-id").val() : null)
-=======
-    dataToPost.set('ParticipanteId', $("#participante-id").val() > 0 ? $("#participante-id").val() : null )
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     dataToPost.set('EquipanteId', $("#equipante-id").val() > 0 ? $("#equipante-id").val() : null)
     dataToPost.set('EventoId', $("#eventoid").val())
     $.ajax(
         {
             processData: false,
             contentType: false,
-<<<<<<< HEAD
             type: "POST",
-=======
-            type: "POST",   
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             data: dataToPost,
             url: "/Arquivo/PostArquivo",
             success: function () {
@@ -771,11 +644,7 @@ function CarregarTabelaPagamentos(id) {
         fixedHeader: true,
         filter: true,
         orderMulti: false,
-<<<<<<< HEAD
         responsive: true, stateSave: true,
-=======
-        responsive: true,stateSave: true,
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         destroy: true,
         dom: domConfigNoButtons,
         columns: [
@@ -810,12 +679,8 @@ function Checkin() {
             url: $("#participante-id").val() > 0 ? "/Participante/ToggleCheckin" : "/Equipante/ToggleCheckin",
             data: JSON.stringify(
                 {
-<<<<<<< HEAD
                     Id: $("#participante-id").val() > 0 ? $("#participante-id").val() : $("#equipante-id").val(),
                     EventoId: $("#eventoid").val()
-=======
-                    Id: $("#participante-id").val() > 0 ? $("#participante-id").val() : $("#equipante-id").val()
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 }),
 
             success: function () {
@@ -925,11 +790,7 @@ function Refresh() {
 
 function ImprimirIndividual(data, position) {
     var printDoc = new jsPDF('p', 'mm', [1056, 816]);
-<<<<<<< HEAD
     printDoc.setFont('helvetica', "normal")
-=======
-    printDoc.setFont('helvetica',"normal")
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     printDoc.setFontSize(14);
     width = position % 2 == 0 ? 212 : 73;
     multiplicador = 0;
@@ -986,17 +847,10 @@ function ImprimirIndividual(data, position) {
         heightApelido = multiplicador * 45;
         heightNome += 60;
         heightApelido += 50;
-<<<<<<< HEAD
         printDoc.setFont('helvetica', "bold")
         printDoc.setFontSize(30);
         printDoc.text(width, heightApelido, participante.Apelido, 'center');
         printDoc.setFont('helvetica', "normal")
-=======
-        printDoc.setFont('helvetica',"bold")
-        printDoc.setFontSize(30);
-        printDoc.text(width, heightApelido, participante.Apelido, 'center');
-        printDoc.setFont('helvetica',"normal")
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         printDoc.setFontSize(18);
         var splitNome = printDoc.splitTextToSize(participante.Nome, 100);
         printDoc.text(width, heightNome, splitNome, 'center');
@@ -1009,20 +863,12 @@ function ImprimirIndividual(data, position) {
         heightNome += 42;
         heightApelido += 57;
         heightEquipe += 68;
-<<<<<<< HEAD
         printDoc.setFont('helvetica', "normal")
-=======
-        printDoc.setFont('helvetica',"normal")
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         printDoc.setFontSize(18);
         printDoc.text(width, heightEquipe, "  (" + equipante.Equipe + ")", 'center');
         var splitNome = printDoc.splitTextToSize(equipante.Nome, 100);
         printDoc.text(width, heightNome, splitNome, 'center');
-<<<<<<< HEAD
         printDoc.setFont('helvetica', "bold")
-=======
-        printDoc.setFont('helvetica',"bold")
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         printDoc.setFontSize(30);
         printDoc.text(width, splitNome.length > 1 ? heightApelido + 4 : heightApelido, equipante.Apelido, 'center');
     }
@@ -1036,7 +882,6 @@ function ImprimirIndividual(data, position) {
 $("#arquivo-modal").change(function () {
     PostArquivo();
 });
-<<<<<<< HEAD
 
 if ($('#map').length > 0) {
 
@@ -1071,5 +916,3 @@ if ($('#map').length > 0) {
     }
 }
 
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566

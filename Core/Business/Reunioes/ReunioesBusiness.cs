@@ -1,8 +1,4 @@
 ﻿using Core.Business.Equipes;
-<<<<<<< HEAD
-=======
-using Core.Models.Eventos;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Core.Models.Reunioes;
 using Data.Entities;
 using Data.Repository;
@@ -23,11 +19,7 @@ namespace Core.Business.Reunioes
             this.reuniaoRepository = reuniaoRepository;
             this.equipanteRepository = equipanteRepository;
             this.equipesBusiness = equipesBusiness;
-<<<<<<< HEAD
         }
-=======
-    }
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
         public void DeleteReuniao(int id)
         {
@@ -37,13 +29,8 @@ namespace Core.Business.Reunioes
 
         public int? GetFaltasByEquipanteId(int equipanteId, int eventoId)
         {
-<<<<<<< HEAD
             if (equipesBusiness.GetEquipeAtual(eventoId, equipanteId) != null)
                 return reuniaoRepository.GetAll(x => x.EventoId == eventoId && x.DataReuniao < System.DateTime.Today && !x.Presenca.Any(y => y.EquipanteEvento.EquipanteId == equipanteId)).Include(x => x.Presenca).Count();
-=======
-            if (equipesBusiness.GetEquipeAtual(eventoId,equipanteId) != null)                          
-                return reuniaoRepository.GetAll(x => x.EventoId == eventoId && x.DataReuniao < System.DateTime.Today && !x.Presenca.Any(y => y.EquipanteEvento.EquipanteId == equipanteId) ).Include(x => x.Presenca).Count();
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             return null;
         }
@@ -60,11 +47,7 @@ namespace Core.Business.Reunioes
 
         public IQueryable<ReuniaoEvento> GetReunioes(int eventoId)
         {
-<<<<<<< HEAD
             return reuniaoRepository.GetAll(x => x.EventoId == eventoId).Include(x => x.Presenca).Include(x => x.Presenca.Select(y => y.EquipanteEvento));
-=======
-            return reuniaoRepository.GetAll(x => x.EventoId == eventoId).Include(x => x.Presenca);
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public void PostReuniao(PostReuniaoModel model)

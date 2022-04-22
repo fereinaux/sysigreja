@@ -167,7 +167,6 @@
           "lib/net45/Microsoft.Owin.Security.OAuth.dll": {}
         }
       },
-<<<<<<< HEAD
       "Microsoft.SqlServer.Types/14.0.1016.290": {
         "type": "package",
         "compile": {
@@ -177,8 +176,6 @@
           "lib/net40/Microsoft.SqlServer.Types.dll": {}
         }
       },
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
       "Microsoft.Web.Infrastructure/1.0.0": {
         "type": "package",
         "compile": {
@@ -223,10 +220,7 @@
           "EntityFramework": "6.2.0",
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.2",
           "Microsoft.AspNet.Identity.Owin": "2.2.2",
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": "14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": "1.0.8",
           "Utils": "1.0.0"
         },
@@ -244,10 +238,7 @@
           "EntityFramework": "6.2.0",
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.2",
           "Microsoft.AspNet.Identity.Owin": "2.2.2",
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": "14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": "1.0.8",
           "Utils": "1.0.0"
         },
@@ -263,10 +254,7 @@
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
           "EPPlus": "4.5.3.2",
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": "14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": "1.0.8"
         },
         "compile": {
@@ -443,7 +431,6 @@
           "lib/net45/Microsoft.Owin.Security.OAuth.dll": {}
         }
       },
-<<<<<<< HEAD
       "Microsoft.SqlServer.Types/14.0.1016.290": {
         "type": "package",
         "compile": {
@@ -453,8 +440,6 @@
           "lib/net40/Microsoft.SqlServer.Types.dll": {}
         }
       },
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
       "Microsoft.Web.Infrastructure/1.0.0": {
         "type": "package",
         "compile": {
@@ -499,10 +484,7 @@
           "EntityFramework": "6.2.0",
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.2",
           "Microsoft.AspNet.Identity.Owin": "2.2.2",
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": "14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": "1.0.8",
           "Utils": "1.0.0"
         },
@@ -520,10 +502,7 @@
           "EntityFramework": "6.2.0",
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.2",
           "Microsoft.AspNet.Identity.Owin": "2.2.2",
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": "14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": "1.0.8",
           "Utils": "1.0.0"
         },
@@ -539,10 +518,7 @@
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
           "EPPlus": "4.5.3.2",
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": "14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": "1.0.8"
         },
         "compile": {
@@ -719,7 +695,6 @@
           "lib/net45/Microsoft.Owin.Security.OAuth.dll": {}
         }
       },
-<<<<<<< HEAD
       "Microsoft.SqlServer.Types/14.0.1016.290": {
         "type": "package",
         "compile": {
@@ -729,8 +704,6 @@
           "lib/net40/Microsoft.SqlServer.Types.dll": {}
         }
       },
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
       "Microsoft.Web.Infrastructure/1.0.0": {
         "type": "package",
         "compile": {
@@ -775,10 +748,7 @@
           "EntityFramework": "6.2.0",
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.2",
           "Microsoft.AspNet.Identity.Owin": "2.2.2",
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": "14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": "1.0.8",
           "Utils": "1.0.0"
         },
@@ -796,10 +766,7 @@
           "EntityFramework": "6.2.0",
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.2",
           "Microsoft.AspNet.Identity.Owin": "2.2.2",
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": "14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": "1.0.8",
           "Utils": "1.0.0"
         },
@@ -815,10 +782,7 @@
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
           "EPPlus": "4.5.3.2",
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": "14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": "1.0.8"
         },
         "compile": {
@@ -995,7 +959,6 @@
           "lib/net45/Microsoft.Owin.Security.OAuth.dll": {}
         }
       },
-<<<<<<< HEAD
       "Microsoft.SqlServer.Types/14.0.1016.290": {
         "type": "package",
         "compile": {
@@ -1005,8 +968,6 @@
           "lib/net40/Microsoft.SqlServer.Types.dll": {}
         }
       },
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
       "Microsoft.Web.Infrastructure/1.0.0": {
         "type": "package",
         "compile": {
@@ -1051,10 +1012,7 @@
           "EntityFramework": "6.2.0",
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.2",
           "Microsoft.AspNet.Identity.Owin": "2.2.2",
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": "14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": "1.0.8",
           "Utils": "1.0.0"
         },
@@ -1072,10 +1030,7 @@
           "EntityFramework": "6.2.0",
           "Microsoft.AspNet.Identity.EntityFramework": "2.2.2",
           "Microsoft.AspNet.Identity.Owin": "2.2.2",
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": "14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": "1.0.8",
           "Utils": "1.0.0"
         },
@@ -1091,10 +1046,7 @@
         "framework": ".NETFramework,Version=v4.7.2",
         "dependencies": {
           "EPPlus": "4.5.3.2",
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": "14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": "1.0.8"
         },
         "compile": {
@@ -1294,7 +1246,6 @@
         "microsoft.owin.security.oauth.nuspec"
       ]
     },
-<<<<<<< HEAD
     "Microsoft.SqlServer.Types/14.0.1016.290": {
       "sha512": "isHCxuC16Tsgp7YfuagLRHEoFfJs0ibc0xBlSuU0yqUB9BeKRVxTU4CbsWfzsaW67I7LG5XLW4UCZFbVktmEuA==",
       "type": "package",
@@ -1317,8 +1268,6 @@
         "tools/uninstall.ps1"
       ]
     },
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     "Microsoft.Web.Infrastructure/1.0.0": {
       "sha512": "FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
       "type": "package",
@@ -1403,10 +1352,7 @@
       "Core >= 1.0.0",
       "Data >= 1.0.0",
       "Microsoft.AspNet.Mvc >= 5.2.7",
-<<<<<<< HEAD
       "Microsoft.SqlServer.Types >= 14.0.1016.290",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
       "System.Linq.Dynamic >= 1.0.8",
       "Utils >= 1.0.0"
     ]
@@ -1417,19 +1363,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\sysigreja\\Arquitetura\\Arquitetura.csproj",
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\ejc\\Arquitetura\\Arquitetura.csproj",
       "projectName": "Arquitetura",
-      "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Arquitetura\\Arquitetura.csproj",
+      "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Arquitetura\\Arquitetura.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Arquitetura\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\Realidade\\Arquitetura\\Arquitetura.csproj",
-      "projectName": "Arquitetura",
-      "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Arquitetura\\Arquitetura.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\Realidade\\Arquitetura\\obj\\",
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
+      "outputPath": "C:\\Users\\User\\source\\repos\\ejc\\Arquitetura\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1446,25 +1384,14 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\Core.csproj"
+            "C:\\Users\\User\\source\\repos\\ejc\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Core\\Core.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj"
+            "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj"
-=======
-            "C:\\Users\\User\\source\\repos\\Realidade\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Core\\Core.csproj"
-            },
-            "C:\\Users\\User\\source\\repos\\Realidade\\Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Data\\Data.csproj"
-            },
-            "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj"
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
+            "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj"
             }
           }
         }
@@ -1477,13 +1404,10 @@
             "target": "Package",
             "version": "[5.2.7, )"
           },
-<<<<<<< HEAD
           "Microsoft.SqlServer.Types": {
             "target": "Package",
             "version": "[14.0.1016.290, )"
           },
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": {
             "target": "Package",
             "version": "[1.0.8, )"

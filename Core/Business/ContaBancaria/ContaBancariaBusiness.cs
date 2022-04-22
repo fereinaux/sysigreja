@@ -1,9 +1,4 @@
 ﻿using Core.Models.ContaBancaria;
-<<<<<<< HEAD
-=======
-using Core.Models.Eventos;
-using Data.Entities;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Data.Repository;
 using System.Linq;
 using Utils.Enums;
@@ -12,19 +7,11 @@ namespace Core.Business.ContaBancaria
 {
     public class ContaBancariaBusiness : IContaBancariaBusiness
     {
-<<<<<<< HEAD
         private readonly IGenericRepository<Data.Entities.ContaBancaria> contaBancariaRepository;
 
         public ContaBancariaBusiness(IGenericRepository<Data.Entities.ContaBancaria> contaBancariaRepository)
         {
             this.contaBancariaRepository = contaBancariaRepository;
-=======
-        private readonly IGenericRepository<Data.Entities.ContaBancaria> contaBancariaRepository;        
-
-        public ContaBancariaBusiness(IGenericRepository<Data.Entities.ContaBancaria> contaBancariaRepository)
-        {
-            this.contaBancariaRepository = contaBancariaRepository;            
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public void DeleteContaBancaria(int id)

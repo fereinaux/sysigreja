@@ -1,10 +1,7 @@
 ﻿using Arquitetura.Controller;
 using Core.Business.Account;
 using Core.Business.Arquivos;
-<<<<<<< HEAD
 using Core.Business.Configuracao;
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Core.Business.Equipes;
 using Core.Business.Eventos;
 using Core.Business.Lancamento;
@@ -12,13 +9,7 @@ using Core.Business.Participantes;
 using Core.Business.Reunioes;
 using SysIgreja.ViewModels;
 using System;
-<<<<<<< HEAD
 using System.Linq;
-=======
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.Web.Mvc;
 using Utils.Constants;
 using Utils.Enums;
@@ -39,11 +30,7 @@ namespace SysIgreja.Controllers
         private readonly IArquivosBusiness arquivosBusiness;
         private readonly IAccountBusiness accountBusiness;
 
-<<<<<<< HEAD
         public HomeController(IEquipesBusiness equipesBusiness, IParticipantesBusiness participantesBusiness, IArquivosBusiness arquivosBusiness, ILancamentoBusiness lancamentoBusiness, IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness, IReunioesBusiness reunioesBusiness, IConfiguracaoBusiness configuracaoBusiness) : base(eventosBusiness, accountBusiness, configuracaoBusiness)
-=======
-        public HomeController(IEquipesBusiness equipesBusiness, IParticipantesBusiness participantesBusiness, IArquivosBusiness arquivosBusiness,ILancamentoBusiness lancamentoBusiness, IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness, IReunioesBusiness reunioesBusiness) : base(eventosBusiness, accountBusiness)
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         {
             this.lancamentoBusiness = lancamentoBusiness;
             this.participantesBusiness = participantesBusiness;
@@ -66,7 +53,6 @@ namespace SysIgreja.Controllers
         [HttpGet]
         public ActionResult GetResultadosAdmin(int EventoId)
         {
-<<<<<<< HEAD
             var ReceberPix = lancamentoBusiness.GetPagamentosEvento(EventoId).Where(x => x.Tipo == TiposLancamentoEnum.Receber && x.MeioPagamento.Descricao == "PIX").Select(x => x.Valor).DefaultIfEmpty(0).Sum();
             var PagarPix = lancamentoBusiness.GetPagamentosEvento(EventoId).Where(x => x.Tipo == TiposLancamentoEnum.Pagar && x.MeioPagamento.Descricao == "PIX").Select(x => x.Valor).DefaultIfEmpty(0).Sum();
             var SaldoPix = ReceberPix - PagarPix;
@@ -77,9 +63,6 @@ namespace SysIgreja.Controllers
             var TotalPagar = lancamentoBusiness.GetPagamentosEvento(EventoId).Where(x => x.Tipo == TiposLancamentoEnum.Pagar).Select(x => x.Valor).DefaultIfEmpty(0).Sum();
             var SaldoGeral = TotalReceber - TotalPagar;
             var result = new
-=======
-            var result = new 
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             {
                 Evento = eventosBusiness.GetEventoById(EventoId).Status.GetDescription(),
                 Confirmados = participantesBusiness.GetParticipantesByEvento(EventoId).Where(x => x.Status == StatusEnum.Confirmado).Count(),
@@ -92,16 +75,11 @@ namespace SysIgreja.Controllers
                 Contatos = participantesBusiness.GetParticipantesByEvento(EventoId).Where(x => !x.PendenciaContato).Count(),
                 Meninos = participantesBusiness.GetParticipantesByEvento(EventoId).Where(x => x.Sexo == SexoEnum.Masculino && x.Status != StatusEnum.Cancelado && x.Status != StatusEnum.Espera).Count(),
                 Meninas = participantesBusiness.GetParticipantesByEvento(EventoId).Where(x => x.Sexo == SexoEnum.Feminino && x.Status != StatusEnum.Cancelado && x.Status != StatusEnum.Espera).Count(),
-<<<<<<< HEAD
                 SaldoGeral = UtilServices.DecimalToMoeda(SaldoGeral),
                 SaldoPix = UtilServices.DecimalToMoeda(SaldoPix),
                 SaldoDinheir = UtilServices.DecimalToMoeda(SaldoDinheiro),
                 TotalPagar = UtilServices.DecimalToMoeda(TotalPagar),
                 TotalReceber = UtilServices.DecimalToMoeda(TotalReceber),
-=======
-                TotalReceber = UtilServices.DecimalToMoeda(lancamentoBusiness.GetPagamentosEvento(EventoId).Where(x => x.Tipo == TiposLancamentoEnum.Receber).Select(x => x.Valor).DefaultIfEmpty(0).Sum()),
-                TotalPagar = UtilServices.DecimalToMoeda(lancamentoBusiness.GetPagamentosEvento(EventoId).Where(x => x.Tipo == TiposLancamentoEnum.Pagar).Select(x => x.Valor).DefaultIfEmpty(0).Sum()),
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 UltimosInscritos = participantesBusiness.GetParticipantesByEvento(EventoId).Where(x => x.Status != StatusEnum.Cancelado)
                 .OrderByDescending(x => x.DataCadastro).Take(5).ToList().Select(x => new ParticipanteViewModel
                 {
@@ -109,11 +87,8 @@ namespace SysIgreja.Controllers
                     Sexo = x.Sexo.GetDescription(),
                     Idade = UtilServices.GetAge(x.DataNascimento)
                 }).ToList(),
-<<<<<<< HEAD
                 EquipeMeninos = equipesBusiness.GetEquipantesEvento(EventoId).Where(x => x.Equipante.Sexo == SexoEnum.Masculino).Count(),
                 EquipeMeninas = equipesBusiness.GetEquipantesEvento(EventoId).Where(x => x.Equipante.Sexo == SexoEnum.Feminino).Count(),
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 Equipes = equipesBusiness.GetEquipes(EventoId).Select(x => new ListaEquipesViewModel
                 {
                     Id = x.Id,

@@ -1,22 +1,9 @@
-<<<<<<< HEAD
 ﻿using Core.Business.Eventos;
 using Core.Models.Lancamento;
 using Data.Entities;
 using Data.Repository;
 using System.Data.Entity;
 using System.Linq;
-=======
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Core.Business.Eventos;
-using Core.Models.Lancamento;
-using Data.Entities;
-using Data.Repository;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Utils.Enums;
 
 namespace Core.Business.Lancamento
@@ -112,13 +99,8 @@ namespace Core.Business.Lancamento
         public IQueryable<Data.Entities.Lancamento> GetPagamentosEquipante(int equipanteId)
         {
             var evento = eventosBusiness.GetEventoAtivo() ?? eventosBusiness.GetEventos().OrderByDescending(x => x.DataEvento).First();
-<<<<<<< HEAD
 
             return lancamentoRepository.GetAll(x => x.EquipanteId == equipanteId && x.EventoId == evento.Id)
-=======
-           
-            return lancamentoRepository.GetAll(x => x.EquipanteId == equipanteId && x.EventoId == evento.Id)                
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 .Include(x => x.CentroCusto)
                 .Include(x => x.ContaBancaria)
                 .Include(x => x.Evento)
@@ -128,11 +110,7 @@ namespace Core.Business.Lancamento
 
         public IQueryable<Data.Entities.Lancamento> GetPagamentosEvento(int eventoId)
         {
-<<<<<<< HEAD
             return lancamentoRepository.GetAll(x => x.EventoId == eventoId).Include(x => x.MeioPagamento).Include(x => x.ContaBancaria)
-=======
-            return lancamentoRepository.GetAll(x => x.EventoId == eventoId).Include(x =>x.MeioPagamento).Include(x => x.ContaBancaria)
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 .Include(x => x.Evento)
                 .Include(x => x.MeioPagamento);
         }

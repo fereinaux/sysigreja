@@ -1,18 +1,10 @@
 ﻿using Data.Entities;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
-<<<<<<< HEAD
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data.Entity.Validation;
 using Utils.Enums;
-=======
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
-using System.Data.Entity.Validation;
-using Utils.Enums;
-using Utils.Extensions;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 namespace Data.Context
 {
@@ -26,11 +18,7 @@ namespace Data.Context
         public virtual Equipante Equipante { get; set; }
     }
 
-<<<<<<< HEAD
     public class ConsultaDbContext : DbContext
-=======
-    public class ConsultaDbContext: DbContext
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     {
         public ConsultaDbContext(string connection)
     : base(connection)
@@ -96,45 +84,33 @@ namespace Data.Context
         public DbSet<Quarto> Quartos { get; set; }
         public DbSet<QuartoParticipante> QuartoParticipantes { get; set; }
         public DbSet<CirculoParticipante> CirculoParticipantes { get; set; }
-<<<<<<< HEAD
         public DbSet<ParticipantesEtiquetas> ParticipantesEtiquetas { get; set; }
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         public DbSet<Newsletter> Newsletters { get; set; }
         public DbSet<Participante> Participantes { get; set; }
         public DbSet<Equipante> Equipantes { get; set; }
         public DbSet<EquipanteEvento> EquipantesEventos { get; set; }
         public DbSet<ReuniaoEvento> ReunioesEventos { get; set; }
-<<<<<<< HEAD
         public DbSet<Configuracao> Configuracoes { get; set; }
         public DbSet<ConfiguracaoCampos> ConfiguracaoCampos { get; set; }
         public DbSet<Mensagem> Mensagens { get; set; }
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         public DbSet<PresencaReuniao> PresencaReunioes { get; set; }
         public DbSet<MeioPagamento> MeioPagamentos { get; set; }
         public DbSet<ContaBancaria> ContasBancarias { get; set; }
         public DbSet<CentroCusto> CentroCustos { get; set; }
         public DbSet<Lancamento> Lancamentos { get; set; }
         public DbSet<Arquivo> Arquivos { get; set; }
-<<<<<<< HEAD
         public DbSet<Etiqueta> Etiquetas { get; set; }
         public DbSet<Carona> Caronas { get; set; }
         public DbSet<CaronaParticipante> CaronaParticipantes { get; set; }
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-<<<<<<< HEAD
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Entity<Carona>()
                 .HasOptional<Equipante>(c => c.Motorista)
                 .WithMany()
                 .WillCascadeOnDelete(false);
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             modelBuilder.Entity<Circulo>()
                 .HasOptional<Evento>(c => c.Evento)
@@ -178,16 +154,8 @@ namespace Data.Context
             modelBuilder.Entity<Equipante>()
                 .HasMany(x => x.Equipes);
 
-<<<<<<< HEAD
             modelBuilder.Entity<EquipanteEvento>()
                 .HasMany(x => x.Presencas);
-=======
-
-            modelBuilder.Entity<EquipanteEvento>()
-                .HasMany(x => x.Presencas);
-
-
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public override int SaveChanges()

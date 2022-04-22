@@ -23,14 +23,9 @@
             { data: "Presenca", name: "Presenca", autoWidth: true },
             {
                 data: "Id", name: "Id", orderable: false, width: "10%",
-<<<<<<< HEAD
                 "render": function (data, type, row) {         
                     return `${GetButton('EditReuniao', data, 'blue', 'fa-edit', 'Editar')}
 ${GetButton('PresencaReuniao', JSON.stringify(row.Equipes), 'green', 'fa-info-circle', 'Presenca')}
-=======
-                "render": function (data, type, row) {
-                    return `${GetButton('EditReuniao', data, 'blue', 'fa-edit', 'Editar')}                            
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                                ${GetButton('DeleteReuniao', data, 'red', 'fa-trash', 'Excluir')}`;
                 }
             }
@@ -69,7 +64,6 @@ function GetReuniao(id) {
     }
 }
 
-<<<<<<< HEAD
 function PresencaReuniao(equipes) {
     $("#table-presenca").DataTable({
         language: languageConfig,
@@ -98,8 +92,6 @@ function PresencaReuniao(equipes) {
     $("#modal-presenca").modal();
 }
 
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 function EditReuniao(id) {
     GetReuniao(id);
     $("#modal-reunioes").modal();

@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Entities\Carona.cs" />
     <Compile Include="Entities\CaronaParticipante.cs" />
     <Compile Include="Entities\ConfiguracaoCampos.cs" />
@@ -49,8 +48,6 @@
     <Compile Include="Entities\Mensagem.cs" />
     <Compile Include="Entities\ParticipantesEtiquetas.cs" />
     <Compile Include="Entities\Etiqueta.cs" />
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <Compile Include="Entities\Base\PessoaBase.cs" />
     <Compile Include="Entities\Base\UsuarioBase.cs" />
     <Compile Include="Entities\ParticipanteConsulta.cs" />
@@ -89,12 +86,9 @@
     <PackageReference Include="Microsoft.AspNet.Identity.Owin">
       <Version>2.2.2</Version>
     </PackageReference>
-<<<<<<< HEAD
     <PackageReference Include="Microsoft.SqlServer.Types">
       <Version>14.0.1016.290</Version>
     </PackageReference>
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <PackageReference Include="System.Linq.Dynamic">
       <Version>1.0.8</Version>
     </PackageReference>

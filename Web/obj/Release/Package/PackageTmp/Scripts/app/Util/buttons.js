@@ -32,11 +32,8 @@ function GetConvidar(tel, nome) {
 }
 
 function GetLinkWhatsApp(tel, text) {
-<<<<<<< HEAD
     if (!tel || !text)
         return ""
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     tel = tel.replaceAll(' ', '').replaceAll('+', '').replaceAll('(', '').replaceAll(')', '').replaceAll('.', '').replaceAll('-', '');
     text = typeof text !== "undefined" ? `&text=${EncodeUrl(text)}` : "";
     return `https://api.whatsapp.com/send?phone=${tel}${text}&source=&data=`;

@@ -1,31 +1,17 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj": {}
+    "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj": {
+    "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj",
         "projectName": "Utils",
-        "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\obj\\",
-=======
-    "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj",
-        "projectName": "Utils",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\obj\\",
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
+        "outputPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -52,13 +38,10 @@
               "target": "Package",
               "version": "[4.5.3.2, )"
             },
-<<<<<<< HEAD
             "Microsoft.SqlServer.Types": {
               "target": "Package",
               "version": "[14.0.1016.290, )"
             },
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             "System.Linq.Dynamic": {
               "target": "Package",
               "version": "[1.0.8, )"

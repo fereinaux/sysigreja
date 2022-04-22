@@ -86,11 +86,7 @@ namespace Data.Repository
 
 
         private IQueryable<T> GetIncludes(IQueryable<T> query)
-<<<<<<< HEAD
         {
-=======
-        {            
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             var properties = getProperties();
             foreach (var property in properties)
             {

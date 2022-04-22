@@ -6,7 +6,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>@ViewBag.Configuracao.Titulo | Inscrições Encerradas</title>
     <link href="~/Content/bootstrap4.css" rel="stylesheet">
     @if (ViewBag.Configuracao.LogoId != null)
@@ -38,28 +37,6 @@
             </div>
         </div>
 
-=======
-    <title>Realidade | Inscrições Encerradas</title>
-    <link href="~/Content/bootstrap4.css" rel="stylesheet">
-    <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
-    <link href="~/Content/animate.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="~/Images/logo-branco.png" />
-    <link href="~/Content/style.css" rel="stylesheet">
-    <link href="~/Content/evento.css" rel="stylesheet">
-</head>
-<body class="background-evento">
-    <div class="middle-box inscricoes animated fadeInDown " style="height: 250px;">
-        <div class="row justify-content-center">
-            <div class="col col-6">
-                <img class="full-width" src="~/Images/logo-branco.png" alt="Realidade" />
-            </div>
-        </div>
-        <div class="row justify-content-center m-l-lg m-r-lg m-t-lg m-b-sm text-white text-center">
-            <h3>As inscrições para o Realidade estão encerradas</h3>
-
-        </div>
-      
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </div>
 </body>
 </html>
@@ -70,7 +47,6 @@
 <script src="~/Scripts/plugins/sweetalert/sweetalert.min.js"></script>
 
 <script>
-<<<<<<< HEAD
     $(document).ready(function () {
         if (@ViewBag.Configuracao.BackgroundId) {
             $('.background-evento').css('background', `url(data:image/jpeg;base64,@ViewBag.Configuracao.Background) no-repeat center center fixed`)
@@ -78,24 +54,4 @@
 
         }
     })
-=======
-    function Newsletter() {
-        if (ValidateForm(`#form-newsletter`)) {
-            $.ajax({
-                url: "/Inscricoes/Newsletter/",
-                datatype: "json",
-                type: "POST",
-                contentType: 'application/json; charset=utf-8',
-                data: JSON.stringify(
-                    {
-                        Whatsapp: $(`#newsletter-fone`).val()
-                    }),
-                success: function () {
-                    SuccessMessage("Obrigado por se inscrever para receber nossas novidades!");
-                    $(`#newsletter-fone`).val("");
-                }
-            });
-        }
-    }
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 </script>

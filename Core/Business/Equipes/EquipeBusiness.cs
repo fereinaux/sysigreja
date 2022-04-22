@@ -3,24 +3,14 @@ using Core.Models.Equipe;
 using Data.Context;
 using Data.Entities;
 using Data.Repository;
-<<<<<<< HEAD
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-=======
-using System.Data.Entity;
-using Microsoft.AspNet.Identity;
-using System.Collections.Generic;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.Linq;
 using System.Threading;
 using Utils.Enums;
 using static Utils.Extensions.EnumExtensions;
-<<<<<<< HEAD
-=======
-using System;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 namespace Core.Business.Equipes
 {
@@ -67,10 +57,7 @@ namespace Core.Business.Equipes
             return equipanteEventoRepository
                 .GetAll()
                 .Include(x => x.Equipante)
-<<<<<<< HEAD
                  .Include(x => x.Equipante.ParticipantesEtiquetas).Include(x => x.Equipante.ParticipantesEtiquetas.Select(y => y.Etiqueta))
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 .Include(x => x.Evento)
                 .ToList()
                 .FirstOrDefault(x => x.EventoId == eventoId && x.EquipanteId == usuarioRepository.GetById(userId).EquipanteId);
@@ -91,10 +78,7 @@ namespace Core.Business.Equipes
             return equipanteEventoRepository
                 .GetAll()
                 .Include(x => x.Equipante)
-<<<<<<< HEAD
                 .Include(x => x.Equipante.ParticipantesEtiquetas).Include(x => x.Equipante.ParticipantesEtiquetas.Select(y => y.Etiqueta))
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 .Include(x => x.Equipante.Arquivos)
                 .Include(x => x.Equipe)
                 .Where(x => x.EventoId == eventoId)
@@ -137,10 +121,7 @@ namespace Core.Business.Equipes
             return equipanteEventoRepository
                 .GetAll(x => x.Equipe == equipeId && x.EventoId == eventoId)
                 .Include(x => x.Equipante.Arquivos)
-<<<<<<< HEAD
                 .Include(x => x.Equipante.ParticipantesEtiquetas).Include(x => x.Equipante.ParticipantesEtiquetas.Select(y => y.Etiqueta))
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 .OrderBy(x => new { x.Tipo, x.Equipante.Nome });
         }
 
@@ -184,11 +165,7 @@ namespace Core.Business.Equipes
         {
             var data = eventosBusiness.GetEventoById(eventoId).DataEvento;
 
-<<<<<<< HEAD
             return GetEquipantesByEvento(eventoId).Where(x => x.DataNascimento?.Month == data.Month).ToList();
-=======
-            return GetEquipantesByEvento(eventoId).Where(x => x.DataNascimento.Month == data.Month).ToList();
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public List<Equipante> GetEquipantesRestricoesByEvento(int eventoId)

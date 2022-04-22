@@ -1,10 +1,6 @@
 ﻿using Core.Business.Arquivos;
 using Core.Business.Eventos;
 using Core.Models.Arquivos;
-<<<<<<< HEAD
-=======
-using SysIgreja.ViewModels;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.Linq;
 using System.Web.Mvc;
 using Utils.Constants;
@@ -48,15 +44,9 @@ namespace SysIgreja.Controllers
         }
 
         [HttpPost]
-<<<<<<< HEAD
         public ActionResult GetArquivosEquipanteEvento(int eventoid, int equipanteid)
         {
             var query = arquivosBusiness.GetArquivosByEquipanteEvento(equipanteid, eventoid);
-=======
-        public ActionResult GetArquivosEquipanteEvento(int eventoid,int equipanteid)
-        {
-            var query = arquivosBusiness.GetArquivosByEquipanteEvento(equipanteid,eventoid );
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             return MapAqruivos(query);
         }
@@ -96,7 +86,6 @@ namespace SysIgreja.Controllers
             var arquivo = arquivosBusiness.GetArquivoById(Id);
 
             return File(arquivo.Conteudo, arquivo.Tipo, arquivo.Nome);
-<<<<<<< HEAD
         }
 
         [HttpPost]
@@ -105,17 +94,6 @@ namespace SysIgreja.Controllers
             model.EventoId = model.EventoId.HasValue ? model.EventoId.Value : eventosBusiness.GetEventoAtivo().Id;
 
             return arquivosBusiness.PostArquivo(model);
-=======
-        }       
-
-        [HttpPost]
-        public ActionResult PostArquivo(PostArquivoModel model)
-        {
-            model.EventoId = model.EventoId.HasValue ? model.EventoId.Value : eventosBusiness.GetEventoAtivo().Id;
-            arquivosBusiness.PostArquivo(model);
-
-            return new HttpStatusCodeResult(200);
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         [HttpPost]

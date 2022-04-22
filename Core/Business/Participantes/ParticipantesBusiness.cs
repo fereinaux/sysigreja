@@ -1,28 +1,16 @@
-<<<<<<< HEAD
 ﻿using Core.Business.Arquivos;
 using Core.Business.Circulos;
 using Core.Business.Equipantes;
 using Core.Business.Etiquetas;
-=======
-﻿using Core.Business.Circulos;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Core.Business.Eventos;
 using Core.Business.Quartos;
 using Core.Models.Participantes;
 using Data.Entities;
 using Data.Repository;
-<<<<<<< HEAD
 using System;
 using System.Data.Entity;
 using System.Linq;
 using Utils.Enums;
-=======
-using System.Linq;
-using System.Data.Entity;
-using Utils.Enums;
-using System;
-using Data.Context;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 namespace Core.Business.Participantes
 {
@@ -31,7 +19,6 @@ namespace Core.Business.Participantes
         private readonly IGenericRepository<Participante> participanteRepository;
         private readonly IGenericRepositoryConsulta<ParticipanteConsulta> participanteConsultaRepository;
         private readonly IGenericRepository<EquipanteEvento> equipanteEventoRepository;
-<<<<<<< HEAD
         private readonly IGenericRepository<ParticipantesEtiquetas> ParticipantesEtiquetasRepo;
         private readonly IEventosBusiness eventosBusiness;
         private readonly IArquivosBusiness arquivosBusiness;
@@ -52,20 +39,6 @@ namespace Core.Business.Participantes
             this.arquivosBusiness = arquivosBusiness;
             this.circulosBusiness = circulosBusiness;
             this.equipantesBusiness = equipantesBusiness;
-=======
-        private readonly IEventosBusiness eventosBusiness;
-        private readonly ICirculosBusiness circulosBusiness;
-        private readonly IQuartosBusiness quartosBusiness;
-
-        public ParticipantesBusiness(IGenericRepository<Participante> participanteRepository, IGenericRepositoryConsulta<ParticipanteConsulta> participanteConsultaRepository, IQuartosBusiness quartosBusiness, IEventosBusiness eventosBusiness, ICirculosBusiness circulosBusiness, IGenericRepository<EquipanteEvento> equipanteEventoRepository)
-        {
-            this.participanteRepository = participanteRepository;
-            this.participanteConsultaRepository = participanteConsultaRepository;
-            this.equipanteEventoRepository = equipanteEventoRepository;
-            this.eventosBusiness = eventosBusiness;
-            this.quartosBusiness = quartosBusiness;
-            this.circulosBusiness = circulosBusiness;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public void CancelarInscricao(int id)
@@ -73,20 +46,12 @@ namespace Core.Business.Participantes
             Participante participante = participanteRepository.GetById(id);
             participante.Status = StatusEnum.Cancelado;
             circulosBusiness.ChangeCirculo(id, null);
-<<<<<<< HEAD
             quartosBusiness.ChangeQuarto(id, null, null);
-=======
-            quartosBusiness.ChangeQuarto(id, null);
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             var emEspera = participanteRepository.GetAll().Where(x => x.Status == StatusEnum.Espera).OrderBy(x => x.Id).FirstOrDefault();
 
             if (emEspera != null && participanteRepository.GetAll().Where(x => x.Status == StatusEnum.Confirmado || x.Status == StatusEnum.Inscrito).Count() - 1 < eventosBusiness.GetEventoById(participante.EventoId).Capacidade)
-<<<<<<< HEAD
             {
-=======
-            {                
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 emEspera.Status = StatusEnum.Inscrito;
                 participanteRepository.Update(emEspera);
             }
@@ -115,15 +80,9 @@ namespace Core.Business.Participantes
 
             entity.Nome = model.Nome;
             entity.Apelido = model.Apelido;
-<<<<<<< HEAD
             entity.DataNascimento = model.DataNascimento?.AddHours(5);
             entity.Fone = model.Fone;
             entity.Email = model.Email;
-=======
-            entity.DataNascimento = model.DataNascimento.AddHours(5);
-            entity.Fone = model.Fone;
-            entity.Email = model.Email;            
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             entity.Sexo = model.Sexo;
             return entity;
 
@@ -175,11 +134,7 @@ namespace Core.Business.Participantes
                 if (cancelarCheckin)
                 {
                     circulosBusiness.ChangeCirculo(participante.Id, null);
-<<<<<<< HEAD
                     quartosBusiness.ChangeQuarto(participante.Id, null, null);
-=======
-                    quartosBusiness.ChangeQuarto(participante.Id, null);
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 }
             }
         }
@@ -187,7 +142,6 @@ namespace Core.Business.Participantes
         private void ManageQuarto(Participante participante)
         {
             if (!quartosBusiness
-<<<<<<< HEAD
                               .GetQuartosComParticipantes(participante.EventoId, TipoPessoaEnum.Participante)
                               .Where(x => x.ParticipanteId == participante.Id)
                               .Any())
@@ -195,15 +149,6 @@ namespace Core.Business.Participantes
                 var quarto = quartosBusiness.GetNextQuarto(participante.EventoId, participante.Sexo, TipoPessoaEnum.Participante);
                 if (quarto != null)
                     quartosBusiness.ChangeQuarto(participante.Id, quarto.Id, TipoPessoaEnum.Participante);
-=======
-                              .GetQuartosComParticipantes(participante.EventoId)
-                              .Where(x => x.ParticipanteId == participante.Id)
-                              .Any())
-            {
-                var quarto = quartosBusiness.GetNextQuarto(participante.EventoId, participante.Sexo);
-                if (quarto != null)
-                    quartosBusiness.ChangeQuarto(participante.Id, quarto.Id);
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             }
         }
 
@@ -225,7 +170,6 @@ namespace Core.Business.Participantes
             Participante participante = participanteRepository.GetById(model.Id);
             participante.Nome = model.Nome;
             participante.Apelido = model.Apelido;
-<<<<<<< HEAD
             participante.DataNascimento = model.DataNascimento?.AddHours(5);
             participante.Fone = model.Fone;
             participante.Email = model.Email;
@@ -239,25 +183,14 @@ namespace Core.Business.Participantes
             participante.Referencia = model.Referencia;
             participante.Latitude = model.Latitude;
             participante.Longitude = model.Longitude;
-=======
-            participante.DataNascimento = model.DataNascimento.AddHours(5);
-            participante.Fone = model.Fone;
-            participante.Email = model.Email;
-            participante.Logradouro = model.Logradouro;
-            participante.Complemento = model.Complemento;
-            participante.Bairro = model.Bairro;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             participante.NomePai = model.NomePai;
             participante.FonePai = model.FonePai;
             participante.NomeMae = model.NomeMae;
             participante.FoneMae = model.FoneMae;
             participante.NomeConvite = model.NomeConvite;
             participante.FoneConvite = model.FoneConvite;
-<<<<<<< HEAD
             participante.NomeContato = model.NomeContato;
             participante.FoneContato = model.FoneContato;
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             participante.Sexo = model.Sexo;
             participante.HasAlergia = model.HasAlergia;
             participante.Alergia = model.HasAlergia ? model.Alergia : null;
@@ -278,11 +211,7 @@ namespace Core.Business.Participantes
                  .Select(x => new
                  {
                      Equipante = x,
-<<<<<<< HEAD
                      Qtd = participanteRepository.GetAll(y => y.PadrinhoId == x.EquipanteId && y.EventoId == eventoid && (y.Status == StatusEnum.Confirmado || y.Status == StatusEnum.Inscrito)).Count()
-=======
-                     Qtd = participanteRepository.GetAll(y => y.PadrinhoId == x.EquipanteId && (y.Status == StatusEnum.Confirmado || y.Status == StatusEnum.Inscrito)).Count()
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                  })
                  .ToList();
 
@@ -296,7 +225,6 @@ namespace Core.Business.Participantes
             {
                 Nome = model.Nome,
                 Apelido = model.Apelido,
-<<<<<<< HEAD
                 DataNascimento = model.DataNascimento?.AddHours(5),
                 Fone = model.Fone,
                 Email = model.Email,
@@ -310,25 +238,14 @@ namespace Core.Business.Participantes
                 Referencia = model.Referencia,
                 Latitude = model.Latitude,
                 Longitude = model.Longitude,
-=======
-                DataNascimento = model.DataNascimento.AddHours(5),
-                Fone = model.Fone,
-                Email = model.Email,
-                Logradouro = model.Logradouro,
-                Complemento = model.Complemento,
-                Bairro = model.Bairro,
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 NomePai = model.NomePai,
                 FonePai = model.FonePai,
                 NomeMae = model.NomeMae,
                 FoneMae = model.FoneMae,
                 NomeConvite = model.NomeConvite,
                 FoneConvite = model.FoneConvite,
-<<<<<<< HEAD
                 NomeContato = model.NomeContato,
                 FoneContato = model.FoneContato,
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 ReferenciaPagSeguro = Guid.NewGuid().ToString(),
                 Sexo = model.Sexo,
                 Status = model.Status == "Espera" ? StatusEnum.Espera : StatusEnum.Inscrito,
@@ -354,7 +271,6 @@ namespace Core.Business.Participantes
             {
                 Nome = model.Nome,
                 Apelido = model.Apelido,
-<<<<<<< HEAD
                 DataNascimento = model.DataNascimento?.AddHours(5),
                 Fone = model.Fone,
                 Email = model.Email,
@@ -368,14 +284,6 @@ namespace Core.Business.Participantes
                 Referencia = model.Referencia,
                 Latitude = model.Latitude,
                 Longitude = model.Longitude,
-=======
-                DataNascimento = model.DataNascimento.AddHours(5),
-                Fone = model.Fone,
-                Email = model.Email,
-                Logradouro = model.Logradouro,
-                Complemento = model.Complemento,
-                Bairro = model.Bairro,
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 NomePai = model.NomePai,
                 FonePai = model.FonePai,
                 NomeMae = model.NomeMae,
@@ -392,13 +300,9 @@ namespace Core.Business.Participantes
 
         public IQueryable<Participante> GetParticipantesByEvento(int eventoId)
         {
-<<<<<<< HEAD
             return participanteRepository.GetAll(x => x.EventoId == eventoId).Include(x => x.Evento)
                 .Include(x => x.ParticipantesEtiquetas).Include(x => x.ParticipantesEtiquetas.Select(y => y.Etiqueta))
                 .Include(x => x.Padrinho).Include(x => x.Arquivos).Include(x => x.Circulos).Include(x => x.Circulos.Select(y => y.Circulo));
-=======
-            return participanteRepository.GetAll(x => x.EventoId == eventoId).Include(x => x.Evento).Include(x => x.Padrinho).Include(x => x.Arquivos).Include(x => x.Circulos).Include(x => x.Circulos.Select(y => y.Circulo));
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public void TogglePendenciaContato(int id)
@@ -430,11 +334,7 @@ namespace Core.Business.Participantes
         {
             var data = eventosBusiness.GetEventoById(eventoId).DataEvento;
 
-<<<<<<< HEAD
             return participanteRepository.GetAll(x => x.Status != StatusEnum.Cancelado && x.EventoId == eventoId && (x.DataNascimento.HasValue && x.DataNascimento.Value.Month == data.Month));
-=======
-            return participanteRepository.GetAll(x => x.Status != StatusEnum.Cancelado && x.EventoId == eventoId && x.DataNascimento.Month == data.Month);
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public IQueryable<Participante> GetRestricoesByEvento(int eventoId)
@@ -496,7 +396,6 @@ namespace Core.Business.Participantes
             participante.MsgPagamento = model.MsgPagamento;
             participante.MsgFoto = model.MsgFoto;
             participante.MsgNoitita = model.MsgNoitita;
-<<<<<<< HEAD
 
 
             ParticipantesEtiquetasRepo.GetAll(x => x.ParticipanteId == model.Id).ToList().ForEach(etiqueta => ParticipantesEtiquetasRepo.Delete(etiqueta.Id));
@@ -509,8 +408,6 @@ namespace Core.Business.Participantes
 
             }
             ParticipantesEtiquetasRepo.Save();
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             participanteRepository.Update(participante);
             participanteRepository.Save();
         }
@@ -519,7 +416,6 @@ namespace Core.Business.Participantes
         {
             return participanteConsultaRepository.GetAll(x => x.Email == email).FirstOrDefault();
         }
-<<<<<<< HEAD
 
         public void MakeEquipante(int id)
         {
@@ -545,7 +441,5 @@ namespace Core.Business.Participantes
             var equipante = equipantesBusiness.GetEquipantes().FirstOrDefault(x => x.Email == participante.Email);
             arquivosBusiness.SetEquipante(participante.Id, equipante.Id);
         }
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     }
 }

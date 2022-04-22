@@ -1,10 +1,7 @@
 ﻿using Arquitetura.Controller;
 using Core.Business.Account;
-<<<<<<< HEAD
 using Core.Business.Configuracao;
 using Core.Business.Equipes;
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Core.Business.Eventos;
 using Core.Business.Reunioes;
 using Core.Models.Reunioes;
@@ -21,19 +18,12 @@ namespace SysIgreja.Controllers
     public class ReuniaoController : SysIgrejaControllerBase
     {
         private readonly IReunioesBusiness reuniaosBusiness;
-<<<<<<< HEAD
         private readonly IEquipesBusiness equipesBusiness;
 
         public ReuniaoController(IReunioesBusiness ReuniaosBusiness, IEquipesBusiness equipesBusiness, IEventosBusiness eventosBusiness, IConfiguracaoBusiness configuracaoBusiness, IAccountBusiness accountBusiness) : base(eventosBusiness, accountBusiness, configuracaoBusiness)
         {
             this.reuniaosBusiness = ReuniaosBusiness;
             this.equipesBusiness = equipesBusiness;
-=======
-
-        public ReuniaoController(IReunioesBusiness ReuniaosBusiness, IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness) :base(eventosBusiness, accountBusiness)
-        {
-            this.reuniaosBusiness = ReuniaosBusiness;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public ActionResult Index()
@@ -54,7 +44,6 @@ namespace SysIgreja.Controllers
                 {
                     Id = x.Id,
                     DataReuniao = x.DataReuniao,
-<<<<<<< HEAD
                     Presenca = x.Presenca.Count(),
                     Equipes = x.Presenca.GroupBy(y => y.EquipanteEvento.Equipe).Select(z => new EquipesModel
                     {
@@ -63,10 +52,6 @@ namespace SysIgreja.Controllers
                         PresencaOrder = z.Count()/equipesBusiness.GetMembrosEquipe(EventoId, z.Key).Count()
                     }).ToList()
                 }); ;
-=======
-                    Presenca = x.Presenca.Count()
-                });
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             return Json(new { data = result }, JsonRequestBehavior.AllowGet);
         }

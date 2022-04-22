@@ -5,16 +5,9 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-<<<<<<< HEAD
 
 namespace Utils.Services
 {
-=======
-using System.Web;
-
-namespace Utils.Services
-{  
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     public class DatatableService : IDatatableService
     {
         // Reflection used to identify DateTime fields for formatting

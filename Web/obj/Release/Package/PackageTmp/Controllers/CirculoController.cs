@@ -1,18 +1,10 @@
 ﻿using Arquitetura.Controller;
 using Core.Business.Account;
 using Core.Business.Circulos;
-<<<<<<< HEAD
 using Core.Business.Configuracao;
 using Core.Business.Equipes;
 using Core.Business.Eventos;
 using Core.Models.Circulos;
-=======
-using Core.Business.Equipes;
-using Core.Business.Eventos;
-using Core.Business.Reunioes;
-using Core.Models.Circulos;
-using Core.Models.Reunioes;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using SysIgreja.ViewModels;
 using System.Linq;
 using System.Web.Mvc;
@@ -30,11 +22,7 @@ namespace SysIgreja.Controllers
         private readonly ICirculosBusiness circulosBusiness;
         private readonly IEquipesBusiness equipesBusiness;
 
-<<<<<<< HEAD
         public CirculoController(ICirculosBusiness circulosBusiness, IEquipesBusiness equipesBusiness, IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness, IConfiguracaoBusiness configuracaoBusiness) : base(eventosBusiness, accountBusiness, configuracaoBusiness)
-=======
-        public CirculoController(ICirculosBusiness circulosBusiness, IEquipesBusiness equipesBusiness,IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness) :base(eventosBusiness, accountBusiness)
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         {
             this.circulosBusiness = circulosBusiness;
             this.equipesBusiness = equipesBusiness;
@@ -44,10 +32,7 @@ namespace SysIgreja.Controllers
         {
             ViewBag.Title = "Círculos";
             GetEventos();
-<<<<<<< HEAD
             GetConfiguracao();
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             return View();
         }
@@ -107,11 +92,7 @@ namespace SysIgreja.Controllers
         public ActionResult GetEquipantes(int EventoId)
         {
             var circuloList = circulosBusiness.GetCirculos().Where(x => x.EventoId == EventoId).Select(x => x.Dirigente1Id);
-<<<<<<< HEAD
             var pgList = equipesBusiness.GetMembrosEquipe(EventoId, EquipesEnum.Circulo).ToList().Where(x => !circuloList.Contains(x.Id)).Select(x => new { x.Id, Nome = x.Equipante.Nome }).ToList();
-=======
-            var pgList = equipesBusiness.GetMembrosEquipe(EventoId, EquipesEnum.Circulo).ToList().Where(x => !circuloList.Contains(x.Id)).Select(x => new { x.Id, Nome = x.Equipante.Nome}).ToList();
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             return Json(new { Equipantes = pgList }, JsonRequestBehavior.AllowGet);
         }
@@ -119,11 +100,7 @@ namespace SysIgreja.Controllers
         [HttpGet]
         public ActionResult GetParticipantesSemCirculo(int EventoId)
         {
-<<<<<<< HEAD
             return Json(new { Participantes = circulosBusiness.GetParticipantesSemCirculo(EventoId).Select(x => new { x.Id, x.Nome }).ToList() }, JsonRequestBehavior.AllowGet);
-=======
-            return Json(new { Participantes = circulosBusiness.GetParticipantesSemCirculo(EventoId).Select(x => new {x.Id, x.Nome }).ToList() }, JsonRequestBehavior.AllowGet);
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         [HttpGet]
@@ -131,7 +108,6 @@ namespace SysIgreja.Controllers
         {
             return Json(new
             {
-<<<<<<< HEAD
                 Circulos = circulosBusiness.GetCirculosComParticipantes(EventoId).ToList().Select(x => new
                 {
                     Nome = UtilServices.CapitalizarNome(x.Participante.Nome),
@@ -139,11 +115,6 @@ namespace SysIgreja.Controllers
                     Longitude = x.Participante.Longitude,
                     ParticipanteId = x.ParticipanteId,
                     CEP = x.Participante.CEP,
-=======
-                Circulos = circulosBusiness.GetCirculosComParticipantes(EventoId).ToList().Select(x => new {
-                    Nome = UtilServices.CapitalizarNome(x.Participante.Nome),
-                    ParticipanteId = x.ParticipanteId,
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     CirculoId = x.CirculoId,
                     Cor = x.Circulo.Cor.GetDescription(),
                     Equipante = x.Circulo.Dirigente1 != null ? UtilServices.CapitalizarNome(x.Circulo.Dirigente1.Equipante.Nome) : ""
@@ -160,7 +131,6 @@ namespace SysIgreja.Controllers
         }
 
         [HttpGet]
-<<<<<<< HEAD
         public ActionResult GetCoresAtivas(int EventoId)
         {
 
@@ -173,8 +143,6 @@ namespace SysIgreja.Controllers
         }
 
         [HttpGet]
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         public ActionResult GetCores(int EventoId)
         {
             var circuloList = circulosBusiness.GetCirculos().Where(x => x.EventoId == EventoId).ToList().Select(x => x.Cor.GetDescription());

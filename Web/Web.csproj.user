@@ -10,17 +10,10 @@
     <WebStackScaffolding_DbContextTypeFullName>Realidade.Models.ScaffoldingContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
     <ProjectView>ShowAllFiles</ProjectView>
-<<<<<<< HEAD
     <NameOfLastUsedPublishProfile>C:\Users\User\source\repos\ejc\Web\Properties\PublishProfiles\ejc.iecbeventos.com.pubxml</NameOfLastUsedPublishProfile>
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <UseIISExpress>true</UseIISExpress>
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
-=======
-    <NameOfLastUsedPublishProfile>C:\Users\User\source\repos\Realidade\Web\Properties\PublishProfiles\Realidade.pubxml</NameOfLastUsedPublishProfile>
-    <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
-    <UseIISExpress>true</UseIISExpress>
-    <LastActiveSolutionConfig>Release|Any CPU</LastActiveSolutionConfig>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <Use64BitIISExpress />
     <IISExpressSSLPort>44309</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />

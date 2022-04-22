@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "G1qiSmJs14wRBegTxALLk2e20NC4LDSLHfATFRUZi7CBbEzgjc12bK5CyKNTlTVn3gXwzpnrOE0KnwI8/v+ILA==",
+  "dgSpecHash": "1Rz2ZJst4yphFrei5FLIn9359xnZHnHe2JNVTpYCzinTvakpqVkwZYyKZQxVm7j/k0nmkfqXtS4OYPM/19xx7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj",
-=======
-  "dgSpecHash": "YIh05Ap6Uf0NKtn8c2jXbYN9uHSZ36gNya6bDXbQ3fEUsasHPgS171NBvHnyamFuhVil5KhplXodlezWOIex0Q==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\User\\source\\repos\\Realidade\\Data\\Data.csproj",
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\epplus\\4.5.3.2\\epplus.4.5.3.2.nupkg.sha512",
@@ -19,10 +13,7 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.owin.security\\3.0.1\\microsoft.owin.security.3.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.owin.security.cookies\\3.0.1\\microsoft.owin.security.cookies.3.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.owin.security.oauth\\3.0.1\\microsoft.owin.security.oauth.3.0.1.nupkg.sha512",
-<<<<<<< HEAD
     "C:\\Users\\User\\.nuget\\packages\\microsoft.sqlserver.types\\14.0.1016.290\\microsoft.sqlserver.types.14.0.1016.290.nupkg.sha512",
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\6.0.4\\newtonsoft.json.6.0.4.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\owin\\1.0.0\\owin.1.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.linq.dynamic\\1.0.8\\system.linq.dynamic.1.0.8.nupkg.sha512"

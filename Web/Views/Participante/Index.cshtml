@@ -19,7 +19,6 @@
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="ibox">
         <div class="ibox-title" style="display: flex;justify-content: space-between;">
-<<<<<<< HEAD
             <h4>Filtros</h4>
             <div class="ibox-tools pull-right">
                 <button class="btn btn-primary" id="btn_Filtrar" onclick="CarregarTabelaParticipante()">Filtrar</button>
@@ -75,23 +74,6 @@
             <h4>@ViewBag.Title</h4>
             <div style=" width: 70%;" class="ibox-tools pull-right">
                 <button class="btn btn-default" id="btn_Adicionar" onclick="EditParticipante(0)">Adicionar</button>
-=======
-            <h4>@ViewBag.Title</h4>
-            <div class="ibox-tools pull-right w-300">
-                <div class="row">
-                    <div class="col-sm-8">
-                        <select class="form-control" id="participante-eventoid" onchange="CarregarTabelaParticipante()">
-                            @foreach (var evento in ViewBag.Eventos)
-                            {
-                                <option value="@evento.Id">@evento.TipoEvento @evento.Numeracao.ToString()</option>
-                            }
-                        </select>
-                    </div>
-                    <div class="col-sm-4">
-                        <button class="btn btn-default" id="btn_Adicionar" onclick="EditParticipante(0)">Adicionar</button>
-                    </div>
-                </div>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             </div>
         </div>
         <div class="ibox-content">
@@ -124,11 +106,7 @@
                     <div class="row p-md">
                         <div class="col-lg-12" id="fotocontent">
 
-<<<<<<< HEAD
                             <div id="main-cropper"></div>
-=======
-                            <div id="main-cropper" ></div>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
                         </div>
 
@@ -137,11 +115,7 @@
                 </div>
 
                 <div class="modal-footer">
-<<<<<<< HEAD
                     <button type="button" class="btn btn-primary pull-right m-l-sm" onclick="ConfirmFoto()">Confirmar</button>
-=======
-                    <button type="button" class="btn btn-primary pull-right m-l-sm" onclick="ConfirmFoto()" >Confirmar</button>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     <button type="button" class="btn btn-white pull-right m-l-sm" data-dismiss="modal">Fechar</button>
                 </div>
             </div>
@@ -199,7 +173,6 @@
                     <h2 class="text-center realista-nome">Nome</h2>
                     <h3 class="text-center">Mensagem</h3>
                     <div class="row m-md">
-<<<<<<< HEAD
                         <div class="col-lg-12">
                             <select class="form-control" id="msg-list">
                             </select>
@@ -227,48 +200,10 @@
                                 <i class="fa fa-user fa-3x m-t-sm"></i>
                                 <h4 class="text-center m-t-sm">Realista</h4>
                                 <h5 class="text-center realistatext"></h5>
-=======
-                        <div class="col-lg-3 col-sm-6 panel-msg p-w-md text-center pointer pagamento" onclick="select1('pagamento')">
-                            <div style="margin:auto">
-
-                                <i class="far fa-money-bill-alt fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Pagamento</h4>
-                                <div class="checkbox i-checks-green inline"><label> <input type="checkbox" id="participante-msgpagamento" checked="" value="1" name="participante-msgpagamento"> <i></i></label></div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-3 col-sm-6 panel-msg p-w-md text-center pointer covid" onclick="select1('covid')">
-                            <div style="margin:auto">
-                                <i class="fa fa-viruses fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Covid 19</h4>
-                                <div class="checkbox i-checks-green inline"><label> <input type="checkbox" id="participante-msgcovid" checked="" value="1" name="participante-msgcovid"> <i></i></label></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 panel-msg p-w-md text-center pointer info" onclick="select1('info')">
-                            <div style="margin:auto">
-                                <i class="fas fa-info-circle fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Informações Gerais</h4>
-                                <div class="checkbox i-checks-green inline"><label> <input type="checkbox" id="participante-msggeral" checked="" value="1" name="participante-msggeral"> <i></i></label></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 panel-msg p-w-md text-center pointer carta" onclick="select1('carta')">
-                            <div style="margin:auto">
-                                <i class="fas fa-moon fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Noitita</h4>
-                                <div class="checkbox i-checks-green inline"><label> <input type="checkbox" id="participante-msgnoitita" checked="" value="1" name="participante-msgnoitita"> <i></i></label></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 panel-msg p-w-md text-center pointer foto" onclick="select1('foto')">
-                            <div style="margin:auto">
-                                <i class="fas fa-camera fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Foto</h4>
-                                <div class="checkbox i-checks-green inline"><label> <input type="checkbox" id="participante-msgfoto" checked="" value="1" name="participante-msgfoto"> <i></i></label></div>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                             </div>
                         </div>
                     </div>
 
-<<<<<<< HEAD
                     <h3 class="text-center">Marcadores</h3>
                     <div class="row m-md">
                         <select class="form-control participante-etiquetas" id="participante-etiquetas" multiple="multiple" style="width: 100%">
@@ -276,33 +211,6 @@
                     </div>
 
 
-=======
-                    <h3 class="text-center">Destinatário</h3>
-                    <div class="row m-md">
-                        <div class="col-lg-3 col-sm-6 panel-msg p-w-md text-center pointer mae" onclick="select2('mae')">
-                            <div style="margin:auto">
-                                <i style='color: #e232dd' class="fa fa-user  fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Mãe</h4>
-                                <h5 class="text-center maetext"></h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 panel-msg p-w-md text-center pointer pai" onclick="select2('pai')">
-                            <div style="margin:auto">
-                                <i style='color: #3289e2' class="fa fa-user  fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Pai</h4>
-                                <h5 class="text-center paitext"></h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 panel-msg p-w-md text-center pointer convite" onclick="select2('convite')">
-                            <div style="margin:auto">
-                                <i style='color: #d46415' class="fa fa-user fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Indicação</h4>
-                                <h5 class="text-center convitetext"></h5>
-                            </div>
-                        </div>
-                    </div>
-
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     <h3 class="text-center">Observações</h3>
                     <div class="row m-md">
                         <textarea style="height: 200px" class="form-control required" id="participante-obs"></textarea>
@@ -502,10 +410,7 @@
 
 @section Styles {
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 }
 
 @section Scripts {

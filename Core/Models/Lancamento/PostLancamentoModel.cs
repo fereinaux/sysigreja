@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 ﻿using Utils.Enums;
-=======
-﻿using System;
-using Utils.Enums;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 namespace Core.Models.Lancamento
 {

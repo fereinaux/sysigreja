@@ -1,14 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-<<<<<<< HEAD
 using Utils.Enums;
-=======
-using System.Data.Entity;
-using System.Data.Entity.Core.Objects;
-using Utils.Enums;
-using Utils.Extensions;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Utils.Services;
 
 namespace Data.Entities.Base
@@ -30,19 +23,12 @@ namespace Data.Entities.Base
             get { return UtilServices.CapitalizarNome(apelido); }
             set { apelido = value; }
         }
-<<<<<<< HEAD
         public DateTime? DataNascimento { get; set; }
 
         public string Email { get; set; }
         public string Fone { get; set; }
         public string Profissão { get; set; }
         public string Instagram { get; set; }
-=======
-        public DateTime DataNascimento { get; set; }
-     
-        public string Email { get; set; }
-        public string Fone { get; set; }
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         public bool HasRestricaoAlimentar { get; set; }
         public string RestricaoAlimentar { get; set; }
         public bool HasVacina { get; set; }
@@ -52,7 +38,6 @@ namespace Data.Entities.Base
         public string Medicacao { get; set; }
         public bool HasAlergia { get; set; }
         public string Alergia { get; set; }
-<<<<<<< HEAD
         public string CEP { get; set; }
         public string Logradouro { get; set; }
         public string Bairro { get; set; }
@@ -64,11 +49,6 @@ namespace Data.Entities.Base
         public string Latitude { get; set; }
         public string Longitude { get; set; }
 
-=======
-        public string Logradouro { get; set; }
-        public string Complemento { get; set; }
-        public string Bairro { get; set; }
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         public SexoEnum Sexo { get; set; }
 
         public static int GetAge(DateTime customerDateOfBirth)

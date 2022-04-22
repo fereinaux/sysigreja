@@ -1,25 +1,17 @@
 namespace Data.Migrations
 {
     using Data.Context;
-<<<<<<< HEAD
-=======
-    using Data.Entities;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Data.Entity.Validation;
-<<<<<<< HEAD
     using System.Linq;
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     using System.Text;
     using Utils.Constants;
     using Utils.Enums;
     using Utils.Extensions;
 
-<<<<<<< HEAD
     public sealed class ConsultaConfiguration : DbMigrationsConfiguration<ConsultaDbContext>
     {
         public ConsultaConfiguration()
@@ -29,8 +21,6 @@ namespace Data.Migrations
         }
     }
 
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     public sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
         public Configuration()
@@ -41,7 +31,6 @@ namespace Data.Migrations
 
         protected override void Seed(Data.Context.ApplicationDbContext context)
         {
-<<<<<<< HEAD
             if (!context.Configuracoes.Any())
             {
 
@@ -66,8 +55,6 @@ namespace Data.Migrations
                     new Data.Entities.ConfiguracaoCampos { Campo = CamposEnum.Fone }
                 );
             }
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             context.MeioPagamentos.AddOrUpdate(x => x.Descricao,
               new Data.Entities.MeioPagamento { Descricao = MeioPagamentoPadraoEnum.Dinheiro.GetDescription(), Taxa = 0, IsEditavel = false, Status = StatusEnum.Ativo },

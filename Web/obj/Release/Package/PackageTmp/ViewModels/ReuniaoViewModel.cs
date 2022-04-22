@@ -1,8 +1,5 @@
 ﻿using System;
-<<<<<<< HEAD
 using System.Collections.Generic;
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 namespace SysIgreja.ViewModels
 {
@@ -11,7 +8,6 @@ namespace SysIgreja.ViewModels
         public int Id { get; set; }
         public DateTime DataReuniao { get; set; }
         public int Presenca { get; set; }
-<<<<<<< HEAD
         public ICollection<EquipesModel> Equipes { get; set; }
     }
 
@@ -24,9 +20,4 @@ namespace SysIgreja.ViewModels
 
 
 
-=======
-    }
-
-    
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 }

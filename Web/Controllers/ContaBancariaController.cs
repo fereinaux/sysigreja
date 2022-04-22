@@ -34,12 +34,8 @@ namespace SysIgreja.Controllers
             var result = contaBancariaBusiness
                 .GetContasBancarias()
                 .ToList()
-<<<<<<< HEAD
                 .Select(x => new ContaBancariaViewModel
                 {
-=======
-                .Select(x => new ContaBancariaViewModel {
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     Id = x.Id,
                     Banco = x.Banco.GetDescription(),
                     Agencia = x.Agencia,
@@ -58,11 +54,7 @@ namespace SysIgreja.Controllers
             var result = contaBancariaBusiness.GetContaBancariaById(Id);
 
             return Json(new { ContaBancaria = result }, JsonRequestBehavior.AllowGet);
-<<<<<<< HEAD
         }
-=======
-        }        
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
         [HttpPost]
         public ActionResult PostContaBancaria(PostContaBancariaModel model)

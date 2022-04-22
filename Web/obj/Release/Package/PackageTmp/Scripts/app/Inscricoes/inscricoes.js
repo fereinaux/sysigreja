@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿var lat, lon;
 
 if ($('#map').length > 0) {
@@ -71,50 +70,11 @@ function VerificaCadastro() {
                 else if (data) {
                     window.location.href = data;
                 }
-=======
-﻿function VerificaCadastro() {
-    $.ajax({
-        url: "/Inscricoes/VerificaCadastro",
-        datatype: "json",
-        type: "POST",
-        contentType: 'application/json; charset=utf-8',
-        data: JSON.stringify({
-            Email: $(`#participante-email`).val()
-        }),
-        success: function (data) {
-            if (data.Participante) {
-                $(`#participante-nome`).val(data.Participante.Nome);
-                $(`#participante-apelido`).val(data.Participante.Apelido);
-                $("#participante-data-nascimento").val(moment(data.Participante.DataNascimento).format('DD/MM/YYYY'));
-                $(`#participante-email`).val(data.Participante.Email);
-                $(`#participante-fone`).val(data.Participante.Fone);
-                $(`#participante-nomepai`).val(data.Participante.NomePai);
-                $(`#participante-fonepai`).val(data.Participante.FonePai);
-                $(`#participante-nomemae`).val(data.Participante.NomeMae);
-                $(`#participante-fonemae`).val(data.Participante.FoneMae);
-                $(`#participante-nomeconvite`).val(data.Participante.NomeConvite);
-                $(`#participante-foneconvite`).val(data.Participante.FoneConvite);
-                $(`#participante-restricaoalimentar`).val(data.Participante.RestricaoAlimentar);
-                $(`#participante-medicacao`).val(data.Participante.Medicacao);
-                $(`#participante-alergia`).val(data.Participante.Alergia);
-                $(`input[type=radio][name=participante-sexo][value=${data.Participante.Sexo}]`).iCheck('check');
-                $(`input[type=radio][name=participante-hasalergia][value=${data.Participante.HasAlergia}]`).iCheck('check');
-                $(`input[type=radio][name=participante-hasmedicacao][value=${data.Participante.HasMedicacao}]`).iCheck('check');
-                $(`input[type=radio][name=participante-hasrestricaoalimentar][value=${data.Participante.HasRestricaoAlimentar}]`).iCheck('check');
-                $('.dados-participante-contato').removeClass('d-none');
-                $('.dados-participante-contato input[id*="nome"]').addClass('required');
-                $('.dados-participante-contato input[id*="fone"]').addClass('fone');                
-            }
-            else if (data) {
-                window.location.href = data;
-            } 
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 $("#participante-email").prop("disabled", true)
                 $(".pnl-cadastro").show();
                 $(".pnl-verifica").hide();
                 $('.inscricoes.middle-box').height('80%');
                 $('.float').css("bottom", "40px")
-<<<<<<< HEAD
 
             }
         })
@@ -124,11 +84,6 @@ function VerificaCadastro() {
 Email: exemplo@provedor.com.br`);
     }
 
-=======
-         
-        }
-    })
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 }
 
 function PostInscricao() {
@@ -145,7 +100,6 @@ function PostInscricao() {
                     DataNascimento: moment($("#participante-data-nascimento").val(), 'DD/MM/YYYY', 'pt-br').toJSON(),
                     Email: $(`#participante-email`).val(),
                     Fone: $(`#participante-fone`).val(),
-<<<<<<< HEAD
                     Instagram: $(`#participante-instagram`).val(),
                     Profissao: $(`#participante-profissao`).val(),
                     CEP: $(`#participante-cep`).val(),
@@ -158,8 +112,6 @@ function PostInscricao() {
                     Referencia: $(`#participante-referencia`).val(),
                     Latitude: $(`#participante-latitude`).val(),
                     Longitude: $(`#participante-longitude`).val(),
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     HasRestricaoAlimentar: $("input[type=radio][name=participante-hasrestricaoalimentar]:checked").val(),
                     RestricaoAlimentar: $(`#participante-restricaoalimentar`).val(),
                     HasMedicacao: $("input[type=radio][name=participante-hasmedicacao]:checked").val(),
@@ -173,14 +125,8 @@ function PostInscricao() {
                     FoneMae: $(`#participante-fone-mae`).val(),
                     NomeConvite: $(`#participante-nome-convite`).val(),
                     FoneConvite: $(`#participante-fone-convite`).val(),
-<<<<<<< HEAD
                     NomeContato: $(`#participante-nome-contato`).val(),
                     FoneContato: $(`#participante-fone-contato`).val(),
-=======
-                    Logradouro: $(`#pariticpante-endereco-logradouro`).val(),
-                    Complemento: $(`#pariticpante-endereco-complemento`).val(),
-                    Bairro: $(`#pariticpante-endereco-bairro`).val()
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 }),
             success: function (url) {
                 window.location.href = url;
@@ -200,7 +146,6 @@ $('#not-medicacao').on('ifChecked', function (event) {
     $("#participante-medicacao").removeClass('required');
 });
 
-<<<<<<< HEAD
 $('#has-parente').on('ifChecked', function (event) {
     $('.parente').removeClass('d-none');
     $("#participante-parente").addClass('required');
@@ -227,8 +172,6 @@ $('#outra').on('ifChecked', function (event) {
 });
 
 
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 $('#has-alergia').on('ifChecked', function (event) {
     $('.alergia').removeClass('d-none');
     $("#participante-alergia").addClass('required');

@@ -1,31 +1,17 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\User\\source\\repos\\sysigreja\\Arquitetura\\Arquitetura.csproj": {}
+    "C:\\Users\\User\\source\\repos\\ejc\\Arquitetura\\Arquitetura.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\sysigreja\\Arquitetura\\Arquitetura.csproj": {
+    "C:\\Users\\User\\source\\repos\\ejc\\Arquitetura\\Arquitetura.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\sysigreja\\Arquitetura\\Arquitetura.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ejc\\Arquitetura\\Arquitetura.csproj",
         "projectName": "Arquitetura",
-        "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Arquitetura\\Arquitetura.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Arquitetura\\Arquitetura.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Arquitetura\\obj\\",
-=======
-    "C:\\Users\\User\\source\\repos\\Realidade\\Arquitetura\\Arquitetura.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\User\\source\\repos\\Realidade\\Arquitetura\\Arquitetura.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Realidade\\Arquitetura\\Arquitetura.csproj",
-        "projectName": "Arquitetura",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Arquitetura\\Arquitetura.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Realidade\\Arquitetura\\obj\\",
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
+        "outputPath": "C:\\Users\\User\\source\\repos\\ejc\\Arquitetura\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -42,25 +28,14 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-<<<<<<< HEAD
-              "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\Core.csproj"
+              "C:\\Users\\User\\source\\repos\\ejc\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Core\\Core.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj"
+              "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj"
-=======
-              "C:\\Users\\User\\source\\repos\\Realidade\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Core\\Core.csproj"
-              },
-              "C:\\Users\\User\\source\\repos\\Realidade\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Data\\Data.csproj"
-              },
-              "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj"
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
+              "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj"
               }
             }
           }
@@ -73,13 +48,10 @@
               "target": "Package",
               "version": "[5.2.7, )"
             },
-<<<<<<< HEAD
             "Microsoft.SqlServer.Types": {
               "target": "Package",
               "version": "[14.0.1016.290, )"
             },
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             "System.Linq.Dynamic": {
               "target": "Package",
               "version": "[1.0.8, )"
@@ -99,25 +71,14 @@
         }
       }
     },
-<<<<<<< HEAD
-    "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\Core.csproj": {
+    "C:\\Users\\User\\source\\repos\\ejc\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ejc\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Core\\obj\\",
-=======
-    "C:\\Users\\User\\source\\repos\\Realidade\\Core\\Core.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Realidade\\Core\\Core.csproj",
-        "projectName": "Core",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Realidade\\Core\\obj\\",
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
+        "outputPath": "C:\\Users\\User\\source\\repos\\ejc\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -134,19 +95,11 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-<<<<<<< HEAD
-              "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj"
+              "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj"
-=======
-              "C:\\Users\\User\\source\\repos\\Realidade\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Data\\Data.csproj"
-              },
-              "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj"
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
+              "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj"
               }
             }
           }
@@ -167,13 +120,10 @@
               "target": "Package",
               "version": "[2.2.2, )"
             },
-<<<<<<< HEAD
             "Microsoft.SqlServer.Types": {
               "target": "Package",
               "version": "[14.0.1016.290, )"
             },
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             "System.Linq.Dynamic": {
               "target": "Package",
               "version": "[1.0.8, )"
@@ -193,25 +143,14 @@
         }
       }
     },
-<<<<<<< HEAD
-    "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj": {
+    "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Data\\obj\\",
-=======
-    "C:\\Users\\User\\source\\repos\\Realidade\\Data\\Data.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Realidade\\Data\\Data.csproj",
-        "projectName": "Data",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Realidade\\Data\\obj\\",
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
+        "outputPath": "C:\\Users\\User\\source\\repos\\ejc\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -228,13 +167,8 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-<<<<<<< HEAD
-              "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj"
-=======
-              "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj"
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
+              "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj"
               }
             }
           }
@@ -255,13 +189,10 @@
               "target": "Package",
               "version": "[2.2.2, )"
             },
-<<<<<<< HEAD
             "Microsoft.SqlServer.Types": {
               "target": "Package",
               "version": "[14.0.1016.290, )"
             },
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             "System.Linq.Dynamic": {
               "target": "Package",
               "version": "[1.0.8, )"
@@ -281,25 +212,14 @@
         }
       }
     },
-<<<<<<< HEAD
-    "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj": {
+    "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj",
         "projectName": "Utils",
-        "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\Utils.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\obj\\",
-=======
-    "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj",
-        "projectName": "Utils",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\obj\\",
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
+        "outputPath": "C:\\Users\\User\\source\\repos\\ejc\\Utils\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -326,13 +246,10 @@
               "target": "Package",
               "version": "[4.5.3.2, )"
             },
-<<<<<<< HEAD
             "Microsoft.SqlServer.Types": {
               "target": "Package",
               "version": "[14.0.1016.290, )"
             },
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             "System.Linq.Dynamic": {
               "target": "Package",
               "version": "[1.0.8, )"

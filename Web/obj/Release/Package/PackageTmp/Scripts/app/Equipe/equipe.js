@@ -4,11 +4,7 @@ let Titulo = ''
 function CarregarTabelaEquipe() {
     const tableEquipeConfig = {
         language: languageConfig,
-<<<<<<< HEAD
         lengthMenu: [200, 500, 1000],
-=======
-        lengthMenu: [200,500,1000],
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         colReorder: false,
         serverSide: false,
         deferloading: 0,
@@ -16,11 +12,7 @@ function CarregarTabelaEquipe() {
         fixedHeader: true,
         filter: true,
         orderMulti: false,
-<<<<<<< HEAD
         responsive: true, stateSave: true,
-=======
-        responsive: true,stateSave: true,
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         destroy: true,
         dom: domConfigNoButtons,
         columns: [
@@ -46,7 +38,6 @@ function CarregarTabelaEquipe() {
     $("#table-equipe").DataTable(tableEquipeConfig);
 }
 
-<<<<<<< HEAD
 function header(doc, evento, page) {
 
     var img = new Image();
@@ -71,8 +62,6 @@ function header(doc, evento, page) {
     doc.setFont('helvetica', "normal")
 }
 
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 function PrintEquipe() {
     $.ajax({
         url: '/Equipe/GetMembrosEquipe',
@@ -81,7 +70,6 @@ function PrintEquipe() {
         type: "POST",
         success: (result) => {
             var doc = new jsPDF('l', 'mm', "a4");
-<<<<<<< HEAD
             var widthP = 285
             var evento = $("#equipe-eventoid option:selected").text();
             header(doc, evento, 1)
@@ -107,32 +95,6 @@ function PrintEquipe() {
                 doc.line(10, height, widthP, height);
                 height += 6;
 
-=======
-
-            doc = AddCabecalhoEvento(doc, Titulo, '');
-            var widthP = 285 
-            doc.line(10, 38, widthP, 38);
-
-            doc.setFont('helvetica',"bold")
-            doc.text(12, 43, "Nome Completo");
-            doc.text(122, 43, "Crachá");
-            doc.text(167, 43, "Idade/Data de Nascimento");
-            doc.text(242, 43, "Whatsapp");
-
-            doc.line(10, 45, widthP, 45);
-            doc.setFont('helvetica',"normal")
-            height = 50;
-
-            $(result.data).each((index, participante) => {
-       
-                doc.text(12, height, participante.Nome);
-                doc.text(122, height, participante.Apelido);
-                doc.text(190, height, `${participante.Idade}`);
-                doc.text(242, height, `${participante.Fone}`);
-                height += 2;
-                doc.line(10, height, widthP, height);
-                height += 6;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             });
 
             for (var i = height; i < 192; i += 8) {
@@ -149,11 +111,7 @@ function PrintEquipe() {
 function CarregarTabelaMembrosEquipe(equipeId, titulo) {
     const tableMembrosEquipeConfig = {
         language: languageConfig,
-<<<<<<< HEAD
         lengthMenu: [200, 500, 1000],
-=======
-        lengthMenu: [200,500,1000],
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         colReorder: false,
         serverSide: false,
         deferloading: 0,
@@ -161,11 +119,7 @@ function CarregarTabelaMembrosEquipe(equipeId, titulo) {
         fixedHeader: true,
         filter: true,
         orderMulti: false,
-<<<<<<< HEAD
         responsive: true, stateSave: true,
-=======
-        responsive: true,stateSave: true,
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         destroy: true,
         dom: domConfig,
         buttons: getButtonsConfig(titulo),

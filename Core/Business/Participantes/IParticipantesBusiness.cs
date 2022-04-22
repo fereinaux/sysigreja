@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 ﻿using Core.Models.Participantes;
-=======
-﻿using Core.Models.Lancamento;
-using Core.Models.Participantes;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.Linq;
 
 namespace Core.Business.Participantes
@@ -28,9 +23,6 @@ namespace Core.Business.Participantes
         void PostInfo(PostInfoModel model);
         void SolicitarBoleto(int id);
         void ToggleSexo(int id);
-<<<<<<< HEAD
         void MakeEquipante(int id);
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     }
 }

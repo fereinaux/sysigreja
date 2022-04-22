@@ -1,44 +1,24 @@
 ﻿using Arquitetura.Controller;
-<<<<<<< HEAD
-=======
-using Arquitetura.ViewModels;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using AutoMapper;
 using Core.Business.Account;
 using Core.Business.Arquivos;
 using Core.Business.Circulos;
-<<<<<<< HEAD
 using Core.Business.Configuracao;
 using Core.Business.ContaBancaria;
 using Core.Business.Equipes;
 using Core.Business.Etiquetas;
-=======
-using Core.Business.ContaBancaria;
-using Core.Business.Equipes;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Core.Business.Eventos;
 using Core.Business.Lancamento;
 using Core.Business.MeioPagamento;
 using Core.Business.Participantes;
 using Core.Business.Quartos;
-<<<<<<< HEAD
 using Core.Models.Etiquetas;
 using Core.Models.Participantes;
 using Core.Models.Quartos;
-=======
-using Core.Models.Lancamento;
-using Core.Models.Participantes;
-using Core.Models.Quartos;
-using Data.Entities;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using SysIgreja.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-<<<<<<< HEAD
-=======
-using System.Globalization;
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.Linq;
 using System.Linq.Dynamic;
 using System.Web.Mvc;
@@ -56,10 +36,7 @@ namespace SysIgreja.Controllers
         private readonly IEquipesBusiness equipesBusiness;
         private readonly ICirculosBusiness circulosBusiness;
         private readonly IArquivosBusiness arquivoBusiness;
-<<<<<<< HEAD
         private readonly IEtiquetasBusiness etiquetasBusiness;
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         private readonly IQuartosBusiness quartosBusiness;
         private readonly ILancamentoBusiness lancamentoBusiness;
         private readonly IMeioPagamentoBusiness meioPagamentoBusiness;
@@ -67,21 +44,14 @@ namespace SysIgreja.Controllers
         private readonly IDatatableService datatableService;
         private readonly IMapper mapper;
 
-<<<<<<< HEAD
         public ParticipanteController(ILancamentoBusiness lancamentoBusiness, IEtiquetasBusiness etiquetasBusiness, IQuartosBusiness quartosBusiness, IEquipesBusiness equipesBusiness, IArquivosBusiness arquivoBusiness, ICirculosBusiness circulosBusiness, IParticipantesBusiness participantesBusiness, IContaBancariaBusiness contaBancariaBusiness, IConfiguracaoBusiness configuracaoBusiness, IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness, IDatatableService datatableService, IMeioPagamentoBusiness meioPagamentoBusiness) : base(eventosBusiness, accountBusiness, configuracaoBusiness)
-=======
-        public ParticipanteController(ILancamentoBusiness lancamentoBusiness, IQuartosBusiness quartosBusiness, IEquipesBusiness equipesBusiness, IArquivosBusiness arquivoBusiness, ICirculosBusiness circulosBusiness, IParticipantesBusiness participantesBusiness, IContaBancariaBusiness contaBancariaBusiness, IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness, IDatatableService datatableService, IMeioPagamentoBusiness meioPagamentoBusiness) : base(eventosBusiness, accountBusiness)
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         {
             this.participantesBusiness = participantesBusiness;
             this.arquivoBusiness = arquivoBusiness;
             this.quartosBusiness = quartosBusiness;
             this.equipesBusiness = equipesBusiness;
             this.circulosBusiness = circulosBusiness;
-<<<<<<< HEAD
             this.etiquetasBusiness = etiquetasBusiness;
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             this.lancamentoBusiness = lancamentoBusiness;
             this.meioPagamentoBusiness = meioPagamentoBusiness;
             this.contaBancariaBusiness = contaBancariaBusiness;
@@ -93,10 +63,6 @@ namespace SysIgreja.Controllers
         {
             ViewBag.Title = "Lista Telefônica";
             GetEventos();
-<<<<<<< HEAD
-=======
-
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             return View();
         }
 
@@ -104,11 +70,8 @@ namespace SysIgreja.Controllers
         {
             ViewBag.Title = "Check-in";
             GetEventos();
-<<<<<<< HEAD
             GetConfiguracao();
             GetCampos();
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             ViewBag.MeioPagamentos = meioPagamentoBusiness.GetAllMeioPagamentos().ToList();
             ViewBag.ValorRealista = (int)ValoresPadraoEnum.Inscricoes;
             ViewBag.ValorEquipante = (int)ValoresPadraoEnum.TaxaEquipante;
@@ -161,28 +124,17 @@ namespace SysIgreja.Controllers
             {
                 Alergia = x.Alergia,
                 Apelido = x.Apelido,
-<<<<<<< HEAD
                 CancelarCheckin = false,
                 Checkin = x.Checkin,
                 Padrinho = x.Padrinho?.Nome,
-=======
-                Bairro = x.Bairro,
-                CancelarCheckin = false,
-                Checkin = x.Checkin,
-                Padrinho = x.Padrinho?.Nome,
-                Complemento = x.Complemento,
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 Congregacao = x.Congregacao,
                 DataNascimento = x.DataNascimento,
                 Email = x.Email,
                 EventoId = x.EventoId,
                 Fone = x.Fone,
                 FoneConvite = x.FoneConvite,
-<<<<<<< HEAD
                 FoneContato = x.FoneContato,
                 NomeContato = x.NomeContato,
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 FoneMae = x.FoneMae,
                 FonePai = x.FonePai,
                 HasAlergia = x.HasAlergia,
@@ -191,7 +143,6 @@ namespace SysIgreja.Controllers
                 HasParente = false,
                 HasRestricaoAlimentar = x.HasRestricaoAlimentar,
                 Id = x.Id,
-<<<<<<< HEAD
                 CEP = x.CEP,
                 Bairro = x.Bairro,
                 Cidade = x.Cidade,
@@ -202,9 +153,6 @@ namespace SysIgreja.Controllers
                 Complemento = x.Complemento,
                 Logradouro = x.Logradouro,
                 Referencia = x.Referencia,
-=======
-                Logradouro = x.Logradouro,
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 Medicacao = x.Medicacao,
                 Nome = x.Nome,
                 NomeConvite = x.NomeConvite,
@@ -224,10 +172,7 @@ namespace SysIgreja.Controllers
                 MsgFoto = x.MsgFoto,
                 PendenciaBoleto = x.PendenciaBoleto,
                 PendenciaContato = x.PendenciaContato,
-<<<<<<< HEAD
                 Etiquetas = etiquetasBusiness.GetEtiquetasByParticipante(x.Id)?.Select(y => new PostEtiquetaModel { Id = y.Id, Cor = y.Cor, Nome = y.Nome }),
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 Foto = x.Arquivos.Any(y => y.IsFoto) ? Convert.ToBase64String(x.Arquivos.FirstOrDefault(y => y.IsFoto).Conteudo) : ""
             };
         }
@@ -240,7 +185,6 @@ namespace SysIgreja.Controllers
             result.Nome = UtilServices.CapitalizarNome(result.Nome);
             result.Apelido = UtilServices.CapitalizarNome(result.Apelido);
 
-<<<<<<< HEAD
             var quartoAtual = quartosBusiness.GetNextQuarto(result.EventoId, result.Sexo, TipoPessoaEnum.Participante);
 
             var etiquetas = etiquetasBusiness.GetEtiquetas().ToList()
@@ -250,15 +194,11 @@ namespace SysIgreja.Controllers
                     Id = x.Id,
                     Cor = x.Cor
                 });
-=======
-            var quartoAtual = quartosBusiness.GetNextQuarto(result.EventoId, result.Sexo);
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             var dadosAdicionais = new
             {
                 Circulo = circulosBusiness.GetCirculosComParticipantes(result.EventoId).Where(x => x.ParticipanteId == Id)?.FirstOrDefault()?.Circulo?.Cor.GetDescription() ?? "",
                 Status = result.Status.GetDescription(),
-<<<<<<< HEAD
                 Quarto = quartosBusiness.GetQuartosComParticipantes(result.EventoId, TipoPessoaEnum.Participante).Where(x => x.ParticipanteId == Id).FirstOrDefault()?.Quarto?.Titulo ?? "",
                 QuartoAtual = new
                 {
@@ -268,17 +208,6 @@ namespace SysIgreja.Controllers
             };
 
             return Json(new { Participante = result, DadosAdicionais = dadosAdicionais, Etiquetas = etiquetas, }, JsonRequestBehavior.AllowGet);
-=======
-                Quarto = quartosBusiness.GetQuartosComParticipantes(result.EventoId).Where(x => x.ParticipanteId == Id).FirstOrDefault()?.Quarto?.Titulo ?? "",
-                QuartoAtual = new
-                {
-                    Quarto = mapper.Map<PostQuartoModel>(quartoAtual),
-                    Participantes = quartoAtual != null ? quartosBusiness.GetParticipantesByQuartos(quartoAtual.Id).Count() : 0
-                }
-            };
-
-            return Json(new { Participante = result, DadosAdicionais = dadosAdicionais }, JsonRequestBehavior.AllowGet);
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
 
@@ -310,11 +239,7 @@ namespace SysIgreja.Controllers
         [HttpGet]
         public ActionResult GetParticipantesByQuarto(int QuartoId)
         {
-<<<<<<< HEAD
             var result = quartosBusiness.GetParticipantesByQuartos(QuartoId, TipoPessoaEnum.Participante).ToList().Select(x => new
-=======
-            var result = quartosBusiness.GetParticipantesByQuartos(QuartoId).ToList().Select(x => new
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             {
                 Nome = UtilServices.CapitalizarNome(x.Participante.Nome),
                 Medicacao = (x.Participante.Medicacao ?? "-") + "/" + (x.Participante.Alergia ?? "-")
@@ -330,11 +255,7 @@ namespace SysIgreja.Controllers
             {
                 Nome = UtilServices.CapitalizarNome(x.Nome),
                 Apelido = UtilServices.CapitalizarNome(x.Apelido),
-<<<<<<< HEAD
                 Dia = x.DataNascimento.HasValue ? x.DataNascimento.Value.ToString("dd") : "",
-=======
-                Dia = x.DataNascimento.ToString("dd"),
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 Idade = UtilServices.GetAge(x.DataNascimento).ToString()
             }).ToList();
 
@@ -342,11 +263,7 @@ namespace SysIgreja.Controllers
             {
                 Nome = UtilServices.CapitalizarNome(x.Nome),
                 Apelido = UtilServices.CapitalizarNome(x.Apelido),
-<<<<<<< HEAD
                 Dia = x.DataNascimento.HasValue ? x.DataNascimento.Value.ToString("dd") : "",
-=======
-                Dia = x.DataNascimento.ToString("dd"),
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 Idade = UtilServices.GetAge(x.DataNascimento).ToString()
             }));
 
@@ -374,11 +291,7 @@ namespace SysIgreja.Controllers
                 Confirmados = participantesBusiness.GetParticipantesByEvento(EventoId).Count(x => x.Status == StatusEnum.Confirmado),
                 Presentes = participantesBusiness.GetParticipantesByEvento(EventoId).Count(x => x.Checkin),
                 ConfirmadosEquipantes = equipesBusiness.GetEquipantesByEvento(EventoId).Count(),
-<<<<<<< HEAD
                 PresentesEquipantes = equipesBusiness.GetEquipantesEvento(EventoId).Count(x => x.Checkin),
-=======
-                PresentesEquipantes = equipesBusiness.GetEquipantesByEvento(EventoId).Count(x => x.Checkin),
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             };
 
             return Json(new { result }, JsonRequestBehavior.AllowGet);
@@ -408,11 +321,7 @@ namespace SysIgreja.Controllers
         [HttpPost]
         public ActionResult GetParticipantesSelect(int EventoId)
         {
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             var result = participantesBusiness
             .GetParticipantesByEvento(EventoId)
             .Where(x => x.Status == StatusEnum.Confirmado || x.Status == StatusEnum.Inscrito)
@@ -435,36 +344,11 @@ namespace SysIgreja.Controllers
             {
                 Guid g = Guid.NewGuid();
 
-<<<<<<< HEAD
                 var result = participantesBusiness
                 .GetParticipantesByEvento(model.EventoId);
                 var data = mapper.Map<IEnumerable<ParticipanteExcelViewModel>>(result);
 
                 Session[g.ToString()] = datatableService.GenerateExcel(data.ToList());
-=======
-                Session[g.ToString()] = datatableService.GenerateExcel(participantesBusiness
-                .GetParticipantesByEvento(model.EventoId).Select(x => new ParticipanteExcelViewModel
-                {
-                    Nome = UtilServices.CapitalizarNome(x.Nome),
-                    Apelido = UtilServices.CapitalizarNome(x.Apelido),
-                    DataNascimento = x.DataNascimento.ToString("dd/MM/yyyy"),
-                    Idade = UtilServices.GetAge(x.DataNascimento),
-                    Sexo = x.Sexo.GetDescription(),
-                    Fone = x.Fone,
-                    Email = x.Email,
-                    Endereco = $"{x.Logradouro} {x.Complemento}",
-                    Bairro = x.Bairro,
-                    NomeParente = x.HasParente.HasValue && x.HasParente.Value ? UtilServices.CapitalizarNome(x.Parente) : "",
-                    NomeConvite = UtilServices.CapitalizarNome(x.NomeConvite),
-                    FoneConvite = x.FoneConvite,
-                    Congregacao = x.Congregacao,
-                    Alergia = x.Alergia,
-                    Medicacao = x.Medicacao,
-                    RestricaoAlimentar = x.RestricaoAlimentar,
-                    Situacao = x.Status.GetDescription()
-
-                }).ToList());
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
                 return Content(g.ToString());
             }
@@ -477,7 +361,6 @@ namespace SysIgreja.Controllers
                 var totalResultsCount = result.Count();
                 var filteredResultsCount = totalResultsCount;
 
-<<<<<<< HEAD
                 if (model.Etiquetas != null && model.Etiquetas.Count > 0)
                 {
                     model.Etiquetas.ForEach(etiqueta =>
@@ -503,8 +386,6 @@ namespace SysIgreja.Controllers
                     filteredResultsCount = result.Count();
                 }
 
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 if (model.search.value != null)
                 {
                     result = result.Where(x => (x.Nome.Contains(model.search.value) || x.Padrinho.Nome.Contains(model.search.value)));
@@ -550,7 +431,6 @@ namespace SysIgreja.Controllers
                 {
                     Nome = UtilServices.CapitalizarNome(x.Nome),
                     Apelido = UtilServices.CapitalizarNome(x.Apelido),
-<<<<<<< HEAD
                     DataNascimento = x.DataNascimento.HasValue ? x.DataNascimento.Value.ToString("dd/MM/yyyy") : "",
                     Idade = UtilServices.GetAge(x.DataNascimento),
                     Sexo = x.Sexo.GetDescription(),
@@ -558,19 +438,6 @@ namespace SysIgreja.Controllers
                     NomeParente = x.HasParente.HasValue && x.HasParente.Value ? UtilServices.CapitalizarNome(x.Parente) : "",
                     NomeConvite = UtilServices.CapitalizarNome(x.NomeConvite),
                     FoneConvite = x.FoneConvite,
-=======
-                    DataNascimento = x.DataNascimento.ToString("dd/MM/yyyy"),
-                    Idade = UtilServices.GetAge(x.DataNascimento),
-                    Sexo = x.Sexo.GetDescription(),
-                    Fone = x.Fone,
-                    Email = x.Email,
-                    Endereco = $"{x.Logradouro} {x.Complemento}",
-                    Bairro = x.Bairro,
-                    NomeParente = x.HasParente.HasValue && x.HasParente.Value ? UtilServices.CapitalizarNome(x.Parente) : "",
-                    NomeConvite = UtilServices.CapitalizarNome(x.NomeConvite),
-                    FoneConvite = x.FoneConvite,
-                    Congregacao = x.Congregacao,
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     Alergia = x.Alergia,
                     Medicacao = x.Medicacao,
                     RestricaoAlimentar = x.RestricaoAlimentar,
@@ -595,11 +462,7 @@ namespace SysIgreja.Controllers
         {
             var list = participantesBusiness
                 .GetParticipantesByEvento(EventoId)
-<<<<<<< HEAD
                 .Where(x => x.Status == StatusEnum.Confirmado || x.Status == StatusEnum.Inscrito)
-=======
-                .Where(x => x.Status == StatusEnum.Confirmado)
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 .ToList();
 
 
@@ -735,7 +598,6 @@ namespace SysIgreja.Controllers
             return new HttpStatusCodeResult(200);
         }
 
-<<<<<<< HEAD
         [HttpGet]
         public ActionResult GetPadrinhos(int eventoId)
         {
@@ -752,7 +614,5 @@ namespace SysIgreja.Controllers
         }
 
 
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     }
 }

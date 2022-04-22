@@ -8,7 +8,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>@ViewBag.Configuracao.Titulo | Inscrições</title>
     <link href="~/Content/bootstrap.css" rel="stylesheet">
     <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
@@ -17,18 +16,11 @@
 
         <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,@ViewBag.Configuracao.Logo" />
     }
-=======
-    <title>Realidade | Inscrições</title>
-    <link href="~/Content/bootstrap.css" rel="stylesheet">
-    <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="~/Images/logo-branco.png" />
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <link href="~/Content/animate.css" rel="stylesheet">
     <link href="~/Content/style.css" rel="stylesheet">
     <link href="~/Content/evento.css" rel="stylesheet">
     <link href="~/Content/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 </head>
-<<<<<<< HEAD
 
 <body class="background-evento" style="display:flex">
     <div class="middle-box inscricoes animated fadeInDown " style="height:550px;display:flex;margin:auto">
@@ -43,17 +35,6 @@
 
                     </div>
                 }
-=======
-<body class="background-evento">
-    <div class="middle-box inscricoes animated fadeInDown ">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="row justify-content-center">
-                    <div class="col-sm-offset-3 col-sm-6">
-                        <img class="full-width" src="~/Images/logo-branco.png" alt="Realidade" />
-                    </div>
-                </div>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 <div class="row justify-content-center m-l-lg m-r-lg m-t-lg m-b-sm text-white text-center">
                     <h2>"@ViewBag.Participante.Apelido"</h2>
                     <h3>Obrigado por se inscrever no @ViewBag.Participante.Evento!</h3>
@@ -63,21 +44,11 @@
 
                 <div class="col-sm-12 p-h-sm text-white text-center">
                     <h2>Qualquer dúvida entrar em contato com:</h2>
-<<<<<<< HEAD
                     <h2 style="cursor:pointer;margin-top:0" onclick="window.open(`https://api.whatsapp.com/send?phone=@ViewBag.Participante.PadrinhoFone`)">
                         @ViewBag.Participante.PadrinhoNome - @ViewBag.Participante.PadrinhoFone.Substring(3)
                     </h2>
                 </div>
             </div>
-=======
-                    <h3 style="        margin-bottom: 40px;
-
-">
-                        Felipe Reinaux - (81)9.9718-7441
-                    </h3>                   
-                </div>
-            </div>           
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
         </div>
     </div>
@@ -88,7 +59,6 @@
 <script src="~/Scripts/plugins/sweetalert/sweetalert.min.js"></script>
 
 <script>
-<<<<<<< HEAD
       $(document).ready(function () {
         if (@ViewBag.Configuracao.BackgroundId) {
             $('.background-evento').css('background', `url(data:image/jpeg;base64,@ViewBag.Configuracao.Background) no-repeat center center fixed`)
@@ -97,8 +67,6 @@
         }
     })
 
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     function PagSeguro(id) {
         window.location.href = `/Inscricoes/CheckoutPagSeguro/${id}`;
     }

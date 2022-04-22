@@ -17,10 +17,7 @@ namespace Data.Entities
         public DateTime DataEvento { get; set; }
         public virtual TiposEventoEnum TipoEvento { get; set; }
         public int Valor { get; set; }
-<<<<<<< HEAD
         public int ValorTaxa { get; set; }
 
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     }
 }

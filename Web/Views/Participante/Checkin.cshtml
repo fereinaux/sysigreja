@@ -1,17 +1,11 @@
 ﻿@{
     ViewBag.Numero = new Random().Next();
 }
-<<<<<<< HEAD
 @using Utils.Enums;
 @using Utils.Extensions;
 
 <div class="wrapper wrapper-content">
     <div class="row">
-=======
-
-<div class="wrapper wrapper-content">
-    <div class="row"> 
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         <div class="col-sm-6">
             <div class="moldura-modal p-h-xs m-b-md">
                 <div class="row m-sm">
@@ -19,11 +13,7 @@
                         <h4>Evento</h4>
                     </div>
                     <div class="col-sm-9">
-<<<<<<< HEAD
                         <select class="chosen-select" id="eventoid" onchange="Refresh()">
-=======
-                        <select class="chosen-select" id="eventoid" onchange="GetParticipantes()">
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                             @foreach (var evento in ViewBag.Eventos)
                             {
                                 <option value="@evento.Id">@evento.TipoEvento @evento.Numeracao.ToString()</option>
@@ -190,7 +180,6 @@
                         <div id="teste"></div>
                         <h5 class="text-center">Teste</h5>
                     </div>
-<<<<<<< HEAD
                     <div class="col-xs-4 col-md-2 p-w-md text-center dados-participante-contato">
                         <i class="fas fa-laptop fa-3x"></i>
                         <h5 class="text-center padrinho">Padrinho</h5>
@@ -202,8 +191,6 @@
 
                         </div>
                     </div>
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 </div>
             </div>
             <div class="moldura-modal p-h-xs d-none" id="form-participante">
@@ -226,7 +213,6 @@
                     <div class="col-sm-6" style="display:none" id="div-foto">
                         <img id="foto" style="height:300px;margin:auto" src="" class="m-auto" />
                     </div>
-<<<<<<< HEAD
                     <div class="col-sm-6 p-w-md m-t-md text-center">
                         <h5>Marcadores</h5>
                         <select class="form-control participante-etiquetas" id="participante-etiquetas" multiple="multiple" style="width: 100%">
@@ -267,36 +253,11 @@
                         </div>
                     }
 
-=======
-
-                    <div class="col-sm-6 p-w-md m-t-md text-center">
-                        <h5>Nome</h5>
-
-                        <input type="text" class="form-control required" id="participante-nome" data-field="Nome" />
-                    </div>
-                    <div class="col-sm-6 p-w-md m-t-md text-center">
-                        <h5>Apelido</h5>
-
-                        <input type="text" class="form-control required" id="participante-apelido" data-field="Apelido" />
-                    </div>
-                    <div class="col-sm-6 p-w-md m-t-md text-center">
-                        <h5>Data de Nascimento</h5>
-
-                        <input type="text" class="form-control full-date required" id="participante-data-nascimento" data-field="Data de Nascimento" />
-                    </div>
-                    <div class="col-sm-6 p-w-md m-t-md text-center">
-                        <h5>Sexo</h5>
-
-                        <div class="radio i-checks-green inline"><label> <input type="radio" id="participante-sexo" checked="" value="1" name="participante-sexo"> <i></i> Masculino </label></div>
-                        <div class="radio i-checks-green inline"><label> <input type="radio" id="participante-sexo" value="2" name="participante-sexo"> <i></i> Feminino </label></div>
-                    </div>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     <div class="col-sm-6 p-w-md m-t-md text-center">
                         <h5>Email</h5>
 
                         <input type="text" class="form-control" id="participante-email" data-field="Email" />
                     </div>
-<<<<<<< HEAD
                     @if (ViewBag.Campos.Contains(CamposEnum.Fone.GetDescription()))
                     {
                         <div class="col-sm-6 p-w-md m-t-md text-center">
@@ -489,126 +450,6 @@
 
                 <div id="form-info" class="d-none">
 
-=======
-                    <div class="col-sm-6 p-w-md m-t-md text-center">
-                        <h5>WhatsApp</h5>
-
-                        <input type="text" class="form-control fone" id="participante-fone" data-field="WhatsApp" placeholder="+55 (81) 9999-9999" />
-                    </div>
-
-                    <div class="dados-participante-contato">
-                        <div class="col-sm-6 p-w-md m-t-md text-center">
-                            <h5>Nome da Mãe</h5>
-                            <input type="text" class="form-control required" id="participante-nomemae" data-field="Nome da Mãe" />
-                        </div>
-                        <div class="col-sm-6 p-w-md m-t-md text-center">
-                            <h5>Fone da Mãe</h5>
-                            <input type="text" class="form-control fone" id="participante-fonemae" data-field="Fone da Mãe" />
-                        </div>
-
-                        <div class="col-sm-6 p-w-md m-t-md text-center">
-                            <h5>Nome do Pai</h5>
-                            <input type="text" class="form-control required" id="participante-nomepai" data-field="Nome do Pai" />
-                        </div>
-                        <div class="col-sm-6 p-w-md m-t-md text-center">
-                            <h5>Fone do Pai</h5>
-                            <input type="text" class="form-control fone" id="participante-fonepai" data-field="Fone do Pai" />
-                        </div>
-
-                        <div class="col-sm-6 p-w-md m-t-md text-center">
-                            <h5>Pessoa de Contato</h5>
-
-                            <input type="text" class="form-control required" id="participante-nomeconvite" data-field="Pessoa de Contato" />
-                        </div>
-                        <div class="col-sm-6 p-w-md m-t-md text-center">
-                            <h5>Fone do Contato</h5>
-
-                            <input type="text" class="form-control fone" id="participante-foneconvite" data-field="Fone do Contato" placeholder="+55 (81) 9999-9999" />
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 p-w-md m-t-md text-center">
-                        <h5>Toma alguma medicação?</h5>
-
-                        <div class="radio i-checks-green inline"><label> <input type="radio" id="has-medicacao" value="true" name="participante-hasmedicacao"> <i></i> Sim </label></div>
-                        <div class="radio i-checks-green inline"><label> <input type="radio" id="not-medicacao" checked="" value="false" name="participante-hasmedicacao"> <i></i> Não </label></div>
-
-                        <div class="medicacao d-none">
-                            <h5>Qual?</h5>
-                            <input type="text" class="form-control" id="participante-medicacao" data-field="Medicação" />
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 p-w-md m-t-md text-center">
-                        <h5>Tem alguma alergia?</h5>
-
-                        <div class="radio i-checks-green inline"><label> <input type="radio" id="has-alergia" value="true" name="participante-hasalergia"> <i></i> Sim </label></div>
-                        <div class="radio i-checks-green inline"><label> <input type="radio" id="not-alergia" checked="" value="false" name="participante-hasalergia"> <i></i> Não </label></div>
-
-                        <div class="alergia d-none">
-                            <h5>Qual?</h5>
-                            <input type="text" class="form-control" id="participante-alergia" data-field="Alergia" />
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 p-w-md m-t-md text-center">
-                        <h5>Tem alguma restrição alimentar?</h5>
-
-                        <div class="radio i-checks-green inline"><label> <input type="radio" id="has-restricaoalimentar" value="true" name="participante-hasrestricaoalimentar"> <i></i> Sim </label></div>
-                        <div class="radio i-checks-green inline"><label> <input type="radio" id="not-restricaoalimentar" checked="" value="false" name="participante-hasrestricaoalimentar"> <i></i> Não </label></div>
-
-                        <div class="restricaoalimentar d-none">
-                            <h5>Qual?</h5>
-                            <input type="text" class="form-control" id="participante-restricaoalimentar" data-field="Restrição Alimentar" />
-                        </div>
-                    </div>
-                </div>
-
-                <div id="form-info" class="d-none">
-
-
-                    <h3 class="text-center">Mensagens</h3>
-                    <h4 id="mensagens" class="text-center"></h4>
-                    <div class="row m-md">
-                        <div class="col-lg-2 col-sm-6 panel-msg p-w-md text-center pointer pagamento">
-                            <div style="margin:auto">
-
-                                <i class="far fa-money-bill-alt fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Pagamento</h4>
-                                <div class="checkbox i-checks-green inline"><label> <input type="checkbox" id="participante-msgpagamento" checked="" value="1" name="participante-msgpagamento"> <i></i></label></div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-2 col-sm-6 panel-msg p-w-md text-center pointer covid">
-                            <div style="margin:auto">
-                                <i class="fa fa-viruses fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Covid 19</h4>
-                                <div class="checkbox i-checks-green inline"><label> <input type="checkbox" id="participante-msgcovid" checked="" value="1" name="participante-msgcovid"> <i></i></label></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-sm-6 panel-msg p-w-md text-center pointer info">
-                            <div style="margin:auto">
-                                <i class="fas fa-info-circle fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Informações Gerais</h4>
-                                <div class="checkbox i-checks-green inline"><label> <input type="checkbox" id="participante-msggeral" checked="" value="1" name="participante-msggeral"> <i></i></label></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-sm-6 panel-msg p-w-md text-center pointer carta">
-                            <div style="margin:auto">
-                                <i class="fas fa-moon fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Noitita</h4>
-                                <div class="checkbox i-checks-green inline"><label> <input type="checkbox" id="participante-msgnoitita" checked="" value="1" name="participante-msgnoitita"> <i></i></label></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-sm-6 panel-msg p-w-md text-center pointer foto">
-                            <div style="margin:auto">
-                                <i class="fas fa-camera fa-3x m-t-sm"></i>
-                                <h4 class="text-center m-t-sm">Foto</h4>
-                                <div class="checkbox i-checks-green inline"><label> <input type="checkbox" id="participante-msgfoto" checked="" value="1" name="participante-msgfoto"> <i></i></label></div>
-                            </div>
-                        </div>
-                    </div>
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
                     <h3 class="text-center">Observações</h3>
                     <div class="row m-md">
@@ -646,12 +487,9 @@
 </div>
 
 @section Styles {
-<<<<<<< HEAD
     <link rel="stylesheet"
           href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css"
           type="text/css" />
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <style>
         .d-none {
             display: none;
@@ -661,11 +499,8 @@
 
 @section Scripts {
 
-<<<<<<< HEAD
     <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
     <script src="~/Scripts/app/Util/mapa.js"></script>
-=======
->>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <script src="~/Scripts/app/Participante/checkin.js?@ViewBag.Numero"></script>
 
     <script>
