@@ -3,6 +3,10 @@ using AutoMapper;
 using Core.Business.Arquivos;
 using Core.Business.Eventos;
 using Core.Models.Eventos;
+<<<<<<< HEAD
+=======
+using SysIgreja.ViewModels;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
@@ -37,7 +41,11 @@ namespace SysIgreja.Controllers
         [HttpGet]
         public ActionResult GetTipos()
         {
+<<<<<<< HEAD
             return Json(new { Tipos = EnumExtensions.GetDescriptions<TiposEventoEnum>().ToList() }, JsonRequestBehavior.AllowGet);
+=======
+            return Json(new { Tipos = EnumExtensions.GetDescriptions<TiposEventoEnum>().ToList() }, JsonRequestBehavior.AllowGet);            
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         [HttpPost]

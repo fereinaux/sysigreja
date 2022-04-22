@@ -1,5 +1,8 @@
 ﻿@using Utils.Constants;
+<<<<<<< HEAD
 @using Utils.Enums;
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 @{
     ViewBag.Numero = new Random().Next();
 }
@@ -22,11 +25,19 @@
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="ibox">
         <div class="ibox-title" style="display: flex;justify-content: space-between;">
+<<<<<<< HEAD
             <h4 class="title-circulo">@ViewBag.Title</h4>
             <div class="ibox-tools pull-right" style="width:400px">
                 <div class="row">
                     <div class="col-xs-12 col-lg-6">
                         <select class="form-control" id="circulo-eventoid" onchange=" CirculoRefresh()">
+=======
+            <h4  class="title-circulo">@ViewBag.Title</h4>
+            <div class="ibox-tools pull-right" style="width:400px">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-6">
+                        <select class="form-control" id="circulo-eventoid" onchange="CarregarTabelaCirculo()">
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                             @foreach (var evento in ViewBag.Eventos)
                             {
                                 <option value="@evento.Id">@evento.TipoEvento @evento.Numeracao.ToString()</option>
@@ -53,6 +64,7 @@
                 <tbody></tbody>
             </table>
         </div>
+<<<<<<< HEAD
 
 
         <div class="ibox" id="ibox-mapa" style="margin-top:25px;">
@@ -69,6 +81,8 @@
             </div>
         </div>
 
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         <div class="ibox">
             <div class="ibox-title" style="display: flex;justify-content: space-between;">
                 <h4 id="gerenciar">Gerenciar Círculos</h4>
@@ -99,6 +113,7 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 
 <div class="modal inmodal" id="modal-cores" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
@@ -126,6 +141,8 @@
     </div>
 </div>
 
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 <div class="modal inmodal" id="modal-circulo" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content animated bounceInRight">
@@ -140,7 +157,11 @@
                             <div class="col-sm-6 p-w-md m-b-sm">
                                 <h5>Equipante</h5>
                                 <select class="form-control chosen-select" id="circulo-dirigente1"></select>
+<<<<<<< HEAD
                             </div>
+=======
+                            </div>                           
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                         </div>
                         <div class="col-sm-6 p-w-md m-b-sm">
                             <h5>Cor</h5>
@@ -160,14 +181,18 @@
 </div>
 
 @section Styles {
+<<<<<<< HEAD
     <link rel="stylesheet"
           href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css"
           type="text/css" />
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <style>
     </style>
 }
 
 @section Scripts {
+<<<<<<< HEAD
     <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
     <script src="~/Scripts/app/Util/mapa.js"></script>
     <script src="~/Scripts/app/Circulo/circulo.js?@ViewBag.Numero"></script>
@@ -176,5 +201,12 @@
         if ('@ViewBag.Configuracao.TipoCirculoId' != '@TipoCirculoEnum.Endereco') {
             $('#ibox-mapa').hide()
         }
+=======
+
+    <script src="~/Scripts/app/Circulo/circulo.js?@ViewBag.Numero"></script>
+
+    <script>
+
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     </script>
 }

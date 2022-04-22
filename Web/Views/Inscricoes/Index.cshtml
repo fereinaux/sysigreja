@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@using System.Collections.Generic;
 @using System.Linq;
 @using Utils.Enums;
@@ -6,12 +7,18 @@
     Layout = null;
     ViewBag.Numero = new Random().Next();
 
+=======
+﻿@{
+    Layout = null;
+    ViewBag.Numero = new Random().Next();
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 }
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>@ViewBag.Configuracao.Titulo | Inscrições</title>
     <link href="~/Content/bootstrap4.css" rel="stylesheet">
     <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
@@ -23,12 +30,19 @@
 
         <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,@ViewBag.Configuracao.Logo" />
     }
+=======
+    <title>Realidade | Inscrições</title>
+    <link href="~/Content/bootstrap4.css" rel="stylesheet">
+    <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="~/Images/logo-branco.png" />
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <link href="~/Content/animate.css" rel="stylesheet">
     <link href="~/Content/style.css" rel="stylesheet">
     <link href="~/Content/evento.css" rel="stylesheet">
     <link href="~/Content/plugins/sweetalert/sweetalert.css" rel="stylesheet">
     <link href="~/Content/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="~/Content/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<<<<<<< HEAD
     <style>
     </style>
 </head>
@@ -266,10 +280,101 @@
                                     </div>
                                 }
                             </div>
+=======
+</head>
+<body class="background-evento">
+    <div class="middle-box inscricoes animated fadeInDown ">
+        <div class="row justify-content-center">
+            <div class="col col-6">
+                <img class="full-width" src="~/Images/logo-branco.png" alt="Realidade" />
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col col-12">
+                <div class="p-h-xs m-b-lg" id="form-inscricao">
+                    <div class="form-group">
+                        <label for="participante-email" class="text-white">Digite seu email</label>
+                        <input type="email" class="form-control" id="participante-email" data-field="Email" />
+                    </div>
+                    <div class="pnl-cadastro">
+
+                        <div class="form-group">
+                            <label for="participante-nome" class="text-white">Nome Completo</label>
+                            <input type="text" class="form-control required" id="participante-nome" data-field="Nome" />
+                        </div>
+                        <div class="form-group">
+                            <label for="participante-apelido" class="text-white">Como você gostaria de ser chamado no Realidade?</label>
+                            <input type="text" class="form-control required" id="participante-apelido" data-field="Apelido" />
+                        </div>
+                        <div class="form-group">
+                            <label for="participante-sexo" class="text-white block">Sexo</label>
+                            <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="sexo-masculino" checked="" value="1" name="participante-sexo"> <i></i> Masculino </label></div>
+                            <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="sexo-feminino" value="2" name="participante-sexo"> <i></i> Feminino </label></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="participante-data-nascimento" class="text-white">Data de Nascimento</label>
+                            <input type="text" class="form-control full-date required" id="participante-data-nascimento" data-field="Data de Nascimento" />
+                        </div>                       
+                        <div class="form-group">
+                            <label for="participante-fone" class="text-white">Fone </label>
+                            <input type="text" class="form-control fone" id="participante-fone" data-field="Fone do Participante" />
+                        </div>
+                        <div class="form-group">
+                            <label for="participante-nome-convite" class="text-white">Nome da Mãe</label>
+                            <input type="text" class="form-control required" id="participante-nome-mae" data-field="Nome da Mãe" />
+                        </div>
+                        <div class="form-group">
+                            <label for="participante-fone-convite" class="text-white">Fone da Mãe</label>
+                            <input type="text" class="form-control fone" id="participante-fone-mae" data-field="Fone da Mãe" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="participante-nome-convite" class="text-white">Nome do Pai</label>
+                            <input type="text" class="form-control required" id="participante-nome-pai" data-field="Nome do Pai" />
+                        </div>
+                        <div class="form-group">
+                            <label for="participante-fone-convite" class="text-white">Fone do Pai</label>
+                            <input type="text" class="form-control fone" id="participante-fone-pai" data-field="Fone do Pai" />
+                        </div>   <div class="form-group">
+                            <label for="participante-nome-convite" class="text-white">Pessoa que lhe convidou</label>
+                            <input type="text" class="form-control required" id="participante-nome-convite" data-field="Pessoa de contato" />
+                        </div>
+                        <div class="form-group">
+                            <label for="participante-fone-convite" class="text-white">Fone de quem lhe convidou</label>
+                            <input type="text" class="form-control fone" id="participante-fone-convite" data-field="Fone do contato" />
+                        </div>
+                        <div class="form-group">
+                            <label for="participante-hasmedicacao" class="text-white block">Toma alguma medicação?</label>
+                            <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="has-medicacao" value="true" name="participante-hasmedicacao"> <i></i> Sim </label></div>
+                            <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="not-medicacao" checked="" value="false" name="participante-hasmedicacao"> <i></i> Não </label></div>
+                        </div>
+                        <div class="form-group medicacao d-none">
+                            <label for="participante-medicacao" class="text-white">Qual?</label>
+                            <input type="text" class="form-control" id="participante-medicacao" data-field="Medicação" />
+                        </div>
+                        <div class="form-group">
+                            <label for="participante-hasalergia" class="text-white block">Tem alguma alergia?</label>
+                            <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="has-alergia" value="true" name="participante-hasalergia"> <i></i> Sim </label></div>
+                            <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="not-alergia" checked="" value="false" name="participante-hasalergia"> <i></i> Não </label></div>
+                        </div>
+                        <div class="form-group alergia d-none">
+                            <label for="participante-alergia" class="text-white">Qual?</label>
+                            <input type="text" class="form-control" id="participante-alergia" data-field="Alergia" />
+                        </div>
+                        <div class="form-group">
+                            <label for="participante-hasrestricaoalimentar" class="text-white block">Tem alguma restrição alimentar?</label>
+                            <div class="radio i-checks-brown inline"><label class="text-white"> <input type="radio" id="has-restricaoalimentar" value="true" name="participante-hasrestricaoalimentar"> <i></i> Sim </label></div>
+                            <div class="radio i-checks-brown inline p-l-xs"><label class="text-white"> <input type="radio" id="not-restricaoalimentar" checked="" value="false" name="participante-hasrestricaoalimentar"> <i></i> Não </label></div>
+                        </div>
+                        <div class="form-group restricaoalimentar d-none">
+                            <label for="participante-restricaoalimentar" class="text-white">Qual?</label>
+                            <input type="text" class="form-control" id="participante-restricaoalimentar" data-field="Restrição Alimentar" />
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                         </div>
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
 
         </div>
         <div style="margin-bottom:auto">
@@ -279,12 +384,25 @@
             <button type="button" class="btn btn-rounded btn-float btn-juventude pnl-cadastro" style="height: 60px; width: 60px; margin-top: -30px;" onclick="PostInscricao()"><i class="fa fa-2x fa-paper-plane m-r-sm"></i></button>
         </div>
     </div>
+=======
+        </div>
+    </div>
+    <div class="pnl-cadastro">
+        <button type="button" class="btn btn-rounded btn-juventude float" onclick="PostInscricao()"><i class="fa fa-2x fa-paper-plane m-r-sm"></i></button>
+    </div>
+    <div class="pnl-verifica">
+        <button type="button" class="btn btn-rounded btn-juventude float" onclick="VerificaCadastro()">Seguinte</button>
+    </div>
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 </body>
 </html>
 
 <script src="~/Scripts/jquery-3.1.1.min.js"></script>
 <script src="~/Scripts/plugins/imaskjs/imask.js"></script>
+<<<<<<< HEAD
 <script src="~/Scripts/app/Util/extensions.js"></script>
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 <script src="~/Scripts/app/Util/forms.js"></script>
 <script src="~/Scripts/app/Util/inputs.js"></script>
 <script src="~/Scripts/app/Util/messages.js"></script>
@@ -293,6 +411,7 @@
 <script src="~/Scripts/plugins/moment/moment-with-locales.min.js"></script>
 <script src="~/Scripts/plugins/datapicker/bootstrap-datepicker.js"></script>
 <script src="~/Scripts/plugins/chosen/chosen.jquery.js"></script>
+<<<<<<< HEAD
 <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"></script>
 <script src="~/Scripts/app/Util/mapa.js"></script>
 
@@ -329,3 +448,8 @@
         $('.inscricoes.middle-box').css('background-color', `rgba(${rgbLoginBox[0]},${rgbLoginBox[1]},${rgbLoginBox[2]},0.7)`)
     })
 </script>
+=======
+
+<script src="~/Scripts/app/Inscricoes/inscricoes.js?@ViewBag.Numero"></script>
+
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566

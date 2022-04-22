@@ -2,17 +2,29 @@
 using Data.Entities;
 using Data.Repository;
 using System.Linq;
+<<<<<<< HEAD
+=======
+using System.Data.Entity;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Utils.Enums;
 
 namespace Core.Business.Eventos
 {
     public class EventosBusiness : IEventosBusiness
     {
+<<<<<<< HEAD
         private readonly IGenericRepository<Evento> eventoRepository;
 
         public EventosBusiness(IGenericRepository<Evento> eventoRepository)
         {
             this.eventoRepository = eventoRepository;
+=======
+        private readonly IGenericRepository<Evento> eventoRepository;        
+
+        public EventosBusiness(IGenericRepository<Evento> eventoRepository)
+        {
+            this.eventoRepository = eventoRepository;            
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public void DeleteEvento(int id)

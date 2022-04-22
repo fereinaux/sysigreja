@@ -12,6 +12,7 @@ namespace SysIgreja.ViewModels
         public string Sexo { get; set; }
         public string Email { get; set; }
         public string Fone { get; set; }
+<<<<<<< HEAD
         [DisplayName("Nome da Mãe")]
         public string NomeMae { get; set; }
         [DisplayName("Fone da Mãe")]
@@ -20,6 +21,13 @@ namespace SysIgreja.ViewModels
         public string NomePai { get; set; }
         [DisplayName("Fone do Pai")]
         public string FonePai { get; set; }
+=======
+        [DisplayName("Endereço")]
+        public string Endereco { get; set; }
+        public string Bairro { get; set; }
+        [DisplayName("Congregação")]
+        public string Congregacao { get; set; }
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
         [DisplayName("Nome do Contato")]
         public string NomeConvite { get; set; }

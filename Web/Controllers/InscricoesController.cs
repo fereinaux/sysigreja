@@ -1,18 +1,39 @@
 ﻿
+<<<<<<< HEAD
 using Core.Business.Configuracao;
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Core.Business.ContaBancaria;
 using Core.Business.Eventos;
 using Core.Business.Lancamento;
 using Core.Business.MeioPagamento;
 using Core.Business.Newsletter;
 using Core.Business.Participantes;
+<<<<<<< HEAD
+=======
+using Core.Models.Lancamento;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Core.Models.Participantes;
 using Data.Entities;
 using SysIgreja.ViewModels;
 using System;
+<<<<<<< HEAD
 using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
+=======
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web.Mvc;
+using System.Xml;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Utils.Enums;
 using Utils.Extensions;
 
@@ -21,17 +42,26 @@ namespace SysIgreja.Controllers
     public class InscricoesController : Controller
     {
         private readonly IParticipantesBusiness participantesBusiness;
+<<<<<<< HEAD
         private readonly IConfiguracaoBusiness configuracaoBusiness;
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         private readonly ILancamentoBusiness lancamentoBusiness;
         private readonly IMeioPagamentoBusiness meioPagamentoBusiness;
         private readonly IContaBancariaBusiness contaBancariaBusiness;
         private readonly IEventosBusiness eventosBusiness;
         private readonly INewsletterBusiness newsletterBusiness;
 
+<<<<<<< HEAD
         public InscricoesController(IParticipantesBusiness participantesBusiness, IConfiguracaoBusiness configuracaoBusiness, IContaBancariaBusiness contaBancariaBusiness, IEventosBusiness eventosBusiness, INewsletterBusiness newsletterBusiness, ILancamentoBusiness lancamentoBusiness, IMeioPagamentoBusiness meioPagamentoBusiness)
         {
             this.participantesBusiness = participantesBusiness;
             this.configuracaoBusiness = configuracaoBusiness;
+=======
+        public InscricoesController(IParticipantesBusiness participantesBusiness, IContaBancariaBusiness contaBancariaBusiness, IEventosBusiness eventosBusiness, INewsletterBusiness newsletterBusiness, ILancamentoBusiness lancamentoBusiness, IMeioPagamentoBusiness meioPagamentoBusiness)
+        {
+            this.participantesBusiness = participantesBusiness;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             this.meioPagamentoBusiness = meioPagamentoBusiness;
             this.lancamentoBusiness = lancamentoBusiness;
             this.contaBancariaBusiness = contaBancariaBusiness;
@@ -42,6 +72,7 @@ namespace SysIgreja.Controllers
         public ActionResult Index()
         {
 
+<<<<<<< HEAD
             ViewBag.Configuracao = configuracaoBusiness.GetConfiguracao();
             ViewBag.Campos = configuracaoBusiness.GetCampos().Select(x => x.Campo).ToList();
             ViewBag.Title = "Inscrições";
@@ -58,6 +89,14 @@ namespace SysIgreja.Controllers
             var evento = eventosBusiness.GetEventoAtivo();
             if (evento == null)
                 return RedirectToAction("InscricoesEncerradas");
+=======
+
+            ViewBag.Title = "Inscrições";
+            var evento = eventosBusiness.GetEventoAtivo();
+            if (evento == null)
+                return RedirectToAction("InscricoesEncerradas");
+            ViewBag.Logo = evento.TipoEvento.GetNickname() + ".png";
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             return View();
         }
 
@@ -72,7 +111,11 @@ namespace SysIgreja.Controllers
         public ActionResult InscricaoConcluida(int Id)
         {
             Participante participante = participantesBusiness.GetParticipanteById(Id);
+<<<<<<< HEAD
             ViewBag.Configuracao = configuracaoBusiness.GetConfiguracao();
+=======
+
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             ViewBag.Participante = new InscricaoConcluidaViewModel
             {
                 Id = participante.Id,
@@ -80,9 +123,13 @@ namespace SysIgreja.Controllers
                 Logo = participante.Evento.TipoEvento.GetNickname() + ".png",
                 Evento = $"{participante.Evento.Numeracao.ToString()}º {participante.Evento.TipoEvento.GetDescription()}",
                 Valor = participante.Evento.Valor.ToString("C", CultureInfo.CreateSpecificCulture("pt-BR")),
+<<<<<<< HEAD
                 DataEvento = participante.Evento.DataEvento.ToString("dd/MM/yyyy"),
                 PadrinhoFone = participante.Padrinho.Fone,
                 PadrinhoNome = participante.Padrinho.Nome
+=======
+                DataEvento = participante.Evento.DataEvento.ToString("dd/MM/yyyy")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             };
 
             ViewBag.ContasBancarias = contaBancariaBusiness.GetContasBancarias().ToList()
@@ -110,7 +157,11 @@ namespace SysIgreja.Controllers
         public ActionResult InscricaoEspera(int Id)
         {
             Participante participante = participantesBusiness.GetParticipanteById(Id);
+<<<<<<< HEAD
             ViewBag.Configuracao = configuracaoBusiness.GetConfiguracao();
+=======
+
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             ViewBag.Participante = new InscricaoConcluidaViewModel
             {
                 Id = participante.Id,
@@ -127,13 +178,22 @@ namespace SysIgreja.Controllers
 
         public ActionResult InscricoesEncerradas()
         {
+<<<<<<< HEAD
             ViewBag.Configuracao = configuracaoBusiness.GetConfiguracao();
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             return View();
         }
 
         [HttpPost]
         public ActionResult PostInscricao(PostInscricaoModel model)
         {
+<<<<<<< HEAD
+=======
+            AddNewsletter(model.Fone);
+
+
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             var evento = eventosBusiness.GetEventoAtivo();
             model.EventoId = model.EventoId > 0 ? model.EventoId : evento.Id;
 
@@ -154,6 +214,17 @@ namespace SysIgreja.Controllers
         }
 
         [HttpPost]
+<<<<<<< HEAD
+=======
+        public ActionResult Newsletter(string Whatsapp)
+        {
+            AddNewsletter(Whatsapp);
+
+            return new HttpStatusCodeResult(200);
+        }
+
+        [HttpPost]
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         public ActionResult VerificaCadastro(string Email)
         {
             var participante = participantesBusiness.GetParticipantesByEvento(eventosBusiness.GetEventoAtivo().Id).FirstOrDefault(x => x.Email == Email && (new StatusEnum[] { StatusEnum.Confirmado, StatusEnum.Inscrito }).Contains(x.Status));
@@ -169,6 +240,140 @@ namespace SysIgreja.Controllers
             return new HttpStatusCodeResult(200);
         }
 
+<<<<<<< HEAD
 
+=======
+        [HttpPost]
+        public ActionResult SolicitarBoleto(int ParticipanteId)
+        {
+            participantesBusiness.SolicitarBoleto(ParticipanteId);
+
+            return new HttpStatusCodeResult(200);
+        }
+
+        private void AddNewsletter(string email)
+        {
+            newsletterBusiness.InsertWhatsapp(email);
+        }
+
+        public async Task<ActionResult> CheckoutPagSeguro(int Id)
+        {
+
+            Participante participante = participantesBusiness.GetParticipanteById(Id);
+
+            if (CapacidadeUltrapassada(participante.Evento, new StatusEnum[] { StatusEnum.Confirmado }))
+                return View("InscricoesEncerradas");
+
+            //URI de checkout.
+            string uri = @"https://ws.pagseguro.uol.com.br/v2/checkout";
+
+            //Webclient faz o post para o servidor de pagseguro.
+            HttpClient client = new HttpClient();
+            var content = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("email", participante.Evento.TipoEvento.GetEmailPagseguro()),
+                new KeyValuePair<string, string>("token", participante.Evento.TipoEvento.GetTokenPagseguro()),
+                new KeyValuePair<string, string>("currency", "BRL"),
+                new KeyValuePair<string, string>("itemId1", "0001"),
+                new KeyValuePair<string, string>("itemDescription1", $"Inscrição {participante.Evento.Numeracao.ToString()}º {participante.Evento.TipoEvento.GetDescription()}"),
+                new KeyValuePair<string, string>("itemAmount1", participante.Evento.Valor.ToString("0.00").Replace(",", ".")),
+                new KeyValuePair<string, string>("itemQuantity1", "1"),
+                new KeyValuePair<string, string>("itemWeight1", "0"),
+                new KeyValuePair<string, string>("reference", participante.ReferenciaPagSeguro),
+                new KeyValuePair<string, string>("senderName", participante.Nome),
+                new KeyValuePair<string, string>("senderAreaCode", participante.Fone.Substring(4, 2)),
+                new KeyValuePair<string, string>("senderPhone", participante.Fone.Substring(7, 11).Replace(".", "").Replace("-", "")),
+                new KeyValuePair<string, string>("senderEmail", participante.Email),
+                new KeyValuePair<string, string>("shippingAddressRequired", "false")
+            });
+
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
+            content.Headers.ContentType.CharSet = "UTF-8";
+
+            Task<HttpResponseMessage> response = client.PostAsync(uri, content);
+
+            //Cria documento XML.
+            XmlDocument xmlDoc = new XmlDocument();
+
+            //Carrega documento XML por string.
+            xmlDoc.LoadXml(await response.Result.Content.ReadAsStringAsync());
+
+            //Obtém código de transação (Checkout).
+            var code = xmlDoc.GetElementsByTagName("code")[0];
+
+            //Obtém data de transação (Checkout).
+            var date = xmlDoc.GetElementsByTagName("date")[0];
+
+            //Monta a URL para pagamento.
+            var paymentUrl = string.Concat("https://pagseguro.uol.com.br/v2/checkout/payment.html?code=", code.InnerText);
+
+            return Redirect(paymentUrl);
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public void RetornoPagSeguro(string notificationCode, string notificationType)
+        {
+            var evento = eventosBusiness.GetEventoAtivo();
+            //uri de consulta da transação.
+            string uri = $"https://ws.pagseguro.uol.com.br/v3/transactions/notifications/{notificationCode}?email={evento.TipoEvento.GetEmailPagseguro()}&token={evento.TipoEvento.GetTokenPagseguro()}";
+
+            //Classe que irá fazer a requisição GET.
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(uri);
+
+            //Método do webrequest.
+            request.Method = "GET";
+
+            //String que vai armazenar o xml de retorno.
+            string xmlString = null;
+
+            //Obtém resposta do servidor.
+            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            {
+                //Cria stream para obter retorno.
+                using (Stream dataStream = response.GetResponseStream())
+                {
+                    //Lê stream.
+                    using (StreamReader reader = new StreamReader(dataStream))
+                    {
+                        //Xml convertido para string.
+                        xmlString = reader.ReadToEnd();
+
+                        //Cria xml document para facilitar acesso ao xml.
+                        XmlDocument xmlDoc = new XmlDocument();
+
+                        //Carrega xml document através da string com XML.
+                        xmlDoc.LoadXml(xmlString);
+
+                        //Busca elemento status do XML.
+                        var status = xmlDoc.GetElementsByTagName("status")[0];
+
+                        //Fecha reader.
+                        reader.Close();
+
+                        //Fecha stream.
+                        dataStream.Close();
+
+                        //Verifica status de retorno.
+                        //3 = Pago.
+                        //if (status.InnerText == "3")
+                        //{
+                        //    var reference = xmlDoc.GetElementsByTagName("reference")[0];
+                        //    var participante = participantesBusiness.GetParticipanteByReference(reference.InnerText);
+                        //    var meioPagSeguro = MeioPagamentoPadraoEnum.PagSeguro.GetDescription();
+                        //    lancamentoBusiness.PostPagamento(new PostPagamentoModel
+                        //    {
+                        //        ParticipanteId = participante.Id,
+                        //        Valor = evento.Valor,
+                        //        MeioPagamentoId = meioPagamentoBusiness.GetAllMeioPagamentos().FirstOrDefault(x => x.Descricao == meioPagSeguro).Id,
+                        //        EventoId = evento.Id
+                        //    });
+                        //}
+
+                    }
+                }
+            }
+        }
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     }
 }

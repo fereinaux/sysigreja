@@ -1,6 +1,15 @@
 ﻿using System;
+<<<<<<< HEAD
 using System.Net;
 using System.Net.Mail;
+=======
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Mail;
+using System.Text;
+using System.Threading.Tasks;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 namespace Utils.Services
 {

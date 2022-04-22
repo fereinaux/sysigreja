@@ -1,8 +1,13 @@
 ﻿using System;
+<<<<<<< HEAD
+=======
+using System.Collections.Generic;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.ComponentModel;
 
 namespace Utils.Enums
 {
+<<<<<<< HEAD
     public enum TipoCirculoEnum
     {
         [Description("Endereco")]
@@ -63,6 +68,8 @@ namespace Utils.Enums
 
 
     }
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     public enum StatusEnum
     {
         [Description("Ativo")]
@@ -97,6 +104,7 @@ namespace Utils.Enums
 
     public enum EquipesEnum
     {
+<<<<<<< HEAD
         [Description("Ordem")]
         Ordem = 1,
         [Description("Minimercado")]
@@ -149,14 +157,53 @@ namespace Utils.Enums
         ED = 25,
         [Description("Lider Espiritual")]
         LiderEspiritual = 26,
+=======
+        [Description("Vaila de Apoio Integral")]
+        VailaAI = 1,
+        [Description("Refeitório")]
+        Refeitorio = 2,
+        [Description("Grupo de Oração e Encorajamento")]
+        GOE = 3,
+        [Description("Reitores")]
+        Reitores = 4,
+        [Description("Secretaria")]
+        Secretaria = 5,
+        [Description("Circulação")]
+        Circulacao = 6,
+        [Description("Vaila de Pequeno Grupo")]
+        Circulo = 7,
+        [Description("Drama")]
+        Drama = 8,
+        [Description("Mídia")]
+        Midia = 9,
+        [Description("Louvor")]
+        Louvor = 10,
+        [Description("Cozinha")]
+        Cozinha = 11,
+        [Description("Pastores")]
+        Pastores = 12,
+        [Description("Bomboniere")]
+        Bomboniere = 13,
+        [Description("Coordenação")]
+        Coordenacao = 14
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     }
 
     public enum TiposEventoEnum
     {
+<<<<<<< HEAD
         [Nickname("EJC")]
         [Description("Encontro de Jovens com Cristo")]
         [Equipes(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 })]
         EJC = 1,
+=======
+        [Nickname("Realidade")]
+        [EmailPagSeguro("")]
+        [TokenPagSeguro("")]
+        [Description("Realidade")]
+        [Equipes(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,13,14 })]
+        Realiadde = 1,
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
     }
 

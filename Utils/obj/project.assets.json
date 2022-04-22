@@ -21,6 +21,7 @@
           "lib/net40/EPPlus.dll": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.SqlServer.Types/14.0.1016.290": {
         "type": "package",
         "compile": {
@@ -30,6 +31,8 @@
           "lib/net40/Microsoft.SqlServer.Types.dll": {}
         }
       },
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
       "System.Linq.Dynamic/1.0.8": {
         "type": "package",
         "compile": {
@@ -60,6 +63,7 @@
           "lib/net40/EPPlus.dll": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.SqlServer.Types/14.0.1016.290": {
         "type": "package",
         "compile": {
@@ -69,6 +73,8 @@
           "lib/net40/Microsoft.SqlServer.Types.dll": {}
         }
       },
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
       "System.Linq.Dynamic/1.0.8": {
         "type": "package",
         "compile": {
@@ -99,6 +105,7 @@
           "lib/net40/EPPlus.dll": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.SqlServer.Types/14.0.1016.290": {
         "type": "package",
         "compile": {
@@ -108,6 +115,8 @@
           "lib/net40/Microsoft.SqlServer.Types.dll": {}
         }
       },
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
       "System.Linq.Dynamic/1.0.8": {
         "type": "package",
         "compile": {
@@ -138,6 +147,7 @@
           "lib/net40/EPPlus.dll": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.SqlServer.Types/14.0.1016.290": {
         "type": "package",
         "compile": {
@@ -147,6 +157,8 @@
           "lib/net40/Microsoft.SqlServer.Types.dll": {}
         }
       },
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
       "System.Linq.Dynamic/1.0.8": {
         "type": "package",
         "compile": {
@@ -179,6 +191,7 @@
         "readme.txt"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.SqlServer.Types/14.0.1016.290": {
       "sha512": "isHCxuC16Tsgp7YfuagLRHEoFfJs0ibc0xBlSuU0yqUB9BeKRVxTU4CbsWfzsaW67I7LG5XLW4UCZFbVktmEuA==",
       "type": "package",
@@ -201,6 +214,8 @@
         "tools/uninstall.ps1"
       ]
     },
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     "System.Linq.Dynamic/1.0.8": {
       "sha512": "nh+3I/wcZcyQ4p8DKMhy/PH4sGKONrrGlx+eqpqrRTDHe6gyDTF5nK0AIXitDuzvtNTOkvpJWvPd0xdzEmlQjA==",
       "type": "package",
@@ -218,7 +233,10 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
       "EPPlus >= 4.5.3.2",
+<<<<<<< HEAD
       "Microsoft.SqlServer.Types >= 14.0.1016.290",
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
       "System.Linq.Dynamic >= 1.0.8"
     ]
   },
@@ -228,11 +246,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj",
       "projectName": "Utils",
       "projectPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\Utils.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\source\\repos\\sysigreja\\Utils\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj",
+      "projectName": "Utils",
+      "projectPath": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\Utils.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\source\\repos\\Realidade\\Utils\\obj\\",
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -259,10 +285,13 @@
             "target": "Package",
             "version": "[4.5.3.2, )"
           },
+<<<<<<< HEAD
           "Microsoft.SqlServer.Types": {
             "target": "Package",
             "version": "[14.0.1016.290, )"
           },
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
           "System.Linq.Dynamic": {
             "target": "Package",
             "version": "[1.0.8, )"

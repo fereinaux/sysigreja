@@ -9,7 +9,11 @@
         fixedHeader: true,
         filter: true,
         orderMulti: false,
+<<<<<<< HEAD
         responsive: true, stateSave: true,
+=======
+        responsive: true,stateSave: true,
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         destroy: true,
         dom: domConfigNoButtons,
         columns: [
@@ -17,7 +21,11 @@
             { data: "Sexo", name: "Sexo", autoWidth: true },
             { data: "Capacidade", name: "Capacidade", autoWidth: true },
             {
+<<<<<<< HEAD
                 data: "Id", name: "Id", className: "text-center", orderable: false, width: "15%",
+=======
+                data: "Id", name: "Id", orderable: false, width: "15%",
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 "render": function (data, type, row) {
                     return `
                             ${GetButton('PrintQuarto', JSON.stringify(row), 'green', 'fa-print', 'Imprimir')}  
@@ -32,16 +40,24 @@
         ajax: {
             url: '/Quarto/GetQuartos',
             datatype: "json",
+<<<<<<< HEAD
             data: { EventoId: $("#quarto-eventoid").val(), Tipo: window.location.href.includes('QuartoEquipe') ? 0 : 1 },
+=======
+            data: { EventoId: $("#quarto-eventoid").val() },
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             type: "POST"
         }
     };
     $("#table-quarto").DataTable(tableQuartoConfig);
 }
 
+<<<<<<< HEAD
 
 $(document).ready(function () {
     $('#col-chave').text(window.location.href.includes('QuartoEquipe') ? 'Equipantes' : 'Participantes')
+=======
+$(document).ready(function () {
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
     $("#Participante").on("keyup", function () {
         var value = $(this).val().toLowerCase();
@@ -57,7 +73,11 @@ $(document).ready(function () {
 
 function PrintQuarto(row) {
     $.ajax({
+<<<<<<< HEAD
         url: window.location.href.includes('QuartoEquipe') ? '/Quarto/GetEquipantesByQuarto' : '/Participante/GetParticipantesByQuarto',
+=======
+        url: '/Participante/GetParticipantesByQuarto',
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         data: { QuartoId: row.Id },
         datatype: "json",
         type: "GET",
@@ -67,17 +87,30 @@ function PrintQuarto(row) {
             doc = AddCabecalhoEvento(doc, titulo, $("#quarto-eventoid option:selected").text());
             doc.line(10, 38, 195, 38);
 
+<<<<<<< HEAD
             doc.setFont('helvetica', "bold")
             doc.text(12, 43, "Nome");
             doc.text(95, 43, window.location.href.includes('QuartoEquipe') ? "Apelido" : "Medicamento/Alergia");
 
             doc.line(10, 45, 195, 45);
             doc.setFont('helvetica', "normal")
+=======
+            doc.setFont('helvetica',"bold")
+            doc.text(12, 43, "Título");
+            doc.text(95, 43, "Medicamento/Alergia");
+
+            doc.line(10, 45, 195, 45);
+            doc.setFont('helvetica',"normal")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             height = 50;
 
             $(result.data).each((index, participante) => {
                 doc.text(12, height, participante.Nome);
+<<<<<<< HEAD
                 var splitMedicacao = doc.splitTextToSize(window.location.href.includes('QuartoEquipe') ? participante.Apelido : participante.Medicacao, 80);
+=======
+                var splitMedicacao = doc.splitTextToSize(participante.Medicacao, 80);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 doc.text(95, height, splitMedicacao);
                 height += 6 * splitMedicacao.length;
             });
@@ -98,7 +131,11 @@ function GetQuarto(id) {
             type: "GET",
             contentType: 'application/json; charset=utf-8',
             success: function (data) {
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 $("#quarto-id").val(data.Quarto.Id);
                 $("#quarto-titulo").val(data.Quarto.Titulo);
                 $("#quarto-capacidade").val(data.Quarto.Capacidade);
@@ -168,6 +205,7 @@ function PostQuarto() {
     }
 }
 
+<<<<<<< HEAD
 function PostQuartoEquipe() {
     if (ValidateForm(`#form-quarto`)) {
         $.ajax({
@@ -194,6 +232,8 @@ function PostQuartoEquipe() {
     }
 }
 
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 function DistribuirQuartos() {
     $.ajax({
         url: "/Quarto/DistribuirQuartos/",
@@ -219,7 +259,11 @@ function GetParticipantesSemQuarto() {
 
     $.ajax({
         url: "/Quarto/GetParticipantesSemQuarto/",
+<<<<<<< HEAD
         data: { EventoId: $("#quarto-eventoid").val(), Tipo: window.location.href.includes('QuartoEquipe') ? 0 : 1 },
+=======
+        data: { EventoId: $("#quarto-eventoid").val() },
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         datatype: "json",
         type: "GET",
         contentType: 'application/json; charset=utf-8',
@@ -240,7 +284,11 @@ function GetQuartosComParticipantes() {
     $.ajax({
         url: '/Quarto/GetQuartos',
         datatype: "json",
+<<<<<<< HEAD
         data: { EventoId: $("#quarto-eventoid").val(), Tipo: window.location.href.includes('QuartoEquipe') ? 0 : 1 },
+=======
+        data: { EventoId: $("#quarto-eventoid").val() },
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         type: "POST",
         success: function (data) {
             data.data.forEach(function (quarto, index, array) {
@@ -258,7 +306,11 @@ function GetQuartosComParticipantes() {
 
             $.ajax({
                 url: "/Quarto/GetQuartosComParticipantes/",
+<<<<<<< HEAD
                 data: { EventoId: $("#quarto-eventoid").val(), Tipo: window.location.href.includes('QuartoEquipe') ? 0 : 1 },
+=======
+                data: { EventoId: $("#quarto-eventoid").val() },
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 datatype: "json",
                 type: "GET",
                 contentType: 'application/json; charset=utf-8',
@@ -279,7 +331,11 @@ function DragDropg() {
 
     $('.quarto').droppable({
         drop: function (event, ui) {
+<<<<<<< HEAD
             var origem = $($($(ui.draggable).parent().parent().parent().parent().children()[0]).children()[0]);
+=======
+            var origem = $($($(ui.draggable).parent().parent().parent().parent().children()[0]).children()[0]);      
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             $(ui.draggable).parent().remove();
             ChangeQuarto($(ui.draggable).data('id'), $(this).data('id'));
             origem.text(AddMembroQuarto(origem.text(), -1));
@@ -321,8 +377,12 @@ function ChangeQuarto(participanteId, destinoId) {
         data: JSON.stringify(
             {
                 ParticipanteId: participanteId,
+<<<<<<< HEAD
                 DestinoId: destinoId,
                 tipo: window.location.href.includes('QuartoEquipe') ? 0 : 1
+=======
+                DestinoId: destinoId
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             }),
         success: function () {
             CarregarTabelaQuarto();

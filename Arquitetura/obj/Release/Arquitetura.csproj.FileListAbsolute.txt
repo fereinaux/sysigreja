@@ -188,6 +188,7 @@ C:\Users\User\source\repos\Realidade\Arquitetura\obj\Release\Arquitetura.csproj.
 C:\Users\User\source\repos\Realidade\Arquitetura\obj\Release\Arquitetura.csproj.CopyComplete
 C:\Users\User\source\repos\Realidade\Arquitetura\obj\Release\Arquitetura.dll
 C:\Users\User\source\repos\Realidade\Arquitetura\obj\Release\Arquitetura.pdb
+<<<<<<< HEAD
 C:\Users\User\source\repos\Realidade\Arquitetura\bin\Release\Microsoft.SqlServer.Types.dll
 C:\Users\felip\source\repos\ejc\Arquitetura\bin\Release\Arquitetura.dll
 C:\Users\felip\source\repos\ejc\Arquitetura\bin\Release\Arquitetura.pdb
@@ -257,3 +258,5 @@ C:\Users\User\source\repos\ejc\Arquitetura\obj\Release\Arquitetura.csproj.CoreCo
 C:\Users\User\source\repos\ejc\Arquitetura\obj\Release\Arquitetura.csproj.CopyComplete
 C:\Users\User\source\repos\ejc\Arquitetura\obj\Release\Arquitetura.dll
 C:\Users\User\source\repos\ejc\Arquitetura\obj\Release\Arquitetura.pdb
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566

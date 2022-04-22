@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "FilePath": "c:\\Users\\User\\source\\repos\\sysigreja\\Arquitetura\\Arquitetura.csproj",
+=======
+  "FilePath": "c:\\Users\\User\\source\\repos\\SysIgreja\\Arquitetura\\Arquitetura.csproj",
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
   "Configuration": {
     "ConfigurationName": "UnsupportedRazor",
     "LanguageVersion": "1.0",

@@ -1,4 +1,8 @@
 ﻿using System.Reflection;
+<<<<<<< HEAD
+=======
+using System.Runtime.CompilerServices;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following

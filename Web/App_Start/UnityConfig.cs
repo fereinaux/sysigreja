@@ -1,5 +1,6 @@
 using Core.Business.Account;
 using Core.Business.Arquivos;
+<<<<<<< HEAD
 using Core.Business.Caronas;
 using Core.Business.CentroCusto;
 using Core.Business.Circulos;
@@ -12,6 +13,16 @@ using Core.Business.Eventos;
 using Core.Business.Lancamento;
 using Core.Business.MeioPagamento;
 using Core.Business.Mensagem;
+=======
+using Core.Business.CentroCusto;
+using Core.Business.Circulos;
+using Core.Business.ContaBancaria;
+using Core.Business.Equipantes;
+using Core.Business.Equipes;
+using Core.Business.Eventos;
+using Core.Business.Lancamento;
+using Core.Business.MeioPagamento;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Core.Business.Newsletter;
 using Core.Business.Participantes;
 using Core.Business.Quartos;
@@ -19,8 +30,15 @@ using Core.Business.Reunioes;
 using Data.Context;
 using Data.Entities;
 using Data.Repository;
+<<<<<<< HEAD
 using System.Web.Mvc;
 using Unity;
+=======
+using SysIgreja.Controllers;
+using System.Web.Mvc;
+using Unity;
+using Unity.Injection;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Unity.Mvc5;
 using Utils.Services;
 
@@ -30,8 +48,13 @@ namespace Web
     {
         public static void RegisterComponents()
         {
+<<<<<<< HEAD
             var container = new UnityContainer();
 
+=======
+			var container = new UnityContainer();           
+            
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
 
             container.RegisterType<IGenericRepositoryConsulta<ParticipanteConsulta>, GenericRepositoryConsulta<ParticipanteConsulta>>();
@@ -50,6 +73,7 @@ namespace Web
             container.RegisterType<IGenericRepository<Arquivo>, GenericRepository<Arquivo>>();
             container.RegisterType<IGenericRepository<Circulo>, GenericRepository<Circulo>>();
             container.RegisterType<IGenericRepository<Quarto>, GenericRepository<Quarto>>();
+<<<<<<< HEAD
             container.RegisterType<IGenericRepository<Etiqueta>, GenericRepository<Etiqueta>>();
             container.RegisterType<IGenericRepository<CirculoParticipante>, GenericRepository<CirculoParticipante>>();
             container.RegisterType<IGenericRepository<ParticipantesEtiquetas>, GenericRepository<ParticipantesEtiquetas>>();
@@ -59,6 +83,10 @@ namespace Web
             container.RegisterType<IGenericRepository<ConfiguracaoCampos>, GenericRepository<ConfiguracaoCampos>>();
             container.RegisterType<IGenericRepository<Carona>, GenericRepository<Carona>>();
             container.RegisterType<IGenericRepository<CaronaParticipante>, GenericRepository<CaronaParticipante>>();
+=======
+            container.RegisterType<IGenericRepository<CirculoParticipante>, GenericRepository<CirculoParticipante>>();
+            container.RegisterType<IGenericRepository<QuartoParticipante>, GenericRepository<QuartoParticipante>>();
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             container.RegisterType<IEmailSender, EmailSender>();
             container.RegisterType<IDatatableService, DatatableService>();
@@ -72,15 +100,22 @@ namespace Web
             container.RegisterType<IEventosBusiness, EventosBusiness>();
             container.RegisterType<INewsletterBusiness, NewsletterBusiness>();
             container.RegisterType<IParticipantesBusiness, ParticipantesBusiness>();
+<<<<<<< HEAD
             container.RegisterType<IEtiquetasBusiness, EtiquetasBusiness>();
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             container.RegisterType<IMeioPagamentoBusiness, MeioPagamentoBusiness>();
             container.RegisterType<IAccountBusiness, AccountBusiness>();
             container.RegisterType<IReunioesBusiness, ReunioesBusiness>();
             container.RegisterType<ICirculosBusiness, CirculosBusiness>();
+<<<<<<< HEAD
             container.RegisterType<ICaronasBusiness, CaronasBusiness>();
             container.RegisterType<IQuartosBusiness, QuartosBusiness>();
             container.RegisterType<IMensagemBusiness, MenssagemBusinesss>();
             container.RegisterType<IConfiguracaoBusiness, ConfiguracaoBusiness>();
+=======
+            container.RegisterType<IQuartosBusiness, QuartosBusiness>();
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
     }
 }

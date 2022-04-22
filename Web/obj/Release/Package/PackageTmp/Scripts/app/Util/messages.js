@@ -55,9 +55,15 @@ function RodapeEvento(evento) {
 function Convidar(nome) {
     return `Olá *${nome}*,
 
+<<<<<<< HEAD
 Você gostaria de trabalhar no próximo Realidade de 25 a 27 de Março nossa primeira reunião será na quarta feira (16/02) às 19h30 na *Catedral da Trindade*.
 
 Esse convite é pessoal e *intransferível*.
+=======
+Você gostaria de trabalhar no próximo Realidade de 17 a 19 de Abril, nossa primeira reunião será na quarta feira (18/03) às 19h30 na *Catedral da Trindade*.
+
+Esse convite é pessoal e *intransferível*. 
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 Carol Bastos.`;
 }

@@ -314,9 +314,12 @@
     <Reference Include="Microsoft.Owin.Security.Twitter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
@@ -760,6 +763,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\MensagemController.cs" />
     <Compile Include="Controllers\ConfiguracaoController.cs" />
     <Compile Include="Controllers\EtiquetaController.cs" />
@@ -767,6 +771,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CentroCustoController.cs" />
     <Compile Include="Controllers\CaronaController.cs" />
+=======
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CentroCustoController.cs" />
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <Compile Include="Controllers\QuartoController.cs" />
     <Compile Include="Controllers\EquipeController.cs" />
     <Compile Include="Controllers\EquipanteController.cs" />
@@ -786,9 +795,13 @@
     </Compile>
     <Compile Include="Helpers\HMTLHelperExtensions.cs" />
     <Compile Include="Mapper\Mapper.cs" />
+<<<<<<< HEAD
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="ViewModels\AdminViewModel.cs" />
     <Compile Include="ViewModels\CaronaViewModel.cs" />
+=======
+    <Compile Include="ViewModels\AdminViewModel.cs" />
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <Compile Include="ViewModels\QuartoViewModel.cs" />
     <Compile Include="ViewModels\ContaBancariaViewModel.cs" />
     <Compile Include="ViewModels\CentroCustoViewModel.cs" />
@@ -878,6 +891,7 @@
     <Content Include="Images\equipes\Reitores.png" />
     <Content Include="Images\equipes\Secretaria.png" />
     <Content Include="Images\equipes\Vaila de Apoio Integral.png" />
+<<<<<<< HEAD
     <Content Include="Images\logo-iecb.png" />
     <Content Include="Images\logo_sombra.png" />
     <Content Include="Images\mapa\amarelo-crown.png" />
@@ -902,6 +916,9 @@
     <Content Include="Images\mapa\vermelho.png" />
     <Content Include="Images\mont-normal.js" />
     <Content Include="Images\Montserrat-normal.js" />
+=======
+    <Content Include="Images\logo_sombra.png" />
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <Content Include="Images\pix-bc-logo.png" />
     <Content Include="Images\qrcode pix.png" />
     <Content Include="Content\Images\question-mark-1.png" />
@@ -1022,7 +1039,10 @@
     <Content Include="fonts\font-awesome\webfonts\fa-solid-900.ttf" />
     <Content Include="fonts\font-awesome\webfonts\fa-solid-900.woff" />
     <Content Include="fonts\font-awesome\webfonts\fa-solid-900.woff2" />
+<<<<<<< HEAD
     <Content Include="Images\mapa\marker.psd" />
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <None Include="packages.config" />
     <Content Include="Content\landing\avatar_all.png" />
     <Content Include="Content\landing\header_one.jpg" />
@@ -1038,10 +1058,13 @@
     <Content Include="Images\Bancos\Itaú.png" />
     <Content Include="Images\Bancos\NuBank.png" />
     <Content Include="Images\Bancos\Santander.png" />
+<<<<<<< HEAD
     <Content Include="Images\tag-background.jpg" />
     <Content Include="Scripts\app\Carona\carona.js" />
     <Content Include="Scripts\app\Etiqueta\etiqueta.js" />
     <Content Include="Scripts\app\Mensagem\mensagem.js" />
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <Content Include="Scripts\app\Participante\checkin.js" />
     <Content Include="Scripts\app\Quarto\quarto.js" />
     <Content Include="Scripts\app\Equipante\equipante.js" />
@@ -1067,7 +1090,10 @@
     <Content Include="Scripts\app\Usuario\usuario.js" />
     <Content Include="Scripts\app\MeioPagamento\meio-pagamento.js" />
     <Content Include="Scripts\app\Inscricoes\inscricoes.js" />
+<<<<<<< HEAD
     <Content Include="Scripts\app\Util\mapa.js" />
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <Content Include="Scripts\app\Util\pdf.js" />
     <Content Include="Scripts\app\Util\extensions.js" />
     <Content Include="Scripts\app\Util\forms.js" />
@@ -1119,6 +1145,7 @@
     <Content Include="Scripts\plugins\sweetalert\sweetalert.min.js" />
     <Content Include="Scripts\plugins\validate\jquery.validate.min.js" />
     <Content Include="Scripts\popper.min.js" />
+<<<<<<< HEAD
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -1132,6 +1159,8 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1182,6 +1211,7 @@
     <Content Include="Scripts\plugins\jsCrop-master\LICENSE" />
     <Content Include="Scripts\plugins\jsCrop-master\README.md" />
     <Content Include="Views\Inscricoes\InscricaoEspera.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Etiqueta\Index.cshtml" />
     <Content Include="Views\Configuracao\Index.cshtml" />
     <Content Include="Views\Mensagem\Index.cshtml" />
@@ -1189,6 +1219,8 @@
     <Content Include="Views\Quarto\QuartoEquipe.cshtml" />
     <Content Include="Views\Inscricoes\Equipe.cshtml" />
     <Content Include="Views\Equipante\InscricaoConcluida.cshtml" />
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -1,8 +1,17 @@
 ﻿using Core.Models.Arquivos;
+<<<<<<< HEAD
+=======
+using Core.Models.Eventos;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Data.Entities;
 using Data.Repository;
 using System.IO;
 using System.Linq;
+<<<<<<< HEAD
+=======
+using System.Data.Entity;
+using Utils.Enums;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 namespace Core.Business.Arquivos
 {
@@ -22,7 +31,11 @@ namespace Core.Business.Arquivos
         }
 
         public void DeleteFotoEquipante(int id)
+<<<<<<< HEAD
         {
+=======
+        {            
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             arquivoRepository.Delete(arquivoRepository.GetAll(x => x.EquipanteId == id && x.IsFoto).FirstOrDefault().Id);
             arquivoRepository.Save();
         }
@@ -55,7 +68,11 @@ namespace Core.Business.Arquivos
 
         public IQueryable<Arquivo> GetArquivosByEvento(int eventoId)
         {
+<<<<<<< HEAD
             return arquivoRepository.GetAll(x => x.EventoId == eventoId && !x.EquipanteId.HasValue);
+=======
+            return arquivoRepository.GetAll(x => x.EventoId == eventoId && !x.EquipanteId.HasValue );
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public IQueryable<Arquivo> GetArquivosByLancamento(int lancamentoId)
@@ -68,7 +85,11 @@ namespace Core.Business.Arquivos
             return arquivoRepository.GetAll(x => x.ParticipanteId == participanteId);
         }
 
+<<<<<<< HEAD
         public int PostArquivo(PostArquivoModel model)
+=======
+        public void PostArquivo(PostArquivoModel model)
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         {
             using (var binaryReader = new BinaryReader(model.Arquivo.InputStream))
             {
@@ -87,6 +108,7 @@ namespace Core.Business.Arquivos
 
                 arquivoRepository.Insert(arquivo);
                 arquivoRepository.Save();
+<<<<<<< HEAD
                 return arquivo.Id;
             }
         }
@@ -103,5 +125,9 @@ namespace Core.Business.Arquivos
 
             arquivoRepository.Save();
         }
+=======
+            }
+        }
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     }
 }

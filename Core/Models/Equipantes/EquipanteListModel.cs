@@ -1,7 +1,12 @@
 ﻿using Core.Models.DataTable;
+<<<<<<< HEAD
 using Core.Models.Etiquetas;
 using System.Collections.Generic;
 using System.ComponentModel;
+=======
+using System;
+using System.Collections.Generic;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Utils.Enums;
 
 namespace Core.Models.Equipantes
@@ -9,11 +14,14 @@ namespace Core.Models.Equipantes
 
     public class FilterModel
     {
+<<<<<<< HEAD
         public int? EventoId { get; set; }
         public EquipesEnum? Equipe { get; set; }
         public string Status { get; set; }
         public List<string> Etiquetas { get; set; }
         public List<string> NaoEtiquetas { get; set; }
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         public int Start { get; set; }
         public int Length { get; set; }
         public List<Column> columns { get; set; }
@@ -27,7 +35,10 @@ namespace Core.Models.Equipantes
         public string Nome { get; set; }
         public string Apelido { get; set; }
         public string Equipe { get; set; }
+<<<<<<< HEAD
         public string Status { get; set; }
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         public int Idade { get; set; }
         public int Faltas { get; set; }
         public int QtdAnexos { get; set; }
@@ -35,6 +46,7 @@ namespace Core.Models.Equipantes
         public string Fone { get; set; }
         public bool HasVacina { get; set; }
         public bool HasFoto { get; set; }
+<<<<<<< HEAD
         public bool HasOferta { get; set; }
         public string DataNascimento { get; set; }
         public string Email { get; set; }
@@ -66,5 +78,8 @@ namespace Core.Models.Equipantes
         public string Medicacao { get; set; }
         [DisplayName("Restrição Alimentar")]
         public string RestricaoAlimentar { get; set; }
+=======
+     
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Arquitetura.ViewModels;
 using AutoMapper;
 using Core.Business.Arquivos;
+<<<<<<< HEAD
 using Core.Business.Configuracao;
 using Core.Business.ContaBancaria;
 using Core.Business.Equipantes;
@@ -12,11 +13,25 @@ using Core.Business.MeioPagamento;
 using Core.Business.Quartos;
 using Core.Business.Reunioes;
 using Core.Models.Equipantes;
+=======
+using Core.Business.ContaBancaria;
+using Core.Business.Equipantes;
+using Core.Business.Equipes;
+using Core.Business.Eventos;
+using Core.Business.Lancamento;
+using Core.Business.MeioPagamento;
+using Core.Business.Reunioes;
+using Core.Models.Equipantes;
+using Core.Models.Lancamento;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Data.Entities;
 using SysIgreja.ViewModels;
 using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Globalization;
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.Linq;
 using System.Linq.Dynamic;
 using System.Web.Mvc;
@@ -32,8 +47,11 @@ namespace SysIgreja.Controllers
     public class EquipanteController : Controller
     {
         private readonly IEquipantesBusiness equipantesBusiness;
+<<<<<<< HEAD
         private readonly IEtiquetasBusiness etiquetasBusiness;
         private readonly IQuartosBusiness quartosBusiness;
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         private readonly IArquivosBusiness arquivoBusiness;
         private readonly IEventosBusiness eventosBusiness;
         private readonly IEquipesBusiness equipesBusiness;
@@ -41,6 +59,7 @@ namespace SysIgreja.Controllers
         private readonly ILancamentoBusiness lancamentoBusiness;
         private readonly IMeioPagamentoBusiness meioPagamentoBusiness;
         private readonly IContaBancariaBusiness contaBancariaBusiness;
+<<<<<<< HEAD
         private readonly IConfiguracaoBusiness configuracaoBusiness;
         private readonly IDatatableService datatableService;
         private readonly IMapper mapper;
@@ -52,6 +71,13 @@ namespace SysIgreja.Controllers
             this.quartosBusiness = quartosBusiness;
             this.etiquetasBusiness = etiquetasBusiness;
             this.configuracaoBusiness = configuracaoBusiness;
+=======
+        private readonly IMapper mapper;
+
+
+        public EquipanteController(IEquipantesBusiness equipantesBusiness, IEventosBusiness eventosBusiness, IEquipesBusiness equipesBusiness, ILancamentoBusiness lancamentoBusiness, IReunioesBusiness reunioesBusiness, IMeioPagamentoBusiness meioPagamentoBusiness, IContaBancariaBusiness contaBancariaBusiness, IArquivosBusiness arquivoBusiness)
+        {
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             this.equipantesBusiness = equipantesBusiness;
             this.eventosBusiness = eventosBusiness;
             this.equipesBusiness = equipesBusiness;
@@ -60,10 +86,15 @@ namespace SysIgreja.Controllers
             this.contaBancariaBusiness = contaBancariaBusiness;
             this.meioPagamentoBusiness = meioPagamentoBusiness;
             this.reunioesBusiness = reunioesBusiness;
+<<<<<<< HEAD
             this.datatableService = datatableService;
             var eventoAtivo = eventosBusiness.GetEventoAtivo() ?? eventosBusiness.GetEventos().ToList().LastOrDefault();
             qtdReunioes = reunioesBusiness.GetReunioes(eventosBusiness.GetEventoAtivo().Id).Where(x => x.DataReuniao < System.DateTime.Today).Count();
             mapper = new MapperRealidade(qtdReunioes, eventoAtivo.Id).mapper;
+=======
+            var eventoAtivo = eventosBusiness.GetEventoAtivo() ?? eventosBusiness.GetEventos().ToList().LastOrDefault();
+            mapper = new MapperRealidade(reunioesBusiness.GetReunioes(eventoAtivo.Id).Where(x => x.DataReuniao < System.DateTime.Today).Count()).mapper;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
 
@@ -96,6 +127,7 @@ namespace SysIgreja.Controllers
         }
 
         [HttpPost]
+<<<<<<< HEAD
         public ActionResult getEquipantesExcel(int eventoid)
         {
             Guid g = Guid.NewGuid();
@@ -253,6 +285,39 @@ namespace SysIgreja.Controllers
                     recordsFiltered = filteredResultsCount,
                 }, JsonRequestBehavior.AllowGet);
             }
+=======
+        public ActionResult GetEquipantesDataTable(FilterModel model)
+        {
+
+            var result = equipantesBusiness.GetEquipantes();
+
+            var totalResultsCount = result.Count();
+            var filteredResultsCount = totalResultsCount;
+
+            if (model.search.value != null)
+            {
+                result = result.Where(x => (x.Nome.Contains(model.search.value)));
+                filteredResultsCount = result.Count();
+            }
+
+            try
+            {
+                result = result.OrderBy(model.columns[model.order[0].column].name + " " + model.order[0].dir);
+            }
+            catch (Exception)
+            {
+            }
+
+            result = result.Skip(model.Start)
+            .Take(model.Length);
+
+            return Json(new
+            {
+                data = mapper.Map<IEnumerable<EquipanteListModel>>(result),
+                recordsTotal = totalResultsCount,
+                recordsFiltered = filteredResultsCount,
+            }, JsonRequestBehavior.AllowGet);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         [HttpPost]
@@ -260,7 +325,11 @@ namespace SysIgreja.Controllers
         {
 
             var result = equipantesBusiness.GetEquipantes();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             return Json(new { data = mapper.Map<IEnumerable<EquipanteListModel>>(result) }, JsonRequestBehavior.AllowGet);
         }
 
@@ -272,6 +341,7 @@ namespace SysIgreja.Controllers
 
             result.Nome = UtilServices.CapitalizarNome(result.Nome);
             result.Apelido = UtilServices.CapitalizarNome(result.Apelido);
+<<<<<<< HEAD
             var equipeAtual = equipesBusiness.GetEquipeAtual(eventoId, result.Id);
             result.Equipe = equipeAtual?.Equipe.GetDescription() ?? "";
             result.Checkin = equipeAtual?.Checkin ?? false;
@@ -366,6 +436,21 @@ namespace SysIgreja.Controllers
                 return new HttpStatusCodeResult(200);
             }
 
+=======
+            result.Equipe = equipesBusiness.GetEquipeAtual(eventoId, result.Id)?.Equipe.GetDescription() ?? "";
+
+            var equipante = mapper.Map<PostEquipanteModel>(result);
+
+            return Json(new { Equipante = equipante }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult PostEquipante(PostEquipanteModel model)
+        {
+            equipantesBusiness.PostEquipante(model);
+
+            return new HttpStatusCodeResult(200);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         [HttpPost]
@@ -401,9 +486,15 @@ namespace SysIgreja.Controllers
         }
 
         [HttpPost]
+<<<<<<< HEAD
         public ActionResult ToggleCheckin(int Id, int eventoid)
         {
             equipantesBusiness.ToggleCheckin(Id, eventoid);
+=======
+        public ActionResult ToggleCheckin(int Id)
+        {
+            equipantesBusiness.ToggleCheckin(Id);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             return new HttpStatusCodeResult(200);
         }

@@ -2,6 +2,7 @@
     return this.split(needle).join(replacement);
 };
 
+<<<<<<< HEAD
 String.prototype.convertToRGB = function () {
     var aRgbHex = this
     var aRgb = [
@@ -12,6 +13,8 @@ String.prototype.convertToRGB = function () {
     return aRgb;
 }
 
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 function EncodeUrl(text) {
     return encodeURIComponent(text).replace(/'/g, "%27").replace(/"/g, "%22").replaceAll("%2Fn", "%0A");
 }

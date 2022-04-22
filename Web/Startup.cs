@@ -17,8 +17,12 @@ namespace SysIgreja
         {
             // Your other services
             services.AddMvc();
+<<<<<<< HEAD
             services.AddProgressiveWebApp(new PwaOptions
             {
+=======
+            services.AddProgressiveWebApp(new PwaOptions {
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 RegisterServiceWorker = false,
                 RegisterWebmanifest = false
             });

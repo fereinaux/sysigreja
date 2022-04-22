@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿const map = initMap('map')
 const markerLayer = createMarkerLayer(map)
 map.setView([-8.050000, -34.900002], 10);
@@ -6,6 +7,9 @@ setInterval(function () {
 }, 100);
 
 function CarregarTabelaCirculo() {
+=======
+﻿function CarregarTabelaCirculo() {
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
     $('#gerenciar').text("Gerenciar Círculos");
     $('#participantes-sem').text("Participantes sem Círculo");
@@ -35,7 +39,11 @@ function CarregarTabelaCirculo() {
         fixedHeader: true,
         filter: true,
         orderMulti: false,
+<<<<<<< HEAD
         responsive: true, stateSave: true,
+=======
+        responsive: true,stateSave: true,
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         destroy: true,
         dom: domConfigNoButtons,
         columns: columnsTb,
@@ -61,6 +69,7 @@ $(document).ready(function () {
         });
     });
 
+<<<<<<< HEAD
     CirculoRefresh()
 });
 
@@ -72,6 +81,12 @@ function CirculoRefresh() {
     GetCirculosComParticipantes();
     GetCoresAtivas()
 }
+=======
+    CarregarTabelaCirculo();
+    GetParticipantesSemCirculo();
+    GetCirculosComParticipantes();
+});
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 function PrintCirculo(row) {
     $.ajax({
@@ -83,12 +98,20 @@ function PrintCirculo(row) {
             var doc = CriarPDFA4();
 
             var evento = $("#circulo-eventoid option:selected").text()
+<<<<<<< HEAD
 
+=======
+     
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             var img = new Image();
             img.src = `/Images/logo-preto.png`;
 
+<<<<<<< HEAD
             doc.setFont('helvetica', "normal")
+=======
+            doc.setFont('helvetica',"normal")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             doc.setFontSize(12);
             doc.addImage(img, 'PNG', 10, 10, 64, 21);
             doc.text(77, 15, $("#circulo-eventoid option:selected").text());
@@ -101,13 +124,21 @@ function PrintCirculo(row) {
             doc.text(77, 30, `Data de Impressão: ${moment().format('DD/MM/YYYY HH:mm')}`);;
             doc.line(10, 38, 195, 38);
 
+<<<<<<< HEAD
             doc.setFont('helvetica', "bold")
+=======
+            doc.setFont('helvetica',"bold")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             doc.text(12, 43, "Nome");
             doc.text(117, 43, "Apelido");
             doc.text(152, 43, "Whatsapp");
 
             doc.line(10, 45, 195, 45);
+<<<<<<< HEAD
             doc.setFont('helvetica', "normal")
+=======
+            doc.setFont('helvetica',"normal")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             height = 50;
 
             $(result.data).each((index, participante) => {
@@ -270,6 +301,7 @@ function GetParticipantesSemCirculo() {
 }
 
 
+<<<<<<< HEAD
 
 function addMapa(lat, long, nome, cor,id) {
     var marker = L.marker([lat, long], { icon: getIcon(cor.toLowerCase().replaceAll(' ', '-')) }).on('click', function (e) { clickMarker(id) }).addTo(markerLayer);
@@ -301,6 +333,8 @@ $("#modal-cores").on('hidden.bs.modal', function () {
 });
 
 
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 function GetCirculosComParticipantes() {
     $("#circulos").empty();
 
@@ -329,6 +363,7 @@ function GetCirculosComParticipantes() {
                 type: "GET",
                 contentType: 'application/json; charset=utf-8',
                 success: function (data) {
+<<<<<<< HEAD
                     markerLayer.getLayers().forEach(mark => mark.remove())
                     data.Circulos.forEach(function (circulo, index, array) {
                         if (circulo.Latitude && circulo.Longitude) {
@@ -339,6 +374,12 @@ function GetCirculosComParticipantes() {
                         $(`#pg-${circulo.CirculoId}`).append($(`<tr><td class="participante" data-id="${circulo.ParticipanteId}">${circulo.Nome}</td></tr>`));
                     });
                     $('.div-map').css('display', 'block')
+=======
+                    data.Circulos.forEach(function (circulo, index, array) {
+                        $(`#pg-${circulo.CirculoId}`).append($(`<tr><td class="participante" data-id="${circulo.ParticipanteId}">${circulo.Nome}</td></tr>`));
+                    });
+
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     DragDropg();
                 }
             });
@@ -386,6 +427,7 @@ function ChangeCirculo(participanteId, destinoId) {
                 DestinoId: destinoId
             }),
         success: function () {
+<<<<<<< HEAD
             CirculoRefresh();
         }
     });
@@ -409,6 +451,9 @@ function GetCoresAtivas() {
                 ErrorMessage("Não existem Cores disponíveis");
                 $("#modal-cores").modal("hide");
             }
+=======
+            CarregarTabelaCirculo();
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
     });
 }
@@ -424,7 +469,10 @@ function GetCores(id) {
         contentType: 'application/json; charset=utf-8',
         success: function (data) {
             data.Cores.forEach(function (cor, index, array) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 $('#circulo-cores').append($(`<option value="${cor.Id}">${cor.Description}</option>`));
             });
             if (id == 0) {

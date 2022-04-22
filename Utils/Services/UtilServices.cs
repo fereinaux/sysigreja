@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+<<<<<<< HEAD
+=======
+using System.Net;
+using System.Net.Mail;
+using System.Text;
+using System.Threading.Tasks;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 namespace Utils.Services
 {
     public static class UtilServices
     {
+<<<<<<< HEAD
         public static int GetAge(DateTime? dataNascimento)
         {
             if (!dataNascimento.HasValue)
@@ -14,6 +22,11 @@ namespace Utils.Services
                 return 0;
             }
             var age = DateTime.Today.Year - dataNascimento.Value.Year;
+=======
+        public static int GetAge(DateTime dataNascimento)
+        {
+            var age = DateTime.Today.Year - dataNascimento.Year;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             if (dataNascimento > DateTime.Today.AddYears(-age)) age--;
 
             return age;

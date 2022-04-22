@@ -182,10 +182,15 @@ C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Utils.dll
 C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Core.pdb
 C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Data.pdb
 C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Utils.pdb
+<<<<<<< HEAD
+=======
+C:\Users\User\source\repos\Realidade\Arquitetura\obj\Debug\Arquitetura.csprojAssemblyReference.cache
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 C:\Users\User\source\repos\Realidade\Arquitetura\obj\Debug\Arquitetura.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\Realidade\Arquitetura\obj\Debug\Arquitetura.csproj.CopyComplete
 C:\Users\User\source\repos\Realidade\Arquitetura\obj\Debug\Arquitetura.dll
 C:\Users\User\source\repos\Realidade\Arquitetura\obj\Debug\Arquitetura.pdb
+<<<<<<< HEAD
 C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\System.Linq.Dynamic.dll
 C:\Users\User\source\repos\Realidade\Arquitetura\obj\Debug\Arquitetura.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\Realidade\Arquitetura\bin\Debug\Microsoft.SqlServer.Types.dll
@@ -257,3 +262,5 @@ C:\Users\User\source\repos\sysigreja\Arquitetura\obj\Debug\Arquitetura.csproj.Co
 C:\Users\User\source\repos\sysigreja\Arquitetura\obj\Debug\Arquitetura.csproj.CopyComplete
 C:\Users\User\source\repos\sysigreja\Arquitetura\obj\Debug\Arquitetura.dll
 C:\Users\User\source\repos\sysigreja\Arquitetura\obj\Debug\Arquitetura.pdb
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566

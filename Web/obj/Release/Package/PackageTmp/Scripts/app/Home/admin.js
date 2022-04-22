@@ -3,6 +3,7 @@
     GetResultadosAdmin();
 });
 
+<<<<<<< HEAD
 function getEquipantesExcel() {
     $.ajax({
         url: "/Equipante/getEquipantesExcel/",
@@ -18,6 +19,8 @@ function getEquipantesExcel() {
     });
 }
 
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 function GetResultadosAdmin() {
     $.ajax({
         url: '/Home/GetResultadosAdmin',
@@ -148,6 +151,7 @@ function GetResultadosAdmin() {
             $("#cancelados").text(result.Cancelados);
             $("#meninos").text(result.Meninos);
             $("#meninas").text(result.Meninas);
+<<<<<<< HEAD
             $("#equipe-male").text(result.EquipeMeninos);
             $("#equipe-female").text(result.EquipeMeninas);
             $("#boletos").text(result.Boletos);
@@ -155,6 +159,10 @@ function GetResultadosAdmin() {
             $("#saldo").text(result.SaldoGeral);
             $("#saldodinheiro").text(result.SaldoDinheir);
             $("#saldopix").text(result.SaldoPix);
+=======
+            $("#boletos").text(result.Boletos);
+            $("#contatos").text(result.Contatos);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             $("#receita").text(result.TotalReceber);
             $("#despesa").text(result.TotalPagar);
 

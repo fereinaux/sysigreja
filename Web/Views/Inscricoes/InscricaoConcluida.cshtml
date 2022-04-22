@@ -8,6 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>@ViewBag.Configuracao.Titulo | Inscrições</title>
     <link href="~/Content/bootstrap.css" rel="stylesheet">
     <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
@@ -16,11 +17,17 @@
 
         <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,@ViewBag.Configuracao.Logo" />
     }
+=======
+    <title>Realidade | Inscrições</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <link href="~/Content/animate.css" rel="stylesheet">
     <link href="~/Content/style.css" rel="stylesheet">
     <link href="~/Content/evento.css" rel="stylesheet">
     <link href="~/Content/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 </head>
+<<<<<<< HEAD
 <body class="background-evento" style="display:flex">
     <div class="middle-box inscricoes animated fadeInDown " style="display:flex;margin:auto">
         <div class="row" style="margin:auto">
@@ -35,6 +42,18 @@
                     </div>
                 }
                 <div class="row justify-content-center m-l-lg m-r-lg m-t-lg text-white text-center">
+=======
+<body class="background-evento">
+    <div class="middle-box inscricoes animated fadeInDown ">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row justify-content-center">
+                    <div class="col-sm-offset-3 col-sm-6">
+                        <img class="full-width" src="~/Images/logo-branco.png" alt="Realidade" />
+                    </div>
+                </div>
+                <div class="row justify-content-center m-l-lg m-r-lg m-t-lg m-b-sm text-white text-center">
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     <h2>"@ViewBag.Participante.Apelido"</h2>
                     <h3>Obrigado por se inscrever no @ViewBag.Participante.Evento!</h3>
                     <h3>Fica ligado que apenas o pagamento garante a sua vaga</h3>
@@ -42,6 +61,7 @@
                 </div>
             </div>
 
+<<<<<<< HEAD
             <div class="col-sm-12 p-h-xs text-white text-center">
                 <h3>Valor</h3>
                 <h2 class="m-t-xs m-b-md">@ViewBag.Participante.Valor</h2>
@@ -54,6 +74,24 @@
                 <h2 style="cursor:pointer;margin-top:0" onclick="window.open(`https://api.whatsapp.com/send?phone=@ViewBag.Participante.PadrinhoFone`)">
                     @ViewBag.Participante.PadrinhoNome - @ViewBag.Participante.PadrinhoFone.Substring(3)
                 </h2>
+=======
+            <div class="col-sm-12 p-h-sm text-white text-center">
+                <h2>Formas de Pagamen   to</h2>
+                <h2>R$ 300,00</h2>
+                <h3>Enviar comprovante para:</h3>
+                <h3 style="        margin-bottom: 40px;
+    
+">Felipe Reinaux - (81)9.9718-7441</h3>
+
+                <div class="text-white text-center d-flex flex-column">
+                    <h3>Pagamento PIX via QR Code ou link:</h3>
+                    <div style="margin-bottom:20px">
+
+                    <a target="_blank" class="text-white" href="https://nubank.com.br/pagar/r21un/sXS2oNYSes" style="text-decoration: underline;">https://nubank.com.br/pagar/r21un/sXS2oNYSes</a>
+                    </div>
+                    <img class="m-auto" style="width:33%" src="~/Images/qrcode pix.png" />
+                </div>
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             </div>
 
         </div>
@@ -65,6 +103,7 @@
 <script src="~/Scripts/plugins/sweetalert/sweetalert.min.js"></script>
 
 <script>
+<<<<<<< HEAD
 
     $(document).ready(function () {
         if (@ViewBag.Configuracao.BackgroundId)
@@ -73,6 +112,9 @@
             $('.background-evento').css('background-size', 'cover')
 
         }
+=======
+    $(document).ready(function () {
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         var ContasBancarias = @Html.Raw(Json.Encode(ViewBag.ContasBancarias));
         htmlContas = ``
         var indiceFinal = 0;

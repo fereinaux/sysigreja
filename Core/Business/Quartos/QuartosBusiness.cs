@@ -2,8 +2,13 @@
 using Data.Entities;
 using Data.Repository;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Data.Entity;
 using System.Linq;
+=======
+using System.Linq;
+using System.Data.Entity;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Utils.Enums;
 using Utils.Services;
 
@@ -14,13 +19,19 @@ namespace Core.Business.Quartos
         private readonly IGenericRepository<Quarto> quartoRepository;
         private readonly IGenericRepository<QuartoParticipante> quartoParticipanteRepository;
         private readonly IGenericRepository<Participante> participanteRepository;
+<<<<<<< HEAD
         private readonly IGenericRepository<Equipante> equipanteRepository;
 
         public QuartosBusiness(IGenericRepository<Participante> participanteRepository, IGenericRepository<Equipante> equipanteRepository, IGenericRepository<Quarto> quartoRepository, IGenericRepository<QuartoParticipante> quartoParticipanteRepository)
+=======
+
+        public QuartosBusiness(IGenericRepository<Participante> participanteRepository, IGenericRepository<Quarto> quartoRepository, IGenericRepository<QuartoParticipante> quartoParticipanteRepository)
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         {
             this.quartoRepository = quartoRepository;
             this.participanteRepository = participanteRepository;
             this.quartoParticipanteRepository = quartoParticipanteRepository;
+<<<<<<< HEAD
             this.equipanteRepository = equipanteRepository;
         }
 
@@ -105,6 +116,48 @@ namespace Core.Business.Quartos
                 return mensagem;
             }
 
+=======
+        }
+
+        public string ChangeQuarto(int participanteId, int? destinoId)
+        {
+            var quartoParticipante = quartoParticipanteRepository.GetAll(x => x.ParticipanteId == participanteId).FirstOrDefault();
+            var participante = participanteRepository.GetById(participanteId);
+            string mensagem = "OK";
+            if (destinoId.HasValue)
+            {
+                var quarto = quartoRepository.GetById(destinoId.Value);
+                if (participante.Sexo != quarto.Sexo)
+                {
+                    mensagem = "O gênero do participante difere do gênero do quarto";
+                }
+                else if (quarto.Capacidade < quartoParticipanteRepository.GetAll(x => x.QuartoId == quarto.Id).Count() + 1)
+                {
+                    mensagem = "Capacidade do quarto excedida";
+                }
+                else
+                {
+                    if (quartoParticipante == null)
+                        quartoParticipante = new QuartoParticipante
+                        {
+                            ParticipanteId = participanteId
+                        };
+
+                    quartoParticipante.QuartoId = destinoId.Value;
+                    quartoParticipanteRepository.InsertOrUpdate(quartoParticipante);
+                }
+            }
+            else
+            {
+                if (quartoParticipante != null)
+                {
+                    quartoParticipanteRepository.Delete(quartoParticipante.Id);
+                }
+            }
+
+            quartoParticipanteRepository.Save();
+            return mensagem;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public void DeleteQuarto(int id)
@@ -113,13 +166,21 @@ namespace Core.Business.Quartos
             quartoRepository.Save();
         }
 
+<<<<<<< HEAD
         public void DistribuirQuartos(int eventoId, TipoPessoaEnum? tipo)
+=======
+        public void DistribuirQuartos(int eventoId)
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         {
             List<Participante> listParticipantes = GetParticipantesSemQuarto(eventoId);
 
             foreach (var participante in listParticipantes)
             {
+<<<<<<< HEAD
                 var quarto = GetNextQuarto(eventoId, participante.Sexo, tipo);
+=======
+                var quarto = GetNextQuarto(eventoId, participante.Sexo);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
                 if (quarto != null)
                 {
@@ -144,24 +205,42 @@ namespace Core.Business.Quartos
             return quartoRepository.GetAll();
         }
 
+<<<<<<< HEAD
         public IQueryable<QuartoParticipante> GetQuartosComParticipantes(int eventoId, TipoPessoaEnum? tipo)
         {
             return quartoParticipanteRepository.GetAll(x => x.Quarto.EventoId == eventoId && x.Quarto.TipoPessoa == (tipo ?? TipoPessoaEnum.Participante))
                 .Include(x => x.Participante)
                 .Include(x => x.Equipante)
+=======
+        public IQueryable<QuartoParticipante> GetQuartosComParticipantes(int eventoId)
+        {
+            return quartoParticipanteRepository.GetAll(x => x.Quarto.EventoId == eventoId)
+                .Include(x => x.Participante)
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 .Include(x => x.Quarto)
                 .OrderBy(x => x.QuartoId);
         }
 
+<<<<<<< HEAD
         public Quarto GetNextQuarto(int eventoId, SexoEnum sexo, TipoPessoaEnum? tipo)
         {
             var query = quartoRepository
                 .GetAll(x => x.EventoId == eventoId && x.Sexo == sexo && x.TipoPessoa == (tipo ?? TipoPessoaEnum.Participante))
+=======
+        public Quarto GetNextQuarto(int eventoId, SexoEnum sexo)
+        {
+            var query = quartoRepository
+                .GetAll(x => x.EventoId == eventoId && x.Sexo == sexo)
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 .ToList()
                 .Select(x => new
                 {
                     Quarto = x,
+<<<<<<< HEAD
                     Qtd = GetParticipantesByQuartos(x.Id, tipo).Count()
+=======
+                    Qtd = GetParticipantesByQuartos(x.Id).Count()
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 })
                 .Where(x => x.Qtd < x.Quarto.Capacidade)
                 .ToList();
@@ -172,20 +251,34 @@ namespace Core.Business.Quartos
                 : null;
         }
 
+<<<<<<< HEAD
         public IQueryable<QuartoParticipante> GetParticipantesByQuartos(int id, TipoPessoaEnum? tipo)
         {
             return quartoParticipanteRepository.GetAll(x => x.QuartoId == id && x.Quarto.TipoPessoa == (tipo ?? TipoPessoaEnum.Participante)).Include(x => x.Participante).Include(x => x.Equipante);
+=======
+        public IQueryable<QuartoParticipante> GetParticipantesByQuartos(int id)
+        {
+            return quartoParticipanteRepository.GetAll(x => x.QuartoId == id).Include(x => x.Participante);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public List<Participante> GetParticipantesSemQuarto(int eventoId)
         {
             var listParticipantesId = quartoParticipanteRepository
+<<<<<<< HEAD
                            .GetAll(x => x.Quarto.EventoId == eventoId && x.Participante.Status == StatusEnum.Confirmado && x.Quarto.TipoPessoa == TipoPessoaEnum.Participante)
+=======
+                           .GetAll(x => x.Quarto.EventoId == eventoId && x.Participante.Status != StatusEnum.Cancelado && x.Participante.Status != StatusEnum.Espera)
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                            .Select(x => x.ParticipanteId)
                            .ToList();
 
             var listParticipantes = participanteRepository
+<<<<<<< HEAD
                  .GetAll(x => x.EventoId == eventoId && !listParticipantesId.Contains(x.Id) && x.Status == StatusEnum.Confirmado)
+=======
+                 .GetAll(x => x.EventoId == eventoId && !listParticipantesId.Contains(x.Id) && x.Status != StatusEnum.Cancelado && x.Status != StatusEnum.Espera)
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                  .OrderBy(x => x.DataCadastro)
                  .ToList();
 
@@ -195,6 +288,7 @@ namespace Core.Business.Quartos
             return listParticipantes;
         }
 
+<<<<<<< HEAD
         public List<Equipante> GetEquipantesSemQuarto(int eventoId)
         {
             var listParticipantesId = quartoParticipanteRepository
@@ -220,6 +314,8 @@ namespace Core.Business.Quartos
             return listParticipantes;
         }
 
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         public void PostQuarto(PostQuartoModel model)
         {
             Quarto quarto = null;
@@ -231,7 +327,10 @@ namespace Core.Business.Quartos
                 quarto.Capacidade = model.Capacidade;
                 quarto.Titulo = model.Titulo;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 quartoRepository.Update(quarto);
             }
             else
@@ -241,8 +340,12 @@ namespace Core.Business.Quartos
                     Titulo = model.Titulo,
                     EventoId = model.EventoId,
                     Sexo = model.Sexo,
+<<<<<<< HEAD
                     Capacidade = model.Capacidade,
                     TipoPessoa = model.TipoPessoa ?? TipoPessoaEnum.Participante
+=======
+                    Capacidade = model.Capacidade
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 };
 
                 quartoRepository.Insert(quarto);

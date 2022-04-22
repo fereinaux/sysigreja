@@ -38,10 +38,15 @@ C:\Users\felipe\Source\Repos\Realidade\Utils\obj\Debug\Utils.pdb
 C:\Users\User\source\repos\Realidade\Utils\bin\Debug\Utils.dll
 C:\Users\User\source\repos\Realidade\Utils\bin\Debug\Utils.pdb
 C:\Users\User\source\repos\Realidade\Utils\bin\Debug\EPPlus.dll
+<<<<<<< HEAD
+=======
+C:\Users\User\source\repos\Realidade\Utils\obj\Debug\Utils.csprojAssemblyReference.cache
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 C:\Users\User\source\repos\Realidade\Utils\obj\Debug\Utils.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\Realidade\Utils\obj\Debug\Utils.csproj.CopyComplete
 C:\Users\User\source\repos\Realidade\Utils\obj\Debug\Utils.dll
 C:\Users\User\source\repos\Realidade\Utils\obj\Debug\Utils.pdb
+<<<<<<< HEAD
 C:\Users\User\source\repos\Realidade\Utils\bin\Debug\System.Linq.Dynamic.dll
 C:\Users\User\source\repos\Realidade\Utils\obj\Debug\Utils.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\Realidade\Utils\bin\Debug\Microsoft.SqlServer.Types.dll
@@ -55,3 +60,5 @@ C:\Users\User\source\repos\ejc\Utils\obj\Debug\Utils.csproj.CoreCompileInputs.ca
 C:\Users\User\source\repos\ejc\Utils\obj\Debug\Utils.csproj.CopyComplete
 C:\Users\User\source\repos\ejc\Utils\obj\Debug\Utils.dll
 C:\Users\User\source\repos\ejc\Utils\obj\Debug\Utils.pdb
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566

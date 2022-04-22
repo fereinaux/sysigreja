@@ -62,6 +62,7 @@ namespace SysIgreja.Controllers
         [HttpGet]
         public ActionResult GetUsuario(string Id)
         {
+<<<<<<< HEAD
             var result = accountBusiness.GetUsuarios().Select(x => new
             {
                 Id = x.Id,
@@ -70,6 +71,9 @@ namespace SysIgreja.Controllers
                 EquipanteId = x.EquipanteId,
                 UserName = x.UserName
             }).FirstOrDefault(x => x.Id == Id);
+=======
+            var result = accountBusiness.GetUsuarioById(Id);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             return Json(new { Usuario = result }, JsonRequestBehavior.AllowGet);
         }
@@ -126,6 +130,7 @@ namespace SysIgreja.Controllers
         }
 
         [HttpPost]
+<<<<<<< HEAD
         public ActionResult DeleteUsuario(string Id)
         {
             accountBusiness.DeleteUsuario(Id);
@@ -133,6 +138,8 @@ namespace SysIgreja.Controllers
         }
 
         [HttpPost]
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Disassociate(string loginProvider, string providerKey)
         {

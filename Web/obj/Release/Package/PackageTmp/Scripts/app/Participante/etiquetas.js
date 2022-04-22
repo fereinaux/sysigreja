@@ -10,6 +10,7 @@
                 datatype: "json",
                 type: "GET",
                 success: (result) => {
+<<<<<<< HEAD
                     switch ($('.cracha:checked').val()) {
                         case '1':
                             MontarCrachaParticipantes(result);
@@ -21,6 +22,12 @@
                             MontarTagsParticipantes(result);
                             break;
                         default:
+=======
+                    if ($('.cracha:checked').val() == 1) {
+                        MontarCrachaParticipantes(result);
+                    } else {
+                        MontarEtiquetasParticipantes(result);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     }
                 }
             });
@@ -31,6 +38,7 @@
                 datatype: "json",
                 type: "POST",
                 success: (result) => {
+<<<<<<< HEAD
                     switch ($('.cracha:checked').val()) {
                         case '1':
                             MontarCrachaParticipantes(result);
@@ -42,6 +50,12 @@
                             MontarTagsParticipantes(result);
                             break;
                         default:
+=======
+                    if ($('.cracha:checked').val() == 1) {
+                        MontarCrachaParticipantes(result);
+                    } else {
+                        MontarEtiquetasParticipantes(result);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     }
                 }
             });
@@ -55,8 +69,12 @@
                 url: '/Equipe/GetMembrosEquipe',
                 data: {
                     EventoId: $("#etiquetas-eventoid").val(),
+<<<<<<< HEAD
                     EquipeId: $("#etiquetas-equipes").val(),
                     Foto: $('.cracha:checked').val() == 1
+=======
+                    EquipeId: $("#etiquetas-equipes").val()
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 },
                 datatype: "json",
                 type: "POST",
@@ -87,6 +105,7 @@
     }
 }
 
+<<<<<<< HEAD
 
 function MontarTagsParticipantes(result) {
     var printDoc = new jsPDF('p', 'cm', 'a3');
@@ -153,6 +172,11 @@ function MontarTagsParticipantes(result) {
 function MontarEtiquetasParticipantes(result) {
     var printDoc = new jsPDF('p', 'mm', 'letter');
     printDoc.setFont('helvetica', "normal")
+=======
+function MontarEtiquetasParticipantes(result) {
+    var printDoc = new jsPDF('p', 'mm', 'letter');
+    printDoc.setFont('helvetica',"normal")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     printDoc.setFontSize(18);
     $(result.data).each((index, participante) => {
         if (index % 14 == 0 || index == 0) {
@@ -163,10 +187,17 @@ function MontarEtiquetasParticipantes(result) {
                 printDoc.addPage();
             }
         }
+<<<<<<< HEAD
         printDoc.setFont('helvetica', "bold")
         printDoc.setFontSize(18);
         printDoc.text(width, heightApelido, participante.Apelido, 'center');
         printDoc.setFont('helvetica', "normal")
+=======
+        printDoc.setFont('helvetica',"bold")
+        printDoc.setFontSize(18);
+        printDoc.text(width, heightApelido, participante.Apelido, 'center');
+        printDoc.setFont('helvetica',"normal")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         printDoc.setFontSize(15);
         var splitNome = printDoc.splitTextToSize(participante.Nome, 70);
         printDoc.text(width, heightNome, splitNome, 'center');
@@ -180,7 +211,11 @@ function MontarEtiquetasParticipantes(result) {
 
 function MontarEtiquetasEquipantes(result) {
     var printDoc = new jsPDF('p', 'mm', 'a3');
+<<<<<<< HEAD
     printDoc.setFont('helvetica', "normal")
+=======
+    printDoc.setFont('helvetica',"normal")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     printDoc.setFontSize(18);
     $(result.data).each((index, equipante) => {
         if (index % 14 == 0 || index == 0) {
@@ -192,12 +227,20 @@ function MontarEtiquetasEquipantes(result) {
                 printDoc.addPage();
             }
         }
+<<<<<<< HEAD
         printDoc.setFont('helvetica', "normal")
+=======
+        printDoc.setFont('helvetica',"normal")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         printDoc.setFontSize(18);
         printDoc.text(width, heightEquipe, "  (" + equipante.Equipe + ")", 'center');
         var splitNome = printDoc.splitTextToSize(equipante.Nome, 100);
         printDoc.text(width, heightNome, splitNome, 'center');
+<<<<<<< HEAD
         printDoc.setFont('helvetica', "bold")
+=======
+        printDoc.setFont('helvetica',"bold")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         printDoc.setFontSize(30);
         printDoc.text(width, splitNome.length > 1 ? heightApelido + 4 : heightApelido, equipante.Apelido, 'center');
         width = index % 2 == 0 ? 212 : 73;
@@ -275,6 +318,7 @@ function MontarCrachaParticipantes(result) {
             printDoc.addImage('data:image/jpeg;base64,' + equipante.Foto, 'JPEG', xFoto, yFoto, widthFoto, heightFoto);
             var img = new Image();
             img.src = `/Images/circulos/${equipante.Circulo}.png`;
+<<<<<<< HEAD
             printDoc.addImage(img, 'PNG', xFoto, yFoto, widthFoto, heightFoto);
 
             printDoc.setFontSize(10);
@@ -284,6 +328,20 @@ function MontarCrachaParticipantes(result) {
             printDoc.setFontSize(18);
             printDoc.setFont('mont', 'normal');
             printDoc.text(xFoto + widthFoto / 2, yFoto + 10.5, equipante.Apelido.toUpperCase(), 'center');
+=======
+            printDoc.addImage(img, 'PNG', xFoto, yFoto + 7.8, widthFoto, 3.75);
+            var img = new Image();
+            img.src = `/Images/logo_sombra.png`;
+            printDoc.addImage(img, 'PNG', xFoto + 3.8, yFoto + 10.4, 3.55, 1.25);
+           
+            printDoc.setFontSize(9.8);
+            printDoc.setFont('calibri', 'normal');
+            printDoc.setTextColor(255, 255, 255)
+            printDoc.text(xFoto + 0.4, yFoto + 9.8, equipante.Nome, 'left');
+            printDoc.setFontSize(15.5);
+            printDoc.setFont('calibri', 'bold');
+            printDoc.text(xFoto + 0.4, yFoto + 9.2, equipante.Apelido, 'left');
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             indice++
         }
     });
@@ -294,16 +352,29 @@ function MontarCrachaEquipantes(result) {
     var printDoc = new jsPDF('l', 'cm', 'a3');
 
     heightFoto = 12;
+<<<<<<< HEAD
     widthFoto = 8;
+=======
+    widthFoto = 8   ;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     result.data = result.data.filter(equipante => equipante.Foto)
     var indice = 0
     var xFoto = 0
     var yFoto = 0
+<<<<<<< HEAD
+=======
+    printDoc.addFont("calibri-normal.ttf", "calibri", "normal");
+    printDoc.addFont("calibri-bold.ttf", "calibri", "bold");
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
     equipe = ''
     var imgEquipe = new Image();
     var imgSombra = new Image();
+<<<<<<< HEAD
     imgSombra.src = `/Images/logo-preto.png`;
+=======
+    imgSombra.src = `/Images/logo_sombra.png`;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     $(result.data).each((index, equipante) => {
         if (equipante.Foto) {
             if (index % 10 == 0 || index == 0) {
@@ -335,7 +406,11 @@ function MontarCrachaEquipantes(result) {
                 xFoto = widthFoto * 4 + 1
                 yFoto = 0 + 2.5
             } else if (indice == 5) {
+<<<<<<< HEAD
                 xFoto = 1
+=======
+                xFoto =  1
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 yFoto = heightFoto + 2.5
             } else if (indice == 6) {
                 xFoto = widthFoto + 1
@@ -355,6 +430,7 @@ function MontarCrachaEquipantes(result) {
             printDoc.addImage('data:image/jpeg;base64,' + equipante.Foto, 'JPEG', xFoto, yFoto, widthFoto, heightFoto);
             if (imgEquipe != equipe) {
 
+<<<<<<< HEAD
 
                 imgEquipe.src = `/Images/equipes/${equipante.Equipe}.png`;
             }
@@ -368,6 +444,67 @@ function MontarCrachaEquipantes(result) {
             printDoc.setFontSize(18);
             printDoc.setFont('mont', 'normal');
             printDoc.text(xFoto + widthFoto / 2, yFoto + 9.8, equipante.Apelido.toUpperCase(), 'center');
+=======
+        
+                imgEquipe.src = `/Images/equipes/${equipante.Equipe}.png`;
+            }
+            printDoc.addImage(imgEquipe, 'PNG', xFoto, yFoto + 7.8, widthFoto, 3.75);
+         
+            printDoc.addImage(imgSombra, 'PNG', xFoto + 3.8, yFoto + 10.4, 3.55, 1.25);
+            switch (equipante.Equipe) {
+                case "Secretaria":
+                    printDoc.setTextColor(150, 152, 154)
+                    break;
+                case "Circulação":
+                    printDoc.setTextColor(168, 207, 69)
+                    break;
+                case "Drama":
+                    printDoc.setTextColor(135, 65, 150)
+                    break;
+                case "Bomboniere":
+                    printDoc.setTextColor(82, 101,140)
+                    break;
+                case "Reitores":
+                    printDoc.setTextColor(0, 175, 239)
+                    break;
+                case "Vaila de Apoio Integral":
+                    equipante.Equipe = "Vaila"
+                    printDoc.setTextColor(255, 242, 18)
+                    break;
+                case "Grupo de Oração e Encorajamento":
+                    equipante.Equipe = 'GOE'
+                    printDoc.setTextColor(179, 52, 124)
+                    break;
+                case "Refeitório":
+                    printDoc.setTextColor(223, 52, 56)
+                    break;
+                case "Mídia":
+                    printDoc.setTextColor(237, 47, 89)
+                    break;
+                case "Louvor":
+                    printDoc.setTextColor(242, 108, 53)
+                    break;
+                case "Pastores":
+                    printDoc.setTextColor(254, 254, 254)
+                    break;
+                case "Vaila de Pequeno Grupo":
+                    equipante.Equipe = "PG"
+                    printDoc.setTextColor(62, 64, 149)
+                    break;
+                  
+                default:
+                    break;
+            }
+     
+            printDoc.setFontSize(9.5);
+            printDoc.setFont('calibri', 'normal');
+            printDoc.text(xFoto + 0.4, yFoto + 10.2, equipante.Equipe, 'left');
+            printDoc.setTextColor(255, 255, 255)
+            printDoc.text(xFoto + 0.4, yFoto + 9.6, equipante.Nome, 'left');
+            printDoc.setFontSize(15);
+            printDoc.setFont('calibri', 'bold');
+            printDoc.text(xFoto + 0.4, yFoto + 9, equipante.Apelido, 'left');
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             indice++
             equipe = equipante.Equipe
         }
@@ -411,7 +548,11 @@ function CarregarEtiquetaIndividual(position) {
 
 function ImprimirIndividual(data, position) {
     var printDoc = new jsPDF('p', 'mm', 'a3');
+<<<<<<< HEAD
     printDoc.setFont('helvetica', "normal")
+=======
+    printDoc.setFont('helvetica',"normal")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     printDoc.setFontSize(18);
     width = position % 2 == 0 ? 212 : 73;
     multiplicador = 0;
@@ -467,10 +608,17 @@ function ImprimirIndividual(data, position) {
         heightApelido = multiplicador * 45;
         heightNome += 60;
         heightApelido += 50;
+<<<<<<< HEAD
         printDoc.setFont('helvetica', "bold")
         printDoc.setFontSize(30);
         printDoc.text(width, heightApelido, participante.Apelido, 'center');
         printDoc.setFont('helvetica', "normal")
+=======
+        printDoc.setFont('helvetica',"bold")
+        printDoc.setFontSize(30);
+        printDoc.text(width, heightApelido, participante.Apelido, 'center');
+        printDoc.setFont('helvetica',"normal")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         printDoc.setFontSize(18);
         var splitNome = printDoc.splitTextToSize(participante.Nome, 100);
         printDoc.text(width, heightNome, splitNome, 'center');
@@ -483,12 +631,20 @@ function ImprimirIndividual(data, position) {
         heightNome += 42;
         heightApelido += 57;
         heightEquipe += 68;
+<<<<<<< HEAD
         printDoc.setFont('helvetica', "normal")
+=======
+        printDoc.setFont('helvetica',"normal")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         printDoc.setFontSize(18);
         printDoc.text(width, heightEquipe, "  (" + equipante.Equipe + ")", 'center');
         var splitNome = printDoc.splitTextToSize(equipante.Nome, 100);
         printDoc.text(width, heightNome, splitNome, 'center');
+<<<<<<< HEAD
         printDoc.setFont('helvetica', "bold")
+=======
+        printDoc.setFont('helvetica',"bold")
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         printDoc.setFontSize(30);
         printDoc.text(width, splitNome.length > 1 ? heightApelido + 4 : heightApelido, equipante.Apelido, 'center');
     }

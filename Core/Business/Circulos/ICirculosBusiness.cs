@@ -1,4 +1,8 @@
 ﻿using Core.Models.Circulos;
+<<<<<<< HEAD
+=======
+using Core.Models.Eventos;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.Collections.Generic;
 using System.Linq;
 

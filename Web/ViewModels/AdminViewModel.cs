@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿using System.Collections.Generic;
+=======
+﻿using Data.Entities;
+using System.Collections.Generic;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 namespace SysIgreja.ViewModels
 {
@@ -21,5 +26,9 @@ namespace SysIgreja.ViewModels
         public List<ReuniaoViewModel> Reunioes { get; set; }
     }
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 }

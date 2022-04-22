@@ -305,6 +305,7 @@ C:\Users\User\source\repos\Realidade\Web\obj\Release\Web.csproj.CopyComplete
 C:\Users\User\source\repos\Realidade\Web\obj\Release\Web.dll
 C:\Users\User\source\repos\Realidade\Web\obj\Release\Web.pdb
 C:\Users\User\source\repos\Realidade\Web\obj\Release\Web.csproj.AssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\User\source\repos\Realidade\Web\bin\SqlServerTypes\x64\msvcr120.dll
 C:\Users\User\source\repos\Realidade\Web\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\User\source\repos\Realidade\Web\bin\SqlServerTypes\x86\msvcr120.dll
@@ -933,3 +934,5 @@ C:\Users\User\source\repos\ejc\Web\obj\Release\Web.csproj.CoreCompileInputs.cach
 C:\Users\User\source\repos\ejc\Web\obj\Release\Web.csproj.CopyComplete
 C:\Users\User\source\repos\ejc\Web\obj\Release\Web.dll
 C:\Users\User\source\repos\ejc\Web\obj\Release\Web.pdb
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566

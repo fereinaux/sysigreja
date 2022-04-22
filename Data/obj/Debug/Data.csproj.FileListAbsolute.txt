@@ -131,10 +131,17 @@ C:\Users\User\source\repos\Realidade\Data\bin\Debug\Newtonsoft.Json.dll
 C:\Users\User\source\repos\Realidade\Data\bin\Debug\Owin.dll
 C:\Users\User\source\repos\Realidade\Data\bin\Debug\Utils.dll
 C:\Users\User\source\repos\Realidade\Data\bin\Debug\Utils.pdb
+<<<<<<< HEAD
+=======
+C:\Users\User\source\repos\Realidade\Data\obj\Debug\Data.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Realidade\Data\obj\Debug\Data.Migrations.InitialCreate.resources
+C:\Users\User\source\repos\Realidade\Data\obj\Debug\Data.csproj.GenerateResource.cache
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 C:\Users\User\source\repos\Realidade\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\Realidade\Data\obj\Debug\Data.csproj.CopyComplete
 C:\Users\User\source\repos\Realidade\Data\obj\Debug\Data.dll
 C:\Users\User\source\repos\Realidade\Data\obj\Debug\Data.pdb
+<<<<<<< HEAD
 C:\Users\User\source\repos\Realidade\Data\bin\Debug\System.Linq.Dynamic.dll
 C:\Users\User\source\repos\Realidade\Data\obj\Debug\Data.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\Realidade\Data\bin\Debug\Microsoft.SqlServer.Types.dll
@@ -184,3 +191,5 @@ C:\Users\User\source\repos\sysigreja\Data\obj\Debug\Data.csproj.CoreCompileInput
 C:\Users\User\source\repos\sysigreja\Data\obj\Debug\Data.csproj.CopyComplete
 C:\Users\User\source\repos\sysigreja\Data\obj\Debug\Data.dll
 C:\Users\User\source\repos\sysigreja\Data\obj\Debug\Data.pdb
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566

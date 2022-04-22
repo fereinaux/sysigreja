@@ -1,4 +1,5 @@
 ﻿using Arquitetura.Controller;
+<<<<<<< HEAD
 using AutoMapper;
 using Core.Business.Account;
 using Core.Business.Configuracao;
@@ -6,6 +7,15 @@ using Core.Business.Equipes;
 using Core.Business.Eventos;
 using Core.Business.Quartos;
 using Core.Models.Quartos;
+=======
+using Core.Business.Account;
+using Core.Business.Quartos;
+using Core.Business.Equipes;
+using Core.Business.Eventos;
+using Core.Business.Reunioes;
+using Core.Models.Quartos;
+using Core.Models.Reunioes;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using SysIgreja.ViewModels;
 using System.Linq;
 using System.Web.Mvc;
@@ -13,6 +23,10 @@ using Utils.Constants;
 using Utils.Enums;
 using Utils.Extensions;
 using Utils.Services;
+<<<<<<< HEAD
+=======
+using AutoMapper;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 namespace SysIgreja.Controllers
 {
@@ -24,7 +38,11 @@ namespace SysIgreja.Controllers
         private readonly IEquipesBusiness equipesBusiness;
         private readonly IMapper mapper;
 
+<<<<<<< HEAD
         public QuartoController(IQuartosBusiness quartosBusiness, IEquipesBusiness equipesBusiness, IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness, IConfiguracaoBusiness configuracaoBusiness) : base(eventosBusiness, accountBusiness, configuracaoBusiness)
+=======
+        public QuartoController(IQuartosBusiness quartosBusiness, IEquipesBusiness equipesBusiness, IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness) : base(eventosBusiness, accountBusiness)
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         {
             this.quartosBusiness = quartosBusiness;
             this.equipesBusiness = equipesBusiness;
@@ -39,6 +57,7 @@ namespace SysIgreja.Controllers
             return View();
         }
 
+<<<<<<< HEAD
         public ActionResult QuartoEquipe()
         {
             ViewBag.Title = "Quartos da Equipe";
@@ -53,11 +72,23 @@ namespace SysIgreja.Controllers
             var result = quartosBusiness
                 .GetQuartos()
                 .Where(x => x.EventoId == EventoId && x.TipoPessoa == (tipo ?? TipoPessoaEnum.Participante))
+=======
+        [HttpPost]
+        public ActionResult GetQuartos(int EventoId)
+        {
+            var result = quartosBusiness
+                .GetQuartos()
+                .Where(x => x.EventoId == EventoId)
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 .ToList()
                 .Select(x => new QuartoViewModel
                 {
                     Id = x.Id,
+<<<<<<< HEAD
                     Capacidade = $"{quartosBusiness.GetParticipantesByQuartos(x.Id, tipo).Count().ToString()}/{x.Capacidade.ToString()}",
+=======
+                    Capacidade = $"{quartosBusiness.GetParticipantesByQuartos(x.Id).Count().ToString()}/{x.Capacidade.ToString()}",
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     Titulo = x.Titulo,
                     Sexo = x.Sexo.GetDescription()
                 });
@@ -90,14 +121,21 @@ namespace SysIgreja.Controllers
         }
 
         [HttpPost]
+<<<<<<< HEAD
         public ActionResult DistribuirQuartos(int EventoId, TipoPessoaEnum? tipo)
         {
             quartosBusiness.DistribuirQuartos(EventoId, tipo ?? TipoPessoaEnum.Participante);
+=======
+        public ActionResult DistribuirQuartos(int EventoId)
+        {
+            quartosBusiness.DistribuirQuartos(EventoId);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             return new HttpStatusCodeResult(200);
         }
 
         [HttpGet]
+<<<<<<< HEAD
         public ActionResult GetParticipantesSemQuarto(int EventoId, TipoPessoaEnum? tipo)
         {
 
@@ -154,6 +192,36 @@ namespace SysIgreja.Controllers
         public ActionResult ChangeQuarto(int ParticipanteId, int? DestinoId, TipoPessoaEnum? tipo)
         {
             var mensagem = quartosBusiness.ChangeQuarto(ParticipanteId, DestinoId, tipo);
+=======
+        public ActionResult GetParticipantesSemQuarto(int EventoId)
+        {
+            return Json(new { Participantes = quartosBusiness.GetParticipantesSemQuarto(EventoId).Select(x => new { 
+                Id = x.Id,
+                Nome = x.Nome
+            }).ToList() }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public ActionResult GetQuartosComParticipantes(int EventoId)
+        {
+            return Json(new
+            {
+                Quartos = quartosBusiness.GetQuartosComParticipantes(EventoId).ToList().Select(x => new
+                {
+                    Nome = UtilServices.CapitalizarNome(x.Participante.Nome),
+                    ParticipanteId = x.ParticipanteId,
+                    QuartoId = x.QuartoId,
+                    Sexo = x.Quarto.Sexo.GetDescription(),
+                    Capacidade = $"{quartosBusiness.GetParticipantesByQuartos(x.QuartoId).Count().ToString()}/{x.Quarto.Capacidade.ToString()}",
+                }).ToList()
+            }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult ChangeQuarto(int ParticipanteId, int? DestinoId)
+        {
+            var mensagem = quartosBusiness.ChangeQuarto(ParticipanteId, DestinoId);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             if (mensagem == "OK")
             {
                 return new HttpStatusCodeResult(200);
@@ -161,6 +229,7 @@ namespace SysIgreja.Controllers
 
             return new HttpStatusCodeResult(400, mensagem);
         }
+<<<<<<< HEAD
 
         [HttpGet]
         public ActionResult GetEquipantesByQuarto(int QuartoId)
@@ -173,5 +242,7 @@ namespace SysIgreja.Controllers
 
             return Json(new { data = result }, JsonRequestBehavior.AllowGet);
         }
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     }
 }

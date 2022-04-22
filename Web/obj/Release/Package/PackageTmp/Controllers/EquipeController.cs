@@ -1,12 +1,22 @@
 ﻿using Arquitetura.Controller;
+<<<<<<< HEAD
 using Core.Business.Account;
 using Core.Business.Configuracao;
+=======
+using Arquitetura.ViewModels;
+using Core.Business.Account;
+using Core.Business.Equipantes;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Core.Business.Equipes;
 using Core.Business.Eventos;
 using Core.Business.Reunioes;
 using Core.Models.Equipe;
 using SysIgreja.ViewModels;
 using System;
+<<<<<<< HEAD
+=======
+using System.Collections.Generic;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.Linq;
 using System.Web.Mvc;
 using Utils.Enums;
@@ -21,6 +31,7 @@ namespace SysIgreja.Controllers
     {
         private readonly IEquipesBusiness equipesBusiness;
         private readonly IReunioesBusiness reunioesBusiness;
+<<<<<<< HEAD
         private readonly IEventosBusiness eventosBusiness;
 
         public EquipeController(IEquipesBusiness equipesBusiness, IConfiguracaoBusiness configuracaoBusiness, IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness, IReunioesBusiness reunioesBusiness) : base(eventosBusiness, accountBusiness, configuracaoBusiness)
@@ -28,6 +39,13 @@ namespace SysIgreja.Controllers
             this.equipesBusiness = equipesBusiness;
             this.reunioesBusiness = reunioesBusiness;
             this.eventosBusiness = eventosBusiness;
+=======
+
+        public EquipeController(IEquipesBusiness equipesBusiness, IEventosBusiness eventosBusiness, IAccountBusiness accountBusiness, IReunioesBusiness reunioesBusiness) : base(eventosBusiness, accountBusiness)
+        {
+            this.equipesBusiness = equipesBusiness;
+            this.reunioesBusiness = reunioesBusiness;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public ActionResult Index()
@@ -87,14 +105,23 @@ namespace SysIgreja.Controllers
         }
 
         [HttpPost]
+<<<<<<< HEAD
         public ActionResult GetEquipes(int? EventoId)
         {
             EventoId = EventoId ?? eventosBusiness.GetEventoAtivo().Id;
+=======
+        public ActionResult GetEquipes(int EventoId)
+        {
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             var result = equipesBusiness.GetEquipes(EventoId).Select(x => new ListaEquipesViewModel
             {
                 Id = x.Id,
                 Equipe = x.Description,
+<<<<<<< HEAD
                 QuantidadeMembros = equipesBusiness.GetMembrosEquipe(EventoId.Value, (EquipesEnum)x.Id).Count()
+=======
+                QuantidadeMembros = equipesBusiness.GetMembrosEquipe(EventoId, (EquipesEnum)x.Id).Count()
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             });
 
             return Json(new { data = result }, JsonRequestBehavior.AllowGet);
@@ -155,7 +182,11 @@ namespace SysIgreja.Controllers
                     Nome = UtilServices.CapitalizarNome(x.Nome),
                     Apelido = UtilServices.CapitalizarNome(x.Apelido),
                     Foto = x.Arquivos.Any(y => y.IsFoto) ? Convert.ToBase64String(x.Arquivos.FirstOrDefault(y => y.IsFoto).Conteudo) : ""
+<<<<<<< HEAD
                 }).ToList().OrderBy(x => x.Equipe).ThenBy(x => x.Nome);
+=======
+                }).ToList().OrderBy(x => x.Equipe ).ThenBy(x => x.Nome);
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             var json = Json(new { data = result }, JsonRequestBehavior.AllowGet);
             json.MaxJsonLength = Int32.MaxValue;
@@ -163,7 +194,11 @@ namespace SysIgreja.Controllers
         }
 
         [HttpPost]
+<<<<<<< HEAD
         public ActionResult GetMembrosEquipe(int EventoId, EquipesEnum EquipeId, bool Foto)
+=======
+        public ActionResult GetMembrosEquipe(int EventoId, EquipesEnum EquipeId)
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         {
             var query = equipesBusiness
                 .GetMembrosEquipe(EventoId, EquipeId)
@@ -179,7 +214,11 @@ namespace SysIgreja.Controllers
                 Idade = UtilServices.GetAge(x.Equipante.DataNascimento),
                 Tipo = x.Tipo.GetDescription(),
                 x.Equipante.Fone,
+<<<<<<< HEAD
                 Foto = Foto && x.Equipante.Arquivos.Any(y => y.IsFoto) ? Convert.ToBase64String(x.Equipante.Arquivos.FirstOrDefault(y => y.IsFoto).Conteudo) : ""
+=======
+                Foto = x.Equipante.Arquivos.Any(y => y.IsFoto) ? Convert.ToBase64String(x.Equipante.Arquivos.FirstOrDefault(y => y.IsFoto).Conteudo) : ""
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             });
 
             var json = Json(new { data = result }, JsonRequestBehavior.AllowGet);

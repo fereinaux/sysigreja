@@ -1,6 +1,10 @@
 ﻿
 using Data.Context;
 using System;
+<<<<<<< HEAD
+=======
+using System.ComponentModel.DataAnnotations;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Data.Entities.Base

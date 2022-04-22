@@ -1,4 +1,5 @@
 ﻿var realista;
+<<<<<<< HEAD
 $.ajax({
     url: '/Etiqueta/GetEtiquetas',
     datatype: "json",
@@ -18,6 +19,9 @@ ${result.data.map(p => `<option value=${p.Id}>${p.Nome}</option>`)}
 function CarregarTabelaEquipante() {
 
 
+=======
+function CarregarTabelaEquipante() {
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     const tableEquipanteConfig = {
         language: languageConfig,
         searchDelay: 750,
@@ -50,6 +54,7 @@ function CarregarTabelaEquipante() {
                     return `<span onclick="ToggleSexo(${row.Id})" style = "font-size:18px;color:${cor};" class="p-l-xs pointer"> <i class="fa ${icon}" aria-hidden="true" title="${data}"></i></span >`;
                 }
             },
+<<<<<<< HEAD
             {
                 data: "Nome", name: "Nome", width: "25%", render: function (data, type, row) {
                     return `<div>
@@ -58,10 +63,14 @@ function CarregarTabelaEquipante() {
                     </div>`
                 }
             },
+=======
+            { data: "Nome", name: "Nome", autoWidth: true },
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             { data: "Idade", name: "Idade", autoWidth: true },
             { data: "Equipe", name: "Equipe", autoWidth: true },
             { data: "Faltas", name: "Faltas", autoWidth: true },
             {
+<<<<<<< HEAD
                 data: "HasOferta", name: "HasOferta", autoWidth: true, render: function (data, type, row) {
                     if (row.Status == "Em Espera") {
                         return `<span style="font-size:13px" class="text-center label label-default}">Em Espera</span>`;
@@ -70,6 +79,8 @@ function CarregarTabelaEquipante() {
                 }
             },
             {
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 data: "Id", name: "Id", orderable: false, width: "20%",
                 "render": function (data, type, row) {
                     return `   
@@ -101,8 +112,11 @@ ${GetIconWhatsApp(row.Fone)}
         ],
         ajax: {
             url: '/Equipante/GetEquipantesDataTable',
+<<<<<<< HEAD
             
             data: { EventoId: $("#equipante-eventoid-filtro").val() != 999 ? $("#equipante-eventoid-filtro").val() : null, Status: $("#equipante-status").val(), Etiquetas: $("#equipante-marcadores").val(), NaoEtiquetas: $("#equipante-nao-marcadores").val(), Equipe: $("#equipe-select").val() != 999 ? $("#equipe-select").val() : null },
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             datatype: "json",
             type: "POST"
         }
@@ -111,6 +125,7 @@ ${GetIconWhatsApp(row.Fone)}
     $("#table-equipantes").DataTable(tableEquipanteConfig);
 }
 
+<<<<<<< HEAD
 function getEquipes() {
     $.ajax({
         url: '/Equipe/GetEquipes',
@@ -125,6 +140,8 @@ ${result.data.map(p => `<option value=${p.Id}>${p.Equipe}</option>`)}
         }
     });
 }
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 function Anexos(id) {
     $("#EquipanteIdModal").val(id);
@@ -460,7 +477,10 @@ $("#modal-anexos").on('hidden.bs.modal', function () {
 $("#modal-pagamentos").on('hidden.bs.modal', function () {
     if (!$('#LancamentoIdModal').val()) {
         CarregarTabelaEquipante();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     }
 })
 
@@ -539,7 +559,10 @@ function Pagamentos(row) {
 }
 
 function GetEquipante(id) {
+<<<<<<< HEAD
                 $('.equipante-etiquetas').select2({ dropdownParent: $("#form-equipante") });
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     if (id > 0) {
         $.ajax({
             url: "/Equipante/GetEquipante/",
@@ -561,9 +584,13 @@ function GetEquipante(id) {
                 $(`input[type=radio][name=equipante-hasalergia][value=${data.Equipante.HasAlergia}]`).iCheck('check');
                 $(`input[type=radio][name=equipante-hasmedicacao][value=${data.Equipante.HasMedicacao}]`).iCheck('check');
                 $(`input[type=radio][name=equipante-hasrestricaoalimentar][value=${data.Equipante.HasRestricaoAlimentar}]`).iCheck('check');
+<<<<<<< HEAD
                 $('#equipante-etiquetas').html(`${data.Etiquetas.map(etiqueta => `<option data-cor="${etiqueta.Cor}" value=${etiqueta.Id}>${etiqueta.Nome}</option>`)
                     }`)
                 $('#equipante-etiquetas').val(data.Equipante.EtiquetasList.map(etiqueta => etiqueta.Id))
+=======
+
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 $("#equipante-numeracao").val(data.Equipante.Numeracao);
             }
         });
@@ -632,8 +659,12 @@ function PostEquipante() {
                     Medicacao: $(`#equipante-medicacao`).val(),
                     HasAlergia: $("input[type=radio][name=equipante-hasalergia]:checked").val(),
                     Alergia: $(`#equipante-alergia`).val(),
+<<<<<<< HEAD
                     Sexo: $("input[type=radio][name=equipante-sexo]:checked").val(),
                     Etiquetas: $('.equipante-etiquetas').val()
+=======
+                    Sexo: $("input[type=radio][name=equipante-sexo]:checked").val()
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 }),
             success: function () {
                 SuccessMesageOperation();
@@ -705,7 +736,10 @@ function PostPagamento() {
 
 $(document).ready(function () {
     CarregarTabelaEquipante();
+<<<<<<< HEAD
     getEquipes()
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 });
 
 

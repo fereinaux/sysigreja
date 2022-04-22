@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿using Data.Context;
+=======
+﻿using Core.Models.Eventos;
+using Data.Context;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using Data.Entities;
 using Data.Repository;
 using Microsoft.AspNet.Identity;
@@ -20,9 +25,15 @@ namespace Core.Business.Account
 
         public AccountBusiness(IGenericRepository<ApplicationUser> accountRepository, IGenericRepository<Equipante> equipanteRepository, ApplicationDbContext context)
         {
+<<<<<<< HEAD
             this.accountRepository = accountRepository;
             this.equipanteRepository = equipanteRepository;
             this.context = context;
+=======
+            this.accountRepository = accountRepository;            
+            this.equipanteRepository = equipanteRepository;            
+            this.context = context;            
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public List<Equipante> GetEquipantesUsuario(string idUsuario)
@@ -39,7 +50,11 @@ namespace Core.Business.Account
 
         public IQueryable<ApplicationUser> GetUsuarios()
         {
+<<<<<<< HEAD
             return accountRepository.GetAll(x => x.Status != StatusEnum.Deletado);
+=======
+            return accountRepository.GetAll();
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
 
         public void ToggleUsuarioStatus(string id)
@@ -56,6 +71,7 @@ namespace Core.Business.Account
             accountRepository.Save();
         }
 
+<<<<<<< HEAD
 
         public void DeleteUsuario(string id)
         {
@@ -66,6 +82,8 @@ namespace Core.Business.Account
             accountRepository.Update(usuario);
             accountRepository.Save();
         }
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         public void Seed()
         {
             context.MeioPagamentos.AddOrUpdate(x => x.Descricao,

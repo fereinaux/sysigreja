@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using Core.Business.Configuracao;
 using Core.Models.Circulos;
 using Data.Entities;
@@ -6,6 +7,14 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Spatial;
+=======
+﻿using Core.Models.Circulos;
+using Core.Models.Eventos;
+using Data.Entities;
+using Data.Repository;
+using System.Collections.Generic;
+using System.Data.Entity;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 using System.Linq;
 using Utils.Enums;
 using Utils.Extensions;
@@ -19,12 +28,19 @@ namespace Core.Business.Circulos
         private readonly IGenericRepository<CirculoParticipante> circuloParticipanteRepository;
         private readonly IGenericRepository<Participante> participanteRepository;
         private readonly IGenericRepository<Evento> eventoeRepository;
+<<<<<<< HEAD
         private readonly IConfiguracaoBusiness configuracaoBusiness;
 
         public CirculosBusiness(IGenericRepository<Evento> eventoeRepository, IConfiguracaoBusiness configuracaoBusiness, IGenericRepository<Participante> participanteRepository, IGenericRepository<Circulo> circuloRepository, IGenericRepository<CirculoParticipante> circuloParticipanteRepository)
         {
             this.circuloRepository = circuloRepository;
             this.configuracaoBusiness = configuracaoBusiness;
+=======
+
+        public CirculosBusiness(IGenericRepository<Evento> eventoeRepository, IGenericRepository<Participante> participanteRepository, IGenericRepository<Circulo> circuloRepository, IGenericRepository<CirculoParticipante> circuloParticipanteRepository)
+        {
+            this.circuloRepository = circuloRepository;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             this.participanteRepository = participanteRepository;
             this.circuloParticipanteRepository = circuloParticipanteRepository;
             this.eventoeRepository = eventoeRepository;
@@ -64,6 +80,7 @@ namespace Core.Business.Circulos
 
         public void DistribuirCirculos(int eventoId)
         {
+<<<<<<< HEAD
             var config = configuracaoBusiness.GetConfiguracao();
             var circulos = circuloRepository.GetAll(x => x.EventoId == eventoId).ToList();
             List<Participante> listParticipantes = GetParticipantesSemCirculo(eventoId);
@@ -139,6 +156,19 @@ namespace Core.Business.Circulos
                         circuloParticipanteRepository.Save();
                     }
                     break;
+=======
+            List<Participante> listParticipantes = GetParticipantesSemCirculo(eventoId);
+
+            foreach (var participante in listParticipantes)
+            {
+                circuloParticipanteRepository.Insert(
+                    new CirculoParticipante
+                    {
+                        ParticipanteId = participante.Id,
+                        CirculoId = GetNextCirculo(eventoId).Id
+                    });
+                circuloParticipanteRepository.Save();
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             }
         }
 

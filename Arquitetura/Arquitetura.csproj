@@ -50,9 +50,12 @@
     <PackageReference Include="Microsoft.AspNet.Mvc">
       <Version>5.2.7</Version>
     </PackageReference>
+<<<<<<< HEAD
     <PackageReference Include="Microsoft.SqlServer.Types">
       <Version>14.0.1016.290</Version>
     </PackageReference>
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <PackageReference Include="System.Linq.Dynamic">
       <Version>1.0.8</Version>
     </PackageReference>

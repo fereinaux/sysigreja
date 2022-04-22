@@ -1,4 +1,5 @@
 ﻿var realista = {}
+<<<<<<< HEAD
 eventoId = 0
 function CarregarTabelaParticipante() {
     if ($("#participante-eventoid").val() != eventoId) {
@@ -40,6 +41,13 @@ ${result.data.map(p => `<option value=${p.Id}>${p.Nome}</option>`)}
         language: languageConfig,
         searchDelay: 750,
         lengthMenu: [10, 30, 50, 100, 200],
+=======
+function CarregarTabelaParticipante() {
+    const tableParticipanteConfig = {
+        language: languageConfig,
+        searchDelay: 750,
+        lengthMenu: [10,30,50,100,200],
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         colReorder: false,
         serverSide: true,
         scrollX: true,
@@ -69,6 +77,7 @@ ${result.data.map(p => `<option value=${p.Id}>${p.Nome}</option>`)}
                     return `<span style = "font-size:18px;color:${cor};" class="p-l-xs pointer"> <i class="fa ${icon}" aria-hidden="true" title="${data}"></i></span >`;
                 }
             },
+<<<<<<< HEAD
             {
                 data: "Nome", name: "Nome", width: "25%", render: function (data, type, row) {
                     return `<div>
@@ -77,6 +86,9 @@ ${result.data.map(p => `<option value=${p.Id}>${p.Nome}</option>`)}
                     </div>`
                 }
             },
+=======
+            { data: "Nome", name: "Nome", width: "25%" },
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             { data: "Idade", name: "Idade", width: "5%", },
             { data: "Padrinho", name: "Padrinho", width: "25%" },
             {
@@ -101,13 +113,18 @@ ${result.data.map(p => `<option value=${p.Id}>${p.Nome}</option>`)}
                 data: "Id", name: "Id", orderable: false, width: "25%",
                 "render": function (data, type, row) {
                     return row.Status != Cancelado && row.Status != Espera ?
+<<<<<<< HEAD
 
                         `<form enctype="multipart/form-data" id="frm-vacina${data}" method="post" novalidate="novalidate">
 ${GetButton('Pagamentos', JSON.stringify(row), 'verde', 'far fa-money-bill-alt', 'Pagamentos')}
+=======
+                        `<form enctype="multipart/form-data" id="frm-vacina${data}" method="post" novalidate="novalidate">
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                         ${!row.HasVacina ? ` <label for="arquivo${data}" class="inputFile">
                                 <span style="font-size:18px" class="text-mutted pointer p-l-xs"><i class="fa fa-syringe" aria-hidden="true" title="Vacina"></i></span>
                                 <input onchange='PostVacina(${data},${JSON.stringify(row)})' style="display: none;" class="custom-file-input inputFile" id="arquivo${data}" name="arquivo${data}" type="file" value="">
                             </label>`: `<span style="font-size:18px" class="text-success p-l-xs pointer" onclick="toggleVacina(${data})"><i class="fa fa-syringe" aria-hidden="true" title="Vacina"></i></span>`}                        
+<<<<<<< HEAD
                         ${!row.HasFoto ? ` <label for="foto${data}" class="inputFile">
                                 <span style="font-size:18px" class="text-mutted pointer p-l-xs"><i class="fa fa-camera" aria-hidden="true" title="Foto"></i></span>
                                 <input accept="image/*" onchange='Foto(${JSON.stringify(row)})' style="display: none;" class="custom-file-input inputFile" id="foto${data}" name="foto${data}" type="file" value="">
@@ -132,6 +149,24 @@ ${GetButton('MakeEquipante', data, 'green', 'fa-broom', 'Equipante')}
                             ${GetButton('CancelarInscricao', JSON.stringify(row), 'red', 'fa-times', 'Cancelar Inscrição')}
                     </form>`
                         : ''
+=======
+                        ${
+                            !row.HasFoto ? ` <label for="foto${data}" class="inputFile">
+                                <span style="font-size:18px" class="text-mutted pointer p-l-xs"><i class="fa fa-camera" aria-hidden="true" title="Foto"></i></span>
+                                <input accept="image/*" onchange='Foto(${JSON.stringify(row)})' style="display: none;" class="custom-file-input inputFile" id="foto${data}" name="foto${data}" type="file" value="">
+                            </label>`: `<span style="font-size:18px" class="text-success p-l-xs pointer" onclick="toggleFoto(${data})"><i class="fa fa-camera" aria-hidden="true" title="Foto"></i></span>`
+                           }
+                            ${GetAnexosButton('Anexos', data, row.QtdAnexos)}
+                            ${GetIconWhatsApp(row.Fone)}
+                            ${GetIconTel(row.Fone)}
+                            ${GetButton('EditParticipante', data, 'blue', 'fa-edit', 'Editar')}      
+                            ${GetButton('Pagamentos', JSON.stringify(row), 'verde', 'far fa-money-bill-alt', 'Pagamentos')}
+                            ${GetButton('Opcoes', JSON.stringify(row), row.HasContact ? 'blue' : 'cinza', 'fas fa-info-circle', 'Opções')}
+                            
+                            ${GetButton('CancelarInscricao', JSON.stringify(row), 'red', 'fa-times', 'Cancelar Inscrição')}
+                    </form>`
+: ''
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 }
             }
         ],
@@ -140,7 +175,11 @@ ${GetButton('MakeEquipante', data, 'green', 'fa-broom', 'Equipante')}
         ],
         ajax: {
             url: '/Participante/GetParticipantesDatatable',
+<<<<<<< HEAD
             data: { EventoId: $("#participante-eventoid").val(), PadrinhoId: $("#participante-padrinhoid").val(), Status: $("#participante-status").val() != 999 ? $("#participante-status").val() : null, Etiquetas: $("#participante-marcadores").val(), NaoEtiquetas: $("#participante-nao-marcadores").val() },
+=======
+            data: { EventoId: $("#participante-eventoid").val() },
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             datatype: "json",
             type: "POST"
         }
@@ -153,7 +192,11 @@ ${GetButton('MakeEquipante', data, 'green', 'fa-broom', 'Equipante')}
                     tableParticipanteConfig.ajax.url + "?extract=excel",
                     tableParticipanteConfig.ajax.data,
                     function (o) {
+<<<<<<< HEAD
                         window.location = `/Participante/DownloadTempFile?fileName=Participantes ${$("#participante-eventoid option:selected").text()}.xlsx&g=` + o;
+=======
+                        window.location = `Participante/DownloadTempFile?fileName=Participantes ${$("#participante-eventoid option:selected").text()}.xlsx&g=` + o;
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     }
                 );
             };
@@ -373,10 +416,17 @@ function DeleteArquivo(id) {
 }
 
 
+<<<<<<< HEAD
 function PostVacina(id, realista) {
     var dataToPost = new FormData($(`#frm-vacina${id}`)[0]);
     dataToPost.set('ParticipanteId', id)
     var filename = dataToPost.get(`arquivo${id}`).name
+=======
+function PostVacina(id,realista) {
+    var dataToPost = new FormData($(`#frm-vacina${id}`)[0]);
+    dataToPost.set('ParticipanteId', id)
+    var filename = dataToPost.get(`arquivo${id}`).name    
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     var arquivo = new File([dataToPost.get(`arquivo${id}`)], 'Vacina ' + realista.Nome + filename.substr(filename.indexOf('.')));
     dataToPost.set('Arquivo', arquivo)
     $.ajax(
@@ -387,6 +437,7 @@ function PostVacina(id, realista) {
             data: dataToPost,
             url: "Arquivo/PostArquivo",
             success: function () {
+<<<<<<< HEAD
                 $.ajax(
                     {
                         datatype: "json",
@@ -403,6 +454,9 @@ function PostVacina(id, realista) {
 
                         }
                     });
+=======
+                toggleVacina(id)
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             }
         });
@@ -434,6 +488,7 @@ function toggleFoto(id) {
 }
 
 
+<<<<<<< HEAD
 function MakeEquipante(id) {
     ConfirmMessage("Transformar em Equipante?").then((result) => {
         if (result) {
@@ -477,6 +532,25 @@ function toggleVacina(id) {
                 }
             });
     })
+=======
+function toggleVacina(id) {
+    $.ajax(
+        {
+            datatype: "json",
+            type: "POST",
+            contentType: 'application/json; charset=utf-8',
+            url: "Participante/ToggleVacina",
+            data: JSON.stringify(
+                {
+                    Id: id
+                }),
+
+            success: function () {
+                CarregarTabelaParticipante()
+
+            }
+        });
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 }
 
 function PostArquivo() {
@@ -484,7 +558,11 @@ function PostArquivo() {
     var dataToPost = new FormData($('#frm-upload-arquivo-modal')[0]);
     var filename = dataToPost.get('arquivo-modal').name
     var arquivo = new File([dataToPost.get('arquivo-modal')], 'Pagamento ' + realista.Nome + filename.substr(filename.indexOf('.')));
+<<<<<<< HEAD
     dataToPost.set('Arquivo', arquivo)
+=======
+    dataToPost.set('Arquivo', arquivo)    
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     dataToPost.set('ParticipanteId', dataToPost.get('ParticipanteIdModal'))
     dataToPost.set('LancamentoId', dataToPost.get('LancamentoIdModal'))
     $.ajax(
@@ -534,6 +612,7 @@ $(`.${tipoGlobal}`).addClass('moldura-modal')
 var destinatarioGlobal = 'mae'
 $(`.${destinatarioGlobal}`).addClass('moldura-modal')
 
+<<<<<<< HEAD
 function enviar() {
     var windowReference = window.open('_blank');
     $.ajax({
@@ -661,6 +740,105 @@ function enviar() {
 //    window.open(GetLinkWhatsApp(getTelefone(tipoGlobal == 'foto' ? 'realista' : destinatarioGlobal), text), '_blank').focus();
 
 //}
+=======
+
+function enviar() {
+    var text = ''
+    switch (tipoGlobal) {
+        case 'covid':
+            text = `Olá, *${getNome(destinatarioGlobal)}*!
+
+Estou vendo aqui que a inscrição de *${getNome('realista')}* para o *Realidade* já foi paga e sua vaga está garantida, sendo assim, tenho uns avisos:
+
+Tendo em vista a situação do novo Coronavírus, solicitamos a realização e apresentação do resultado do *RT-PCR* ou *Teste Rápido* , bem como a apresentação do *Cartão de Vacinação* do participante com pelo menos *1 dose* da vacina.
+
+- A realização do *RT-PCR* deverá ser feita em *até 48h antes* do dia do evento (a partir do dia 27/10). Já o *Teste Rápido* deverá ser realizado em *até 24h antes* do dia do evento (a partir do dia 28/10). O resultado deve ser *NEGATIVO* e apresentado no dia do evento ou enviado previamente.
+
+- Caso o resultado do participante dê *POSITIVO*, o valor do evento será reembolsado.
+
+${RodapeEvento($("#participante-eventoid option:selected").text())}`
+            break;
+        case 'pagamento':
+            text = `Olá, *${getNome(destinatarioGlobal)}*!
+
+Estamos com a inscrição de *${getNome('realista')}* para o Realidade, cursilho para jovens da IECB Catedral da Trindade. Porém, para confirmá-la é preciso efetuar o pagamento.
+
+Como ainda estamos em pandemia, precisamos tomar um cuidado extra e por isso teremos *apenas 100 vagas*;
+
+O investimento está custando *R$ 300,00*, e poderá ser feito através do PIX: 100.778.704-09, cartão ou dinheiro. *A secretaria estará na frente da livraria após os cultos das quartas e domingos para recebê-lo(a).* 
+
+No caso do PIX, lembra de enviar o comprovante de pagamento para mim! 
+
+*Corre para garantir tua vaga!*  🥳
+
+${RodapeEvento($("#participante-eventoid option:selected").text())}`
+            break;
+        case 'info':
+            text = `Olá, *${getNome(destinatarioGlobal)}*!
+
+Seguem alguns outros avisos a respeito do Realidade:
+
+O Realidade começará as 19h da sexta-feira, dia 29 e se encerrará às 18h do dia 31 de outubro. 🥳
+
+A localização do evento será no Colonial Aldeia, Km 11,5, nosso G2.
+*R. Sete de Setembro, s\\n - Aldeia dos Camarás, Araça - PE, 54789-525*
+https://goo.gl/maps/ZYcmct2f4jrMa1bw9
+
+O *uso da máscara* durante todo o evento será obrigatório, dessa forma, deverá ser providenciado uma quantidade para a troca da máscara durante o dia. 😷
+
+Lembrem-se de levar *roupa de cama e banho, produtos de higiene pessoal* e se fizer uso de alguma *medicação* também.
+
+Nosso plenário é frio então é bom levar um *casaco*.
+
+Os *quartos serão divididos a com no máximo outras 5 pessoas*, tendo todo o distanciamento possivel durante as dormidas; 
+
+Vocês precisam providenciar mensagens, cartinhas, de amigos próximos e da família, *não é álbum*, são apenas mensagens!!
+
+ Estaremos recebendo as mensagens no *sábado do evento das 8h30 até as 12h30* na Catedral da Trindade, Rua Carneiro Vilela 569.
+
+Me confirma se já fizeste cursilho pra eu não te estragar uma surpresa! 🥰
+
+${RodapeEvento($("#participante-eventoid option:selected").text())}`
+            break;
+        case 'carta':
+            text = `Ficamos felizes por você ter participado de um dos nossos Cursilhos e temos um convite a lhe fazer!
+
+Temos um momento no Realidade que se parece muito com a *Manhãnita*, é a nossa *Noitita* que acontece no sábado à noite, a partir das 17h. 
+
+Então você e outras pessoas próximas do/da realista que *já participaram de algum Cursilho/Realidade* são muito bem-vindos. É um momento muito especial onde demonstramos a importância de ser parte do corpo de Cristo para eles!
+
+Para participar da nossa *Noitita*, pedimos que siga algumas orientações: 
+- Esteja vacinado com pelo menos a primeira dose.
+- Use máscara  durante todo o momento e respeite o distanciamento orientado pela nossa equipe.
+- Caso você esteja com sintomas de gripe, pedimos que não compareça, para sua segurança e a nossa - temos quase 200 adolescente na bolha do Realidade.
+
+Pode ficar tranquilo  que seu realista vai receber todo o amor e cuidado que o momento sugere.
+
+Te esperamos lá! 🥰
+*Equipe da Secretaria | ${$("#participante-eventoid option:selected").text()}*`
+            break;
+        case 'foto':
+            text = `Oi, *${getNome('realista')}*! Como estão as expectativas para o Realidade? Espero que boas! 🥳
+
+
+Como estamos na pandemia e o uso da máscara será obrigatório no evento, vamos precisar de uma *foto sua*! Fica atento para as especificações:
+1. Foto de rosto - num plano mais aberto, numa pose relaxada, nada parecido com uma 3x4.
+2. Formato vertical
+3. Sem óculos de sol ou máscara
+
+Escolhe e me manda o quanto antes, beleza?
+
+
+${RodapeEvento($("#participante-eventoid option:selected").text())}`
+            break;
+        default:
+            break;
+    }
+
+    window.open(GetLinkWhatsApp(getTelefone(tipoGlobal == 'foto' ? 'realista' : destinatarioGlobal), text), '_blank').focus();
+
+}
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
 
 
@@ -679,8 +857,11 @@ function select2(destinatario) {
     $('.mae').removeClass('moldura-modal')
     $('.pai').removeClass('moldura-modal')
     $('.convite').removeClass('moldura-modal')
+<<<<<<< HEAD
     $('.contato').removeClass('moldura-modal')
     $('.realista').removeClass('moldura-modal')
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     destinatarioGlobal = destinatario
     $(`.${destinatario}`).addClass('moldura-modal')
     $('.btn-ligar').attr("href", `tel:${getTelefone(destinatario)}`)
@@ -701,9 +882,12 @@ function getNome(destinatario) {
         case 'convite':
             return realista.NomeConvite.trim()
             break;
+<<<<<<< HEAD
         case 'contato':
             return realista.NomeContato.trim()
             break;
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         default:
             break;
     }
@@ -723,9 +907,12 @@ function getTelefone(destinatario) {
         case 'convite':
             return realista.FoneConvite
             break;
+<<<<<<< HEAD
         case 'contato':
             return realista.FoneContato
             break;
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         default:
             break;
     }
@@ -773,7 +960,10 @@ function CarregarTabelaPagamentos(id) {
 }
 
 $(document).ready(function () {
+<<<<<<< HEAD
     HideMenu()
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     CarregarTabelaParticipante();
 });
 
@@ -898,7 +1088,11 @@ function PostPagamento() {
 
 function Opcoes(row) {
     realista = row;
+<<<<<<< HEAD
     $('.participante-etiquetas').select2({ dropdownParent: $("#form-opcoes") });
+=======
+
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     $.ajax({
         url: "/Participante/GetParticipante/",
         data: { Id: row.Id },
@@ -912,7 +1106,10 @@ function Opcoes(row) {
             $('.realista-nome').text(realista.Nome)
             $('.paitext').text(realista.NomePai)
             $('.convitetext').text(realista.NomeConvite)
+<<<<<<< HEAD
             $('.contatotext').text(realista.NomeContato)
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
 
             $('.pagamento').show()
             $('#participante-obs').val(realista.Observacao)
@@ -921,6 +1118,7 @@ function Opcoes(row) {
             $(`#participante-msgnoitita`).iCheck(realista.MsgNoitita ? 'check' : 'uncheck');
             $(`#participante-msggeral`).iCheck(realista.MsgGeral ? 'check' : 'uncheck');
             $(`#participante-msgfoto`).iCheck(realista.MsgFoto ? 'check' : 'uncheck');
+<<<<<<< HEAD
 
             $.ajax({
                 url: "/Mensagem/GetMensagens/",
@@ -938,6 +1136,8 @@ ${dataMsg.data.map(p => `<option value=${p.Id}>${p.Titulo}</option>`)}
             $('#participante-etiquetas').html(`${data.Etiquetas.map(etiqueta => `<option data-cor="${etiqueta.Cor}" value=${etiqueta.Id}>${etiqueta.Nome}</option>`)
                 }`)
             $('#participante-etiquetas').val(data.Participante.Etiquetas.map(etiqueta => etiqueta.Id))
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             if (realista.Status == "Confirmado") {
                 $('.pagamento').hide()
             }
@@ -962,11 +1162,18 @@ $("#modal-opcoes").on('hidden.bs.modal', function () {
                 MsgPagamento: $(`#participante-msgpagamento`).prop("checked"),
                 MsgNoitita: $(`#participante-msgnoitita`).prop("checked"),
                 MsgGeral: $(`#participante-msggeral`).prop("checked"),
+<<<<<<< HEAD
                 MsgFoto: $(`#participante-msgfoto`).prop("checked"),
                 Etiquetas: $('.participante-etiquetas').val()
             }),
         success: function () {
             CarregarTabelaParticipante()
+=======
+                MsgFoto: $(`#participante-msgfoto`).prop("checked")
+            }),
+        success: function () {
+
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         }
     });
 });
@@ -991,8 +1198,11 @@ function GetParticipanteContato(id) {
             $(`#participante-fonemae`).val(data.Participante.FoneMae);
             $(`#participante-nomeconvite`).val(data.Participante.NomeConvite);
             $(`#participante-foneconvite`).val(data.Participante.FoneConvite);
+<<<<<<< HEAD
             $(`#participante-nomecontato`).val(data.Participante.NomeContato);
             $(`#participante-fonecontato`).val(data.Participante.FoneContato);
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
             $(`#participante-restricaoalimentar`).val(data.Participante.RestricaoAlimentar);
             $(`#participante-medicacao`).val(data.Participante.Medicacao);
             $(`#participante-alergia`).val(data.Participante.Alergia);
@@ -1027,8 +1237,11 @@ function GetParticipante(id) {
                 $(`#participante-fonemae`).val(data.Participante.FoneMae);
                 $(`#participante-nomeconvite`).val(data.Participante.NomeConvite);
                 $(`#participante-foneconvite`).val(data.Participante.FoneConvite);
+<<<<<<< HEAD
                 $(`#participante-nomecontato`).val(data.Participante.NomeContato);
                 $(`#participante-fonecontato`).val(data.Participante.FoneContato);
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 $(`#participante-restricaoalimentar`).val(data.Participante.RestricaoAlimentar);
                 $(`#participante-medicacao`).val(data.Participante.Medicacao);
                 $(`#participante-alergia`).val(data.Participante.Alergia);
@@ -1057,8 +1270,11 @@ function GetParticipante(id) {
         $(`#participante-fonemae`).val("");
         $(`#participante-nomeconvite`).val("");
         $(`#participante-foneconvite`).val("");
+<<<<<<< HEAD
         $(`#participante-nomecontato`).val("");
         $(`#participante-fonecontato`).val("");
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         $(`input[type=radio][name=participante-sexo][value=1]`).iCheck('check');
         $(`input[type=radio][name=participante-hasalergia][value=false]`).iCheck('check');
         $(`input[type=radio][name=participante-hasmedicacao][value=false]`).iCheck('check');
@@ -1094,8 +1310,11 @@ function PostParticipante() {
                     FoneMae: $(`#participante-fonemae`).val(),
                     NomeConvite: $(`#participante-nomeconvite`).val(),
                     FoneConvite: $(`#participante-foneconvite`).val(),
+<<<<<<< HEAD
                     NomeContato: $(`#participante-nomecontato`).val(),
                     FoneContato: $(`#participante-fonecontato`).val(),
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                     HasRestricaoAlimentar: $("input[type=radio][name=participante-hasrestricaoalimentar]:checked").val(),
                     RestricaoAlimentar: $(`#participante-restricaoalimentar`).val(),
                     HasMedicacao: $("input[type=radio][name=participante-hasmedicacao]:checked").val(),

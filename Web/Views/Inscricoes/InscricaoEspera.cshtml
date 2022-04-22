@@ -8,6 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>@ViewBag.Configuracao.Titulo | Inscrições</title>
     <link href="~/Content/bootstrap.css" rel="stylesheet">
     @if (ViewBag.Configuracao.LogoId != null)
@@ -15,12 +16,17 @@
 
         <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,@ViewBag.Configuracao.Logo" />
     }
+=======
+    <title>Realidade | Inscrições</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
     <link href="~/Fonts/font-awesome/css/all.css" rel="stylesheet">
     <link href="~/Content/animate.css" rel="stylesheet">
     <link href="~/Content/style.css" rel="stylesheet">
     <link href="~/Content/evento.css" rel="stylesheet">
     <link href="~/Content/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 </head>
+<<<<<<< HEAD
 <body class="background-evento" style="display:flex">
     <div class="middle-box inscricoes animated fadeInDown " style="display:flex;height:550px;margin:auto">
         <div class="row" style="margin:auto">
@@ -34,6 +40,17 @@
 
                     </div>
                 }
+=======
+<body class="background-evento">
+    <div class="middle-box inscricoes animated fadeInDown ">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row justify-content-center">
+                    <div class="col-sm-offset-3 col-sm-6">
+                        <img class="full-width" src="~/Images/logo-branco.png" alt="Realidade" />
+                    </div>
+                </div>
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
                 <div class="row justify-content-center m-l-lg m-r-lg m-t-lg m-b-sm text-white text-center">
                     <h2>"@ViewBag.Participante.Apelido"</h2>
                     <h3>Obrigado por se inscrever no @ViewBag.Participante.Evento!</h3>
@@ -61,12 +78,15 @@
 
 <script>
     $(document).ready(function () {
+<<<<<<< HEAD
             if (@ViewBag.Configuracao.BackgroundId)
         {
             $('.background-evento').css('background', `url(data:image/jpeg;base64,@ViewBag.Configuracao.Background) no-repeat center center fixed`)
             $('.background-evento').css('background-size', 'cover')
 
         }
+=======
+>>>>>>> 80495c8b8c10fef5b1b185455b7ef50cc662c566
         var ContasBancarias = @Html.Raw(Json.Encode(ViewBag.ContasBancarias));
         htmlContas = ``
         var indiceFinal = 0;
